@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "contents"
+    },
+    {
+      "path": "contents/video"
+    },
+    {
+      "path": "contents/docs"
+    },
+    {
+      "path": "contents/code"
+    }
+  ],
+  "settings": {}
+}
