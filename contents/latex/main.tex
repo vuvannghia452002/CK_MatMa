@@ -9,94 +9,136 @@
 \usepackage{lipsum}
 \usepackage{tikz}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\AtBeginSection[]
-{
-\begin{frame}<beamer>
-\frametitle{Nội dung}
+% \AtBeginSection[]
+% {
+% \begin{frame}<beamer>
+% \frametitle{Nội dung}
 
-\tableofcontents[
-currentsection,
-subsectionstyle=hide/hide,
-subsubsectionstyle=hide/hide
-]
-
-\end{frame}
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\AtBeginSubsection[]
-{
-\begin{frame}<beamer>
-\frametitle{Nội dung}
-
-\tableofcontents[
-currentsection,
-currentsubsection,
-subsectionstyle=show/shaded/hide,
-%
+% \tableofcontents[
+% currentsection,
+% subsectionstyle=hide/hide,
 % subsubsectionstyle=hide/hide
-subsubsectionstyle=show/show/shaded/hide
-]
+% ]
 
-\end{frame}
-}
+% \end{frame}
+% }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[{\makebox[.15\paperwidth]{MI4100 - Mật mã và độ phức tạp thuật toán}}]{Chủ đề: Mô phỏng tấn công hệ mật mã khóa công khai RSA bằng thuật toán LLL giảm lưới}
-\author[Nhóm 8]{Nhóm 8}
-\date[\today]{\today}
+% \AtBeginSubsection[]
+% {
+% \begin{frame}<beamer>
+% \frametitle{Nội dung}
+
+% \tableofcontents[
+% currentsection,
+% currentsubsection,
+% subsectionstyle=show/shaded/hide,
+% %
+% % subsubsectionstyle=hide/hide
+% subsubsectionstyle=show/show/shaded/hide
+% ]
+
+% \end{frame}
+% }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \title[{\makebox[.15\paperwidth]{MI4100 - Mật mã và độ phức tạp thuật toán}}]{Chủ đề: Mô phỏng tấn công hệ mật mã khóa công khai RSA bằng thuật toán LLL giảm lưới}
+% \author[Nhóm 8]{Nhóm 8}
+% \date[\today]{\today}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Trang tiêu đề
-% Cần có hình ảnh pictures/HUST2.jpeg
-% Không chỉnh sửa gì
-\begin{frame}
-\begin{tikzpicture}[remember picture, overlay]
-\node[anchor=center, inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth, height=\paperheight]{pictures/HUST2.jpeg}};
-\fill[white, opacity=0.8] (current page.south west) rectangle (current page.north east);
-\end{tikzpicture}
-\titlepage
+% % Trang tiêu đề
+% % Cần có hình ảnh pictures/HUST2.jpeg
+% % Không chỉnh sửa gì
+% \begin{frame}
+% \begin{tikzpicture}[remember picture, overlay]
+% \node[anchor=center, inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth, height=\paperheight]{pictures/HUST2.jpeg}};
+% \fill[white, opacity=0.8] (current page.south west) rectangle (current page.north east);
+% \end{tikzpicture}
+% \titlepage
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Danh sách thành viên}
+% \begin{block}{Nhóm 8}
+% \centering
+% \begin{tabular} {|l|c|}
+% \hline
+% Họ và tên & MSSV \\
+% \hline
+% Vũ Văn Nghĩa & 20206205 \\
+% Vũ Văn Nghĩa & 20206205 \\
+% Vũ Văn Nghĩa & 20206205 \\
+% Vũ Văn Nghĩa & 20206205 \\
+% Vũ Văn Nghĩa & 20206205 \\
+% \hline
+% \end{tabular}
+% \end{block}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Phân công thành viên}
+% \begin{block}{Phân công}
+% \begin{itemize}
+% % Lập kế hoạch, phân chia công việc.
+% \item Vũ Văn Nghĩa: xxx
+% \item Vũ Văn Nghĩa: xxx
+% \item Vũ Văn Nghĩa: xxx
+% \item Vũ Văn Nghĩa: xxx
+% \item Vũ Văn Nghĩa: xxx
+% \end{itemize}
+% \end{block}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hệ mật mã khóa công khai}
+\subsection{xxxxxxxxxxxxxxxxxxxxxx}
+\subsubsection{xxxxxxxxxxxxxxxxxxxxxx}
+\begin{frame}{xxxxxxxxxxxxxxxxxxxxxx}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Danh sách thành viên}
-\begin{block}{Nhóm 8}
-\centering
-\begin{tabular} {|l|c|}
-\hline
-Họ và tên & MSSV \\
-\hline
-Vũ Văn Nghĩa & 20206205 \\
-Vũ Văn Nghĩa & 20206205 \\
-Vũ Văn Nghĩa & 20206205 \\
-Vũ Văn Nghĩa & 20206205 \\
-Vũ Văn Nghĩa & 20206205 \\
-\hline
-\end{tabular}
-\end{block}
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hệ mật mã RSA}
+\subsection{xxxxxxxxxxxxxxxxxxxxxx}
+\subsubsection{xxxxxxxxxxxxxxxxxxxxxx}
+\begin{frame}{xxxxxxxxxxxxxxxxxxxxxx}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Phân công thành viên}
-\begin{block}{Phân công}
-\begin{itemize}
-% Lập kế hoạch, phân chia công việc.
-\item Vũ Văn Nghĩa: xxx
-\item Vũ Văn Nghĩa: xxx
-\item Vũ Văn Nghĩa: xxx
-\item Vũ Văn Nghĩa: xxx
-\item Vũ Văn Nghĩa: xxx
-\end{itemize}
-\end{block}
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Phương pháp lưới và thuật toán LLL giảm lưới}
+\subsection{xxxxxxxxxxxxxxxxxxxxxx}
+\subsubsection{xxxxxxxxxxxxxxxxxxxxxx}
+\begin{frame}{xxxxxxxxxxxxxxxxxxxxxx}
+
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Khảo sát}
-\subsection{Tổng quan về quản lý nhân sự}
-\subsubsection{Giới thiệu về quản lý nhân sự}
-\begin{frame}{Giới thiệu về quản lý nhân sự}
+% \section*{}
+% \begin{frame}{}
+% \centering
+% \Huge{Thanks for listening!}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
+
+
 % \begin{columns}
 % \begin{column}{0.4\textwidth}
 % \includegraphics[width=\textwidth]{pictures/Giới thiệu về HRM.png}
@@ -114,18 +156,3 @@ Vũ Văn Nghĩa & 20206205 \\
 % \end{itemize}
 % \end{column}
 % \end{columns}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{}
-\begin{frame}{}
-\centering
-\Huge{Thanks for listening!}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{document}
