@@ -4,12 +4,16 @@
 
 ![alt text](public.png)
 
-<!-- Bao gồm: bản rõ, bản mã, hàm E, D, khóa K -->
+<!-- hệ mật mã khóa công khai bao gồm: bản rõ, bản mã, hàm mã hóa, hàm giải mã, khóa công khai K+ và khóa bí mật K-. Vì hàm mã hóa và giải mã sử dụng khóa khác nhau nên hệ mật mã khóa công khai còn được gọi là hệ mật mã bất đối xứng -->
 
 <!-- Ứng dụng -->
 
 Xây dựng chứng chỉ số
 Xây dựng chữ kí số
+
+<!--  -->
+<!--  -->
+<!--  -->
 
 <!-- Lịch sử -->
 
