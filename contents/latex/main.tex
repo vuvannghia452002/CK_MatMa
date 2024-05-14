@@ -74,74 +74,71 @@
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Tổng quan về hệ mật mã khóa công khai}
-\subsection{Lịch sử}
-\begin{frame}{Lịch sử}
+% \section{Tổng quan về hệ mật mã khóa công khai}
+% \subsection{Lịch sử}
+% \begin{frame}{Lịch sử}
 
-\begin{itemize}
-\item Hệ mật mã khóa công khai là một bước tiến lớn và là cuộc cách mạng trong lĩnh vực mật mã.
-\item Hệ mật mã khóa công khai được Diffie và Hellman đưa ra năm 1976.
-\end{itemize}
+% \begin{itemize}
+% \item Hệ mật mã khóa công khai là một bước tiến lớn và là cuộc cách mạng trong lĩnh vực mật mã
+% \item Hệ mật mã khóa công khai được Diffie và Hellman đưa ra năm 1976
+% \end{itemize}
 
-\begin{columns}
+% \begin{columns}
 
-\begin{column}{0.4\textwidth}
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.4]{pictures/Bailey_Whitfield_Diffie.png}
-\end{figure}
-Bailey Whitfield 'Whit' Diffie\\ (sinh 05/06/1944 – 80 tuổi)
-\end{column}
+% \begin{column}{0.4\textwidth}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[scale = 0.4]{pictures/Bailey_Whitfield_Diffie.png}
+% \end{figure}
+% Bailey Whitfield 'Whit' Diffie\\ (sinh 05/06/1944 – 80 tuổi)
+% \end{column}
 
-\begin{column}{0.4\textwidth}
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.4]{pictures/Martin_Edward_Hellman.png}
-\end{figure}
-Martin Edward Hellman\\(sinh 02/10/1945 - 79 tuổi)
-\end{column}
+% \begin{column}{0.4\textwidth}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[scale = 0.4]{pictures/Martin_Edward_Hellman.png}
+% \end{figure}
+% Martin Edward Hellman\\(sinh 02/10/1945 - 79 tuổi)
+% \end{column}
 
-\end{columns}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Khái niệm}
-\begin{frame}{Khái niệm}
-
-\begin{itemize}
-\item Hệ mật mã khóa công khai là một dạng mật mã hoá cho phép người sử dụng trao đổi các thông tin mật mà không cần phải trao đổi các khoá chung bí mật trước đó.
-\item    Việc mã hóa công khai được thực hiện bằng cách sử dụng một cặp khóa có quan hệ toán học với nhau là khóa công khai     (Public key)    và khoá   bí mật  (Private key)
-\item    Trong mật mã hóa khóa công khai, khóa cá nhân phải được giữ bí mật trong khi khóa công khai được phổ biến công khai. Hai khóa này khác nhau, một dùng để mã hóa và khóa còn lại dùng để giải mã. 
-
-
-$\Rightarrow$ Điều này đảm bảo   hệ thống là không thể  (hoặc rất khó)  tìm ra khóa bí mật nếu chỉ biết khóa công khai.
-\end{itemize}
-
-\end{frame}
+% \end{columns}
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \subsection{Khái niệm}
 % \begin{frame}{Khái niệm}
 
 % \begin{itemize}
-% \item Hệ mật mã khóa công khai là một bước tiến lớn và là cuộc cách mạng trong lĩnh vực mật mã.
-% \item Hệ mật mã khóa công khai được Diffie và Hellman đưa ra năm 1976.
+% \item Hệ mật mã khóa công khai là một dạng mật mã hoá cho phép người sử dụng trao đổi các thông tin mật mà không cần phải trao đổi các khoá chung bí mật trước đó
+% \item    Việc mã hóa công khai được thực hiện bằng cách sử dụng một cặp khóa có quan hệ toán học với nhau là khóa công khai         và khoá   bí mật  
+% \begin{itemize}
+%     \item  Khóa công khai:   được công khai phổ biến -     dùng để mã hóa
+%     \item  Khóa  bí mật:   được giữ bí mật -     dùng để giải mã
 % \end{itemize}
+% \end{itemize}
+
+% $\Rightarrow$ Điều này đảm bảo   hệ thống là không thể  (hoặc rất khó)  tìm ra khóa bí mật nếu chỉ biết khóa công khai
 
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Mô hình tổng quát}
+% \begin{frame}{Mô hình tổng quát}
+%     \begin{figure}[H]
+%         \centering
+%         \includegraphics[scale = 0.6]{pictures/mo_hinh_tong_quat.png}
+%     \end{figure}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% <!-- Mô hình tổng quát -->
 
-% ![alt text](public.png)
 
-% <!-- hệ mật mã khóa công khai bao gồm: bản rõ, bản mã, mã hóa, giải mã, khóa công khai K+ và khóa bí mật K-. hệ mật mã khóa công khai là hệ mật mã bất đối xứng Vì mã hóa và giải mã sử dụng khóa khác nhau -->
 
+
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % <!-- Giới thiệu về hệ mật mã Rabin -->
-
-%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Hệ mật mã RSA}
 \subsection{xxxxxxxxxxxxxxxxxxxxxx}
 \subsubsection{xxxxxxxxxxxxxxxxxxxxxx}
