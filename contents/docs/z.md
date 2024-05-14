@@ -1,4 +1,3 @@
-<!-- -->
 <!-- Tổng quan về mật mã khóa công khai -->
 
 <!-- Lịch sử -->
@@ -60,18 +59,13 @@ Hệ mật RSA, được phát triển bởi Ron Rivest, Adi Shamir và Leonard 
 <!--! Sinh cặp khóa công khai  và bí mật -->
 
 <!--! Ví dụ: -->
- 
+
 <!-- code? -->
- 
-  
+
 <!--! Áp dụng hệ mật RSA -->
 
+<!--! LLL -->
 
- 
- 
-  
- 
- 
 <!-- -->
 <!-- https://web.microsoftstream.com/video/a677964a-d1a2-40a8-bb4d-dc7e70ad75a3 -->
 <!-- https://web.microsoftstream.com/video/cbe08326-77fc-42a2-bd2d-eb693e6c8e49 -->
