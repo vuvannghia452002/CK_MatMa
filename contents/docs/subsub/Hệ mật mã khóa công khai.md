@@ -1,8 +1,17 @@
 <!-- \section{Tổng quan về hệ mật mã khóa công khai} -->
 
-# Tổng quan về hệ mật mã khóa công khai
+<!-- Mô hình tổng quát -->
 
-## Lịch sử
+![alt text](public.png)
+
+<!-- Bao gồm: bản rõ, bản mã, hàm E, D, khóa K -->
+
+<!-- Ứng dụng -->
+
+Xây dựng chứng chỉ số
+Xây dựng chữ kí số
+
+<!-- Lịch sử -->
 
 Ý tưởng về hệ thống mã hóa khóa công khai được Martin Hellman, Ralph Merkle và Whitfield Diffie tại Đại học Stanford giới thiệu vào năm 1976.
 
@@ -15,10 +24,6 @@ Mật mã khóa công khai là hệ mã không đối xứng, nghĩa là sử d�
 Lưu ý:
 
 Một hệ mật khóa công khai không bao giờ cung cấp độ mật vô điều kiện - thực tế, đó là hàm cửa sập một chiều (a trapdoor one-way function).
-
-<!-- Mô hình tổng quát -->
-
-![alt text](../public.png)
 
 <!-- Ý tưởng: -->
 <!-- Mỗi người dùng: sử dụng một cặp khóa (khóa công khai, khóa bí mật) -->
