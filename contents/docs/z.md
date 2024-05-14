@@ -138,7 +138,7 @@ Slide mật mã thầy Nam
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 <!-- Khái niệm hệ mật khóa công khai -->
-<!-- Cách tấn công (phương thức/giao thức, cơ chế, lỗ hổng,...) -->
+<!-- Cách tấn công (phương thức/giao thức, cơ chế, lỗ hổng, ...) -->
 <!-- Áp dụng: Hệ RSA -->
 <!-- Lịch sử ra đời -->
 <!-- Cơ chế hoạt động -->
