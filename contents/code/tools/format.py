@@ -40,6 +40,6 @@ def format(path):
         file.write(contents)
 
 
-file = r"../../docs/z.md"
+file = r"../../docs/subsub/z.md"
 format(file)
 print("Xong")
