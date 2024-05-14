@@ -4,16 +4,16 @@
 
 ![alt text](public.png)
 
-<!-- hệ mật mã khóa công khai bao gồm: bản rõ, bản mã, hàm mã hóa, hàm giải mã, khóa công khai K+ và khóa bí mật K-. Vì hàm mã hóa và giải mã sử dụng khóa khác nhau nên hệ mật mã khóa công khai còn được gọi là hệ mật mã bất đối xứng -->
+<!-- hệ mật mã khóa công khai bao gồm: bản rõ, bản mã,   mã hóa,   giải mã, khóa công khai K+ và khóa bí mật K-.  hệ mật mã khóa công khai  là hệ mật mã bất đối xứng Vì   mã hóa và giải mã sử dụng khóa khác nhau   -->
 
 <!-- Ứng dụng -->
 
-Xây dựng chứng chỉ số
-Xây dựng chữ kí số
+Xác thực điện tử (Chứng chỉ số, Chữ kí số)
 
 <!-- !-->
 <!-- !-->
 <!-- !-->
+<!-- hệ mật mã khóa công khai là một bước tiến lớn nhất và là cuộc cách mạng thực sự trong lĩnh vực mật mã. -->
 
 <!-- Lịch sử -->
 
@@ -22,8 +22,6 @@ Xây dựng chữ kí số
 Sách: Diffie, W.; Hellman, M.E. (November 1976). "New directions in cryptography". IEEE Transactions on Information Theory
 
 <!-- Khái niệm -->
-
-Mật mã khóa công khai là hệ mã không đối xứng, nghĩa là sử dụng hai khóa liên đới cho việc mã hoá và giải mã thay vì một khóa duy nhất như trong các hệ mã cổ điển. Việc này đáp ứng được các yêu cầu trong các ứng dụng về bảo mật riêng tư, phân phối khóa, và xác thực điện tử.
 
 Lưu ý:
 
