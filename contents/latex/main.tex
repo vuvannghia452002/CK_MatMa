@@ -1,0 +1,112 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\setbeamercolor{block title}{bg=red!80!black, fg=white}
+\setbeamercolor{block body}{bg=red!10, fg=black}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{vietnam}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{tikz}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginSection[]
+{
+\begin{frame}<beamer>
+\frametitle{Nội dung}
+
+\tableofcontents[
+currentsection,
+subsectionstyle=hide/hide,
+subsubsectionstyle=hide/hide
+]
+
+\end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginSubsection[]
+{
+\begin{frame}<beamer>
+\frametitle{Nội dung}
+
+\tableofcontents[
+currentsection,
+currentsubsection,
+subsectionstyle=show/shaded/hide,
+%
+% subsubsectionstyle=hide/hide
+subsubsectionstyle=show/show/shaded/hide
+]
+
+\end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[{\makebox[.15\paperwidth]{Human Resources Management}}]{Chủ đề: Human Resources Management}
+\author[Nhóm 22]{Nhóm 22}
+\date[Data Warehouse \& BI]{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}
+% \begin{tikzpicture}[remember picture, overlay]
+% \node[anchor=center, inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth, height=\paperheight]{pictures/HUST2.jpeg}};
+% \fill[white, opacity=0.8] (current page.south west) rectangle (current page.north east);
+% \end{tikzpicture}
+% \titlepage
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Danh sách thành viên}
+% \begin{block}{Nhóm 22}
+% \centering
+% \begin{tabular} {|l|c|}
+% \hline
+% Họ và tên & MSSV \\
+% \hline
+% Nguyễn Việt Anh & 20216796 \\
+% Phùng Quốc Đạt & 20216813 \\
+% Vũ Văn Nghĩa & 20206205 \\
+% Mai Thị Tuyết Nhung & 20216866 \\
+% \hline
+% \end{tabular}
+% \end{block}
+% \end{frame}
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Khảo sát}
+\subsection{Tổng quan về quản lý nhân sự}
+\subsubsection{Giới thiệu về quản lý nhân sự}
+\begin{frame}{Giới thiệu về quản lý nhân sự}
+% \begin{columns}
+% \begin{column}{0.4\textwidth}
+% \includegraphics[width=\textwidth]{pictures/Giới thiệu về HRM.png}
+% \end{column}
+% \begin{column}{0.6\textwidth}
+% \begin{itemize}
+% \item HRM là gì?
+% \item HRM là gì?
+% \item \dots
+% % ![alt text](image-22.png)
+% % https://talentbold.com/hrm-la-gi-tat-tan-tat-ve-human-resource-management-939-ns
+% % https://en.wikipedia.org/wiki/Human_resource_management
+% % <!-- Video nhóm 6 -->
+% % <!-- Video download -->
+% \end{itemize}
+% \end{column}
+% \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{}
+\begin{frame}{}
+\centering
+\Huge{Thanks for listening!}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
