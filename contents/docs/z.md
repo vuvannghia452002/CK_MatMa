@@ -1,41 +1,30 @@
-<!--  -->
+<!-- -->
 <!-- Tổng quan về mật mã khóa công khai -->
 
 <!-- Lịch sử -->
+
 Ý tưởng về hệ thống mã hóa khóa công khai được Martin Hellman, Ralph Merkle và Whitfield Diffie tại Đại học Stanford giới thiệu vào năm 1976.
 
 Sách: Diffie, W.; Hellman, M.E. (November 1976). "New directions in cryptography". IEEE Transactions on Information Theory
 
-
-
-
-
-
-
-
 <!-- Khái niệm -->
 
-Mật mã khóa công khai  là hệ mã không đối xứng, nghĩa là sử dụng hai khóa liên đới cho việc mã hoá và giải mã thay vì một khóa duy nhất như trong các hệ mã cổ điển. Việc này đáp ứng được các yêu cầu trong các ứng dụng về bảo mật riêng tư, phân phối khóa, và xác thực điện tử.
+Mật mã khóa công khai là hệ mã không đối xứng, nghĩa là sử dụng hai khóa liên đới cho việc mã hoá và giải mã thay vì một khóa duy nhất như trong các hệ mã cổ điển. Việc này đáp ứng được các yêu cầu trong các ứng dụng về bảo mật riêng tư, phân phối khóa, và xác thực điện tử.
 
 Lưu ý:
 
 Một hệ mật khóa công khai không bao giờ cung cấp độ mật vô điều kiện - thực tế, đó là hàm cửa sập một chiều (a trapdoor one-way function).
 
-<!-- Mô hình  tổng quát -->
+<!-- Mô hình tổng quát -->
+
 ![alt text](public.png)
-
-
 
 <!-- Ý tưởng: -->
 <!-- Mỗi người dùng: sử dụng một cặp khóa (khóa công khai, khóa bí mật) -->
 <!-- Khóa công cộng: được công bố rộng rãi và được sử dụng trong mã hóa thông tin -->
-<!-- Khóa riêng:  chỉ do một người nắm giữ và được sử dụng để giải mã thông tin đã được mã hóa bằng khóa công cộng tương ứng -->
-<!-- Mã hóa: A muốn gửi thông điệp cho B - mã hóa bằng khóa công khai của B    ($$y = E(e_B, x)$$) -->
-<!-- Giải mã: B giải mã bằng khóa bí mật của mình  ($$x = D(d_B, y)$$) -->
-
-
-
-
+<!-- Khóa riêng: chỉ do một người nắm giữ và được sử dụng để giải mã thông tin đã được mã hóa bằng khóa công cộng tương ứng -->
+<!-- Mã hóa: A muốn gửi thông điệp cho B - mã hóa bằng khóa công khai của B ($$y = E(e_B, x)$$) -->
+<!-- Giải mã: B giải mã bằng khóa bí mật của mình ($$x = D(d_B, y)$$) -->
 
 <!-- Trong đó:
 \begin{itemize}
@@ -153,7 +142,7 @@ và thu được từ hiện A muốn gửi.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section*{References:}
+% \section\*{References:}
 Diffie, W.; Hellman, M.E. (November 1976). "New directions in cryptography". IEEE Transactions on Information Theory
 
 https://ieeexplore.ieee.org/document/1055638
@@ -164,7 +153,6 @@ Slide mật mã thầy Nam
 
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 <!-- Khái niệm hệ mật khóa công khai -->
 <!-- Cách tấn công (phương thức/giao thức, cơ chế, lỗ hổng,...) -->
@@ -179,7 +167,7 @@ Slide mật mã thầy Nam
 <!-- public -->
 <!-- LLL -->
 
-<!--  -->
+<!-- -->
 <!-- https://web.microsoftstream.com/video/a677964a-d1a2-40a8-bb4d-dc7e70ad75a3 -->
 <!-- https://web.microsoftstream.com/video/cbe08326-77fc-42a2-bd2d-eb693e6c8e49 -->
 <!-- https://web.microsoftstream.com/video/25535150-2bf5-43a2-8ed6-94e7133dc4e9 -->
