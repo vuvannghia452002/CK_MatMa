@@ -53,103 +53,25 @@ Hệ mật RSA, được phát triển bởi Ron Rivest, Adi Shamir và Leonard 
 
 <!-- Thực hiện thuật toán mã hoá và thuật toán giải mã -->
 
-% \subsection{Mô tả hệ mật}
+<!--! Mô tả hệ mật -->
 
-\begin{itemize}
-\item Các phép tính được thực hiện trên $Z_n$ với $n = p \cdot q$.
-\item $S = \langle P, C, K, E, D \rangle$
-\begin{itemize}
-\item $n = pq$ với $p$ và $q$ là hai số nguyên tố lẻ phân biệt. $\phi(n) = (p-1)(q-1)$
-\item $P = C = Z_n$
-\item $K = \{(n, p, q, a, b) : n = pq, p, q$ là số nguyên tố, $ab \equiv 1 \mod \phi(n) \}$
-\end{itemize}
-\end{itemize}
+<!--! Bảng chữ cái -->
 
-Với mỗi $k = (n, p, q, a, b) \in K$, định nghĩa:
-\begin{align*}
-e_k(x) &= x^b \mod n \\
-d_k(y) &= y^a \mod n
-\end{align*}
-với $x, y \in Z_n$.
+<!--! Sinh cặp khóa công khai  và bí mật -->
 
-% \subsection{Sinh cặp khóa công khai - bí mật}
+<!--! Ví dụ: -->
+ 
+<!-- code? -->
+ 
+  
+<!--! Áp dụng hệ mật RSA -->
 
-\begin{enumerate}
-\item Chọn hai số nguyên tố đủ lớn, $p$ và $q$
-\item Tính toán $n = pq$ và $\phi(n) = (p - 1)(q - 1)$
-\item Chọn một số, $e$ $(1 < e < \phi(n))$ sao cho $\text{gcd}(e, \phi(n)) = 1$. Giá trị $e$ sẽ được sử dụng trong mã hoá
-\item Tìm một số $d$ sao cho $ed - 1$ chia hết cho $\phi(n)$, hay nói cách khác $d = e^{-1} \mod \phi(n)$. Giá trị $d$ sẽ được sử dụng để giải mã
-\item Công khai khóa $K^+_B$ = (n, e) và giữ bí mật khóa $K^-_B$ = (n, d)
-\end{enumerate}
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale = 0.4]{pictures/Bob_Alice.jpg}
-\caption{Thuật toán mã hoá (Alice) và thuật toán giải mã (Bob)}
-\end{figure}
-
-Mã hoá (Alice):
-
-Giả sử Alice muốn gửi cho Bob một mẫu bit, hoặc một số $m$ sao cho $m < n$. Để mã hoá, Alice thực hiện tính luỹ thừa, $m^e$, sau đó tính toán số dư khi đem chia $m^e$ cho $n$. Vì vậy, giá trị được mã hoá ($c$) của bản tin $m$ là: $c = m^e \mod n $
-
-Giải mã (Bob):
-
-Để giải mã đoạn tin mã hoá nhận được ($c$), Bob tính toán: $ m = c^d \mod n $. Việc này đòi hỏi phải sử dụng khóa bí mật $(n, d)$.
-
-Ví dụ:
-
-Giả sử B chọn $p = 101$ và $q = 113$, khi đó $n = 11413$ và $\phi(n) = 11200$.
-
-Giả sử B chọn $b = 3533$, khi đó bằng thuật toán Euclidean mở rộng ta tính được
-\[a = b^{-1} \equiv 6597 \pmod{11200}.\]
-
-B công khai bộ $(n = 11413, b = 3533)$.
-
-Bây giờ giả sử A muốn gửi từ hiện $9726$ cho B, A sẽ tính
-\[9726^{3533} \equiv 5761 \pmod{11413}, \]
-là từ mã.
-
-Khi B nhận được $5761$, B sẽ tính
-\[5761^{6597} \equiv 9726 \pmod{11413}, \]
-và thu được từ hiện A muốn gửi.
-
-% \subsection{Áp dụng hệ mật RSA}
-
-\begin{enumerate}
-\item Sinh hai số nguyên tố có giá trị lớn: $p$ và $q$
-\item Tính $n = pq$ và $\phi(n) = (p - 1)(q - 1)$
-\item Chọn ngẫu nhiên một số nguyên $e$ $(1 < e < \phi(n))$ thỏa $\text{gcd}(e, \phi(n)) = 1$
-\item Tính giá trị $d = e^{-1} \mod \phi(n)$ (bằng thuật toán Euclide mở rộng)
-\item Công bố giá trị $(n, e)$ (khóa công khai)
-\item Giữ bí mật giá trị $(p, q, d)$ (khóa bí mật)
-\end{enumerate}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section\*{References:}
-Diffie, W.; Hellman, M.E. (November 1976). "New directions in cryptography". IEEE Transactions on Information Theory
-
-https://ieeexplore.ieee.org/document/1055638
-
-Slide mật mã thầy Hân
-
-Slide mật mã thầy Nam
-
-\end{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-<!-- Khái niệm hệ mật khóa công khai -->
-<!-- Cách tấn công (phương thức/giao thức, cơ chế, lỗ hổng, ...) -->
-<!-- Áp dụng: Hệ RSA -->
-<!-- Lịch sử ra đời -->
-<!-- Cơ chế hoạt động -->
-<!-- Ưu điểm, nhược điểm -->
-<!-- Ví dụ thực tế -->
-
-<!-- asymmetric algorithm (RSA) -->
-<!-- RSA -->
-<!-- public -->
-<!-- LLL -->
-
+ 
+ 
+  
+ 
+ 
 <!-- -->
 <!-- https://web.microsoftstream.com/video/a677964a-d1a2-40a8-bb4d-dc7e70ad75a3 -->
 <!-- https://web.microsoftstream.com/video/cbe08326-77fc-42a2-bd2d-eb693e6c8e49 -->
