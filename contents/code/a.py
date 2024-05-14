@@ -24,23 +24,28 @@ def rsa_decrypt(C, d, n):
 # Thông số RSA
 p = 11
 q = 3
+e = 3  # chọn e sao cho gcd(e, phi_n) = 1
+# print(f"🚀 {nghia}")
+
 n = p * q  # n = 33
 phi_n = (p - 1) * (q - 1)  # phi_n = 20
 
-e = 3  # chọn e sao cho gcd(e, phi_n) = 1
-
+# print(f"🚀 {nghia}")
 # Tìm d sao cho d * e ≡ 1 (mod phi_n)
 d = modinv(e, phi_n)  # d = 7
 
 # Khóa công khai (n, e) và khóa bí mật (n, d)
 public_key = (n, e)
 private_key = (n, d)
+# print(f"🚀 {nghianghia}")
+# print(f"🚀 {nghianghia}")
 
 # Bản rõ
 M = 15
 
 # Mã hóa
 C = rsa_encrypt(M, e, n)
+
 print(f"Mã hóa: M = {M} -> C = {C}")
 
 # Giải mã
