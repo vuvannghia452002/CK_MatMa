@@ -1,15 +1,6 @@
-<!-- Khái niệm hệ mật khóa công khai -->
-<!-- Cách tấn công (phương thức/giao thức, cơ chế, lỗ hổng,...) -->
-<!-- Áp dụng: Hệ RSA -->
-<!-- Lịch sử ra đời -->
-<!-- Cơ chế hoạt động -->
-<!-- Ưu điểm, nhược điểm -->
-<!-- Ví dụ thực tế -->
+<!--  -->
 
-<!-- asymmetric algorithm (RSA) -->
-<!-- RSA -->
-<!-- public -->
-<!-- LLL -->
+
 
 <!--  -->
 <!-- https://web.microsoftstream.com/video/a677964a-d1a2-40a8-bb4d-dc7e70ad75a3 -->
