@@ -36,10 +36,10 @@ def copy_folders_and_nghia_files(root_folder, dest_folder):
 
 
 
-root_folder = r"C:\Users\vvn20206205\Desktop\github\20232\CK_MatMa\contents\video\Udemy_Master_Modern_Security_and_Cryptography_by_Coding_in_Python\en"
+root_folder = r"C:\Users\vvn20206205\Desktop\github\20232\CK_MatMa\contents\video\Udemy_The_Mathematics_of_Cryptography_with_Dr_James_Grime\en"
 print(f"🚀 Folder root: {os.path.abspath(root_folder)}")
 dest_folder = os.path.basename(root_folder)
-dest_folder = re.sub(r'[^a-zA-Z0-9]', '', dest_folder)+"_VVN_COPY"
+dest_folder = re.sub(r'[^a-zA-Z0-9]', '', dest_folder)+"_Save"
 dest_folder = os.path.join(os.path.dirname(root_folder), dest_folder)
 if os.path.exists(dest_folder):
     shutil.rmtree(dest_folder)
