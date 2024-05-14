@@ -9,6 +9,8 @@ def format(path):
     
     
     contents = contents.replace('\\cite', ' \\cite')
+    contents = contents.replace(' ', ' ')
+    
 
 
 
