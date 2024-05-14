@@ -221,44 +221,86 @@
 % \end{itemize}
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Ví dụ}
-\begin{itemize}
-\item Thuật toán sinh khóa
+% \begin{frame}{Ví dụ về RSA}
+%     \begin{block}{Ví dụ}
+% Cho   bản rõ \( M = 15 \) sử dụng thuật toán RSA với \( p = 11 \), \( q = 3 \), và \( e = 3 \)
+%     \end{block}
 
-\begin{enumerate}
-\item Chọn hai số nguyên tố đủ lớn, $p$ và $q$
-\item Tính toán $n = pq$ và $\phi(n) = (p - 1)(q - 1)$
-\item Chọn một số, $e$ $(1 < e < \phi(n))$ sao cho $\text{gcd}(e, \phi(n)) = 1$.
-
-Giá trị $e$ sẽ được sử dụng trong mã hoá
-\item Tìm một số $d$ sao cho $ed - 1$ chia hết cho $\phi(n)$, hay nói cách khác $d = e^{-1} \mod \phi(n)$. Giá trị $d$ sẽ được sử dụng để giải mã
-\item Công khai khóa $K^+_B$ = (n, e) và giữ bí mật khóa $K^-_B$ = (n, d)
-\end{enumerate}
-\end{itemize}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Ví dụ}
-\begin{itemize}
-\item Mã hóa:
-
-\[
-c = E (m, K_B^+) = m^e \mod n
-\]
-\item Giải mã:
-
-\[
-m = D (c, K_B^-) = c^d \mod n
-\]
-\end{itemize}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Mã hóa và giải mã RSA}
 % \begin{itemize}
-% \item Bảo mật của RSA dựa trên giả thuyết không có các thuật toán đủ nhanh để khai triển luỹ thừa một số. Qui trình áp dụng RSA gồm hai bước:
+% \item Thuật toán sinh khóa
+
+
+
+
 % \begin{enumerate}
-% \item Lựa chọn (sinh) cặp khóa công khai và khóa bí mật
-% \item Thực hiện thuật toán mã hoá và thuật toán giải mã
-% \end{enumerate}
+%     \item[Bước 1] \textbf{Với hai số nguyên tố}: $p = 11, \quad q = 3 \quad \Rightarrow \quad n = p \cdot q = 11 \cdot 3 = 33$
+%     \item[Bước 2] \textbf{Tính hàm Euler}: 
+%     \[
+%     \varphi(n) = (p - 1) \cdot (q - 1) = (11 - 1) \cdot (3 - 1) = 10 \cdot 2 = 20
+%     \]
+%     \item[Bước 3] \textbf{Với số $e = 3$ nguyên tố cùng nhau với $\varphi(n) = 20$}:
+%     \item[Bước 4] \textbf{Tính $d$ là nghịch đảo của $e$ trong modulo $\varphi(n)$}:
+%     \[
+%     d \cdot e \equiv 1 \pmod{20}
+%     \]
+%     Ta có:
+%     \[
+%     d \cdot 3 \equiv 1 \pmod{20} \quad \Rightarrow \quad d = 7 \quad \text{(theo thuật toán Euclid)}
+%     \] 
+% \end{enumerate} 
+
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ về RSA}
+%     \begin{itemize}
+%         \item Thuật toán sinh khóa
+        
+%         \begin{enumerate}
+%                   \item[Bước 5] \textbf{Khóa công khai và khóa bí mật}:
+%                         \begin{itemize}
+%                             \item \textbf{Khóa công khai} $(K_B^+)$:
+%                             \[
+%                             (n, e) = (33, 3)
+%                             \]
+%                             \item \textbf{Khóa bí mật} $(K_B^-)$:
+%                             \[
+%                             (n, d) = (33, 7)
+%                             \]
+%                         \end{itemize}
+%               \end{enumerate}
+%     \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ về RSA} 
+
+% \begin{itemize}
+
+%     \item \textbf{Mã hóa bản rõ $M = 15$}:
+% \[
+% C = M^e \mod n = 15^3 \mod 33
+% \]
+% Tính toán:
+% $15^3 = 3375 \Rightarrow C = 9$
+
+% \item \textbf{Giải mã bản mã $C = 9$}:
+% \[
+% M = C^d \mod n = 9^7 \mod 33
+% \]
+% Tính toán:
+% \[
+% 9^2 = 81 \quad \Rightarrow \quad 81 \mod 33 = 15
+% \]
+% \[
+% 9^4 = 15^2 = 225 \quad \Rightarrow \quad 225 \mod 33 = 24
+% \]
+% \[
+% 9^7 = 9^{4+2+1} = 9^4 \cdot 9^2 \cdot 9 = 24 \cdot 15 \cdot 9 = 3240 \quad \Rightarrow \quad 3240 \mod 33 = 15
+% \]
+% \[
+% \Rightarrow M = 15
+% \]
+
 % \end{itemize}
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

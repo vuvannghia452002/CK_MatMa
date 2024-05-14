@@ -1,41 +1,37 @@
-<!-- Lịch sử -->
-Hệ mật RSA, được phát triển bởi Ron Rivest, Adi Shamir và Leonard Adleman (1977), có thể được sử dụng trong bảo mật dữ liệu và công nghệ chữ ký điện tử.
-
-Hệ mật đầu tiên ra đời vào năm 1977 do Rivest, Shamir và Adleman
-
-![alt text](image-3.png) RSA_RonRivestAdiShamirLeonardAdleman
-
-
-<!-- % \subsection{Lịch sử} -->
-<!-- % \subsection{Khái niệm} -->
-<!-- % \subsection{Mô hình tổng quát} -->
-<!-- % \subsection{Ưu, nhược điểm của hệ mã hóa công khai} -->
+![alt text](image-2.png)
+Mã hóa: 
+c = E (m, KB+) = m^e \mod n
+Giải mã: 
+m=  D (c, KB-) = c^d \mod n
 
 
-
-<!-- Ý tưởng -->
-<!-- Bảo mật của RSA dựa trên giả thuyết không có các thuật toán đủ nhanh để khai triển luỹ thừa một số. Qui trình áp dụng RSA gồm hai bước: -->
-
-<!-- Lựa chọn (sinh) cặp khóa công khai và khóa bí mật -->
-
-<!-- Thực hiện thuật toán mã hoá và thuật toán giải mã -->
-
-<!--! Mô tả hệ mật -->
-
-<!--! Bảng chữ cái -->
-
-<!--! Sinh cặp khóa công khai  và bí mật -->
 
 <!--! Ví dụ: -->
 
+Ví dụ:
+
+Giả sử B chọn $p = 101$ và $q = 113$, khi đó $n = 11413$ và $\phi(n) = 11200$.
+
+Giả sử B chọn $b = 3533$, khi đó bằng thuật toán Euclidean mở rộng ta tính được
+\[a = b^{-1} \equiv 6597 \pmod{11200}.\]
+
+B công khai bộ $(n = 11413, b = 3533)$.
+
+Bây giờ giả sử A muốn gửi từ hiện $9726$ cho B, A sẽ tính
+\[9726^{3533} \equiv 5761 \pmod{11413}, \]
+là từ mã.
+
+Khi B nhận được $5761$, B sẽ tính
+\[5761^{6597} \equiv 9726 \pmod{11413}, \]
+và thu được từ hiện A muốn gửi.
+
 <!-- code? -->
 
-​
 
-<!--! Áp dụng hệ mật RSA -->
 
-![alt text](image.png)
+ 
 
-![alt text](image-1.png)
 
-![alt text](image-2.png)
+
+<!--! Mô tả hệ mật -->
+<!--! Bảng chữ cái -->
