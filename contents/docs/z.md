@@ -25,50 +25,40 @@ Một hệ mật khóa công khai không bao giờ cung cấp độ mật vô đ
 <!-- Khóa riêng: chỉ do một người nắm giữ và được sử dụng để giải mã thông tin đã được mã hóa bằng khóa công cộng tương ứng -->
 <!-- Mã hóa: A muốn gửi thông điệp cho B - mã hóa bằng khóa công khai của B ($$y = E(e_B, x)$$) -->
 <!-- Giải mã: B giải mã bằng khóa bí mật của mình ($$x = D(d_B, y)$$) -->
+ 
 
-<!-- Trong đó:
-\begin{itemize}
-\item Các phương pháp mã hóa này khai thác những ánh xạ f mà
-\begin{itemize}
-\item Biết x, tính y=f(x) dễ dàng
-\item Biết y, việc thực hiện ánh xạ ngược f –1 tính x là rất khó
-\end{itemize}
-Hàm f có tính chất trên thường gọi là hàm một chiều
-\item Ví dụ: Cho các số nguyên tố p1, p2, ..., pn
-\begin{itemize}
-\item Tính N= p1* p2* ... * pn- dễ
-\item Ngược lại, biết N, tìm p1, p2, ..., pn là khó
-\end{itemize}
-\end{itemize}
+<!--! Những hệ mật khóa công khai quan trọng nhất -->
 
-Hàm cửa sập (trap door):
-\begin{itemize}
-\item Để xây dựng hệ mã khóa công khai - thường dùng hàm một chiều đặc biệt có tham số/cửa sập
-\begin{itemize}
-\item Hàm mã hóa - là hàm cửa sập
-\item Khóa (bí mật) - chính là thông tin tham số - bẫy trap door
-\end{itemize}
-\end{itemize} -->
+<!-- RSA: dựa trên độ khó của phép phân tích các số nguyên lớn. -->
 
-% \subsection{Những hệ mật khóa công khai quan trọng nhất}
-\begin{itemize}
-\item RSA: dựa trên độ khó của phép phân tích các số nguyên lớn.
-\item Merkle-Hellman Knapsack: và các hệ liên quan dựa trên độ khó của bài toán subset sum (được biết là NP-complete). Tuy nhiên, có nhiều hệ mật dựa trên bài toán sắp ba lô đã được chứng minh là không bảo mật.
-\item McEliece: dựa trên bài toán giải mã của một mã tuyến tính (cũng được cho là NP-complete).
-\item ElGamal: dựa trên bài toán Logarit rời rạc trên trường hữu hạn.
-\item Chor-Rivest: là một hệ sắp ba lô nhưng được xem là bảo mật.
-\item Elliptic Curve: là sự cải tiến của các hệ mật khác, chẳng hạn tương tự ElGamal nhưng dựa trên các đường cong elíp thay vì trường hữu hạn. Ưu điểm của các hệ mật dạng này là có thể duy trì được độ bảo mật với khóa nhỏ hơn thông thường.
-\end{itemize}
+<!-- Merkle-Hellman Knapsack:  dựa trên độ khó của bài toán subset sum (được biết là NP-complete). Tuy nhiên, có nhiều hệ mật dựa trên bài toán sắp ba lô đã được chứng minh là không bảo mật. -->
 
-% \section{Hệ mật RSA}
-% \subsection{Lịch sử}
+<!-- McEliece: dựa trên bài toán giải mã của một mã tuyến tính (cũng được cho là NP-complete). -->
+
+<!-- ElGamal: dựa trên bài toán Logarit rời rạc trên trường hữu hạn. -->
+
+<!-- Chor-Rivest: là một hệ sắp ba lô nhưng được xem là bảo mật. -->
+
+<!-- Elliptic Curve: là sự cải tiến của các hệ mật khác, chẳng hạn tương tự ElGamal nhưng dựa trên các đường cong elíp thay vì trường hữu hạn. Ưu điểm của các hệ mật dạng này là có thể duy trì được độ bảo mật với khóa nhỏ hơn thông thường. -->
+
+
+
+
+
+
+    <!-- Hệ mật RSA -->
+
+    <!-- Lịch sử -->
 Hệ mật RSA, được phát triển bởi Ron Rivest, Adi Shamir và Leonard Adleman (1977), có thể được sử dụng trong bảo mật dữ liệu và công nghệ chữ ký điện tử.
-% \subsection{Ý tưởng}
-Bảo mật của RSA dựa trên giả thuyết không có các thuật toán đủ nhanh để khai triển luỹ thừa một số. Qui trình áp dụng RSA gồm hai bước:
-\begin{enumerate}
-\item Lựa chọn (sinh) cặp khóa công khai và khóa bí mật
-\item Thực hiện thuật toán mã hoá và thuật toán giải mã
-\end{enumerate}
+<!-- Ý tưởng -->
+<!-- Bảo mật của RSA dựa trên giả thuyết không có các thuật toán đủ nhanh để khai triển luỹ thừa một số. Qui trình áp dụng RSA gồm hai bước: -->
+
+<!-- Lựa chọn (sinh) cặp khóa công khai và khóa bí mật -->
+
+
+
+
+<!-- Thực hiện thuật toán mã hoá và thuật toán giải mã -->
 
 % \subsection{Mô tả hệ mật}
 
