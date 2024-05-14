@@ -21,26 +21,23 @@ Lưu ý:
 
 Một hệ mật khóa công khai không bao giờ cung cấp độ mật vô điều kiện - thực tế, đó là hàm cửa sập một chiều (a trapdoor one-way function).
 
-<!-- Mô hình hệ mật khóa công khai tổng quát -->
+<!-- Mô hình  tổng quát -->
 ![alt text](public.png)
 
 
 
-Ý tưởng:
-\item Mỗi người dùng: sử dụng một cặp khóa (khóa công khai, khóa bí mật)
-\item Khóa công cộng (public key): được công bố rộng rãi và được sử dụng trong mã hóa thông tin
-\item Khóa riêng (private key): chỉ do một người nắm giữ và được sử dụng để giải mã thông tin đã được mã hóa bằng khóa công cộng tương ứng
-
-\item Mã hóa: A muốn gửi thông điệp cho B - mã hóa bằng khóa công khai của B
-$$y = E(e_B, x)$$
-
-\item Giải mã: B giải mã bằng khóa bí mật của mình
-$$x = D(d_B, y)$$
-
-\item Hàm mã hóa và giải mã có thể đổi chỗ
+<!-- Ý tưởng: -->
+<!-- Mỗi người dùng: sử dụng một cặp khóa (khóa công khai, khóa bí mật) -->
+<!-- Khóa công cộng: được công bố rộng rãi và được sử dụng trong mã hóa thông tin -->
+<!-- Khóa riêng:  chỉ do một người nắm giữ và được sử dụng để giải mã thông tin đã được mã hóa bằng khóa công cộng tương ứng -->
+<!-- Mã hóa: A muốn gửi thông điệp cho B - mã hóa bằng khóa công khai của B    ($$y = E(e_B, x)$$) -->
+<!-- Giải mã: B giải mã bằng khóa bí mật của mình  ($$x = D(d_B, y)$$) -->
 
 
-Trong đó:
+
+
+
+<!-- Trong đó:
 \begin{itemize}
 \item Các phương pháp mã hóa này khai thác những ánh xạ f mà
 \begin{itemize}
@@ -62,7 +59,7 @@ Hàm cửa sập (trap door):
 \item Hàm mã hóa - là hàm cửa sập
 \item Khóa (bí mật) - chính là thông tin tham số - bẫy trap door
 \end{itemize}
-\end{itemize}
+\end{itemize} -->
 
 % \subsection{Những hệ mật khóa công khai quan trọng nhất}
 \begin{itemize}
