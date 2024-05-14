@@ -4,7 +4,7 @@
 
 ![alt text](public.png)
 
-<!-- hệ mật mã khóa công khai bao gồm: bản rõ, bản mã,   mã hóa,   giải mã, khóa công khai K+ và khóa bí mật K-.  hệ mật mã khóa công khai  là hệ mật mã bất đối xứng Vì   mã hóa và giải mã sử dụng khóa khác nhau   -->
+<!-- hệ mật mã khóa công khai bao gồm: bản rõ, bản mã, mã hóa, giải mã, khóa công khai K+ và khóa bí mật K-. hệ mật mã khóa công khai là hệ mật mã bất đối xứng Vì mã hóa và giải mã sử dụng khóa khác nhau -->
 
 <!-- Ứng dụng -->
 
