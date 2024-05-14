@@ -190,7 +190,38 @@
 % \end{itemize}
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Mã hóa và giải mã RSA}
+% \begin{frame}{Mã hóa và giải mã RSA}
+% \begin{itemize}
+% \item Thuật toán sinh khóa
+
+% \begin{enumerate}
+% \item Chọn hai số nguyên tố đủ lớn, $p$ và $q$
+% \item Tính toán $n = pq$ và $\phi(n) = (p - 1)(q - 1)$
+% \item Chọn một số, $e$ $(1 < e < \phi(n))$ sao cho $\text{gcd}(e, \phi(n)) = 1$.
+
+% Giá trị $e$ sẽ được sử dụng trong mã hoá
+% \item Tìm một số $d$ sao cho $ed - 1$ chia hết cho $\phi(n)$, hay nói cách khác $d = e^{-1} \mod \phi(n)$. Giá trị $d$ sẽ được sử dụng để giải mã
+% \item Công khai khóa $K^+_B$ = (n, e) và giữ bí mật khóa $K^-_B$ = (n, d)
+% \end{enumerate}
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Mã hóa và giải mã RSA}
+% \begin{itemize}
+% \item Mã hóa:
+
+% \[
+% c = E (m, K_B^+) = m^e \mod n
+% \]
+% \item Giải mã:
+
+% \[
+% m = D (c, K_B^-) = c^d \mod n
+% \]
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ}
 \begin{itemize}
 \item Thuật toán sinh khóa
 
@@ -206,7 +237,7 @@ Giá trị $e$ sẽ được sử dụng trong mã hoá
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Mã hóa và giải mã RSA}
+\begin{frame}{Ví dụ}
 \begin{itemize}
 \item Mã hóa:
 
