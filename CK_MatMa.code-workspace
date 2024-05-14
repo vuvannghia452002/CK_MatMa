@@ -19,5 +19,7 @@
       "path": "contents/latex"
     }
   ],
-  "settings": {}
+  "settings": {
+    "latex-workshop.latex.autoBuild.run": "onFileChange"
+  }
 }
