@@ -551,27 +551,50 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Thuật toán LLL}
 \begin{frame}{Thuật toán LLL}
-\begin{itemize}
-\item Những ứng dụng của lý thuyết lưới trong hệ mật mã được phát triển từ khi có thuật toán rút gọn cơ sở lưới
-\item Thuật toán rút gọn cơ sở lưới do ba nhà toán học Arjen Lenstra, Hendrik Lenstra, László Lovász tìm ra (được viết tắt là LLL) năm 1982
-\item Ý tưởng của việc rút gọn cơ sở là thay đổi cơ sở $B$ của lưới $L$ thành một cơ sở mới $B'$ ngắn hơn sao cho
-$|\det(L)|$ không đổi.
-\end{itemize}
+    \begin{itemize}
+        \item Những ứng dụng của lý thuyết lưới trong hệ mật mã được phát triển từ khi có thuật toán rút gọn cơ sở lưới
+        \item Thuật toán rút gọn cơ sở lưới do ba nhà toán học Arjen Lenstra, Hendrik Lenstra, László Lovász tìm ra (được viết tắt là LLL) năm 1982
+        \item Ý tưởng của việc rút gọn cơ sở là thay đổi cơ sở $B$ của lưới $L$ thành một cơ sở mới $B'$ ngắn hơn sao cho $|\det(L)|$ không đổi.
+    \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Ứng dụng lý thuyết lưới trong hệ  mật mã RSA}
-\begin{frame}{Ứng dụng lý thuyết lưới trong hệ  mật mã RSA}
-\begin{itemize}
-\item  
-\end{itemize}
+\subsection{Lưới 2 chiều}
+\begin{frame}{Lưới 2 chiều}
+    \begin{itemize}
+        \item   Việc giảm cơ sở lưới 2 chiều tương đối dễ hiểu.
+        \item     Đặt $\{x_1,x_2\}$ làm cơ sở của lưới 2 chiều.
+        \item      Mục tiêu của chúng ta sẽ thay thế cơ sở này bằng cơ sở giảm.
+              \begin{enumerate}
+                  \item Nếu $\|x_1\| > \|x_2\|$ ta sẽ hoán vị $x_1$ với $x_2$.
+                  \item  Thay vector $x_2$ bằng vector $x_2^*$ vuông góc với $x_1$ qua phép trực giao hóa Gram-Schmidt :
+                  $$x_2^* = x_2 - \frac{x_1.x_2}{x_1.x_1}.x_1 \text{.}$$ Đặt $t$ là số nguyên gần nhất với $\dfrac{x_1.x_2}{x_1.x_1}$
+                  \item   Ta thay thế cơ sở $\{x_1,x_2 \}$ bằng cơ sở $$\{x_1, x_2 - tx_1\}\text{.}$$
+                  \item   Lặp lại quy trình này đến khi không thể giảm cơ sở nữa.
+
+              \end{enumerate}
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
+\begin{frame}{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
+    \begin{itemize}
+        \item
+    \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Thực hiện chương trình}
 \begin{frame}{Thực hiện chương trình}
-\begin{itemize}
-% 1 2 3 4
-%  nền trắng
-\end{itemize}
+    % \begin{itemize}
+        % 1 2 3 4
+        % \end{itemize}
+        
+        % nền trắng
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -583,11 +606,11 @@ $|\det(L)|$ không đổi.
 % \subsection{Tổng kết}
 % \subsubsection{Tổng kết}
 % \begin{frame}{Tổng kết}
-% 
-% Trên đây là toàn văn báo cáo Đồ án 1 về chủ đề \textbf{Phương pháp lưới}. Trong đồ án này, em đã trình bày một số kiến thức cơ bản về lý thuyết lưới, tìm hiểu về thuật toán LLL và nhận thấy một phần tầm quan trọng của nó tróng lý thuyết số và mật mã.Trong bài báo cáo có giới thiệu về một số hệ mật mã như RSA và NTRU ,thực hiện các cuộc tấn công vào chúng và thực hiện chạy chương trình thực nghiệm trên phần mềm SageMath.\\
+%
+% Trên đây là toàn văn báo cáo Đồ án 1 về chủ đề \textbf{Phương pháp lưới}. Trong đồ án này, em đã trình bày một số kiến thức cơ bản về lý thuyết lưới, tìm hiểu về thuật toán LLL và nhận thấy một phần tầm quan trọng của nó tróng lý thuyết số và mật mã.Trong bài báo cáo có giới thiệu về một số hệ mật mã như RSA và NTRU, thực hiện các cuộc tấn công vào chúng và thực hiện chạy chương trình thực nghiệm trên phần mềm SageMath.\\
 
 % Báo
-% cáo Đồ án vẫn còn rất nhiều thiếu sót, vậy nên  em rất mong được thầy và các bạn đọc cùng
+% cáo Đồ án vẫn còn rất nhiều thiếu sót, vậy nên em rất mong được thầy và các bạn đọc cùng
 % góp ý, nhận xét để báo cáo trở nên hoàn thiện hơn.\\
 
 % \end{frame}

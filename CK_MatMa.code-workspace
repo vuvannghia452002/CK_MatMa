@@ -20,6 +20,6 @@
     }
   ],
   "settings": {
-    // "latex-workshop.latex.autoBuild.run": "onFileChange"
+    "latex-workshop.latex.autoBuild.run": "onFileChange"
   }
 }
