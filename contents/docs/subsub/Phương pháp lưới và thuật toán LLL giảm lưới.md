@@ -1,8 +1,4 @@
-\documentclass{article}
-\usepackage{amsmath}
-\usepackage{amsfonts}
 
-\begin{document}
 
 Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$ và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. Ta có:
 
@@ -42,4 +38,3 @@ Do đó, ta có điều cần chứng minh:
 |\det(X)| \leq \|x_1\|\|x_2\|\cdots\|x_n\|.
 \]
 
-\end{document}
