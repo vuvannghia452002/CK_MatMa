@@ -676,6 +676,78 @@
 % Do đó $x_1$ là vector khác $0$ ngắn nhất của lưới
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Thuật toán giảm lưới 2 chiều}
+% \begin{frame}{Thuật toán giảm lưới 2 chiều} 
+
+
+
+
+
+% \begin{enumerate}
+%     \item     Nhập vào cơ sở lưới 2 chiều ${b_1,b_2} \in R^2$.
+%     \item     Nếu $\|b_1\| > \|b_2\|$, ta hoán đổi vị trí $b_1$ và $b_2$.
+%     \item     Đặt $t$ bằng phần nguyên $\left|\dfrac{b_1.b_2}{b_1.b_1}\right|$. 
+
+%     Nếu $t = 0$, dừng lại và kết luận là cơ sở giảm. 
+
+%     Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2 
+% \end{enumerate}
+
+
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Thuật toán giảm lưới 2 chiều} 
+
+
+
+
+% \begin{figure}[h!]
+% \centering
+%   \includegraphics[scale = 0.6]{pictures/a.10.png}
+%   \label{fig:boat1}
+% \end{figure}
+
+
+
+%     \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Giảm lưới nhiều chiều}
+% \begin{frame}{Giảm lưới nhiều chiều}
+%     \begin{itemize}
+%         \item Việc giảm cơ sở lưới nhiều    chiều  khó khăn hơn nhiều
+%         \item   Thuật toán LLL  sử dụng cách tiếp cận tìm kiếm các vector gần như ngắn nhất(trong thời gian đa thức)
+%     \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Định nghĩa}
+%     \begin{itemize}
+%         \item Tham số rút gọn $\alpha$ là một số thực sao cho $\dfrac{1}{4} < \alpha < 1$. Giá trị chính tắc của $\alpha$ là $\alpha = \dfrac{3}{4}$
+%         \item  Cơ sở $x_1,x_2,...,x_n$ được gọi là một cơ sở $\alpha$-rút gọn nếu nó thỏa mãn:
+%               \begin{enumerate}
+%                   \item $|\mu_{ij}| \leq \dfrac{1}{2} $ với $1 \leq j < i \leq n$,
+%                   \item $\|x_i^*\|^2 \geq (\alpha - \mu_{i,i-1}^2)\|x_{i-1}^*\|^2$ với $2\leq i \leq n$.
+%               \end{enumerate}
+%         \item  Ta định nghĩa tham số bổ trợ  $\beta$ như sau: \quad $\beta = \dfrac{4}{4\alpha - 1}$
+%     \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Định nghĩa}
+%     \begin{itemize}
+%         \item   Nếu $x_1,x_2,...,x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $x_1^*,x_2^*,...,x_n^*$ là cơ sở trực giao hóa Gram-Schmidt của nó thì:
+%               \begin{enumerate}
+%                   \item $\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n $,
+%                   \item $\|x_1\|.\|x_2\|...\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L)$,
+%                   \item $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $.
+%               \end{enumerate}
+%     \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \section{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
