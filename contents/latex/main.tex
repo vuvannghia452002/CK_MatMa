@@ -323,42 +323,42 @@
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \section{Lý thuyết lưới}
 % \begin{frame}{Lý thuyết lưới}
-%     \begin{itemize}
-%         \item  Lý thuyết lưới là một lĩnh vực trong toán học có liên quan đến việc nghiên cứu các cấu trúc đại số và hình học của các mạng lưới được phát triển từ những năm 1940.
-%         \item  Lý thuyết lưới   được sử dụng trong nhiều lĩnh vực:
-%         \begin{itemize}
-%             \item  Lĩnh vực mật mã học
-%             \item  Lĩnh vực   khoa học máy tính
-%             \item  Lĩnh vực     kỹ thuật thông tin
-%         \end{itemize}
+% \begin{itemize}
+% \item Lý thuyết lưới là một lĩnh vực trong toán học có liên quan đến việc nghiên cứu các cấu trúc đại số và hình học của các mạng lưới được phát triển từ những năm 1940.
+% \item Lý thuyết lưới được sử dụng trong nhiều lĩnh vực:
+% \begin{itemize}
+% \item Lĩnh vực mật mã học
+% \item Lĩnh vực khoa học máy tính
+% \item Lĩnh vực kỹ thuật thông tin
+% \end{itemize}
 % \end{itemize}
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \subsection{Định nghĩa}
 % \begin{frame}{Định nghĩa}
-%     \begin{block}{Tập hợp các vector độc lập tuyến tính}
-%     Tập hợp các vector \(\{x_1, x_2, \ldots, x_n\}\) trong \(\mathbb{R}^n\) độc lập tuyến tính nếu:
-%     \[
-%     c_1 x_1 + c_2 x_2 + \ldots + c_n x_n = 0 \text{ với } c_i \in \mathbb{R}
-%     \]
-%     Dấu "=" xảy ra khi và chỉ khi \( c_1 = c_2 = \ldots = c_n = 0 \).
+% \begin{block}{Tập hợp các vector độc lập tuyến tính}
+% Tập hợp các vector \(\{x_1, x_2, \ldots, x_n\}\) trong \(\mathbb{R}^n\) độc lập tuyến tính nếu:
+% \[
+% c_1 x_1 + c_2 x_2 + \ldots + c_n x_n = 0 \text{với} c_i \in \mathbb{R}
+% \]
+% Dấu "=" xảy ra khi và chỉ khi \(c_1 = c_2 = \ldots = c_n = 0 \).
 % \end{block}
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}{Định nghĩa}
-%     \begin{block}{Cơ sở của không gian vector} 
-%         Cho \( n \geq 1 \), \(\{x_1, x_2, \ldots, x_n\}\) là một cơ sở của \(\mathbb{R}^n\). Lưới \( n \) chiều với cơ sở \(\{x_1, x_2, \ldots, x_n\}\) là tập hợp \( L \) tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên:
-%         \[
-%         L = \{ a_1 x_1 + a_2 x_2 + \ldots + a_n x_n \mid a_i \in \mathbb{Z} \}
-%         \]
-%         Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lưới.
+% \begin{block}{Cơ sở của không gian vector}
+% Cho \(n \geq 1 \), \(\{x_1, x_2, \ldots, x_n\}\) là một cơ sở của \(\mathbb{R}^n\). Lưới \(n \) chiều với cơ sở \(\{x_1, x_2, \ldots, x_n\}\) là tập hợp \(L \) tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên:
+% \[
+% L = \{a_1 x_1 + a_2 x_2 + \ldots + a_n x_n \mid a_i \in \mathbb{Z} \}
+% \]
+% Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lưới.
 % \end{block}
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \subsection{Bổ đề}
 % \begin{frame}{Bổ đề}
-%     \begin{block}{Bổ đề}
-%         Cho $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$ là hai cơ sở của lưới $L \subset \mathbb{R}^n$. Lấy $X$, $Y$ lần lượt là các ma trận $n \times n$ nhận $x_i$ (tương ứng $y_i$) là các hàng thứ $i$. Khi đó $Y = CX$ với $C$ là ma trận vuông $n \times n$ với các hệ số nguyên và $\det(C) = \pm 1$.
+% \begin{block}{Bổ đề}
+% Cho $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$ là hai cơ sở của lưới $L \subset \mathbb{R}^n$. Lấy $X$, $Y$ lần lượt là các ma trận $n \times n$ nhận $x_i$ (tương ứng $y_i$) là các hàng thứ $i$. Khi đó $Y = CX$ với $C$ là ma trận vuông $n \times n$ với các hệ số nguyên và $\det(C) = \pm 1$.
 % \end{block}
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -373,8 +373,7 @@
 % X = BY, \quad Y = CX.
 % \]
 
-% Vì vậy ta có $X = BCX$ và $Y = CBY$. Do $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$ là cơ sở trong không gian $\mathbb{R}^n$ nên ma trận $X$, $Y$ là ma trận khả nghịch. 
-
+% Vì vậy ta có $X = BCX$ và $Y = CBY$. Do $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$ là cơ sở trong không gian $\mathbb{R}^n$ nên ma trận $X$, $Y$ là ma trận khả nghịch.
 
 % Suy ra $BC = CB = I$ và $\det(B) \det(C) = 1$. Thêm nữa, $B$, $C$ là các ma trận hệ số nguyên. Do đó:
 % \[
@@ -385,14 +384,87 @@
 % \]
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Nhận xét}
+% \begin{frame}{Nhận xét}
+% \begin{block}{Nhận xét}
+% Định thức của một lưới không phụ thuộc vào cách chọn cơ sở.
+% \end{block}
 
+% \textbf{Chứng minh:}
 
+% Giả sử lưới $L \subset \mathbb{R}^n$ có hai cơ sở $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$. Theo Bổ đề ta có:
+% \[
+% |\det(Y)| = |\det(CX)| = |\det(C) \cdot \det(X)| = |\pm 1 \cdot \det(X)| = |\det(X)|
+% \]
 
+% \textbf{Ví dụ:} Đặt $\{x_1, x_2\}$ là cơ sở của lưới $L$. Với $x_1 = (1, 0)$, $x_2 = (0, 1)$. Khi đó:
+% \[
+% L = a_1 x_1 + a_2 x_2 \quad \text{với} \quad a_1, a_2 \in \mathbb{Z}
+% \]
 
+% Đặt:
+% \[
+% \begin{cases}
+% y_1 = x_1 + 5x_2 = (1, 5) \\
+% y_2 = x_2 = (0, 1)
+% \end{cases}
+% \]
 
+% Suy ra $\{y_1, y_2\}$ là một cơ sở khác của lưới.
 
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Trực giao hóa Gram-Schmidt}
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+% \begin{itemize}
+% \item Phần này trình bày thuật toán Gram-Schmidt cổ điển cho việc chuyển một cơ sở bất kỳ trong $\mathbb{R}^n$ thành một cơ sở trực giao.
+% \item Đây là kỹ thuật quan trọng trong thuật toán LLL.
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
 
+% Cho $x_1, x_2, \ldots, x_n$ là một cơ sở trong $\mathbb{R}^n$. Trực giao hóa Gram-Schmidt của $x_1, x_2, \ldots, x_n$ là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sau:
 
+% \begin{itemize}
+% \item[(i)] $x_1 = x_1^*$,
+% \item[(ii)] $x_i^* = x_i - \sum_{j=1}^{i-1} \mu_{ij} x_j^*$, \quad $2 \leq i \leq n$, \quad $\mu_{ij} = \frac{\langle x_i, x_j^* \rangle}{\langle x_j^*, x_j^* \rangle}$.
+% \end{itemize}
+
+% \begin{block}{Chú ý}
+% Nếu $x_1, x_2, \ldots, x_n$ là một cơ sở của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \ldots, x_n^*$ có thể không nằm trong lưới $L$.
+% \end{block}
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Trực giao hóa Gram-Schmidt}
+
+Nếu ta đặt $\mu_{ii} = 1$ và $\mu_{ij} = 0$ với $1 \leq i < j \leq n$, ta có thể viết lại dưới dạng ma trận:
+
+\[
+\underset{X}{\underbrace{\begin{pmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{pmatrix}}}
+=
+\underset{M}{\underbrace{\begin{pmatrix}
+1 & 0 & \cdots & 0 \\
+\mu_{21} & 1 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+\mu_{n1} & \mu_{n2} & \cdots & 1
+\end{pmatrix}}}
+\underset{X^*}{\underbrace{\begin{pmatrix}
+x_1^* \\
+x_2^* \\
+\vdots \\
+x_n^*
+\end{pmatrix}}}
+\]
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
