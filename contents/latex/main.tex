@@ -677,86 +677,170 @@
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \subsection{Thuật toán giảm lưới 2 chiều}
-% \begin{frame}{Thuật toán giảm lưới 2 chiều} 
-
-
-
-
+% \begin{frame}{Thuật toán giảm lưới 2 chiều}
 
 % \begin{enumerate}
-%     \item     Nhập vào cơ sở lưới 2 chiều ${b_1,b_2} \in R^2$.
-%     \item     Nếu $\|b_1\| > \|b_2\|$, ta hoán đổi vị trí $b_1$ và $b_2$.
-%     \item     Đặt $t$ bằng phần nguyên $\left|\dfrac{b_1.b_2}{b_1.b_1}\right|$. 
+% \item Nhập vào cơ sở lưới 2 chiều ${b_1, b_2} \in R^2$.
+% \item Nếu $\|b_1\| > \|b_2\|$, ta hoán đổi vị trí $b_1$ và $b_2$.
+% \item Đặt $t$ bằng phần nguyên $\left|\dfrac{b_1.b_2}{b_1.b_1}\right|$.
 
-%     Nếu $t = 0$, dừng lại và kết luận là cơ sở giảm. 
+% Nếu $t = 0$, dừng lại và kết luận là cơ sở giảm.
 
-%     Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2 
+% Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
 % \end{enumerate}
-
-
 
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Thuật toán giảm lưới 2 chiều} 
-
-
-
+% \begin{frame}{Thuật toán giảm lưới 2 chiều}
 
 % \begin{figure}[h!]
 % \centering
-%   \includegraphics[scale = 0.6]{pictures/a.10.png}
-%   \label{fig:boat1}
+% \includegraphics[scale = 0.6]{pictures/a.10.png}
+% \label{fig:boat1}
 % \end{figure}
 
-
-
-%     \end{frame}
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \subsection{Giảm lưới nhiều chiều}
 % \begin{frame}{Giảm lưới nhiều chiều}
-%     \begin{itemize}
-%         \item Việc giảm cơ sở lưới nhiều    chiều  khó khăn hơn nhiều
-%         \item   Thuật toán LLL  sử dụng cách tiếp cận tìm kiếm các vector gần như ngắn nhất(trong thời gian đa thức)
-%     \end{itemize}
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Định nghĩa}
-%     \begin{itemize}
-%         \item Tham số rút gọn $\alpha$ là một số thực sao cho $\dfrac{1}{4} < \alpha < 1$. Giá trị chính tắc của $\alpha$ là $\alpha = \dfrac{3}{4}$
-%         \item  Cơ sở $x_1,x_2,...,x_n$ được gọi là một cơ sở $\alpha$-rút gọn nếu nó thỏa mãn:
-%               \begin{enumerate}
-%                   \item $|\mu_{ij}| \leq \dfrac{1}{2} $ với $1 \leq j < i \leq n$,
-%                   \item $\|x_i^*\|^2 \geq (\alpha - \mu_{i,i-1}^2)\|x_{i-1}^*\|^2$ với $2\leq i \leq n$.
-%               \end{enumerate}
-%         \item  Ta định nghĩa tham số bổ trợ  $\beta$ như sau: \quad $\beta = \dfrac{4}{4\alpha - 1}$
-%     \end{itemize}
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Định nghĩa}
-%     \begin{itemize}
-%         \item   Nếu $x_1,x_2,...,x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $x_1^*,x_2^*,...,x_n^*$ là cơ sở trực giao hóa Gram-Schmidt của nó thì:
-%               \begin{enumerate}
-%                   \item $\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n $,
-%                   \item $\|x_1\|.\|x_2\|...\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L)$,
-%                   \item $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $.
-%               \end{enumerate}
-%     \end{itemize}
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
-% \begin{frame}{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
 % \begin{itemize}
-% \item
+% \item Việc giảm cơ sở lưới nhiều chiều khó khăn hơn nhiều
+% \item Thuật toán LLL sử dụng cách tiếp cận tìm kiếm các vector gần như ngắn nhất(trong thời gian đa thức)
 % \end{itemize}
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Định nghĩa}
+% \begin{itemize}
+% \item Tham số rút gọn $\alpha$ là một số thực sao cho $\dfrac{1}{4} < \alpha < 1$. Giá trị chính tắc của $\alpha$ là $\alpha = \dfrac{3}{4}$
+% \item Cơ sở $x_1, x_2, ..., x_n$ được gọi là một cơ sở $\alpha$-rút gọn nếu nó thỏa mãn:
+% \begin{enumerate}
+% \item $|\mu_{ij}| \leq \dfrac{1}{2} $ với $1 \leq j < i \leq n$,
+% \item $\|x_i^*\|^2 \geq (\alpha - \mu_{i, i-1}^2)\|x_{i-1}^*\|^2$ với $2\leq i \leq n$.
+% \end{enumerate}
+% \item Ta định nghĩa tham số bổ trợ $\beta$ như sau: \quad $\beta = \dfrac{4}{4\alpha - 1}$
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Định nghĩa}
+% \begin{itemize}
+% \item Nếu $x_1, x_2, ..., x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $x_1^*, x_2^*, ..., x_n^*$ là cơ sở trực giao hóa Gram-Schmidt của nó thì:
+% \begin{enumerate}
+% \item $\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n $,
+% \item $\|x_1\|.\|x_2\|...\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L)$,
+% \item $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $.
+% \end{enumerate}
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
+\begin{frame}{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
+\begin{block}{Bài toán}
+    Bài toán RSA với số mũ $e$ nhỏ, $m$ có giá trị lớn. Cho $m^e$ , ta có $B$ với $|m-B| \leq n^{\tfrac{1}{e}}$. Tìm $m \in Z_n$
+\end{block}
+
+ 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ví dụ}
+\begin{frame}{Ứng dụng lý thuyết lưới trong hệ mật mã RSA} 
+
+
+Trong bài toán này, thông báo có dạng $m = B + x$ , trong đó $B$ cố định và $|x| \leq Y$ với Y nguyên
+
+Giả sử Bob có khóa công khai $(n,e) = (n,3)$
+
+Khi đó bài toán là $c \equiv (B+x)^3 \quad (mod \ n)$ 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
+   
+    
+
+    Ta giả sử rằng Eve biết $B , Y , n$ . Vì vậy cô ấy chỉ cần tìm $x$. Ta có thể tạo thành đa thức:
+    $$
+    \begin{aligned}
+        f(T) & = (B+T)^3 - c = T^3 + 3BT^2 + 3B^2T + B^3 -c\\
+        & \equiv T^3 + a_2T^2 + a_1T + a_0 (mod \ n).
+    \end{aligned}
+    $$
+    
+    Eve đang tìm $|x| \leq Y$ sao cho $f(x) \equiv 0 \quad (mod \ n)$. Nói cách khác, cô ấy đang tìm nghiệm nhỏ của đồng dư đa thức $f(T) \equiv 0 \quad (mod \ n)$ 
+        \end{frame}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
+   
+    
+
+    Eve áp dụng thuật toán LLL cho lưới được tạo bởi các vector: 
+    $$v_1 =(n,0,0,0), v_2 = (0,Yn,0,0)  $$
+    $$  v_3 = (0,0,Y^2n,0), v_4 = (a_0,a_1Y,a_2Y^2,Y^3)$$
+    Điều này tạo nên cơ sở mới $b_1,b_2,b_3,b_4$ . Nhưng ở đây, ta chỉ quan tâm đến $b_1$. Theo Mệnh đề 2.8 ta có
+    $$
+    \begin{aligned}
+        \|b_1\| & \leq 2^{\tfrac{3}{4}}.det(v_1,...,v_4)^{\tfrac{1}{4}} \qquad \quad \text{với} \quad \alpha = \frac{3}{4} \quad \text{hay} \quad \beta = 2 \\
+        & = 2^{\tfrac{3}{4}}.(n^{3}Y^{6})^{\tfrac{1}{4}} =  2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} \text{.}
+    \end{aligned}
+    $$
+    
+    
+    \end{frame}
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
+   
+    
+
+
+    Ta có thể viết lại:
+    $$b_1 = c_1v_1 + ... + c_4v_4 = (e_0,Ye_1,Y^2e_2,Y^3e_3)\text{.}$$
+    với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$  $$e_2 = c_3n + c_4a_2$$ 
+    \hspace*{7cm} $e_3 = c_4$.\\
+    Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n) , \quad 0\leq i\leq 2$. \\
+        
+        
+        \end{frame}
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
+   
+    
+    Ta có thể thiết lập được đa thức $$g(T) = e_3T^3 + e_2T^2 + e_1T + e_0\text{.}$$
+    Khi đó , vì số nguyên $x$ thỏa mãn $f(x) \equiv 0 \quad (mod \ n) $ và vì các hệ số của $c_4f(T)$ và $g(T)$ đồng dạng với $mod(n)$ nên,  $$0 \equiv c_4f(x) \equiv g(x) \quad (mod \ n)\text{.}$$
+  
+    
+            
+            \end{frame}
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
+   
+    Bây giờ ta giả sử rằng $$Y < 2^{-7/6}n^{1/6}$$
+    Khi đó $$
+    \begin{aligned}
+        |g(x)| & \leq |e_0|+|e_1x|+|e_2x^2|+|e_3x^3|\\
+        & \leq |e_0| + |e_1|Y + |e_2|Y^2 + |e_3|Y^3\\
+        & = (1,1,1,1).(|e_0|,|e_1Y|,|e_2Y^2|,|e_3Y^3|)\\
+        &\leq \|(1,1,1,1)\|\|(|e_0|,|e_1Y|,|e_2Y^2|,|e_3Y^3|)\| \\
+        & = 2\|b_1\|\text{,}
+    \end{aligned}
+    $$
+    
+    
+    
+            
+            \end{frame}
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
+   
+     
+    Trong đó, bất đẳng thức cuối sử dụng bất đẳng thức Cauchy-Schwarz cho các tích vô hướng \index{tích vô hướng} ($u.v \leq \|u\|\|v\|$) . Suy ra: $$\|b_1\| \leq 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} <  2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}(2^{\tfrac{-7}{6}}n^{\tfrac{1}{6}})^{\tfrac{3}{2}} = 2^{-1}n \text{.}$$
+    Do đó ta có được, $$|g(x)| < n.$$
+    Vì $g(x) \equiv 0 \quad (mod \ n)$, nên ta có $g(x) = 0$. Từ đó , ta có thể tìm được tối đa 3 nghiệm của $g(x)$ . Sau đó ta sẽ thử xem nó có đưa ra bản mã chính xác hay không. Do đó Eve có thể tìm thấy $x$.\\
+    
+    
+    
+            
+            \end{frame}
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \section{Thực hiện chương trình}
 % \begin{frame}{Thực hiện chương trình}
 % % \begin{itemize}
