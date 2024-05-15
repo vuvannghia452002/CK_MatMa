@@ -21,33 +21,27 @@ def rsa_encrypt(M, e, n):
 def rsa_decrypt(C, d, n):
     return pow(C, d, n)
 
-# Thông số RSA
-p = 11
-q = 3
-e = 3  # chọn e sao cho gcd(e, phi_n) = 1
-# print(f"🚀 {nghia}")
+p=int(input(f"Nhập giá trị p: "))
+q=int(input(f"Nhập giá trị q: "))
 
-n = p * q  # n = 33
-phi_n = (p - 1) * (q - 1)  # phi_n = 20
+n = p * q
+phi_n = (p - 1) * (q - 1)  
+print(f"🚀 n = {n}, phi_n = {phi_n}")
 
-# print(f"🚀 {nghia}")
-# Tìm d sao cho d * e ≡ 1 (mod phi_n)
-d = modinv(e, phi_n)  # d = 7
+print(f"🚀 Chọn e sao cho gcd(e, phi_n) = 1")
+e=int(input(f"Nhập giá trị e: "))
 
-# Khóa công khai (n, e) và khóa bí mật (n, d)
-public_key = (n, e)
-private_key = (n, d)
-# print(f"🚀 {nghianghia}")
-# print(f"🚀 {nghianghia}")
+print(f"🚀 Tìm d sao cho d * e ≡ 1 (mod phi_n)")
+d = modinv(e, phi_n)   
 
-# Bản rõ
-M = 15
+print(f"🚀 Khóa công khai (n, e) = ({n}, {e})")
+print(f"🚀 Khóa công khai (n, d) = ({n}, {d})")
 
-# Mã hóa
-C = rsa_encrypt(M, e, n)
+m=int(input(f"Nhập giá trị bản rõ m: "))
 
-print(f"Mã hóa: M = {M} -> C = {C}")
+c = rsa_encrypt(m, e, n)
 
-# Giải mã
-decrypted_M = rsa_decrypt(C, d, n)
-print(f"Giải mã: C = {C} -> M = {decrypted_M}")
+print(f"Mã hóa: m = {m} -> c = {c}")
+
+decrypted_M = rsa_decrypt(c, d, n)
+print(f"Giải mã: c = {c} -> m = {decrypted_M}")
