@@ -437,32 +437,110 @@
 
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+
+%     Nếu ta đặt $\mu_{ii} = 1$ và $\mu_{ij} = 0$ với $1 \leq i < j \leq n$, ta có thể viết lại dưới dạng ma trận:
+    
+%     \[
+%     \underset{X}{\underbrace{\begin{pmatrix}
+%     x_1 \\
+%     x_2 \\
+%     \vdots \\
+%     x_n
+%     \end{pmatrix}}}
+%     =
+%     \underset{M}{\underbrace{\begin{pmatrix}
+%     1 & 0 & \cdots & 0 \\
+%     \mu_{21} & 1 & \cdots & 0 \\
+%     \vdots & \vdots & \ddots & \vdots \\
+%     \mu_{n1} & \mu_{n2} & \cdots & 1
+%     \end{pmatrix}}}
+%     \underset{X^*}{\underbrace{\begin{pmatrix}
+%     x_1^* \\
+%     x_2^* \\
+%     \vdots \\
+%     x_n^*
+%     \end{pmatrix}}}
+%     \]
+    
+%     \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+ 
+     
+% Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$ và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. Khi đó:
+
+% \begin{itemize}
+%     \item[(i)] $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$,
+%     \item[(ii)] $\|x_k^*\| \leq \|x_k\|$,
+%     \item[(iii)] $\det(X^*) = \det(X)$.
+% \end{itemize}
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+ 
+    
+%     \textbf{Chứng minh:}
+    
+%     \begin{itemize}
+%         \item[(i)] Theo định nghĩa của quá trình trực giao hóa Gram-Schmidt, các vector $x_1^*, x_2^*, \ldots, x_n^*$ được xây dựng sao cho mỗi vector mới là trực giao với tất cả các vector trước đó. Cụ thể, với $x_i^*$ và $x_j^*$:
+%         \[
+%         x_j^* = x_j - \sum_{k=1}^{j-1} \mu_{jk} x_k^*, \quad \text{với} \quad \mu_{jk} = \frac{\langle x_j, x_k^* \rangle}{\langle x_k^*, x_k^* \rangle}
+%         \]
+%         Do đó, $ x_i^* x_j^*  = 0$ với $1 \leq i < j \leq n$.
+%     \end{itemize}
+    
+    
+%     \end{frame}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+ 
+    
+%     \textbf{Chứng minh:}
+    
+%     \begin{itemize}
+%         \item[(ii)] Do $x_i^*$ là hình chiếu của $x_i$ lên không gian trực giao với các vector trước đó, ta có:
+%         \[
+%         x_i^* = x_i - \sum_{j=1}^{i-1} \mu_{ij} x_j^*
+%         \]
+        
+%         Theo định lý Py-ta-go, ta có:
+        
+%         \[
+%             \|x_k\|^2 = \|x_k^*\|^2 + \sum_{j=1}^{k-1} (\mu_{kj})^2 \|x_j^*\|^2.
+%             \]
+
+%             Do đó, $\|x_i^*\| \leq \|x_i\|$. 
+%     \end{itemize}
+    
+    
+%     \end{frame}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+ 
+    
+%     \textbf{Chứng minh:}
+    
+%     \begin{itemize} 
+%         \item[(iii)]         Theo quá trình Gram-Schmidt, ta có $X = MX^*$ với $M$ là ma trận tam giác dưới với các phần tử đường chéo bằng 1 và các phần tử dưới đường chéo chính là các hệ số $\mu_{ij}$. Ma trận $M$ có định thức bằng 1, do đó:
+%         \[
+%         \det(X) = \det(MX^*) = \det(M) \det(X^*) = 1 \cdot \det(X^*) = \det(X^*)
+%         \]
+%     \end{itemize}
+    
+    
+%     \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Trực giao hóa Gram-Schmidt}
-
-Nếu ta đặt $\mu_{ii} = 1$ và $\mu_{ij} = 0$ với $1 \leq i < j \leq n$, ta có thể viết lại dưới dạng ma trận:
-
-\[
-\underset{X}{\underbrace{\begin{pmatrix}
-x_1 \\
-x_2 \\
-\vdots \\
-x_n
-\end{pmatrix}}}
-=
-\underset{M}{\underbrace{\begin{pmatrix}
-1 & 0 & \cdots & 0 \\
-\mu_{21} & 1 & \cdots & 0 \\
-\vdots & \vdots & \ddots & \vdots \\
-\mu_{n1} & \mu_{n2} & \cdots & 1
-\end{pmatrix}}}
-\underset{X^*}{\underbrace{\begin{pmatrix}
-x_1^* \\
-x_2^* \\
-\vdots \\
-x_n^*
-\end{pmatrix}}}
-\]
-
+ 
+    
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Trực giao hóa Gram-Schmidt}
+ 
+    
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
