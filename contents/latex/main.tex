@@ -321,12 +321,79 @@
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Phương pháp lưới và thuật toán LLL giảm lưới}
-\subsection{xxxxxxxxxxxxxxxxxxxxxx}
-\subsubsection{xxxxxxxxxxxxxxxxxxxxxx}
-\begin{frame}{xxxxxxxxxxxxxxxxxxxxxx}
+% \section{Lý thuyết lưới}
+% \begin{frame}{Lý thuyết lưới}
+%     \begin{itemize}
+%         \item  Lý thuyết lưới là một lĩnh vực trong toán học có liên quan đến việc nghiên cứu các cấu trúc đại số và hình học của các mạng lưới được phát triển từ những năm 1940.
+%         \item  Lý thuyết lưới   được sử dụng trong nhiều lĩnh vực:
+%         \begin{itemize}
+%             \item  Lĩnh vực mật mã học
+%             \item  Lĩnh vực   khoa học máy tính
+%             \item  Lĩnh vực     kỹ thuật thông tin
+%         \end{itemize}
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Định nghĩa}
+% \begin{frame}{Định nghĩa}
+%     \begin{block}{Tập hợp các vector độc lập tuyến tính}
+%     Tập hợp các vector \(\{x_1, x_2, \ldots, x_n\}\) trong \(\mathbb{R}^n\) độc lập tuyến tính nếu:
+%     \[
+%     c_1 x_1 + c_2 x_2 + \ldots + c_n x_n = 0 \text{ với } c_i \in \mathbb{R}
+%     \]
+%     Dấu "=" xảy ra khi và chỉ khi \( c_1 = c_2 = \ldots = c_n = 0 \).
+% \end{block}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Định nghĩa}
+%     \begin{block}{Cơ sở của không gian vector} 
+%         Cho \( n \geq 1 \), \(\{x_1, x_2, \ldots, x_n\}\) là một cơ sở của \(\mathbb{R}^n\). Lưới \( n \) chiều với cơ sở \(\{x_1, x_2, \ldots, x_n\}\) là tập hợp \( L \) tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên:
+%         \[
+%         L = \{ a_1 x_1 + a_2 x_2 + \ldots + a_n x_n \mid a_i \in \mathbb{Z} \}
+%         \]
+%         Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lưới.
+% \end{block}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Bổ đề}
+% \begin{frame}{Bổ đề}
+%     \begin{block}{Bổ đề}
+%         Cho $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$ là hai cơ sở của lưới $L \subset \mathbb{R}^n$. Lấy $X$, $Y$ lần lượt là các ma trận $n \times n$ nhận $x_i$ (tương ứng $y_i$) là các hàng thứ $i$. Khi đó $Y = CX$ với $C$ là ma trận vuông $n \times n$ với các hệ số nguyên và $\det(C) = \pm 1$.
+% \end{block}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Chứng minh}
+% Với mọi $y_i$ thuộc lưới với cơ sở $x_1, x_2, \ldots, x_n$ và mọi $x_i$ thuộc lưới với cơ sở $y_1, y_2, \ldots, y_n$. Khi đó:
+% \[
+% x_i = \sum_{j=1}^n b_{ij} y_j, \quad y_i = \sum_{j=1}^n c_{ij} x_j.
+% \]
 
-\end{frame}
+% Ta có thể viết gọn lại dưới dạng ma trận:
+% \[
+% X = BY, \quad Y = CX.
+% \]
+
+% Vì vậy ta có $X = BCX$ và $Y = CBY$. Do $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$ là cơ sở trong không gian $\mathbb{R}^n$ nên ma trận $X$, $Y$ là ma trận khả nghịch. 
+
+
+% Suy ra $BC = CB = I$ và $\det(B) \det(C) = 1$. Thêm nữa, $B$, $C$ là các ma trận hệ số nguyên. Do đó:
+% \[
+% \begin{cases}
+% \det(B) = \det(C) = 1, \\
+% \det(B) = \det(C) = -1.
+% \end{cases}
+% \]
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
