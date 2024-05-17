@@ -60,18 +60,16 @@ d = get_d(e, phi_n)
 print(f"d = {d}")
 
 
+print(f"Public key (e,n) = ", e, n)
 
-print(f"Public key (e,n) = ",e,n)
-
-print(f"Private key (d,n) = ",d,n)
-
+print(f"Private key (d,n) = ", d, n)
 
 
-m=117
-c=m**e % n
+m = 117
+c = m**e % n
 
 print(f"m = {m}, c = {c}")
 
-m=c**d % n
+m = c**d % n
 
 print(f"m = {m}, c = {c}")
