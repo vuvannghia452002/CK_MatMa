@@ -46,9 +46,9 @@ def format(path):
         file.write(contents)
 
 
-# root = r"../../"
-# tex_files = glob.glob(os.path.join(root, "**/*.tex"), recursive=True)
-# for i in tex_files:
-#     format(i)
-format(r"C:\Users\vvn20206205\Desktop\github\20232\CK_MatMa\contents\latex\main2.tex")
+root = r"../../"
+tex_files = glob.glob(os.path.join(root, "**/*.tex"), recursive=True)
+for i in tex_files:
+    format(i)
+# format(r"C:\Users\vvn20206205\Desktop\github\20232\CK_MatMa\contents\latex\main2.tex")
 print("Xong")

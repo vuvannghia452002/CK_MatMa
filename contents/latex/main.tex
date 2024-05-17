@@ -6,17 +6,56 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[utf8]{vietnam}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginSection[]
+{
+\begin{frame}<beamer>
+\frametitle{Nội dung}
 
-
- 
-
+\tableofcontents[
+currentsection,
+subsectionstyle=hide/hide,
+subsubsectionstyle=hide/hide
+]
+\end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[{\makebox[.15\paperwidth]{MI4100 - Mật mã và độ phức tạp thuật toán}}]{Chủ đề: Mô phỏng tấn công hệ mật mã khóa công khai RSA bằng thuật toán LLL giảm lưới}
+\author[Nhóm 8]{Nhóm 8}
+\date[\today]{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
- 
- 
- 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % Trang tiêu đề cần có hình ảnh pictures/HUST2.jpeg
+% % Không chỉnh sửa gì
+% \begin{frame}
+% \begin{tikzpicture}[remember picture, overlay]
+% \node[anchor=center, inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth, height=\paperheight]{pictures/HUST2.jpeg}};
+% \fill[white, opacity=0.8] (current page.south west) rectangle (current page.north east);
+% \end{tikzpicture}
+% \titlepage
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Danh sách thành viên}
+% \begin{block}{Nhóm 8}
+% \centering
+% \begin{tabular} {|l|c|}
+% \hline
+% Họ và tên & MSSV \\
+% \hline
+% Nguyễn Phan Anh & 20206113 \\
+% Nguyễn Việt Anh & 20206115 \\
+% Nguyễn Đình Anh & 20206111 \\
+% Nguyễn Thị Hoa & 20206199 \\
+% Vũ Văn Nghĩa & 20206205 \\
+% \hline
+% \end{tabular}
+% \end{block}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
-
 
 % \documentclass{beamer}
 % \usepackage[utf8]{vietnam}
