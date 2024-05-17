@@ -73,3 +73,9 @@ print(f"m = {m}, c = {c}")
 m = c**d % n
 
 print(f"m = {m}, c = {c}")
+
+
+
+
+print("Eve")
+print(f"n = {n}, e = {e}, c = {c}")
