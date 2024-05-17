@@ -1,0 +1,511 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\setbeamercolor{block title}{bg=red!80!black, fg=white}
+\setbeamercolor{block body}{bg=red!10, fg=black}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{vietnam}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{tikz}
+
+\usepackage{bookmark}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Định nghĩa}
+% \begin{block}{Cơ sở của không gian vector}
+% Cho \(n \geq 1 \), \(\{x_1, x_2, \ldots, x_n\}\) là một cơ sở của \(\mathbb{R}^n\). Lưới \(n \) chiều với cơ sở \(\{x_1, x_2, \ldots, x_n\}\) là tập hợp \(L \) tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên:
+% \[
+% L = \{a_1 x_1 + a_2 x_2 + \ldots + a_n x_n \mid a_i \in \mathbb{Z} \}
+% \]
+% Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lưới.
+% \end{block}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Bổ đề}
+% \begin{frame}{Bổ đề}
+% \begin{block}{Bổ đề}
+% Cho $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$ là hai cơ sở của lưới $L \subset \mathbb{R}^n$. Lấy $X$, $Y$ lần lượt là các ma trận $n \times n$ nhận $x_i$ (tương ứng $y_i$) là các hàng thứ $i$. Khi đó $Y = CX$ với $C$ là ma trận vuông $n \times n$ với các hệ số nguyên và $\det(C) = \pm 1$.
+% \end{block}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Chứng minh}
+% Với mọi $y_i$ thuộc lưới với cơ sở $x_1, x_2, \ldots, x_n$ và mọi $x_i$ thuộc lưới với cơ sở $y_1, y_2, \ldots, y_n$. Khi đó:
+% \[
+% x_i = \sum_{j=1}^n b_{ij} y_j, \quad y_i = \sum_{j=1}^n c_{ij} x_j.
+% \]
+
+% Ta có thể viết gọn lại dưới dạng ma trận:
+% \[
+% X = BY, \quad Y = CX.
+% \]
+
+% Vì vậy ta có $X = BCX$ và $Y = CBY$. Do $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$ là cơ sở trong không gian $\mathbb{R}^n$ nên ma trận $X$, $Y$ là ma trận khả nghịch.
+
+% Suy ra $BC = CB = I$ và $\det(B) \det(C) = 1$. Thêm nữa, $B$, $C$ là các ma trận hệ số nguyên. Do đó:
+% \[
+% \begin{cases}
+% \det(B) = \det(C) = 1, \\
+% \det(B) = \det(C) = -1.
+% \end{cases}
+% \]
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Nhận xét}
+% \begin{frame}{Nhận xét}
+% \begin{block}{Nhận xét}
+% Định thức của một lưới không phụ thuộc vào cách chọn cơ sở.
+% \end{block}
+
+% \textbf{Chứng minh:}
+
+% Giả sử lưới $L \subset \mathbb{R}^n$ có hai cơ sở $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$. Theo Bổ đề ta có:
+% \[
+% |\det(Y)| = |\det(CX)| = |\det(C) \cdot \det(X)| = |\pm 1 \cdot \det(X)| = |\det(X)|
+% \]
+
+% \textbf{Ví dụ:} Đặt $\{x_1, x_2\}$ là cơ sở của lưới $L$. Với $x_1 = (1, 0)$, $x_2 = (0, 1)$. Khi đó:
+% \[
+% L = a_1 x_1 + a_2 x_2 \quad \text{với} \quad a_1, a_2 \in \mathbb{Z}
+% \]
+
+% Đặt:
+% \[
+% \begin{cases}
+% y_1 = x_1 + 5x_2 = (1, 5) \\
+% y_2 = x_2 = (0, 1)
+% \end{cases}
+% \]
+
+% Suy ra $\{y_1, y_2\}$ là một cơ sở khác của lưới.
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Trực giao hóa Gram-Schmidt}
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+% \begin{itemize}
+% \item Phần này trình bày thuật toán Gram-Schmidt cổ điển cho việc chuyển một cơ sở bất kỳ trong $\mathbb{R}^n$ thành một cơ sở trực giao.
+% \item Đây là kỹ thuật quan trọng trong thuật toán LLL.
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+
+% Cho $x_1, x_2, \ldots, x_n$ là một cơ sở trong $\mathbb{R}^n$. Trực giao hóa Gram-Schmidt của $x_1, x_2, \ldots, x_n$ là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sau:
+
+% \begin{itemize}
+% \item[(i)] $x_1 = x_1^*$,
+% \item[(ii)] $x_i^* = x_i - \sum_{j=1}^{i-1} \mu_{ij} x_j^*$, \quad $2 \leq i \leq n$, \quad $\mu_{ij} = \frac{\langle x_i, x_j^* \rangle}{\langle x_j^*, x_j^* \rangle}$.
+% \end{itemize}
+
+% \begin{block}{Chú ý}
+% Nếu $x_1, x_2, \ldots, x_n$ là một cơ sở của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \ldots, x_n^*$ có thể không nằm trong lưới $L$.
+% \end{block}
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+
+% Nếu ta đặt $\mu_{ii} = 1$ và $\mu_{ij} = 0$ với $1 \leq i < j \leq n$, ta có thể viết lại dưới dạng ma trận:
+
+% \[
+% \underset{X}{\underbrace{\begin{pmatrix}
+% x_1 \\
+% x_2 \\
+% \vdots \\
+% x_n
+% \end{pmatrix}}}
+% =
+% \underset{M}{\underbrace{\begin{pmatrix}
+% 1 & 0 & \cdots & 0 \\
+% \mu_{21} & 1 & \cdots & 0 \\
+% \vdots & \vdots & \ddots & \vdots \\
+% \mu_{n1} & \mu_{n2} & \cdots & 1
+% \end{pmatrix}}}
+% \underset{X^*}{\underbrace{\begin{pmatrix}
+% x_1^* \\
+% x_2^* \\
+% \vdots \\
+% x_n^*
+% \end{pmatrix}}}
+% \]
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+
+% Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$ và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. Khi đó:
+
+% \begin{itemize}
+% \item[(i)] $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$,
+% \item[(ii)] $\|x_k^*\| \leq \|x_k\|$,
+% \item[(iii)] $\det(X^*) = \det(X)$.
+% \end{itemize}
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+
+% \textbf{Chứng minh:}
+
+% \begin{itemize}
+% \item[(i)] Theo định nghĩa của quá trình trực giao hóa Gram-Schmidt, các vector $x_1^*, x_2^*, \ldots, x_n^*$ được xây dựng sao cho mỗi vector mới là trực giao với tất cả các vector trước đó. Cụ thể, với $x_i^*$ và $x_j^*$:
+% \[
+% x_j^* = x_j - \sum_{k=1}^{j-1} \mu_{jk} x_k^*, \quad \text{với} \quad \mu_{jk} = \frac{\langle x_j, x_k^* \rangle}{\langle x_k^*, x_k^* \rangle}
+% \]
+% Do đó, $ x_i^* x_j^* = 0$ với $1 \leq i < j \leq n$.
+% \end{itemize}
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+
+% \textbf{Chứng minh:}
+
+% \begin{itemize}
+% \item[(ii)] Do $x_i^*$ là hình chiếu của $x_i$ lên không gian trực giao với các vector trước đó, ta có:
+% \[
+% x_i^* = x_i - \sum_{j=1}^{i-1} \mu_{ij} x_j^*
+% \]
+
+% Theo định lý Py-ta-go, ta có:
+
+% \[
+% \|x_k\|^2 = \|x_k^*\|^2 + \sum_{j=1}^{k-1} (\mu_{kj})^2 \|x_j^*\|^2.
+% \]
+
+% Do đó, $\|x_i^*\| \leq \|x_i\|$.
+% \end{itemize}
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+
+% \textbf{Chứng minh:}
+
+% \begin{itemize}
+% \item[(iii)] Theo quá trình Gram-Schmidt, ta có $X = MX^*$ với $M$ là ma trận tam giác dưới với các phần tử đường chéo bằng 1 và các phần tử dưới đường chéo chính là các hệ số $\mu_{ij}$. Ma trận $M$ có định thức bằng 1, do đó:
+% \[
+% \det(X) = \det(MX^*) = \det(M) \det(X^*) = 1 \cdot \det(X^*) = \det(X^*)
+% \]
+% \end{itemize}
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+
+% Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$ và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. Ta có:
+
+% \[
+% |\det(X)| \leq \|x_1\|\|x_2\|\cdots\|x_n\|.
+% \]
+
+% \textbf{Chứng minh:}
+
+% Ta có $|\det(X^*)|$ là thể tích hình hộp $n$ chiều căng bởi các vector trực giao $x_1^*, x_2^*, \ldots, x_n^*$. Do đó:
+
+% \[
+% |\det(X^*)| = \|x_1^*\|\|x_2^*\|\cdots\|x_n^*\|.
+% \]
+
+% Theo Định lý 2.2, ta có:
+
+% \[
+% |\det(X)| = |\det(X^*)| \leq \|x_1^*\|\|x_2^*\|\cdots\|x_n^*\| \leq \|x_1\|\|x_2\|\cdots\|x_n\|.
+% \]
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Thuật toán LLL}
+% \begin{frame}{Thuật toán LLL}
+% \begin{itemize}
+% \item Những ứng dụng của lý thuyết lưới trong hệ mật mã được phát triển từ khi có thuật toán rút gọn cơ sở lưới
+% \item Thuật toán rút gọn cơ sở lưới do ba nhà toán học Arjen Lenstra, Hendrik Lenstra, László Lovász tìm ra (được viết tắt là LLL) năm 1982
+% \item Ý tưởng của việc rút gọn cơ sở là thay đổi cơ sở $B$ của lưới $L$ thành một cơ sở mới $B'$ ngắn hơn sao cho $|\det(L)|$ không đổi.
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Giảm lưới 2 chiều}
+% \begin{frame}{Giảm lưới 2 chiều}
+% \begin{itemize}
+% \item Việc giảm cơ sở lưới 2 chiều tương đối dễ hiểu.
+% \item Đặt $\{x_1, x_2\}$ làm cơ sở của lưới 2 chiều.
+% \item Mục tiêu của chúng ta sẽ thay thế cơ sở này bằng cơ sở giảm.
+% \begin{enumerate}
+% \item Nếu $\|x_1\| > \|x_2\|$ ta sẽ hoán vị $x_1$ với $x_2$.
+% \item Thay vector $x_2$ bằng vector $x_2^*$ vuông góc với $x_1$ qua phép trực giao hóa Gram-Schmidt :
+% $$x_2^* = x_2 - \frac{x_1.x_2}{x_1.x_1}.x_1 \text{.}$$ Đặt $t$ là số nguyên gần nhất với $\dfrac{x_1.x_2}{x_1.x_1}$
+% \item Ta thay thế cơ sở $\{x_1, x_2 \}$ bằng cơ sở $$\{x_1, x_2 - tx_1\}\text{.}$$
+% \item Lặp lại quy trình này đến khi không thể giảm cơ sở nữa.
+% \end{enumerate}
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Cơ sở giảm}
+% \begin{frame}{Cơ sở giảm}
+% \begin{itemize}
+% \item Một cơ sở $\{x_1, x_2\}$ được gọi là cơ sở giảm khi và chỉ khi
+% \begin{enumerate}
+% \item $\|x_1\| \leq \|x_2\|$,
+% \item $|\mu| = \left|\dfrac{x_1.x_2}{x_1.x_1}\right| \leq \dfrac{1}{2}$.
+% \end{enumerate}
+% \end{itemize}
+
+% \begin{block}{Ví dụ}
+% Cho $\{x_1, x_2\}$ là cơ sở của lưới $L$ với $x_1 = (31, 59), x_2 = (37, 70)$. Thực hiện giảm cơ sở lưới trên.
+% \end{block}
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ}
+% \begin{itemize}
+% \item Ta thấy $\|x_1\| \leq \|x_2\|$. Ta có $\dfrac{x_1.x_2}{x_1.x_1} = \dfrac{5277}{4442} \approx 1, 18$\\
+
+% Chọn $t_1 = 1 $ suy ra cơ sở mới: $$\begin{cases}
+% x_1^{'} = x_1 = (31, 59)\\
+% x_2^{'} = x_2 - t_1x_1 = (6, 11)
+% \end{cases}$$
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ}
+% \begin{itemize}
+% \item Ta thấy $\|x_1'\| \geq \|x_2'\|$, hoán vị 2 vector ta có:
+% $$\begin{cases}
+% x_1^{'} = (6, 11)\\
+% x_2^{'} = (31, 59)
+% \end{cases} \text{.} $$
+
+% \hspace*{1cm} Ta có: $\qquad \dfrac{x_1^{'}.x_2^{'}}{x_1^{'}.x_1^{'}} \approx 5, 3$\\
+% + Chọn $t_2 = 5$ ta có cơ sở mới: $$\begin{cases}
+% x_1^{''} = x_1^{'} = (6, 11) \\
+% x_2^{''} = x_2^{'} - t_2x_1^{'} = (1, 4)
+% \end{cases}$$
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ}
+% \begin{itemize}
+% \item Hoán vị vị trí $x_1^{''}$ và $x_2^{''}$ ta thu được cơ sở $$\begin{cases}
+% x_1^{''}= (1, 4)\\
+% x_2^{''}= (6, 11)
+% \end{cases}$$
+% \hspace*{1cm} Ta có $\dfrac{x_1^{''}.x_2^{''}}{x_1^{''}.x_1^{''}} = \dfrac{50}{17} \approx 2, 9$. \qquad Chọn $t_3 = 3$ ta có: $$\begin{cases}
+% x_1^{(3)} = (1, 4)\\
+% x_2^{(3)} = x_2^{''} - 3.x_1^{''} = (3, -1)
+% \end{cases}$$\\
+
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ}
+% \begin{itemize}
+% \item Hoán vị 2 vector ta có $$\begin{cases}
+% x_1^{(3)} = (3, -1)\\
+% x_2^{(3)} = (1, 4)
+% \end{cases}$$
+% \hspace*{1cm}Ta thấy $\dfrac{x_1^{(3)}.x_2^{(3)}}{x_1^{(3)}.x_1^{(3)}} = -\dfrac{1}{10}$
+
+% $\Rightarrow$ Suy ra $\{x_1^{(3)}, x_2^{(3)}\}$ là cơ sở giảm.\vspace{0.5cm}
+
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Định lý}
+% \begin{frame}{Định lý}
+% \begin{block}{Định lý}
+% Nếu $x_1, x_2$ là cơ sở rút gọn của lưới $L$ thì $x_1$ là vector khác $0$ ngắn nhất của lưới đó.
+% \end{block}
+
+% Chứng minh.
+
+% Đặt $ax_1 + bx_2$ là vector khác không bất kì trong lưới $L$ (với $a, b \in Z$).\\
+% Ta có: \hspace{4cm}$ \quad \|ax_1 + bx_2\|^2 = a^2\|x_1\|^2 + b^2\|x_2\|^2 + 2abx_1x_2$\\
+% Vì $x_1, x_2$ là cơ sở giảm nên: $$-\frac{1}{2}x_1x_1 \leq x_1x_2 \leq \frac{1}{2}x_1x_1 \text{.}$$
+% Suy ra: \hspace{3cm} $\qquad 2abx_1x_2 \geq -|ab|\|x_1\|^2 $
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Định lý}
+
+% Do đó
+% $$
+% \begin{aligned}
+% \|ax_1 + bx_2\|^2 &\geq a^2\|x_1\|^2 - |ab|\|x_1\|^2 + b^2\|x_2\|^2 \\
+% & \geq a^2\|x_1\|^2 - |ab|\|x_1\|^2 + b^2\|x_1\|^2 \quad (\text{do}\|x_2\| \geq \|x_1\|)\\
+% & = (a^2 - |ab| + b^2) \|x_1\|^2 \text{.}
+% \end{aligned}
+% $$
+% Ta thấy $a^2 - |ab| + b^2 \in N$ và bằng 0 khi và chỉ khi $a = b = 0$.\\
+% Nhưng \quad $ax_1 + bx_2 \ne 0$ \qquad $\Rightarrow$ \qquad Trường hợp $a = b = 0$ (loại).\\
+% \hspace*{3cm}$\Rightarrow a^2 - |ab| + b^2 \geq 1$\\
+% \hspace*{3cm}$ \Rightarrow \|ax_1 + bx_2\| \geq \|x_1\|^2$.\\
+% Do đó $x_1$ là vector khác $0$ ngắn nhất của lưới
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Thuật toán giảm lưới 2 chiều}
+% \begin{frame}{Thuật toán giảm lưới 2 chiều}
+
+% \begin{enumerate}
+% \item Nhập vào cơ sở lưới 2 chiều ${b_1, b_2} \in R^2$.
+% \item Nếu $\|b_1\| > \|b_2\|$, ta hoán đổi vị trí $b_1$ và $b_2$.
+% \item Đặt $t$ bằng phần nguyên $\left|\dfrac{b_1.b_2}{b_1.b_1}\right|$.
+
+% Nếu $t = 0$, dừng lại và kết luận là cơ sở giảm.
+
+% Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
+% \end{enumerate}
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Thuật toán giảm lưới 2 chiều}
+
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[scale = 0.6]{pictures/a.10.png}
+% \label{fig:boat1}
+% \end{figure}
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Giảm lưới nhiều chiều}
+% \begin{frame}{Giảm lưới nhiều chiều}
+% \begin{itemize}
+% \item Việc giảm cơ sở lưới nhiều chiều khó khăn hơn nhiều
+% \item Thuật toán LLL sử dụng cách tiếp cận tìm kiếm các vector gần như ngắn nhất(trong thời gian đa thức)
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Định nghĩa}
+% \begin{itemize}
+% \item Tham số rút gọn $\alpha$ là một số thực sao cho $\dfrac{1}{4} < \alpha < 1$. Giá trị chính tắc của $\alpha$ là $\alpha = \dfrac{3}{4}$
+% \item Cơ sở $x_1, x_2, ..., x_n$ được gọi là một cơ sở $\alpha$-rút gọn nếu nó thỏa mãn:
+% \begin{enumerate}
+% \item $|\mu_{ij}| \leq \dfrac{1}{2} $ với $1 \leq j < i \leq n$,
+% \item $\|x_i^*\|^2 \geq (\alpha - \mu_{i, i-1}^2)\|x_{i-1}^*\|^2$ với $2\leq i \leq n$.
+% \end{enumerate}
+% \item Ta định nghĩa tham số bổ trợ $\beta$ như sau: \quad $\beta = \dfrac{4}{4\alpha - 1}$
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Định nghĩa}
+% \begin{itemize}
+% \item Nếu $x_1, x_2, ..., x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $x_1^*, x_2^*, ..., x_n^*$ là cơ sở trực giao hóa Gram-Schmidt của nó thì:
+% \begin{enumerate}
+% \item $\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n $,
+% \item $\|x_1\|.\|x_2\|...\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L)$,
+% \item $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $.
+% \end{enumerate}
+% \end{itemize}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
+\begin{frame}{Ứng dụng lý thuyết lưới trong hệ mật mã RSA}
+\begin{block}{Bài toán}
+Bài toán RSA với số mũ $e$ nhỏ, $m$ có giá trị lớn. Cho $m^e$, ta có $B$ với $|m-B| \leq n^{\tfrac{1}{e}}$. Tìm $m \in Z_n$
+\end{block}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ví  dụ ứng dụng}
+\begin{frame}{Ví dụ ứng dụng}
+
+Trong bài toán này, thông báo có dạng $m = B + x$, trong đó $B$ cố định và $|x| \leq Y$ với Y nguyên
+
+Giả sử Bob có khóa công khai $(n, e) = (n, 3)$
+
+Khi đó bài toán là $c \equiv (B+x)^3 \quad (mod \ n)$
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Ta giả sử rằng Eve biết $B, Y, n$ . Vì vậy cô ấy chỉ cần tìm $x$. Ta có thể tạo thành đa thức:
+$$
+\begin{aligned}
+f(T) & = (B+T)^3 - c = T^3 + 3BT^2 + 3B^2T + B^3 -c\\
+& \equiv T^3 + a_2T^2 + a_1T + a_0 (mod \ n).
+\end{aligned}
+$$
+
+Eve đang tìm $|x| \leq Y$ sao cho $f(x) \equiv 0 \quad (mod \ n)$. Nói cách khác, cô ấy đang tìm nghiệm nhỏ của đồng dư đa thức $f(T) \equiv 0 \quad (mod \ n)$
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Eve áp dụng thuật toán LLL cho lưới được tạo bởi các vector:
+$$v_1 =(n, 0, 0, 0), v_2 = (0, Yn, 0, 0) $$
+$$ v_3 = (0, 0, Y^2n, 0), v_4 = (a_0, a_1Y, a_2Y^2, Y^3)$$
+Điều này tạo nên cơ sở mới $b_1, b_2, b_3, b_4$ . Nhưng ở đây, ta chỉ quan tâm đến $b_1$. Theo Mệnh đề 2.8 ta có
+$$
+\begin{aligned}
+\|b_1\| & \leq 2^{\tfrac{3}{4}}.det(v_1, ..., v_4)^{\tfrac{1}{4}} \qquad \quad \text{với} \quad \alpha = \frac{3}{4} \quad \text{hay} \quad \beta = 2 \\
+& = 2^{\tfrac{3}{4}}.(n^{3}Y^{6})^{\tfrac{1}{4}} = 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} \text{.}
+\end{aligned}
+$$
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Ta có thể viết lại:
+$$b_1 = c_1v_1 + ... + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
+với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$ $$e_2 = c_3n + c_4a_2$$
+\hspace*{7cm} $e_3 = c_4$.\\
+Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n), \quad 0\leq i\leq 2$. \\
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Ta có thể thiết lập được đa thức $$g(T) = e_3T^3 + e_2T^2 + e_1T + e_0\text{.}$$
+Khi đó, vì số nguyên $x$ thỏa mãn $f(x) \equiv 0 \quad (mod \ n) $ và vì các hệ số của $c_4f(T)$ và $g(T)$ đồng dạng với $mod(n)$ nên, $$0 \equiv c_4f(x) \equiv g(x) \quad (mod \ n)\text{.}$$
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Bây giờ ta giả sử rằng $$Y < 2^{-7/6}n^{1/6}$$
+Khi đó $$
+\begin{aligned}
+|g(x)| & \leq |e_0|+|e_1x|+|e_2x^2|+|e_3x^3|\\
+& \leq |e_0| + |e_1|Y + |e_2|Y^2 + |e_3|Y^3\\
+& = (1, 1, 1, 1).(|e_0|, |e_1Y|, |e_2Y^2|, |e_3Y^3|)\\
+&\leq \|(1, 1, 1, 1)\|\|(|e_0|, |e_1Y|, |e_2Y^2|, |e_3Y^3|)\| \\
+& = 2\|b_1\|\text{,}
+\end{aligned}
+$$
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Trong đó, bất đẳng thức cuối sử dụng bất đẳng thức Cauchy-Schwarz cho các tích vô hướng \index{tích vô hướng} ($u.v \leq \|u\|\|v\|$) . Suy ra: $$\|b_1\| \leq 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} < 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}(2^{\tfrac{-7}{6}}n^{\tfrac{1}{6}})^{\tfrac{3}{2}} = 2^{-1}n \text{.}$$
+Do đó ta có được, $$|g(x)| < n.$$
+Vì $g(x) \equiv 0 \quad (mod \ n)$, nên ta có $g(x) = 0$. Từ đó, ta có thể tìm được tối đa 3 nghiệm của $g(x)$ . Sau đó ta sẽ thử xem nó có đưa ra bản mã chính xác hay không. Do đó Eve có thể tìm thấy $x$.\\
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tổng quát}
+\begin{frame}{Tổng quát}
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Thực hiện chương trình}
+% \begin{frame}{Thực hiện chương trình}
+% % \begin{itemize}
+% % 1 2 3 4
+% % \end{itemize}
+
+% % nền trắng
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

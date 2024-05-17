@@ -1,0 +1,71 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{vietnam}
+ 
+
+\usepackage{amsmath}   % For mathematical environments 
+\usepackage{cleveref}  % For referencing
+ 
+
+
+\title{Tiêu đề Bài thuyết trình}
+\author{Tên Tác giả}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Mục lục}
+    \tableofcontents
+\end{frame}
+
+\section{Giới thiệu}
+
+\begin{frame}
+    \frametitle{Giới thiệu}
+    Đây là một đoạn giới thiệu ngắn.
+\end{frame}
+
+\section{Nội dung chính}
+
+\begin{frame}
+    \frametitle{Công thức Toán học và Tham chiếu}
+    Xét công thức sau:
+    \begin{equation}
+        E = mc^2
+        \label{eq:einstein}
+    \end{equation}
+    Công thức \cref{eq:einstein} là công thức nổi tiếng của Einstein.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Định lý, Định nghĩa và Ví dụ}
+    \begin{theorem}
+        Đây là một ví dụ về định lý.
+    \end{theorem}
+
+    \begin{definition}
+        Đây là một định nghĩa.
+    \end{definition}
+
+    \begin{proof}
+        Đây là phần chứng minh.
+    \end{proof}
+
+    \begin{example}
+        Đây là một ví dụ.
+    \end{example}
+\end{frame}
+
+\section{Kết luận}
+
+\begin{frame}
+    \frametitle{Kết luận}
+    Đây là phần kết luận của bài thuyết trình.
+\end{frame}
+
+\end{document}
