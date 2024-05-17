@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "contents"
+    },
+    {
+      "path": "contents/video"
+    },
+    {
+      "path": "contents/docs"
+    },
+    {
+      "path": "contents/code"
+    },
+    {
+      "path": "contents/latex"
+    }
+  ],
+  "settings": {
+    "latex-workshop.latex.autoBuild.run": "onFileChange"
+  }
+}
