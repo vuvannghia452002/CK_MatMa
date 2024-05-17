@@ -5,6 +5,7 @@
 \setbeamercolor{block body}{bg=red!10, fg=black}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[utf8]{vietnam}
+\usepackage{tikz}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginSection[]
@@ -26,33 +27,32 @@ subsubsectionstyle=hide/hide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% % Trang tiêu đề cần có hình ảnh pictures/HUST2.jpeg
-% % Không chỉnh sửa gì
-% \begin{frame}
-% \begin{tikzpicture}[remember picture, overlay]
-% \node[anchor=center, inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth, height=\paperheight]{pictures/HUST2.jpeg}};
-% \fill[white, opacity=0.8] (current page.south west) rectangle (current page.north east);
-% \end{tikzpicture}
-% \titlepage
-% \end{frame}
+% Trang tiêu đề cần có hình ảnh pictures/HUST2.jpeg
+% Không chỉnh sửa gì
+\begin{frame}
+\begin{tikzpicture}[remember picture, overlay]
+\node[anchor=center, inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth, height=\paperheight]{pictures/HUST2.jpeg}};
+\fill[white, opacity=0.8] (current page.south west) rectangle (current page.north east);
+\end{tikzpicture}
+\titlepage
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Danh sách thành viên}
-% \begin{block}{Nhóm 8}
-% \centering
-% \begin{tabular} {|l|c|}
-% \hline
-% Họ và tên & MSSV \\
-% \hline
-% Nguyễn Phan Anh & 20206113 \\
-% Nguyễn Việt Anh & 20206115 \\
-% Nguyễn Đình Anh & 20206111 \\
-% Nguyễn Thị Hoa & 20206199 \\
-% Vũ Văn Nghĩa & 20206205 \\
-% \hline
-% \end{tabular}
-% \end{block}
-% \end{frame}
+\begin{frame}{Danh sách thành viên}
+\begin{block}{Nhóm 8}
+\centering
+\begin{tabular} {|l|c|}
+\hline
+Họ và tên & MSSV \\
+\hline
+Nguyễn Phan Anh & 20206113 \\
+Nguyễn Việt Anh & 20206115 \\
+Nguyễn Đình Anh & 20206111 \\
+Nguyễn Thị Hoa & 20206199 \\
+Vũ Văn Nghĩa & 20206205 \\
+\hline
+\end{tabular}
+\end{block}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
