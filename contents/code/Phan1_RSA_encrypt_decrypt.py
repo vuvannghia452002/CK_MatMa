@@ -23,50 +23,18 @@ def rsa_encrypt(M, e, n):
 def rsa_decrypt(C, d, n):
     return pow(C, d, n)
 
-p=int(input(f"Nhập giá trị p: "))
-# p=11
-q=int(input(f"Nhập giá trị q: "))
-# q=3
-
-n = p * q
-phi_n = (p - 1) * (q - 1)  
-print(f"n = {n}, phi_n = {phi_n}")
-
-print(f"Chọn e sao cho gcd(e, phi_n) = 1")
-e=int(input(f"Nhập giá trị e: "))
-# e=3
-
-print(f"Tìm d sao cho d * e ≡ 1 (mod phi_n)")
-d = modinv(e, phi_n)   
-print(f"d = {d}")
-
-print(f"Khóa công khai (n, e) = ({n}, {e})")
-print(f"Khóa bí mật (n, d) = ({n}, {d})")
-
-m=int(input(f"Nhập giá trị bản rõ m: "))
-# m=15
-
-c = rsa_encrypt(m, e, n)
-
-print(f"Mã hóa: m = {m} -> c = {c}")
-
-decrypted_M = rsa_decrypt(c, d, n)
-print(f"Giải mã: c = {c} -> m = {decrypted_M}")
-
-
- 
-# # p=int(input(f"Nhập giá trị p: "))
-# p=11
-# # q=int(input(f"Nhập giá trị q: "))
-# q=3
+# p=int(input(f"Nhập giá trị p: "))
+# # p=11
+# q=int(input(f"Nhập giá trị q: "))
+# # q=3
 
 # n = p * q
 # phi_n = (p - 1) * (q - 1)  
 # print(f"n = {n}, phi_n = {phi_n}")
 
 # print(f"Chọn e sao cho gcd(e, phi_n) = 1")
-# # e=int(input(f"Nhập giá trị e: "))
-# e=3
+# e=int(input(f"Nhập giá trị e: "))
+# # e=3
 
 # print(f"Tìm d sao cho d * e ≡ 1 (mod phi_n)")
 # d = modinv(e, phi_n)   
@@ -75,8 +43,8 @@ print(f"Giải mã: c = {c} -> m = {decrypted_M}")
 # print(f"Khóa công khai (n, e) = ({n}, {e})")
 # print(f"Khóa bí mật (n, d) = ({n}, {d})")
 
-# # m=int(input(f"Nhập giá trị bản rõ m: "))
-# m=15
+# m=int(input(f"Nhập giá trị bản rõ m: "))
+# # m=15
 
 # c = rsa_encrypt(m, e, n)
 
@@ -84,6 +52,38 @@ print(f"Giải mã: c = {c} -> m = {decrypted_M}")
 
 # decrypted_M = rsa_decrypt(c, d, n)
 # print(f"Giải mã: c = {c} -> m = {decrypted_M}")
+
+
+ 
+# p=int(input(f"Nhập giá trị p: "))
+p=11
+# q=int(input(f"Nhập giá trị q: "))
+q=3
+
+n = p * q
+phi_n = (p - 1) * (q - 1)  
+print(f"n = {n}, phi_n = {phi_n}")
+
+print(f"Chọn e sao cho gcd(e, phi_n) = 1")
+# e=int(input(f"Nhập giá trị e: "))
+e=3
+
+print(f"Tìm d sao cho d * e ≡ 1 (mod phi_n)")
+d = modinv(e, phi_n)   
+print(f"d = {d}")
+
+print(f"Khóa công khai (n, e) = ({n}, {e})")
+print(f"Khóa bí mật (n, d) = ({n}, {d})")
+
+# m=int(input(f"Nhập giá trị bản rõ m: "))
+m=15
+
+c = rsa_encrypt(m, e, n)
+
+print(f"Mã hóa: m = {m} -> c = {c}")
+
+decrypted_M = rsa_decrypt(c, d, n)
+print(f"Giải mã: c = {c} -> m = {decrypted_M}")
 
 
  
