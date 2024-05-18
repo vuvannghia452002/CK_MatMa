@@ -987,26 +987,25 @@ $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Định lý}
 
-    \begin{block}{Định lý}
-    
-    \end{block}
-    
-    % \defi{\textbf{Định lý 2.10.} \textit{Nếu $x_1, x_2, \dots, x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $y\in L$ là vector trong lưới khác không bất kỳ thì: $$\|x_1\| \leq \beta^{\frac{n-1}{2}}\|y\|\text{.}$$
-    % Đặc biệt, vector đầu tiên trong cơ sở rút gọn không dài hơn $\beta^{\tfrac{n-1}{2}}$ lần vector ngắn nhất \index{vector ngắn nhất} khác không của lưới \index{lưới} $L$.}}
-    
-    % \textit{Chứng minh.}\\
-    % Ta có $\|x_i^*\| \geq \frac{1}{\beta}\|x_{i-1}^*\|$ với $1\leq i \leq n$. Vì $x_1^* = x_1$ nên $$\|x_1\|^2 = \|x_1^*\| \leq \beta^{n-1}\|x_n^*\|.$$
-    % Do đó, với $1\leq i \leq n$ ta có : $$\|x_i^*\|^2 \geq \beta^{-(i-1)}\|x_1\|^2.$$
-    % Theo Bổ đề 2.9, với vector khác 0 bất kì $y \in L$ ta có:
-    % $$\|y\| \geq \min\{\|x_1^*\|, \|x_2^*\|, \dots, \|x_n^*\|\} \geq \beta^{\tfrac{-(n-1)}{2}}\|x_1^*\| . $$
-    % Vì vậy, ta có điều phải chứng minh
-    % \vspace{0.5cm}
-    
-    \end{frame}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{block}{Định lý}
+
+\end{block}
+
+% \defi{\textbf{Định lý 2.10.} \textit{Nếu $x_1, x_2, \dots, x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $y\in L$ là vector trong lưới khác không bất kỳ thì: $$\|x_1\| \leq \beta^{\frac{n-1}{2}}\|y\|\text{.}$$
+% Đặc biệt, vector đầu tiên trong cơ sở rút gọn không dài hơn $\beta^{\tfrac{n-1}{2}}$ lần vector ngắn nhất \index{vector ngắn nhất} khác không của lưới \index{lưới} $L$.}}
+
+% \textit{Chứng minh.}\\
+% Ta có $\|x_i^*\| \geq \frac{1}{\beta}\|x_{i-1}^*\|$ với $1\leq i \leq n$. Vì $x_1^* = x_1$ nên $$\|x_1\|^2 = \|x_1^*\| \leq \beta^{n-1}\|x_n^*\|.$$
+% Do đó, với $1\leq i \leq n$ ta có : $$\|x_i^*\|^2 \geq \beta^{-(i-1)}\|x_1\|^2.$$
+% Theo Bổ đề 2.9, với vector khác 0 bất kì $y \in L$ ta có:
+% $$\|y\| \geq \min\{\|x_1^*\|, \|x_2^*\|, \dots, \|x_n^*\|\} \geq \beta^{\tfrac{-(n-1)}{2}}\|x_1^*\| . $$
+% Vì vậy, ta có điều phải chứng minh
+% \vspace{0.5cm}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Thuật toán LLL.}
- 
-    
+
 % \defi{\textbf{Thuật toán LLL.}}
 % \begin{itemize}
 % \item Bước 1 : Nhập vào lưới $L$ với cơ sở lưới $b_1, b_2, \dots, b_n$ và tham số bổ trợ $c$ với $c \geq \dfrac{4}{3}$.
@@ -1017,12 +1016,7 @@ $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $
 % \item Thủ tục rút gọn: Ta sẽ rút gọn vector $b_i$ bằng cách trừ đi một bội nguyên $\|u_{ij}\|$ của $b_j$. Vì $\|u_{ij}\|$ là số nguyên gần nhất với hệ số Gram-Schmidt $u_{ij}$ nên đây là phép rút gọn tốt nhất ta có thể thực hiện, với điều kiện ràng buộc là $b_i$ vẫn nằm trong lưới ban đầu. Và cập nhật các hệ số cơ sở Gram-Schmidt.
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Mô tả   hoạt động}
- 
-    
- 
-
-
+\begin{frame}{Mô tả hoạt động}
 
 \begin{figure}[h]
 \centering
@@ -1032,16 +1026,13 @@ $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Mô tả   hoạt động}
- 
- 
-
+\begin{frame}{Mô tả hoạt động}
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale = 0.6]{pictures/a.11.3.png}
 \end{figure}
-    
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
