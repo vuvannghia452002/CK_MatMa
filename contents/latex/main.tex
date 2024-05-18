@@ -427,25 +427,14 @@ Giả sử lưới $L \subset \mathbb{R}^n$ có 2 cơ sở $x_1, x_2, \ldots, x_
 
 Theo bổ đề (\ref{equation:bo_de}) ta có:
 
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
-% nghia
+
+
+
+
+
+
+
+
 
 \[
 |\det(Y)| = |\det(CX)| = |\det(C) \cdot \det(X)| = |\pm 1 \cdot \det(X)| = |\det(X)|
@@ -513,6 +502,7 @@ là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sa
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Ma trận}
 Không hiểu?
+Trang 9
 Trang 10
 
 \end{frame}
@@ -524,16 +514,26 @@ Trang 10
 Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$
 và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. Khi đó:
 
-\begin{itemize}
-\item $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$
-% \item $\|x_k^*\| \leq \|x_k\|$
-\item
-\begin{equation} \label{equation:einstein}
+\begin{equation} \label{equation:dinh_li_Gram-Schmidt1}
+           \langle x_i^*, x_j^* \rangle = 0     \quad     \text{với}          \quad          1 \leq i < j \leq n       
+\end{equation}
+
+
+
+
+\begin{equation} \label{equation:dinh_li_Gram-Schmidt2}
 \|x_k^*\| \leq \|x_k\|
 \end{equation}
 
-\item $\det(X^*) = \det(X)$
-\end{itemize}
+
+
+\begin{equation} \label{equation:dinh_li_Gram-Schmidt3}
+           \det(X^*) = \det(X)       
+\end{equation}
+
+
+
+
 
 \end{block}
 
@@ -541,11 +541,9 @@ và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. K
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Định lý}
 
-\begin{itemize}
-\item $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$
-\end{itemize}
-
-\textbf{Chứng minh:}
+    
+    \textbf{Chứng minh công thức \ref{equation:dinh_li_Gram-Schmidt1}:}
+       $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$ 
 
 Theo định nghĩa của quá trình trực giao hóa Gram-Schmidt,
 các vector $x_1^*, x_2^*, \ldots, x_n^*$ được xây dựng sao cho
@@ -562,11 +560,9 @@ Do đó, $ x_i^* x_j^* = 0$ với $1 \leq i < j \leq n$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Định lý}
 
-\begin{itemize}
-\item $\|x_k^*\| \leq \|x_k\|$
-\end{itemize}
+    \textbf{Chứng minh công thức \ref{equation:dinh_li_Gram-Schmidt2}:}
+      $\|x_k^*\| \leq \|x_k\|$ 
 
-\textbf{Chứng minh:}
 
 Do $x_i^*$ là hình chiếu của $x_i$ lên không gian trực giao với các vector trước đó, ta có:
 
@@ -586,13 +582,21 @@ Do đó, $\|x_i^*\| \leq \|x_i\|$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Định lý}
 
-\begin{itemize}
-\item $\det(X^*) = \det(X)$
-\end{itemize}
+    \textbf{Chứng minh công thức \ref{equation:dinh_li_Gram-Schmidt3}:}
+       $\det(X^*) = \det(X)$ 
+% Slide ma trận 
+% Slide ma trận 
+% Slide ma trận 
+% Slide ma trận 
+% Slide ma trận 
+% Slide ma trận 
+% Slide ma trận 
+% Slide ma trận 
+% Slide ma trận 
+% Slide ma trận 
+% Slide ma trận 
 
-\textbf{Chứng minh:}
-
-Theo quá trình Gram-Schmidt, ta có $X = MX^*$
+Theo quá trình Gram-Schmidt xxxxxxxxxxxxxxxxxxxxxxxxxxx, ta có $X = MX^*$
 với $M$ là ma trận tam giác dưới với các phần tử đường chéo bằng 1 và các phần tử dưới đường chéo chính là các hệ số $\mu_{ij}$.
 Ma trận $M$ có định thức bằng 1, do đó:
 
@@ -624,9 +628,8 @@ Ta có $|\det(X^*)|$ là thể tích hình hộp $n$ chiều căng bởi các ve
 |\det(X^*)| = \|x_1^*\|\|x_2^*\|\cdots\|x_n^*\|.
 \]
 
-Theo Định lý 2.2, ta có:
+Theo công thức  (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta có:
 
-Công thức (\ref{equation:einstein}) là công thức nổi tiếng của Einstein.
 
 \[
 |\det(X)| = |\det(X^*)| \leq \|x_1^*\|\|x_2^*\|\cdots\|x_n^*\| \leq \|x_1\|\|x_2\|\cdots\|x_n\|.
