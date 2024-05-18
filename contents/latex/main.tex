@@ -639,6 +639,428 @@ Theo công thức (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta c
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+
+
+% \chapter{Thuật toán LLL}
+% Trong mục này , bài báo cáo sẽ trình bày về thuật toán LLL \index{thuật toán LLL} cho việc rút gọn cơ sở lưới. Thuật toán này được lấy tên theo chữ cái đầu tiên của ba tác giả A.Ken.Lenstra, H.W.Lenstra Jr và L. Lovasz, những người đã giới thiệu thuật toán này đầu tiên năm 1982\cite{8}.\\
+
+% Ý tưởng việc rút gọn cơ sở \index{cơ sở} là thay đổi cơ sở $B$ của lưới $L$ thành cơ sở mới $B'$ ngắn hơn sao cho $|det L |$ không đổi. Rút gọn cơ sở có thể được sử dụng để giải bài toán vector ngắn nhất theo nghĩa là vector cơ sở ngắn nhất ( $b_1$ trong thuật toán giảm lưới gần như là vector ngắn nhất \index{vector ngắn nhất}).
+
+
+% \begin{figure}[h!]
+% \centering
+%   \includegraphics[width = 0.9\textwidth]{a.2.png}
+%   \caption{Lưới $L \subset R^2$. Mô tả kết quả giảm lưới trong $R^2$.}
+%   \label{fig:boat1}
+% \end{figure}
+
+
+
+% \section{Lưới 2 chiều}
+% Việc giảm cơ sở lưới 2 chiều tương đối dễ hiểu và nó đóng vai trò then chốt trong thuật toán giảm cơ sở LLL.\\
+% Đặt $\{x_1,x_2\}$ làm cơ sở của lưới 2 chiều và mục tiêu của chúng ta sẽ thay thế cơ sở này bằng cơ sở giảm. Nếu $\|x_1\| > \|x_2\|$ ta sẽ hoán vị $x_1$ với $x_2$. Sau đó , ta thay vector $x_2$ bằng vector $x_2^*$ vuông góc với $x_1$ qua phép trực giao hóa Gram-Schmidt : 
+% $$x_2^* = x_2 - \frac{x_1.x_2}{x_1.x_1}.x_1 \text{.}$$ Đặt $t$ là số nguyên gần nhất với $\dfrac{x_1.x_2}{x_1.x_1}$ . Sau đó, ta thay thế cơ sở $\{x_1,x_2 \}$ bằng cơ sở $$\{x_1, x_2 - tx_1\}\text{.}$$ Sau đó, ta lặp lại quy trình này đến khi không thể giảm cơ sở nữa.
+% \vspace{0.5cm}
+% \defi{\textbf{Định nghĩa 2.4.} \textit{Một cơ sở $\{x_1,x_2\}$ được gọi là cơ sở giảm khi và chỉ khi \begin{enumerate}[i)]
+%     \item $\|x_1\| \leq \|x_2\|$,
+%     \item $|\mu| = \left|\dfrac{x_1.x_2}{x_1.x_1}\right| \leq \dfrac{1}{2}$.
+% \end{enumerate}}}
+
+% \begin{figure}[h!]
+% \centering
+%   \includegraphics[scale = 1]{a.3.3.png}
+%   \caption{Hình ảnh cơ sở giảm và chưa giảm}
+%   \label{fig:boat1}
+% \end{figure}
+
+% \textbf{Ví dụ} Cho $\{x_1,x_2\}$ là cơ sở của lưới $L$ với $x_1 = (31,59), x_2 = (37,70)$. Thực hiện giảm cơ sở lưới trên.\\
+% Ta thấy $\|x_1\| \leq \|x_2\|$. Ta có $\dfrac{x_1.x_2}{x_1.x_1} = \dfrac{5277}{4442} \approx 1,18$\\
+% + Chọn $t_1 = 1 $ suy ra cơ sở mới: $$\begin{cases}
+%     x_1^{'} = x_1 = (31,59)\\
+%     x_2^{'} = x_2 - t_1x_1 = (6,11)
+% \end{cases}$$\\
+% + Ta thấy $\|x_1'\| \geq \|x_2'\|$ , hoán vị 2 vector ta có:
+% $$\begin{cases}
+%     x_1^{'} = (6,11)\\
+%     x_2^{'} =  (31,59)
+% \end{cases} \text{.} $$
+%  \hspace*{1cm} Ta có: $\qquad \dfrac{x_1^{'}.x_2^{'}}{x_1^{'}.x_1^{'}} \approx 5,3$\\
+% + Chọn $t_2 = 5$ ta có cơ sở mới: $$\begin{cases}
+%     x_1^{''} = x_1^{'} = (6,11) \\
+%     x_2^{''} = x_2^{'} - t_2x_1^{'} = (1,4)
+% \end{cases}$$
+% \\ + Hoán vị vị trí $x_1^{''}$ và $x_2^{''}$ ta thu được cơ sở $$\begin{cases}
+%     x_1^{''}= (1,4)\\
+%     x_2^{''}= (6,11)
+% \end{cases}$$
+% \hspace*{1cm} Ta có $\dfrac{x_1^{''}.x_2^{''}}{x_1^{''}.x_1^{''}} = \dfrac{50}{17} \approx 2,9$.  \qquad Chọn $t_3 = 3$ ta có: $$\begin{cases}
+%     x_1^{(3)} = (1,4)\\
+%     x_2^{(3)} = x_2^{''} - 3.x_1^{''} = (3,-1)
+% \end{cases}$$\\
+% + Hoán vị 2 vector ta có $$\begin{cases}
+%     x_1^{(3)} = (3,-1)\\
+%     x_2^{(3)}  = (1,4)
+% \end{cases}$$
+% \hspace*{1cm}Ta thấy $\dfrac{x_1^{(3)}.x_2^{(3)}}{x_1^{(3)}.x_1^{(3)}} = -\dfrac{1}{10}$
+% . \qquad Suy ra $\{x_1^{(3)},x_2^{(3)}\}$ là cơ sở giảm.\vspace{0.5cm}
+
+% \defi{\textbf{Định lý 2.5.} \textit{Nếu $x_1,x_2$ là cơ sở rút gọn của lưới $L$ thì $x_1$ là vector khác không ngắn nhất của lưới đó.}}
+% \textit{Chứng minh.}\\
+% Đặt $ax_1 + bx_2$ là vector khác không bất kì trong lưới $L$ (với $a,b \in Z$).\\
+% Ta có: \hspace{4cm}$ \quad \|ax_1 + bx_2\|^2 = a^2\|x_1\|^2 + b^2\|x_2\|^2 + 2abx_1x_2$\\
+% Vì $x_1,x_2$ là cơ sở giảm nên: $$-\frac{1}{2}x_1x_1 \leq x_1x_2 \leq \frac{1}{2}x_1x_1 \text{.}$$
+% Suy ra: \hspace{3cm} $\qquad 2abx_1x_2 \geq -|ab|\|x_1\|^2 . \quad \text{Do đó}$
+% $$
+% \begin{aligned}
+%     \|ax_1 + bx_2\|^2 &\geq a^2\|x_1\|^2 - |ab|\|x_1\|^2 + b^2\|x_2\|^2 \\
+%     & \geq a^2\|x_1\|^2 - |ab|\|x_1\|^2 + b^2\|x_1\|^2  \quad (\text{do }\|x_2\| \geq \|x_1\|)\\
+%     & = (a^2 - |ab| + b^2) \|x_1\|^2 \text{.}
+% \end{aligned}
+% $$
+% Ta thấy $a^2 - |ab| + b^2 \in N$ và bằng 0 khi và chỉ khi $a = b = 0$.\\
+% Nhưng \quad $ax_1 + bx_2 \ne 0$ \qquad $\Rightarrow$ \qquad Trường hợp $a = b = 0$ (loại).\\
+% \hspace*{3cm}$\Rightarrow a^2 - |ab| + b^2 \geq 1$\\
+% \hspace*{3cm}$ \Rightarrow \|ax_1 + bx_2\| \geq \|x_1\|^2$.\\
+% Do đó $x_1$ là vector khác không ngắn nhất của lưới.
+% \vspace{1cm}
+
+% \defi{\textbf{Thuật toán:} \textit{Giảm lưới 2 chiều.}}
+% \begin{itemize}
+%     \item Bước 1 : Nhập vào cơ sở lưới 2 chiều ${b_1,b_2} \in R^2$.
+%     \item Bước 2 : Nếu $\|b_1\| > \|b_2\|$, ta hoán đổi vị trí $b_1$ và $b_2$.
+%     \item Bước 3 : Đặt $t$ bằng phần nguyên $\left|\dfrac{b_1.b_2}{b_1.b_1}\right|$. Nếu $t = 0$, dừng lại và kết luận là cơ sở giảm. Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2 
+% \end{itemize}
+% \begin{figure}[h!]
+% \centering
+%   \includegraphics[scale = 1]{a.10.png}
+%   \caption{Thuật toán giảm lưới 2 chiều.}
+%   \label{fig:boat1}
+% \end{figure}
+
+
+
+
+
+
+
+% \newpage
+% \section{Thuật toán LLL}
+% Việc giảm lưới ở kích thước lớn hơn 2 chiều khó khăn hơn nhiều. Trong nhiều bài toán, cần có một vector ngắn và không nhất thiết vector đó ngắn nhất. Thuật toán LLL \index{thuật toán LLL} sử dụng cách tiếp cận này và tìm kiếm các vector gần như ngắn nhất(trong thời gian đa thức). Phương pháp này được dùng cho nhiều ứng dụng khác nhau.
+% \defi{\textbf{Định nghĩa 2.6.} \textit{Tham số rút gọn \index{tham số rút gọn}$\alpha$ là một số thực sao cho $\dfrac{1}{4} < \alpha < 1$. Giá trị chính tắc của $\alpha$ là $\alpha = \dfrac{3}{4}$\cite{6}.}}
+
+% \defi{\textbf{Định nghĩa 2.7.} \textit{Cơ sở $x_1,x_2,...,x_n$ được gọi là một cơ sở $\alpha$-rút gọn nếu nó thỏa mãn: \begin{enumerate}[i)]
+%     \item $|\mu_{ij}| \leq \dfrac{1}{2} $ với $1 \leq j < i \leq n$,
+%     \item $\|x_i^*\|^2 \geq (\alpha - \mu_{i,i-1}^2)\|x_{i-1}^*\|^2$ với $2\leq i \leq n$.
+% \end{enumerate}}}
+
+
+%  Ta định nghĩa tham số bổ trợ \index{tham số bổ trợ} $\beta$ như sau: \quad $\beta = \dfrac{4}{4\alpha - 1}$.\\
+%  \hspace*{0.7cm}Do  \quad $\frac{1}{4} < \alpha < 1$ \quad $\Rightarrow \quad \beta > \dfrac{4}{3}$. \quad Nếu $\alpha = \dfrac{3}{4}$ thì $\beta = 2$.
+
+% \defi{\textbf{Mệnh đề 2.8.} \textit{Nếu $x_1,x_2,...,x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $x_1^*,x_2^*,...,x_n^*$ là cơ sở trực giao hóa Gram-Schmidt của nó thì \begin{enumerate}[i)]
+%     \item $\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n $,
+%     \item $\|x_1\|.\|x_2\|...\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L)$,
+%     \item $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $.
+% \end{enumerate}}}
+% \textit{Chứng minh.}\\
+% i) Theo Định nghĩa 2.7 ta có : 
+% $$\|x_i^*\| \geq (\alpha - \mu_{i,i-1}^2)\|x_{i-1}^*\|^2 \geq (\alpha - \frac{1}{4}).\|x_{i-1}^*\|^2 = \frac{1}{\beta}\|x_{i-1}^*\|^2 \text{.}$$
+% Khi đó \quad $\|x_{i-1}^*\|^2 \leq \beta.\|x_{i}^*\|^2$ ,và $$\|x_{j}^*\|^2 \leq \beta^{i-j}\|x_{i}^*\|^2  \qquad (1 \leq j \leq i \leq n)\text{.} \qquad (1)$$
+% Mặt khác, ta có : $$x_i = x_i^* + \displaystyle\sum_{j=1}^{i-1} \mu_{ij}x_j^*\text{,}$$ và vì $x_1^*,x_2^*,...,x_n^*$ là trực giao nên:
+% $$
+% \begin{aligned}
+%     \|x_i\|^2 & = \|x_i^*\|^2 + \displaystyle\sum_{j=1}^{i-1} (\mu_{ij})^2\|x_j^*\|^2  \leq \|x_i^*\|^2 + \displaystyle\sum_{j=1}^{i-1} \frac{1}{4}\beta^{i-j}\|x_i^*\|^2\\
+%     & \leq (1 + \frac{1}{4}\displaystyle\sum_{j=1}^{i-1} \beta^{i-j})\|x_i^*\|^2 = (1 + \frac{1}{4}\frac{\beta^i - \beta}{\beta - 1})\|x_i^*\|^2 \text{.}
+% \end{aligned}
+% $$
+% Bằng quy nạp, ta có thể dễ chứng minh $$1 + \frac{1}{4}\frac{\beta^i - \beta}{\beta - 1} \leq \beta^{i-1}.$$
+% Vì vậy,
+% $$ \|x_i\|^2 \leq \beta^{i-1}\|x_i^*\|^2 \text{.} \qquad\qquad (2)$$
+% Từ (1), (2) ta có:\\
+% \hspace*{4cm} $\|x_j\|^2 \leq \beta^{j-1}\|x_j^*\|^2 \leq \beta^{i-1}\|x_i\|^2 \text{.}$\\
+% ii) Theo Bổ đề 2.3. ta có :
+% $$det(L) = \|x_1^*\|.\|x_2^*\|...\|x_n^*\| \leq \|x_1\|.\|x_2\|...\|x_n\|\text{.}$$
+% Từ (2) ta có: \\
+% \hspace*{2cm}$\qquad \|x_1\|.\|x_2\|...\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}\|x_1^*\|.\|x_2^*\|...\|x_n^*\| = \beta^{\tfrac{n(n-1)}{4}}.det(L)$\\
+% iii) Xét $j = 1$ trong i), ta có $$\|x_1\|^2 \leq \beta^{i-1}\|x_i^*\|^2 $$  với $1\leq i \leq n$.
+
+% \noindent Khi đó:  $$\qquad \|x_1\|^{2n} \leq \beta^{0 + 1 +2 + ... +(n-1)}\|x_1^*\|^2.\|x_2^*\|^2...\|x_n^*\|^2 \leq \beta^{\tfrac{n(n-1)}{2}}.det(L)^2\text{.}$$
+
+%  \noindent Suy ra:
+% $$ \qquad \|x_1\| \leq \beta^{\tfrac{n-1}{4}}.det(L)^{\tfrac{1}{n}}\text{.}$$
+% \hspace{2cm}
+
+% \defi{\textbf{Bổ đề 2.9.} \textit{Cho $x_1,x_2,...,x_n$ là một cơ sở \index{cơ sở} của lưới $L$ và $x_1^*,x_2^*,...,x_n^*$ tương ứng là phép trực giao hóa Gram-Schmidt của nó. Với $y \in L$ khác không, $$\|y\| \geq min\{\|x_1^*\|,\|x_2^*\|,...,\|x_n^*\|\}\text{.}$$}}
+% \textit{Chứng minh.}\\
+% Cho $y$ là vector khác không bất kỳ thuộc lưới $L$ ta có : $$y = a_1x_1 + a_2x_2 + ... + a_nx_n \text{.}$$
+% Lấy $k$ là chỉ số lớn nhất sao cho $a_k \ne 0$. Khi đó:
+% $$
+% \begin{aligned}
+%     y & = \displaystyle\sum_{i=1}^{k} a_i.\displaystyle\sum_{j=1}^{i} \mu_{ij}x_j^* = \displaystyle\sum_{i=1}^{k}\displaystyle\sum_{j=1}^{i}a_i.\mu_{ij}.x_j^*\\
+%     & = \displaystyle\sum_{i=1}^{k}\left( \displaystyle\sum_{j=1}^{i} a_i.\mu_{ij}\right)x_j^* = a_k.x_k^* + \displaystyle\sum_{j=1}^{k-1} v_jx_j^*\text{.}
+% \end{aligned}
+% $$
+% Khi đó: $$\|y\| \geq a_k^2.\|x_k^*\|^2 + \displaystyle\sum_{j=1}^{k-1} v_j^2\|x_j^*\|^2 .$$ 
+% Mặt khác, do $a_k$ nguyên và khác 0 nên $a_k^2 \geq 1$:
+% $$\Rightarrow \quad \|y\| \geq \|x_k^*\|^2 + \displaystyle\sum_{j=1}^{k-1} v_j^2\|x_j^*\|^2 \text{.}$$
+%  Vì vậy:  $$\|y\|\geq \|x_k^*\| \geq min\{\|x_1^*\|,\|x_2^*\|,...,\|x_n^*\|\}.$$
+%  Ta có điều phải chứng minh.
+% \vspace{0.2cm}
+% \defi{\textbf{Định lý 2.10.} \textit{Nếu $x_1,x_2,...,x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $y\in L$ là vector trong lưới khác không bất kỳ thì: $$\|x_1\| \leq \beta^{\frac{n-1}{2}}\|y\|\text{.}$$
+% Đặc biệt, vector đầu tiên trong cơ sở rút gọn không dài hơn $\beta^{\tfrac{n-1}{2}}$ lần vector ngắn nhất \index{vector ngắn nhất} khác không của lưới \index{lưới} $L$.}}
+% \textit{Chứng minh.}\\
+% Ta có   $\|x_i^*\| \geq \frac{1}{\beta}\|x_{i-1}^*\|$ với $1\leq i \leq n$. Vì  $x_1^* = x_1$ nên $$\|x_1\|^2 = \|x_1^*\| \leq \beta^{n-1}\|x_n^*\|.$$
+% Do đó, với $1\leq i \leq n$ ta có : $$\|x_i^*\|^2 \geq \beta^{-(i-1)}\|x_1\|^2.$$
+% Theo Bổ đề 2.9, với vector khác 0 bất kì $y \in L$ ta có:
+% $$\|y\| \geq \min\{\|x_1^*\|,\|x_2^*\|,...,\|x_n^*\|\} \geq \beta^{\tfrac{-(n-1)}{2}}\|x_1^*\|  . $$
+% Vì vậy, ta có điều phải chứng minh
+% \vspace{0.5cm}
+
+
+
+% \newpage
+% \defi{\textbf{Thuật toán LLL.}}
+% \begin{itemize}
+%     \item Bước 1 : Nhập vào lưới $L$ với cơ sở lưới $b_1,b_2,...,b_n$ và tham số bổ trợ $c$ với $c \geq \dfrac{4}{3}$.
+%     \item Bước 2 : Tính cơ sở trực giao hóa Gram-Schmidt $b_1^*,b_2^*,...,b_n^*$ và các hệ số trực giao $u_{ij}$.
+%     \item Bước 3 : Thực hiện vòng lặp, nếu $\|b_i^*\|^2 \leq c.\|b_{i+1}^*\|^2$ tăng $i$ lên, ngược lại thực hiện hoán vị các vector $b_i$ và $b_{i+1}$, sau đó cập nhật lại cơ sở trực giao Gram-Schmidt và các hệ số của nó. \\
+%     Kiểm tra xem hệ số $\|u_{ij}\| > \dfrac{1}{2}$ thực hiện thủ tục rút gọn.\\
+%     Kết quả cuối cùng thu được cơ sở lưới giảm $L$.
+%     \item Thủ tục rút gọn: Ta sẽ rút gọn vector $b_i$ bằng cách trừ đi một bội nguyên $\|u_{ij}\|$ của $b_j$. Vì $\|u_{ij}\|$ là số nguyên gần nhất với hệ số Gram-Schmidt $u_{ij}$ nên đây là phép rút gọn tốt nhất ta có thể thực hiện, với điều kiện ràng buộc là $b_i$ vẫn nằm trong lưới ban đầu. Và cập nhật các hệ số cơ sở Gram-Schmidt. 
+    
+% \end{itemize}
+% \vspace{1cm}
+% \noindent Sau đây là lưu đồ mô tả cách hoạt động của thuật toán LLL.
+% \begin{figure}[h!]
+% \centering
+%   \includegraphics[scale = 1.1]{a.12.png}
+%   \caption{Hàm reduce.}
+%   \label{fig:boat1}
+% \end{figure}
+% \newpage
+% \begin{figure}[h!]
+% \centering
+%   \includegraphics[width = 1\textwidth]{a.11.3.png}
+%   \caption{Thuật toán LLL.}
+%   \label{fig:boat1}
+% \end{figure}
+% % \begin{figure}[h!]
+% % \centering
+% %   \includegraphics[scale = 1.3]{a.11.3.png}
+% %   \caption{Thuật toán LLL}
+% %   \label{fig:boat1}
+% % \end{figure}
+% % Trong đó, hàm Reduce có thuật toán sau :\\
+
+
+
+
+% \section{Thực hiện chương trình}
+% Để triển khai và kiểm tra các thuật toán, bài báo cáo này sẽ sử dụng phần mềm SageMath \index{SageMath}. SageMath là một chương trình tính toán mã nguồn mở, cấp phép bởi GPL. Nó là sự kết hợp sức mạnh của nhiều gói source vào Python (NumPy, SciPy, matplotlib, Sympy,Maxima, GAP, FLINT, R and many more). Nhiệm vụ của Sage là tạo ra một chương trình miễn phí có thể thay thế Magma, Maple, Mathematica và Matlab. Trang web \href{https://www.sagemath.org/}{https://www.sagemath.org/}.
+% \vspace{1cm}\\
+% Chương trình thuật toán LLL:\\
+
+% \begin{lstlisting}
+%     #Ham giam luoi
+% def reduce(i, B, U):
+    
+%     print("gia tri ma tran B: \n")
+%     j = i - 1
+%     while j >= 0:
+%         B.set_column(i, B.column(i) - round(U[j, i]) * B.column(j))
+%         U.set_column(i, U.column(i) - round(U[j, i]) * U.column(j))
+%         j = j - 1
+%     print(B)
+
+% #ham chinh gia tri ma tran bang thuat toan LLL    
+% def LLL(B, c=2):
+%     #Lay so hang va cot ma tran
+%     n = B.nrows()
+%     m = B.ncols()
+%     #khoi tao ma tran
+%     U = matrix(RR, m, m)
+%     O = matrix(RR, n, m)
+    
+%     # Truc giao hoa G-S
+%     for i in range(0, m):
+%         U[i, i] = 1
+%         O.set_column(i, B.column(i))
+%         for j in range(0, i):
+%             U[j, i] = (B.column(i) * O.column(j)) / (O.column(j) * O.column(j))
+%             O.set_column(i, O.column(i) - U[j, i] * O.column(j))
+%             reduce(i, B, U) # Goi ham recduce de bien doi ma tran
+%         i += 1
+    
+%     # Dieu kien giam
+%     i = 0
+%     while i < m - 1:
+%         if O.column(i) * O.column(i) <= c * O.column(i + 1) * O.column(i + 1):
+%             i += 1
+%         else:
+%             O.set_column(i + 1, O.column(i + 1) + U[i, i + 1] * O.column(i))
+%             U[i, i] = (B.column(i) * O.column(i + 1)) / (O.column(i + 1) * O.column(i + 1))
+%             U[i + 1, i] = 1
+%             U[i, i + 1] = 1
+%             U[i + 1, i + 1] = 0
+%             O.set_column(i, O.column(i) - U[i, i] * O.column(i + 1))
+%             U.swap_columns(i, i + 1)
+%             O.swap_columns(i, i + 1)
+%             B.swap_columns(i, i + 1)
+%             for k in range(i + 2, m):
+%                 U[i, k] = (B.column(k) * O.column(i)) / (O.column(i) * O.column(i))
+%                 U[i + 1, k] = (B.column(k) * O.column(i + 1)) / (O.column(i + 1) * O.column(i + 1))
+%             if abs(U[i, i + 1]) > 0.5:
+%                 reduce(i + 1, B, U)
+%                 i = max(i - 1, 0)
+%     return B
+
+% # Nhap du lieu tu ban phim
+
+% n = int(input("Nhap so chieu cua luoi n: "))
+% A = Matrix(ZZ, n, n)
+% for j in range(n):
+%     row = input(f"Nhap hang {j+1} cua ma tran : ")
+%     A[j] = list(map(int, row.split()))
+% print(A)
+% print("Ket qua giam luoi:\n")
+% res = LLL(A)
+
+% \end{lstlisting}
+
+% \newpage
+
+% \noindent \textbf{Một số kết quả thu được.}
+
+% \begin{enumerate}
+%     \item \textbf{Lưới 2 chiều:} Cho cơ sở $x_1 = (2,5), x_2 = (5,8)$ : 
+%     \begin{figure}[h!]
+% \centering
+%   \includegraphics[width = 0.6\textwidth]{a.6.png}
+%   \caption{Chương trình thuật toán LLL với lưới 2 chiều.}
+%   \label{fig:boat1}
+% \end{figure}
+%  % Lưới sau khi rút gọn có cơ sở mởi $x_1 = (1,-2), x_2 = (4,1)$.
+% %     \begin{figure}[h!]
+% % \centering
+% %   \includegraphics[scale = 1.1]{a.6.png}
+  
+% %   \label{fig:boat1}
+% % \end{figure}
+%     \item  \textbf{Lưới 3 chiều:} Cho cơ sở $x_1 = (1,1,1) , x_2 = (-1,0,2) , x_3 = (3,5,6)$:
+%     \begin{figure}[h!]
+% \centering
+%   \includegraphics[width = 0.5\textwidth]{a.7.png}
+%   \caption{Chương trình thuật toán LLL với lưới 3 chiều.}
+%   \label{fig:boat1}
+% \end{figure}
+% \end{enumerate}
+
+
+
+
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Ứng dụng phương pháp lưới trong hệ mật mã RSA}
+% \begin{frame}{Ứng dụng phương pháp lưới trong hệ mật mã RSA}
+% \begin{block}{Bài toán}
+% Bài toán RSA với số mũ $e$ nhỏ, $m$ có giá trị lớn. Cho $m^e$, ta có $B$ với $|m-B| \leq n^{\tfrac{1}{e}}$. Tìm $m \in Z_n$
+% \end{block}
+
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Ví  dụ ứng dụng}
+% \begin{frame}{Ví dụ ứng dụng}
+
+% Trong bài toán này, thông báo có dạng $m = B + x$, trong đó $B$ cố định và $|x| \leq Y$ với Y nguyên
+
+% Giả sử Bob có khóa công khai $(n, e) = (n, 3)$
+
+% Khi đó bài toán là $c \equiv (B+x)^3 \quad (mod \ n)$
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ ứng dụng}
+
+% Ta giả sử rằng Eve biết $B, Y, n$ . Vì vậy cô ấy chỉ cần tìm $x$. Ta có thể tạo thành đa thức:
+% $$
+% \begin{aligned}
+% f(T) & = (B+T)^3 - c = T^3 + 3BT^2 + 3B^2T + B^3 -c\\
+% & \equiv T^3 + a_2T^2 + a_1T + a_0 (mod \ n).
+% \end{aligned}
+% $$
+
+% Eve đang tìm $|x| \leq Y$ sao cho $f(x) \equiv 0 \quad (mod \ n)$. Nói cách khác, cô ấy đang tìm nghiệm nhỏ của đồng dư đa thức $f(T) \equiv 0 \quad (mod \ n)$
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ ứng dụng}
+
+% Eve áp dụng thuật toán LLL cho lưới được tạo bởi các vector:
+% $$v_1 =(n, 0, 0, 0), v_2 = (0, Yn, 0, 0) $$
+% $$ v_3 = (0, 0, Y^2n, 0), v_4 = (a_0, a_1Y, a_2Y^2, Y^3)$$
+% Điều này tạo nên cơ sở mới $b_1, b_2, b_3, b_4$ . Nhưng ở đây, ta chỉ quan tâm đến $b_1$. Theo Mệnh đề 2.8 ta có
+% $$
+% \begin{aligned}
+% \|b_1\| & \leq 2^{\tfrac{3}{4}}.det(v_1, ..., v_4)^{\tfrac{1}{4}} \qquad \quad \text{với} \quad \alpha = \frac{3}{4} \quad \text{hay} \quad \beta = 2 \\
+% & = 2^{\tfrac{3}{4}}.(n^{3}Y^{6})^{\tfrac{1}{4}} = 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} \text{.}
+% \end{aligned}
+% $$
+
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ ứng dụng}
+
+% Ta có thể viết lại:
+% $$b_1 = c_1v_1 + ... + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
+% với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$ $$e_2 = c_3n + c_4a_2$$
+% \hspace*{7cm} $e_3 = c_4$.\\
+% Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n), \quad 0\leq i\leq 2$. \\
+
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ ứng dụng}
+
+% Ta có thể thiết lập được đa thức $$g(T) = e_3T^3 + e_2T^2 + e_1T + e_0\text{.}$$
+% Khi đó, vì số nguyên $x$ thỏa mãn $f(x) \equiv 0 \quad (mod \ n) $ và vì các hệ số của $c_4f(T)$ và $g(T)$ đồng dạng với $mod(n)$ nên, $$0 \equiv c_4f(x) \equiv g(x) \quad (mod \ n)\text{.}$$
+
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ ứng dụng}
+
+% Bây giờ ta giả sử rằng $$Y < 2^{-7/6}n^{1/6}$$
+% Khi đó $$
+% \begin{aligned}
+% |g(x)| & \leq |e_0|+|e_1x|+|e_2x^2|+|e_3x^3|\\
+% & \leq |e_0| + |e_1|Y + |e_2|Y^2 + |e_3|Y^3\\
+% & = (1, 1, 1, 1).(|e_0|, |e_1Y|, |e_2Y^2|, |e_3Y^3|)\\
+% &\leq \|(1, 1, 1, 1)\|\|(|e_0|, |e_1Y|, |e_2Y^2|, |e_3Y^3|)\| \\
+% & = 2\|b_1\|\text{,}
+% \end{aligned}
+% $$
+
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ ứng dụng}
+
+% Trong đó, bất đẳng thức cuối sử dụng bất đẳng thức Cauchy-Schwarz cho các tích vô hướng \index{tích vô hướng} ($u.v \leq \|u\|\|v\|$) . Suy ra: $$\|b_1\| \leq 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} < 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}(2^{\tfrac{-7}{6}}n^{\tfrac{1}{6}})^{\tfrac{3}{2}} = 2^{-1}n \text{.}$$
+% Do đó ta có được, $$|g(x)| < n.$$
+% Vì $g(x) \equiv 0 \quad (mod \ n)$, nên ta có $g(x) = 0$. Từ đó, ta có thể tìm được tối đa 3 nghiệm của $g(x)$ . Sau đó ta sẽ thử xem nó có đưa ra bản mã chính xác hay không. Do đó Eve có thể tìm thấy $x$.\\
+
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Tổng quát}
+% \begin{frame}{Tổng quát}
+
+
+% \end{frame}
+
+
+
+
+
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -664,6 +1086,12 @@ Theo công thức (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta c
 % \subsection{Tổng kết}
 % \subsubsection{Tổng kết}
 % \begin{frame}{Tổng kết}
+%     \begin{itemize}
+%     \item
+%     \item
+%     \item
+%     \item
+%     \end{itemize}
 %
 % Trên đây là toàn văn báo cáo Đồ án 1 về chủ đề \textbf{phương pháp lưới}. Trong đồ án này, em đã trình bày một số kiến thức cơ bản về phương pháp lưới, tìm hiểu về thuật toán LLL và nhận thấy một phần tầm quan trọng của nó tróng lý thuyết số và mật mã.Trong bài báo cáo có giới thiệu về một số hệ mật mã như RSA và NTRU, thực hiện các cuộc tấn công vào chúng và thực hiện chạy chương trình thực nghiệm trên phần mềm SageMath.\\
 
