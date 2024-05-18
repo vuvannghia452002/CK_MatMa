@@ -726,11 +726,11 @@ Cho $\{x_1, x_2\}$ là cơ sở của lưới $L$ với $x_1 = (31, 59), x_2 = (
 \item Với: $x_1 = (31, 59), x_2 = (37, 70)$
 \item Ta có: $\|x_1\|= \sqrt{4442}$ và $\|x_2\| = \sqrt{6269}$ $\Rightarrow$ $\|x_1\| \leq \|x_2\|$
 \item Và: $\dfrac{x_1.x_2}{x_1.x_1} = \dfrac{5277}{4442} \approx 1, 18$
-\item Chọn $t_1 = 1 $ suy ra cơ sở mới:
+\item Chọn $t  = 1 $ suy ra cơ sở mới:
 
 $$\begin{cases}
 x_1^{*} = x_1 = (31, 59)\\
-x_2^{*} = x_2 - t_1x_1 = (6, 11)
+x_2^{*} = x_2 - t x_1 = (6, 11)
 \end{cases}$$
 \end{itemize}
 
@@ -739,93 +739,118 @@ x_2^{*} = x_2 - t_1x_1 = (6, 11)
 \begin{frame}{Ví dụ}
 \begin{itemize}
 \item Với: $x_1 = (31, 59), x_2 =  (6, 11)$
-\item Ta có: $\|x_1\|= \sqrt{4442}$ và $\|x_2\| = \sqrt{157}$ $\Rightarrow$ $\|x_1\| \geq \|x_2\|$, hoán vị 2 vector ta có:
+\item Ta có: $\|x_1\|= \sqrt{4442}$ và $\|x_2\| = \sqrt{157}$ $\Rightarrow$ $\|x_1\| \geq \|x_2\|$
+
+Hoán vị 2 vector ta có:
+
 $$\begin{cases}
 x_1 = (6, 11)\\
 x_2 = (31, 59)
-\end{cases}  $$
+\end{cases}$$
 
 
-\item Và: $\dfracdfrac{x_1^{'}.x_2^{'}}{x_1^{'}.x_1^{'}} \approx 5, 3$
-\item Chọn $t_1 = 1 $ suy ra cơ sở mới:
+\item Và: $\dfrac{x_1.x_2}{x_1.x_1}    = \dfrac{835}{157}       \approx 5, 3$
+
+
+
+\item Chọn  $t  = 5$ ta có cơ sở mới: 
+
+
+
+$$\begin{cases}
+    x_1^{*} = x_1 = (6, 11) \\
+    x_2^{*} = x_2 - t x_1 = (1, 4)
+    \end{cases}$$
+
+  
+
+ 
+\end{itemize}
+
+
+  
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ}
+\begin{itemize}
+
+
+
     
-    $$\begin{cases}
-    x_1^{*} = x_1 = (31, 59)\\
-    x_2^{*} = x_2 - t_1x_1 = (6, 11)
+\item Với: $x_1 =    (6, 11), x_2 =  (1, 4)$
+\item Ta có: $\|x_1\|= \sqrt{157}$ và $\|x_2\| = \sqrt{17}$ $\Rightarrow$ $\|x_1\| \geq \|x_2\|$
+
+Hoán vị 2 vector ta có:
+
+
+$$\begin{cases}
+    x_1 = (1, 4)\\
+    x_2 =(6, 11)
+    \end{cases}$$
+
+    \item Và: $\dfrac{x_1.x_2}{x_1.x_1}   = \dfrac{50}{17} \approx 2, 9$
+    
+\item Chọn  $t  = 3$ ta có cơ sở mới: 
+    
+     
+
+
+$$\begin{cases}
+    x_1^{*} = x_1 = (1, 4)\\
+    x_2^{*} = x_2 - t x_1 = (3, -1)
     \end{cases}$$
 
  
 
- 
-% + Chọn $t_2 = 5$ ta có cơ sở mới: $$\begin{cases}
-% x_1^{''} = x_1^{'} = (6, 11) \\
-% x_2^{''} = x_2^{'} - t_2x_1^{'} = (1, 4)
-% \end{cases}$$
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ}
+\begin{itemize}
 
 
-  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Ví dụ}
-% \begin{itemize}
-% \item Hoán vị vị trí $x_1^{''}$ và $x_2^{''}$ ta thu được cơ sở $$\begin{cases}
-% x_1^{''}= (1, 4)\\
-% x_2^{''}= (6, 11)
-% \end{cases}$$
-% \hspace*{1cm} Ta có $\dfrac{x_1^{''}.x_2^{''}}{x_1^{''}.x_1^{''}} = \dfrac{50}{17} \approx 2, 9$. \qquad Chọn $t_3 = 3$ ta có: $$\begin{cases}
-% x_1^{(3)} = (1, 4)\\
-% x_2^{(3)} = x_2^{''} - 3.x_1^{''} = (3, -1)
-% \end{cases}$$\\
 
-% \end{itemize}
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Ví dụ}
-% \begin{itemize}
-% \item Hoán vị 2 vector ta có $$\begin{cases}
-% x_1^{(3)} = (3, -1)\\
-% x_2^{(3)} = (1, 4)
-% \end{cases}$$
-% \hspace*{1cm}Ta thấy $\dfrac{x_1^{(3)}.x_2^{(3)}}{x_1^{(3)}.x_1^{(3)}} = -\dfrac{1}{10}$
+    
+    \item Với: $x_1 = (1, 4), x_2 =  (3, -1)$
+    \item Ta có: $\|x_1\|= \sqrt{17}$ và $\|x_2\| = \sqrt{10}$ $\Rightarrow$ $\|x_1\| \geq \|x_2\|$
 
-% $\Rightarrow$ Suy ra $\{x_1^{(3)}, x_2^{(3)}\}$ là cơ sở giảm.\vspace{0.5cm}
 
-% \end{itemize}
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    Hoán vị 2 vector ta có:
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    $$\begin{cases}
+        x_1 =  (3, -1)\\
+        x_2 =  (1, 4)
+        \end{cases}$$
+ 
+
+
+        \item Và: $\dfrac{x_1.x_2}{x_1.x_1}  = -\dfrac{1}{10}$
+
+    \end{itemize}
+    
+$\Rightarrow$ Suy ra  cơ sở giảm của lưới $L$   là  $\{  (3, -1),  (1, 4)\}$  
+ 
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 
-% \\ + Hoán vị vị trí $x_1^{''}$ và $x_2^{''}$ ta thu được cơ sở $$\begin{cases}
-% x_1^{''}= (1, 4)\\
-% x_2^{''}= (6, 11)
-% \end{cases}$$
-
-
-% \hspace*{1cm} Ta có $\dfrac{x_1^{''}.x_2^{''}}{x_1^{''}.x_1^{''}} = \dfrac{50}{17} \approx 2, 9$. \qquad Chọn $t_3 = 3$ ta có: $$\begin{cases}
-% x_1^{(3)} = (1, 4)\\
-% x_2^{(3)} = x_2^{''} - 3.x_1^{''} = (3, -1)
-% \end{cases}$$\\
 
 
 
-% + Hoán vị 2 vector ta có $$\begin{cases}
-% x_1^{(3)} = (3, -1)\\
-% x_2^{(3)} = (1, 4)
-% \end{cases}$$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
-% \hspace*{1cm}Ta thấy $\dfrac{x_1^{(3)}.x_2^{(3)}}{x_1^{(3)}.x_1^{(3)}} = -\dfrac{1}{10}$
-% . \qquad Suy ra $\{x_1^{(3)}, x_2^{(3)}\}$ là cơ sở giảm.\vspace{0.5cm}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
