@@ -690,7 +690,7 @@ $$
 \begin{aligned}
 \|ax_1 + bx_2\|^2 &\geq a^2\|x_1\|^2 - |ab|\|x_1\|^2 + b^2\|x_2\|^2 \\
 & \geq a^2\|x_1\|^2 - |ab|\|x_1\|^2 + b^2\|x_1\|^2 \quad (\text{do}\|x_2\| \geq \|x_1\|)\\
-& = (a^2 - |ab| + b^2) \|x_1\|^2 
+& = (a^2 - |ab| + b^2) \|x_1\|^2
 \end{aligned}
 $$
 Ta thấy $a^2 - |ab| + b^2 \in N$ và bằng 0 khi và chỉ khi $a = b = 0$.\\
@@ -726,7 +726,7 @@ Cho $\{x_1, x_2\}$ là cơ sở của lưới $L$ với $x_1 = (31, 59), x_2 = (
 \item Với: $x_1 = (31, 59), x_2 = (37, 70)$
 \item Ta có: $\|x_1\|= \sqrt{4442}$ và $\|x_2\| = \sqrt{6269}$ $\Rightarrow$ $\|x_1\| \leq \|x_2\|$
 \item Và: $\dfrac{x_1.x_2}{x_1.x_1} = \dfrac{5277}{4442} \approx 1, 18$
-\item Chọn $t  = 1 $ suy ra cơ sở mới:
+\item Chọn $t = 1 $ suy ra cơ sở mới:
 
 $$\begin{cases}
 x_1^{*} = x_1 = (31, 59)\\
@@ -738,7 +738,7 @@ x_2^{*} = x_2 - t x_1 = (6, 11)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Ví dụ}
 \begin{itemize}
-\item Với: $x_1 = (31, 59), x_2 =  (6, 11)$
+\item Với: $x_1 = (31, 59), x_2 = (6, 11)$
 \item Ta có: $\|x_1\|= \sqrt{4442}$ và $\|x_2\| = \sqrt{157}$ $\Rightarrow$ $\|x_1\| \geq \|x_2\|$
 
 Hoán vị 2 vector ta có:
@@ -748,59 +748,40 @@ x_1 = (6, 11)\\
 x_2 = (31, 59)
 \end{cases}$$
 
+\item Và: $\dfrac{x_1.x_2}{x_1.x_1} = \dfrac{835}{157} \approx 5, 3$
 
-\item Và: $\dfrac{x_1.x_2}{x_1.x_1}    = \dfrac{835}{157}       \approx 5, 3$
-
-
-
-\item Chọn  $t  = 5$ ta có cơ sở mới: 
-
-
+\item Chọn $t = 5$ ta có cơ sở mới:
 
 $$\begin{cases}
-    x_1^{*} = x_1 = (6, 11) \\
-    x_2^{*} = x_2 - t x_1 = (1, 4)
-    \end{cases}$$
+x_1^{*} = x_1 = (6, 11) \\
+x_2^{*} = x_2 - t x_1 = (1, 4)
+\end{cases}$$
 
-  
-
- 
 \end{itemize}
 
-
-  
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Ví dụ}
 \begin{itemize}
 
-
-
-    
-\item Với: $x_1 =    (6, 11), x_2 =  (1, 4)$
+\item Với: $x_1 = (6, 11), x_2 = (1, 4)$
 \item Ta có: $\|x_1\|= \sqrt{157}$ và $\|x_2\| = \sqrt{17}$ $\Rightarrow$ $\|x_1\| \geq \|x_2\|$
 
 Hoán vị 2 vector ta có:
 
+$$\begin{cases}
+x_1 = (1, 4)\\
+x_2 =(6, 11)
+\end{cases}$$
+
+\item Và: $\dfrac{x_1.x_2}{x_1.x_1} = \dfrac{50}{17} \approx 2, 9$
+
+\item Chọn $t = 3$ ta có cơ sở mới:
 
 $$\begin{cases}
-    x_1 = (1, 4)\\
-    x_2 =(6, 11)
-    \end{cases}$$
-
-    \item Và: $\dfrac{x_1.x_2}{x_1.x_1}   = \dfrac{50}{17} \approx 2, 9$
-    
-\item Chọn  $t  = 3$ ta có cơ sở mới: 
-    
-     
-
-
-$$\begin{cases}
-    x_1^{*} = x_1 = (1, 4)\\
-    x_2^{*} = x_2 - t x_1 = (3, -1)
-    \end{cases}$$
-
- 
+x_1^{*} = x_1 = (1, 4)\\
+x_2^{*} = x_2 - t x_1 = (3, -1)
+\end{cases}$$
 
 \end{itemize}
 \end{frame}
@@ -808,49 +789,30 @@ $$\begin{cases}
 \begin{frame}{Ví dụ}
 \begin{itemize}
 
+\item Với: $x_1 = (1, 4), x_2 = (3, -1)$
+\item Ta có: $\|x_1\|= \sqrt{17}$ và $\|x_2\| = \sqrt{10}$ $\Rightarrow$ $\|x_1\| \geq \|x_2\|$
 
+Hoán vị 2 vector ta có:
 
-    
-    \item Với: $x_1 = (1, 4), x_2 =  (3, -1)$
-    \item Ta có: $\|x_1\|= \sqrt{17}$ và $\|x_2\| = \sqrt{10}$ $\Rightarrow$ $\|x_1\| \geq \|x_2\|$
+$$\begin{cases}
+x_1 = (3, -1)\\
+x_2 = (1, 4)
+\end{cases}$$
 
+\item Và: $\dfrac{x_1.x_2}{x_1.x_1} = -\dfrac{1}{10}$
 
-    Hoán vị 2 vector ta có:
+\end{itemize}
 
+$\Rightarrow$ Suy ra cơ sở giảm của lưới $L$ là $\{(3, -1), (1, 4)\}$
 
-    $$\begin{cases}
-        x_1 =  (3, -1)\\
-        x_2 =  (1, 4)
-        \end{cases}$$
- 
-
-
-        \item Và: $\dfrac{x_1.x_2}{x_1.x_1}  = -\dfrac{1}{10}$
-
-    \end{itemize}
-    
-$\Rightarrow$ Suy ra  cơ sở giảm của lưới $L$   là  $\{  (3, -1),  (1, 4)\}$  
- 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
