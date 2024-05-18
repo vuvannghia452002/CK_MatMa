@@ -486,9 +486,9 @@ Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$
 và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. Khi đó:
 
 \begin{itemize}
-\item $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$,
-\item $\|x_k^*\| \leq \|x_k\|$,
-\item $\det(X^*) = \det(X)$.
+\item $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$
+\item $\|x_k^*\| \leq \|x_k\|$
+\item $\det(X^*) = \det(X)$
 \end{itemize}
 
 \end{block}
@@ -500,39 +500,113 @@ và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. K
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Định lý}
 
-\textbf{Chứng minh:}
+    
+    
+    
+    
+    
+    \begin{itemize}
+        \item $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$
+        \end{itemize}
+    
+    
+        
+        
+        
+    \textbf{Chứng minh:}
+        
+        
+        Theo định nghĩa của quá trình trực giao hóa Gram-Schmidt, các vector $x_1^*, x_2^*, \ldots, x_n^*$ được xây dựng sao cho mỗi vector mới là trực giao với tất cả các vector trước đó. Cụ thể, với $x_i^*$ và $x_j^*$:
+    
+    
+    
+    
+    
+    \[
+    x_j^* = x_j - \sum_{k=1}^{j-1} \mu_{jk} x_k^*, \quad \text{với} \quad \mu_{jk} = \frac{\langle x_j, x_k^* \rangle}{\langle x_k^*, x_k^* \rangle}
+    \]
+    
+    
+    
+    
+    
+    Do đó, $ x_i^* x_j^* = 0$ với $1 \leq i < j \leq n$.
+    
+    
+    
+     
+    \end{frame}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Định lý}
 
-% \begin{itemize}
-% \item[(i)] Theo định nghĩa của quá trình trực giao hóa Gram-Schmidt, các vector $x_1^*, x_2^*, \ldots, x_n^*$ được xây dựng sao cho mỗi vector mới là trực giao với tất cả các vector trước đó. Cụ thể, với $x_i^*$ và $x_j^*$:
-% \[
-% x_j^* = x_j - \sum_{k=1}^{j-1} \mu_{jk} x_k^*, \quad \text{với} \quad \mu_{jk} = \frac{\langle x_j, x_k^* \rangle}{\langle x_k^*, x_k^* \rangle}
-% \]
-% Do đó, $ x_i^* x_j^* = 0$ với $1 \leq i < j \leq n$.
-% \end{itemize}
+    
+    
+    
+    
+    
+    \begin{itemize}
+\item $\|x_k^*\| \leq \|x_k\|$
+        \end{itemize}
+    
+    
+        
+    \textbf{Chứng minh:}
+         
+    
+    \end{frame}
+    
+    
+    
+    
+     
+    % \item Ta có $x_k = x_k^* + \displaystyle\sum_{j=1}^{k-1} \mu_{kj}.x_j^*$. Theo định lý Py-ta-go ta có :
+    % $$\|x_k\|^2 = \|x_k^*\|^2 + \displaystyle\sum_{j=1}^{k-1} (\mu_{kj})^2.\|x_j^*\|^2 \text{.}$$
+    % Suy ra : \hspace{3cm} $\qquad \|x_k^*\| \leq \|x_k\|$.
+    % \item Ta có $X=MX^*$ (như chú ý trên)\\
+    % Mà $M$ là ma trận tam giác dưới với \index{ma trận!tam giác dưới} $\mu_{ii} = 1$.\\
+    % Do đó: $\qquad det(M) = 1 \Rightarrow{det(X^*) = det(X)}$.
+    % \end{enumerate}
+    % \newpage
+    % \defi{\textbf{Bổ đề 2.3.} \textit{Cho $x_1, x_2, ..., x_n$ là một cơ sở của $R^n$ và $x_1^*, x_2^*, ..., x_n^*$ là trực giao hóa Gram-Schmidt của nó. Ta có $$|det(X)| \leq \|x_1\|\|x_2\|...\|x_n\| \text{.}$$}}
+    % \textit{Chứng minh.}\\
+    % Ta có $|det(X^*)|$ là thể tích hình hộp n chiều căng bởi các vector trực giao $x_1^*, x_2^*, ..., x_n^*$ nên suy ra: $$|det(X^*)| = \|x_1^*\|\|x_2^*\|...\|x_n^*\|\text{.}$$
+    % Theo Định lý 2.2, ta có $\|x_k^*\| \leq \|x_k\|$ nên $$|det(X)| = |det(X^*)| \leq \|x_1\|\|x_2\|...\|x_n\| \text{.}$$
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Định lý}
 
-\end{frame}
-
-
-
-
-
-
-% \textbf{Chứng minh.}
-% \begin{enumerate}[i)]
-% \item Điều này luôn đúng trong quá trình trực giao hóa Gram-Schmidt.
-% \item Ta có $x_k = x_k^* + \displaystyle\sum_{j=1}^{k-1} \mu_{kj}.x_j^*$. Theo định lý Py-ta-go ta có :
-% $$\|x_k\|^2 = \|x_k^*\|^2 + \displaystyle\sum_{j=1}^{k-1} (\mu_{kj})^2.\|x_j^*\|^2 \text{.}$$
-% Suy ra : \hspace{3cm} $\qquad \|x_k^*\| \leq \|x_k\|$.
-% \item Ta có $X=MX^*$ (như chú ý trên)\\
-% Mà $M$ là ma trận tam giác dưới với \index{ma trận!tam giác dưới} $\mu_{ii} = 1$.\\
-% Do đó: $\qquad det(M) = 1 \Rightarrow{det(X^*) = det(X)}$.
-% \end{enumerate}
-% \newpage
-% \defi{\textbf{Bổ đề 2.3.} \textit{Cho $x_1, x_2, ..., x_n$ là một cơ sở của $R^n$ và $x_1^*, x_2^*, ..., x_n^*$ là trực giao hóa Gram-Schmidt của nó. Ta có $$|det(X)| \leq \|x_1\|\|x_2\|...\|x_n\| \text{.}$$}}
-% \textit{Chứng minh.}\\
-% Ta có $|det(X^*)|$ là thể tích hình hộp n chiều căng bởi các vector trực giao $x_1^*, x_2^*, ..., x_n^*$ nên suy ra: $$|det(X^*)| = \|x_1^*\|\|x_2^*\|...\|x_n^*\|\text{.}$$
-% Theo Định lý 2.2, ta có $\|x_k^*\| \leq \|x_k\|$ nên $$|det(X)| = |det(X^*)| \leq \|x_1\|\|x_2\|...\|x_n\| \text{.}$$
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    
+    
+    
+    
+    \begin{itemize}
+\item $\det(X^*) = \det(X)$
+        \end{itemize}
+    
+    
+    \textbf{Chứng minh:}
+        
+         
+    
+    \end{frame}
+    
+    
+    
+    
+     
+    % \item Ta có $x_k = x_k^* + \displaystyle\sum_{j=1}^{k-1} \mu_{kj}.x_j^*$. Theo định lý Py-ta-go ta có :
+    % $$\|x_k\|^2 = \|x_k^*\|^2 + \displaystyle\sum_{j=1}^{k-1} (\mu_{kj})^2.\|x_j^*\|^2 \text{.}$$
+    % Suy ra : \hspace{3cm} $\qquad \|x_k^*\| \leq \|x_k\|$.
+    % \item Ta có $X=MX^*$ (như chú ý trên)\\
+    % Mà $M$ là ma trận tam giác dưới với \index{ma trận!tam giác dưới} $\mu_{ii} = 1$.\\
+    % Do đó: $\qquad det(M) = 1 \Rightarrow{det(X^*) = det(X)}$.
+    % \end{enumerate}
+    % \newpage
+    % \defi{\textbf{Bổ đề 2.3.} \textit{Cho $x_1, x_2, ..., x_n$ là một cơ sở của $R^n$ và $x_1^*, x_2^*, ..., x_n^*$ là trực giao hóa Gram-Schmidt của nó. Ta có $$|det(X)| \leq \|x_1\|\|x_2\|...\|x_n\| \text{.}$$}}
+    % \textit{Chứng minh.}\\
+    % Ta có $|det(X^*)|$ là thể tích hình hộp n chiều căng bởi các vector trực giao $x_1^*, x_2^*, ..., x_n^*$ nên suy ra: $$|det(X^*)| = \|x_1^*\|\|x_2^*\|...\|x_n^*\|\text{.}$$
+    % Theo Định lý 2.2, ta có $\|x_k^*\| \leq \|x_k\|$ nên $$|det(X)| = |det(X^*)| \leq \|x_1\|\|x_2\|...\|x_n\| \text{.}$$
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}{Trực giao hóa Gram-Schmidt}
 
 % \textbf{Chứng minh:}
