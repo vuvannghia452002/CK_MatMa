@@ -819,7 +819,6 @@ $\Rightarrow$ Suy ra cơ sở giảm của lưới $L$ là $\{(3, -1), (1, 4)\}$
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Thuật toán giảm lưới 2 chiều}
 \begin{frame}{Thuật toán giảm lưới 2 chiều}
 
 \begin{enumerate}
@@ -860,29 +859,47 @@ Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Định nghĩa}
+    
 
-% \begin{frame}{Định nghĩa}
-% \begin{itemize}
-% \item Tham số rút gọn $\alpha$ là một số thực sao cho $\dfrac{1}{4} < \alpha < 1$. Giá trị chính tắc của $\alpha$ là $\alpha = \dfrac{3}{4}$
-% \item Cơ sở $x_1, x_2, ..., x_n$ được gọi là một cơ sở $\alpha$-rút gọn nếu nó thỏa mãn:
-% \begin{enumerate}
-% \item $|\mu_{ij}| \leq \dfrac{1}{2} $ với $1 \leq j < i \leq n$,
-% \item $\|x_i^*\|^2 \geq (\alpha - \mu_{i, i-1}^2)\|x_{i-1}^*\|^2$ với $2\leq i \leq n$.
-% \end{enumerate}
-% \item Ta định nghĩa tham số bổ trợ $\beta$ như sau: \quad $\beta = \dfrac{4}{4\alpha - 1}$
-% \end{itemize}
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Định nghĩa}
-% \begin{itemize}
-% \item Nếu $x_1, x_2, ..., x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $x_1^*, x_2^*, ..., x_n^*$ là cơ sở trực giao hóa Gram-Schmidt của nó thì:
-% \begin{enumerate}
-% \item $\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n $,
-% \item $\|x_1\|.\|x_2\|...\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L)$,
-% \item $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $.
-% \end{enumerate}
-% \end{itemize}
-% \end{frame}
+    \begin{block}{Định nghĩa}
+    
+
+
+Tham số rút gọn    $\alpha$ là một số thực sao cho $\dfrac{1}{4} < \alpha < 1$. 
+Giá trị chính tắc của $\alpha$ là $\alpha = \dfrac{3}{4}$
+        
+    \end{block}
+
+
+
+
+    \begin{block}{Định nghĩa}
+        
+
+        Cơ sở $x_1, x_2, ..., x_n$ được gọi là một cơ sở $\alpha$-rút gọn nếu nó thỏa mãn: 
+        
+        
+        
+        \begin{itemize}
+\item $|\mu_{ij}| \leq \dfrac{1}{2} $ với $1 \leq j < i \leq n$,
+\item $\|x_i^*\|^2 \geq (\alpha - \mu_{i, i-1}^2)\|x_{i-1}^*\|^2$ với $2\leq i \leq n$.
+\end{itemize}
+
+\end{block}
+
+
+
+Ta định nghĩa tham số bổ trợ     $\beta$ như sau: \quad $\beta = \dfrac{4}{4\alpha - 1}$.
+
+
+Do \quad $\frac{1}{4} < \alpha < 1$ \quad $\Rightarrow \quad \beta > \dfrac{4}{3}$. \quad Nếu $\alpha = \dfrac{3}{4}$ thì $\beta = 2$.
+
+
+
+
+
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -895,15 +912,11 @@ Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \defi{\textbf{Định nghĩa 2.6.} \textit{Tham số rút gọn \index{tham số rút gọn}$\alpha$ là một số thực sao cho $\dfrac{1}{4} < \alpha < 1$. Giá trị chính tắc của $\alpha$ là $\alpha = \dfrac{3}{4}$ \cite{6}.}}
 
-% \defi{\textbf{Định nghĩa 2.7.} \textit{Cơ sở $x_1, x_2, ..., x_n$ được gọi là một cơ sở $\alpha$-rút gọn nếu nó thỏa mãn: \begin{enumerate}[i)]
-% \item $|\mu_{ij}| \leq \dfrac{1}{2} $ với $1 \leq j < i \leq n$,
-% \item $\|x_i^*\|^2 \geq (\alpha - \mu_{i, i-1}^2)\|x_{i-1}^*\|^2$ với $2\leq i \leq n$.
-% \end{enumerate}}}
 
-% Ta định nghĩa tham số bổ trợ \index{tham số bổ trợ} $\beta$ như sau: \quad $\beta = \dfrac{4}{4\alpha - 1}$.\\
-% \hspace*{0.7cm}Do \quad $\frac{1}{4} < \alpha < 1$ \quad $\Rightarrow \quad \beta > \dfrac{4}{3}$. \quad Nếu $\alpha = \dfrac{3}{4}$ thì $\beta = 2$.
+
+
+
 
 % \defi{\textbf{Mệnh đề 2.8.} \textit{Nếu $x_1, x_2, ..., x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $x_1^*, x_2^*, ..., x_n^*$ là cơ sở trực giao hóa Gram-Schmidt của nó thì \begin{enumerate}[i)]
 % \item $\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n $,
