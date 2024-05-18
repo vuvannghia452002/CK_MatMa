@@ -482,7 +482,8 @@ là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sa
 
 \begin{block}{Định lý}
 
-Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$ và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. Khi đó:
+Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$ 
+và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. Khi đó:
 
 \begin{itemize}
 \item $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$,
@@ -492,14 +493,30 @@ Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$ và $x_1^*, 
 
 \end{block}
 
+ 
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Định lý}
+
+\textbf{Chứng minh:}
+
+% \begin{itemize}
+% \item[(i)] Theo định nghĩa của quá trình trực giao hóa Gram-Schmidt, các vector $x_1^*, x_2^*, \ldots, x_n^*$ được xây dựng sao cho mỗi vector mới là trực giao với tất cả các vector trước đó. Cụ thể, với $x_i^*$ và $x_j^*$:
+% \[
+% x_j^* = x_j - \sum_{k=1}^{j-1} \mu_{jk} x_k^*, \quad \text{với} \quad \mu_{jk} = \frac{\langle x_j, x_k^* \rangle}{\langle x_k^*, x_k^* \rangle}
+% \]
+% Do đó, $ x_i^* x_j^* = 0$ với $1 \leq i < j \leq n$.
+% \end{itemize}
+
 \end{frame}
 
-% \defi{\textbf{Định lý 2.2.} \textit{Cho $x_1, x_2, ..., x_n$ là một cơ sở của $R^n$ và $x_1^*, x_2^*, ..., x_n^*$ là trực giao hóa Gram-Schmidt của nó. Khi đó
-% \begin{enumerate}[i)]
-% \item $x_i^*.x_j^* = 0$ với $ 1\leq i < j \leq n$,
-% \item $\|x_k^*\| \leq \|x_k\|$,
-% \item $det(X^*) = det(X)$.
-% \end{enumerate}}}
+
+
+
+
+
 % \textbf{Chứng minh.}
 % \begin{enumerate}[i)]
 % \item Điều này luôn đúng trong quá trình trực giao hóa Gram-Schmidt.
@@ -515,21 +532,6 @@ Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$ và $x_1^*, 
 % \textit{Chứng minh.}\\
 % Ta có $|det(X^*)|$ là thể tích hình hộp n chiều căng bởi các vector trực giao $x_1^*, x_2^*, ..., x_n^*$ nên suy ra: $$|det(X^*)| = \|x_1^*\|\|x_2^*\|...\|x_n^*\|\text{.}$$
 % Theo Định lý 2.2, ta có $\|x_k^*\| \leq \|x_k\|$ nên $$|det(X)| = |det(X^*)| \leq \|x_1\|\|x_2\|...\|x_n\| \text{.}$$
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Trực giao hóa Gram-Schmidt}
-
-% \textbf{Chứng minh:}
-
-% \begin{itemize}
-% \item[(i)] Theo định nghĩa của quá trình trực giao hóa Gram-Schmidt, các vector $x_1^*, x_2^*, \ldots, x_n^*$ được xây dựng sao cho mỗi vector mới là trực giao với tất cả các vector trước đó. Cụ thể, với $x_i^*$ và $x_j^*$:
-% \[
-% x_j^* = x_j - \sum_{k=1}^{j-1} \mu_{jk} x_k^*, \quad \text{với} \quad \mu_{jk} = \frac{\langle x_j, x_k^* \rangle}{\langle x_k^*, x_k^* \rangle}
-% \]
-% Do đó, $ x_i^* x_j^* = 0$ với $1 \leq i < j \leq n$.
-% \end{itemize}
-
-% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}{Trực giao hóa Gram-Schmidt}
 
