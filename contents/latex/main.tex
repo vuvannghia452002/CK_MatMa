@@ -19,15 +19,12 @@
 % \usepackage{amsmath}
 % \usepackage{amssymb}
 
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Định nghĩa  cách đánh số công thức   bao gồm số chương
+% Định nghĩa cách đánh số công thức bao gồm số chương
 \numberwithin{equation}{section}
 \AtBeginSection[]{
-  \setcounter{section}{\thesection}
-  \refstepcounter{section}
+\setcounter{section}{\thesection}
+\refstepcounter{section}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginSection[]
@@ -435,7 +432,7 @@ Thêm nữa, $B$, $C$ là các ma trận hệ số nguyên. Do đó:
 
 Giả sử lưới $L \subset \mathbb{R}^n$ có 2 cơ sở $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$.
 
-Theo công thức (\ref{equation:bo_de})  trong bổ đề, ta có:
+Theo công thức (\ref{equation:bo_de}) trong bổ đề, ta có:
 
 \[
 |\det(Y)| = |\det(CX)| = |\det(C) \cdot \det(X)| = |\pm 1 \cdot \det(X)| = |\det(X)|
@@ -679,4 +676,4 @@ Theo công thức (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta c
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \begin{equation} \label{equation:einstein}
-% Theo công thức (\ref{equation:bo_de})  trong bổ đề, ta có:
+% Theo công thức (\ref{equation:bo_de}) trong bổ đề, ta có:
