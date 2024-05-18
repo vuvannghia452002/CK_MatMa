@@ -6,9 +6,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[utf8]{vietnam}
 \usepackage{tikz}
+\usepackage{hyperref}
 
 % % \usepackage{amsmath} % For mathematical environments
-% % \usepackage{cleveref} % For referencing
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \usepackage{graphicx}
@@ -16,11 +16,9 @@
 
 % \usepackage{bookmark}
 
-% \usepackage{hyperref}
 % \usepackage{amsmath}
 % \usepackage{amssymb}
 
-% % \usepackage{cleveref} % For referencing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginSection[]
@@ -371,6 +369,12 @@ Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lư�
 \end{block}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Định thức}
+\begin{block}{Định thức}
+
+\end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Bổ đề}
 \begin{block}{Bổ đề}
 Cho $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$ là hai cơ sở của lưới $L \subset \mathbb{R}^n$.
@@ -493,7 +497,13 @@ và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. K
 
 \begin{itemize}
 \item $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$
-\item $\|x_k^*\| \leq \|x_k\|$
+% \item $\|x_k^*\| \leq \|x_k\|$
+\item 
+\begin{equation}  \label{equation:einstein}
+    \|x_k^*\| \leq \|x_k\|
+\end{equation}
+
+
 \item $\det(X^*) = \det(X)$
 \end{itemize}
 
@@ -564,31 +574,40 @@ Ma trận $M$ có định thức bằng 1, do đó:
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Trực giao hóa Gram-Schmidt}
+\begin{frame}{Bổ đề}
 
-% Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$ và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. Ta có:
+\begin{block}{Bổ đề}
 
-% \[
-% |\det(X)| \leq \|x_1\|\|x_2\|\cdots\|x_n\|.
-% \]
+Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$
+và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó.
+Ta có:
 
-% \textbf{Chứng minh:}
+\[
+|\det(X)| \leq \|x_1\|\|x_2\|\cdots\|x_n\|.
+\]
 
-% Ta có $|\det(X^*)|$ là thể tích hình hộp $n$ chiều căng bởi các vector trực giao $x_1^*, x_2^*, \ldots, x_n^*$. Do đó:
+\end{block}
 
-% \[
-% |\det(X^*)| = \|x_1^*\|\|x_2^*\|\cdots\|x_n^*\|.
-% \]
+\textbf{Chứng minh:}
 
-% Theo Định lý 2.2, ta có:
+Ta có $|\det(X^*)|$ là thể tích hình hộp $n$ chiều căng bởi các vector trực giao $x_1^*, x_2^*, \ldots, x_n^*$. Do đó:
 
-% \[
-% |\det(X)| = |\det(X^*)| \leq \|x_1^*\|\|x_2^*\|\cdots\|x_n^*\| \leq \|x_1\|\|x_2\|\cdots\|x_n\|.
-% \]
+\[
+|\det(X^*)| = \|x_1^*\|\|x_2^*\|\cdots\|x_n^*\|.
+\]
 
-% \end{frame}
+Theo Định lý 2.2, ta có:
 
-% \defi{\textbf{Bổ đề 2.3.} \textit{Cho $x_1, x_2, ..., x_n$ là một cơ sở của $R^n$ và $x_1^*, x_2^*, ..., x_n^*$ là trực giao hóa Gram-Schmidt của nó. Ta có $$|det(X)| \leq \|x_1\|\|x_2\|...\|x_n\| \text{.}$$}}
+
+Công thức \ref{equation:einstein}  là công thức nổi tiếng của Einstein.
+
+
+\[
+|\det(X)| = |\det(X^*)| \leq \|x_1^*\|\|x_2^*\|\cdots\|x_n^*\| \leq \|x_1\|\|x_2\|\cdots\|x_n\|.
+\]
+
+\end{frame}
+
 % \textit{Chứng minh.}\\
 % Ta có $|det(X^*)|$ là thể tích hình hộp n chiều căng bởi các vector trực giao $x_1^*, x_2^*, ..., x_n^*$ nên suy ra: $$|det(X^*)| = \|x_1^*\|\|x_2^*\|...\|x_n^*\|\text{.}$$
 % Theo Định lý 2.2, ta có $\|x_k^*\| \leq \|x_k\|$ nên $$|det(X)| = |det(X^*)| \leq \|x_1\|\|x_2\|...\|x_n\| \text{.}$$
@@ -641,4 +660,4 @@ Ma trận $M$ có định thức bằng 1, do đó:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \begin{equation} \label{equation:einstein}
-% Công thức \cref{eq:einstein} là công thức nổi tiếng của Einstein.
+% Công thức \ref{eq:einstein} là công thức nổi tiếng của Einstein.
