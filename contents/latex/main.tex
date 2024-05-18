@@ -1061,7 +1061,7 @@ Ta giả sử rằng Eve biết $B, Y, n$. Vì vậy cô ấy chỉ cần tìm $
 \end{block}
 
 \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Ví dụ ứng dụng}
 \begin{frame}{Ví dụ ứng dụng}
 
@@ -1082,7 +1082,7 @@ Eve đang tìm $|x| \leq Y$ sao cho $f(x) \equiv 0 \quad (mod \ n)$.
 Nói cách khác, cô ấy đang tìm nghiệm nhỏ của đồng dư đa thức $f(T) \equiv 0 \quad (mod \ n)$
 
 \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Ví dụ ứng dụng}
 
 Eve áp dụng thuật toán LLL cho lưới được tạo bởi các vector:
@@ -1094,12 +1094,12 @@ $$ v_3 = (0, 0, Y^2n, 0), v_4 = (a_0, a_1Y, a_2Y^2, Y^3)$$
 Điều này tạo nên cơ sở mới $b_1, b_2, b_3, b_4$. Nhưng ở đây, ta chỉ quan tâm đến $b_1$.
 
 Theo Mệnh đề 2.8 ta có:
-% Theo Mệnh đề 2.8 ta có:
-% Theo Mệnh đề 2.8 ta có:
-% Theo Mệnh đề 2.8 ta có:
-% Theo Mệnh đề 2.8 ta có:
-% Theo Mệnh đề 2.8 ta có:
-% Theo Mệnh đề 2.8 ta có:
+% Theo Mệnh đề 2.8 ta có:    tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có:    tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có:    tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có:    tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có:    tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có:    tham chiếu đến công thức
 
 $$
 \begin{aligned}
@@ -1108,84 +1108,78 @@ $$
 \end{aligned}
 $$
 
+
+
+
+
+% Ta có thể viết lại:
+% $$b_1 = c_1v_1 + \dots + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
+% với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$ $$e_2 = c_3n + c_4a_2$$
+% \hspace*{7cm} $e_3 = c_4$.\\
+% Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n), \quad 0\leq i\leq 2$. \\
+
+
+
 \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Ví dụ ứng dụng}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
 
-% Ta có thể viết lại:
-% $$b_1 = c_1v_1 + \dots + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
-% với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$ $$e_2 = c_3n + c_4a_2$$
-% \hspace*{7cm} $e_3 = c_4$.\\
-% Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n), \quad 0\leq i\leq 2$. \\
+Ta có thể viết lại:
+$$b_1 = c_1v_1 + \dots + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
+với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$ $$e_2 = c_3n + c_4a_2$$
+\hspace*{7cm} $e_3 = c_4$.\\
+Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n), \quad 0\leq i\leq 2$. \\
 
-% \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Ví dụ ứng dụng}
 
-% Ta có thể thiết lập được đa thức $$g(T) = e_3T^3 + e_2T^2 + e_1T + e_0\text{.}$$
-% Khi đó, vì số nguyên $x$ thỏa mãn $f(x) \equiv 0 \quad (mod \ n) $ và vì các hệ số của $c_4f(T)$ và $g(T)$ đồng dạng với $mod(n)$ nên, $$0 \equiv c_4f(x) \equiv g(x) \quad (mod \ n)\text{.}$$
 
-% \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Ví dụ ứng dụng}
+ 
 
-% Bây giờ ta giả sử rằng $$Y < 2^{-7/6}n^{1/6}$$
-% Khi đó $$
-% \begin{aligned}
-% |g(x)| & \leq |e_0|+|e_1x|+|e_2x^2|+|e_3x^3|\\
-% & \leq |e_0| + |e_1|Y + |e_2|Y^2 + |e_3|Y^3\\
-% & = (1, 1, 1, 1).(|e_0|, |e_1Y|, |e_2Y^2|, |e_3Y^3|)\\
-% &\leq \|(1, 1, 1, 1)\|\|(|e_0|, |e_1Y|, |e_2Y^2|, |e_3Y^3|)\| \\
-% & = 2\|b_1\|\text{,}
-% \end{aligned}
-% $$
 
-% \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Ví dụ ứng dụng}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
 
-% Trong đó, bất đẳng thức cuối sử dụng bất đẳng thức Cauchy-Schwarz cho các tích vô hướng \index{tích vô hướng} ($u.v \leq \|u\|\|v\|$) . Suy ra: $$\|b_1\| \leq 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} < 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}(2^{\tfrac{-7}{6}}n^{\tfrac{1}{6}})^{\tfrac{3}{2}} = 2^{-1}n \text{.}$$
-% Do đó ta có được, $$|g(x)| < n.$$
-% Vì $g(x) \equiv 0 \quad (mod \ n)$, nên ta có $g(x) = 0$. Từ đó, ta có thể tìm được tối đa 3 nghiệm của $g(x)$ . Sau đó ta sẽ thử xem nó có đưa ra bản mã chính xác hay không. Do đó Eve có thể tìm thấy $x$.\\
+Ta có thể thiết lập được đa thức $$g(T) = e_3T^3 + e_2T^2 + e_1T + e_0\text{.}$$
 
-% \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Tổng quát}
-% \begin{frame}{Tổng quát}
 
-% \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Ta có thể viết lại:
-% $$b_1 = c_1v_1 + \dots + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
-% với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$ $$e_2 = c_3n + c_4a_2$$
-% \hspace*{7cm} $e_3 = c_4$.\\
-% Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n), \quad 0\leq i\leq 2$. \\
-% Ta có thể thiết lập được đa thức $$g(T) = e_3T^3 + e_2T^2 + e_1T + e_0\text{.}$$
-% Khi đó, vì số nguyên $x$ thỏa mãn $f(x) \equiv 0 \quad (mod \ n) $ và vì các hệ số của $c_4f(T)$ và $g(T)$ đồng dạng với $mod(n)$ nên, $$0 \equiv c_4f(x) \equiv g(x) \quad (mod \ n)\text{.}$$
-% Bây giờ ta giả sử rằng $$Y < 2^{-7/6}n^{1/6}$$
-% Khi đó $$
-% \begin{aligned}
-% |g(x)| & \leq |e_0|+|e_1x|+|e_2x^2|+|e_3x^3|\\
-% & \leq |e_0| + |e_1|Y + |e_2|Y^2 + |e_3|Y^3\\
-% & = (1, 1, 1, 1).(|e_0|, |e_1Y|, |e_2Y^2|, |e_3Y^3|)\\
-% &\leq \|(1, 1, 1, 1)\|\|(|e_0|, |e_1Y|, |e_2Y^2|, |e_3Y^3|)\| \\
-% & = 2\|b_1\|\text{,}
-% \end{aligned}
-% $$
-% Trong đó, bất đẳng thức cuối sử dụng bất đẳng thức Cauchy-Schwarz cho các tích vô hướng \index{tích vô hướng} ($u.v \leq \|u\|\|v\|$) . Suy ra: $$\|b_1\| \leq 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} < 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}(2^{\tfrac{-7}{6}}n^{\tfrac{1}{6}})^{\tfrac{3}{2}} = 2^{-1}n \text{.}$$
-% Do đó ta có được, $$|g(x)| < n.$$
-% Vì $g(x) \equiv 0 \quad (mod \ n)$, nên ta có $g(x) = 0$. Từ đó, ta có thể tìm được tối đa 3 nghiệm của $g(x)$ . Sau đó ta sẽ thử xem nó có đưa ra bản mã chính xác hay không. Do đó Eve có thể tìm thấy $x$.\\
 
+Khi đó, vì số nguyên $x$ thỏa mãn $f(x) \equiv 0 \quad (mod \ n) $ và vì các hệ số của $c_4f(T)$ và $g(T)$ đồng dạng với $mod(n)$ nên, $$0 \equiv c_4f(x) \equiv g(x) \quad (mod \ n)\text{.}$$
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Bây giờ ta giả sử rằng $$Y < 2^{-7/6}n^{1/6}$$
+Khi đó $$
+\begin{aligned}
+|g(x)| & \leq |e_0|+|e_1x|+|e_2x^2|+|e_3x^3|\\
+& \leq |e_0| + |e_1|Y + |e_2|Y^2 + |e_3|Y^3\\
+& = (1, 1, 1, 1).(|e_0|, |e_1Y|, |e_2Y^2|, |e_3Y^3|)\\
+&\leq \|(1, 1, 1, 1)\|\|(|e_0|, |e_1Y|, |e_2Y^2|, |e_3Y^3|)\| \\
+& = 2\|b_1\|\text{,}
+\end{aligned}
+$$
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Trong đó, bất đẳng thức cuối sử dụng bất đẳng thức Cauchy-Schwarz cho các tích vô hướng \index{tích vô hướng} ($u.v \leq \|u\|\|v\|$) . Suy ra: $$\|b_1\| \leq 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} < 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}(2^{\tfrac{-7}{6}}n^{\tfrac{1}{6}})^{\tfrac{3}{2}} = 2^{-1}n \text{.}$$
+Do đó ta có được, $$|g(x)| < n.$$
+Vì $g(x) \equiv 0 \quad (mod \ n)$, nên ta có $g(x) = 0$. Từ đó, ta có thể tìm được tối đa 3 nghiệm của $g(x)$ . Sau đó ta sẽ thử xem nó có đưa ra bản mã chính xác hay không. Do đó Eve có thể tìm thấy $x$.\\
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tổng quát}
+\begin{frame}{Tổng quát}
+
+
+
+
+
+    
+ 
 % Lưu ý rằng phương pháp trên thay thế cho vấn đề tìm giải pháp cho giải phương trình đồng dư \index{phương trình đồng dư} $f(T) \equiv 0 \quad (mod \ n)$ bằng việc giải phương trình đa thức $g(T) = 0$. Việc giải phương trình đồng dư thường yêu cầu phân tích $n$, nhưng việc giải phương trình đa thức có thể được thực hiện bằng các phương pháp như phương pháp Newton. Theo cách tương tự, ta có thể tìm nghiệm nhỏ (nếu chúng tồn tại) cho một đa thức đồng dư bậc d, sử dụng một lưới có kích thước d + 1. Tất nhiên, d phải nhỏ để thuật toán LLL chạy trong một khoảng thời gian hợp lý. Cải tiến cho phương pháp này, Coppersmith \index{Coppersmith} đã đưa ra, một thuật toán sử dụng các lưới có nhiều chiều hơn để tìm nghiệm nhỏ cho phương trình đa thức $f(T) \equiv 0 \quad (mod \ n)$(có hệ số bậc cao nhất bằng 1) có bậc $d$. Nếu $|x| \leq n^{\frac{1}{d}}$, thì thuật toán chạy theo thời gian đa thức trong $log(n)$ và $d$.\\
 
 % \textbf{Tổng quát:} Giả sử hệ thống RSA có số mũ $e$ thấp và modulus $N$ được công khai, và nó được sử dụng để gửi thông báo có dạng $(M + x)^e \quad (mod \ N)$, trong đó M đã biết và $0<x<Y$.\\
@@ -1205,83 +1199,12 @@ $$
 % $$b_0 + \frac{b_1}{Y}x + \dots + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n}x^n \text{.}$$
 % Sau đó thực hiện giải phương trình đa thức tìm nghiệm nguyên bài toán \cite{7}.
 
-% \subsection{Thực hiện chương trình}
-% Thực hiện chạy chương trình trên phần mềm SageMath \index{SageMath}.
-% \vspace{0.5cm}
-% \begin{lstlisting}
-% # Ham tan cong RSA
-% def RSA(pol, N, X):
-% d = pol.degree()
 
-% # Chuyen doi ve da thuc nguyen va dat bien x
-% polZ = pol.change_ring(ZZ)
-% x = polZ.parent().gen()
 
-% # Xay dung luoi B
-% BB = Matrix(ZZ, d + 1, d+1)
 
-% for i in range(d + 1) :
 
-% for j in range(d):
-% if i == j :
-% BB[i, j] = N*X**i
-% else :
-% BB[i, j] = 0
-% BB[i, d] = polZ[i] * X**i
-% print("Ma tran luoi B : \n")
-% print(BB)
-% # Su dung thuat toan LLL
-% BB = LLL(BB, 2)
-% print("\nma tran giam luoi\n")
-% print(BB)
-% print("\nvecto B1\n")
-% print(BB.column(0))
-% # Xay dung da thuc theo vector B1
-% new_pol = 0
-% for i in range(d+1):
-% new_pol += x**i * BB[i, 0] / X**i
-% print("\nDa thuc giai nghiem: ")
-% print(new_pol)
-% # Tim nghiem va kiem tra xem phai nghiem nguyen khong
-% potential_roots = new_pol.roots()
-
-% roots = []
-% for root in potential_roots:
-% if root[0].is_integer():
-% result = polZ(ZZ(root[0]))
-% roots.append(ZZ(root[0]))
-
-% return roots
-% #bai toan 1
-% e = 3
-% C = 64784502
-% N = 115348777
-
-% ZmodN = Zmod(N);
-
-% # Gia tri dau vao
-% P.<x> = PolynomialRing(ZmodN)
-% pol = (5180 + x)^e - C
-% # pol = (200805000114192305180009190000 + x)^e - C
-
-% d = pol.degree()
-% X = 9
-% # X = 100
-
-% roots = RSA(pol, N, X)
-% print("\nNghiem can tim:", str(roots))
-% \end{lstlisting}
-
-% \vspace{0.5cm}
-% Thực hiện 1 ví dụ : Một hệ mật RSA có khóa công khai \index{khóa công khai} $(N, e) = (115348777, 3)$, gửi đi một thông báo có dạng $M = B + x$, trong đó $B = 5180$ và $0 \leq x \leq 9$. Ta cần giải bài toán $c \equiv (B + x)^3 \quad (mod \ N)$ với $c = 64784502$.\\
-
-% Kết quả thực nghiệm bằng chương trình: \\
-% \begin{figure}[!h]
-% \centering
-% \includegraphics[width = 0.7\textwidth]{a.8.png}
-% \caption{Chương trình tấn công hệ mật mã RSA.}
-% \end{figure}
-
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
