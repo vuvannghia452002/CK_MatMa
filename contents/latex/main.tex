@@ -455,9 +455,9 @@ Theo công thức (\ref{equation:bo_de}) trong bổ đề, ta có:
 \begin{frame}{Vector ngắn nhất}
 
 \begin{itemize}
-\item Độ dài vector $v = (v_1, v_2, ..., v_n)$ là:
+\item Độ dài vector $v = (v_1, v_2, \dots, v_n)$ là: 
 
-$$\|v\| = (v_1^2 + v_2^2 + ... + v_n^2)^{\tfrac{1}{2}}$$
+$$\|v\| = (v_1^2 + v_2^2 + \dots + v_n^2)^{\tfrac{1}{2}}$$
 
 \item Có nhiều vấn đề liên quan đến việc tìm một vector khác không ngắn nhất trong lưới.
 Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) rất khó để giải, khi số chiều của lưới lớn.
@@ -858,80 +858,86 @@ Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
 \item Thuật toán LLL sử dụng cách tiếp cận tìm kiếm các vector gần như ngắn nhất (trong thời gian đa thức)
 \end{itemize}
 \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Định nghĩa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Định nghĩa}
 
-% \begin{block}{Định nghĩa}
+\begin{block}{Định nghĩa}
 
-% Tham số rút gọn $\alpha$ là một số thực sao cho $\dfrac{1}{4} < \alpha < 1$.
-% Giá trị chính tắc của $\alpha$ là $\alpha = \dfrac{3}{4}$
+Tham số rút gọn $\alpha$ là một số thực sao cho $\dfrac{1}{4} < \alpha < 1$.
+Giá trị chính tắc của $\alpha$ là $\alpha = \dfrac{3}{4}$
 
-% \end{block}
+\end{block}
 
-% \begin{block}{Định nghĩa}
+\begin{block}{Định nghĩa}
 
-% Cơ sở $x_1, x_2, ..., x_n$ được gọi là một cơ sở $\alpha$-rút gọn nếu nó thỏa mãn:
+Cơ sở $x_1, x_2, \dots, x_n$ được gọi là một cơ sở $\alpha$-rút gọn nếu nó thỏa mãn:
 
-% \begin{itemize}
-% \item $|\mu_{ij}| \leq \dfrac{1}{2} $ với $1 \leq j < i \leq n$,
-% \item $\|x_i^*\|^2 \geq (\alpha - \mu_{i, i-1}^2)\|x_{i-1}^*\|^2$ với $2\leq i \leq n$.
-% \end{itemize}
+\begin{itemize}
+\item $|\mu_{ij}| \leq \dfrac{1}{2} $ với $1 \leq j < i \leq n$,
+\item $\|x_i^*\|^2 \geq (\alpha - \mu_{i, i-1}^2)\|x_{i-1}^*\|^2$ với $2\leq i \leq n$.
+\end{itemize}
 
-% \end{block}
+\end{block}
 
-% Ta định nghĩa tham số bổ trợ $\beta$ như sau: \quad $\beta = \dfrac{4}{4\alpha - 1}$.
+Ta định nghĩa tham số bổ trợ $\beta$ như sau: \quad $\beta = \dfrac{4}{4\alpha - 1}$.
 
-% Do \quad $\frac{1}{4} < \alpha < 1$ \quad $\Rightarrow \quad \beta > \dfrac{4}{3}$. \quad Nếu $\alpha = \dfrac{3}{4}$ thì $\beta = 2$.
+Do \quad $\frac{1}{4} < \alpha < 1$ \quad $\Rightarrow \quad \beta > \dfrac{4}{3}$. \quad Nếu $\alpha = \dfrac{3}{4}$ thì $\beta = 2$.
 
-% \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Mệnh đề}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Mệnh đề}
 
-% \begin{block}{Mệnh đề}
+\begin{block}{Mệnh đề}
 
-% Nếu $x_1, x_2, ..., x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$
-% và $x_1^*, x_2^*, ..., x_n^*$ là cơ sở trực giao hóa Gram-Schmidt của nó thì
+Nếu $x_1, x_2, \dots, x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$
+và $x_1^*, x_2^*, \dots, x_n^*$ là cơ sở trực giao hóa Gram-Schmidt của nó thì:
 
-% \begin{equation} \label{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu1}
-% \|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n
-% \end{equation}
+\begin{equation} \label{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu1}
+\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2 \quad \text{với}  \quad 1 \leq j \leq i \leq n
+\end{equation}
 
-% \begin{equation} \label{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu2}
-% \|x_1\|.\|x_2\|...\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L)
-% \end{equation}
 
-% \begin{equation} \label{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu3}
-% \|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}}
-% \end{equation}
 
-% \end{block}
+\begin{equation} \label{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu2}
+\|x_1\|.\|x_2\|\dots\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L)
+\end{equation}
 
-% \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Mệnh đề}
 
-% \textbf{Chứng minh công thức (\ref{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu1}):}
-% $\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n $
 
-% \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Mệnh đề}
 
-% \textbf{Chứng minh công thức (\ref{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu2}):}
-% $\|x_1\|.\|x_2\|...\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L) $
+\begin{equation} \label{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu3}
+\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}}
+\end{equation}
 
-% \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Mệnh đề}
 
-% \textbf{Chứng minh công thức (\ref{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu3}):}
-% $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $
+\end{block}
 
-% \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Mệnh đề}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Chứng minh công thức (\ref{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu1}):}
+$\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n $
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Mệnh đề}
+
+\textbf{Chứng minh công thức (\ref{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu2}):}
+$\|x_1\|.\|x_2\|\dots\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L) $
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Mệnh đề}
+
+\textbf{Chứng minh công thức (\ref{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu3}):}
+$\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -944,7 +950,7 @@ Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
 % i) Theo Định nghĩa 2.7 ta có :
 % $$\|x_i^*\| \geq (\alpha - \mu_{i, i-1}^2)\|x_{i-1}^*\|^2 \geq (\alpha - \frac{1}{4}).\|x_{i-1}^*\|^2 = \frac{1}{\beta}\|x_{i-1}^*\|^2 \text{.}$$
 % Khi đó \quad $\|x_{i-1}^*\|^2 \leq \beta.\|x_{i}^*\|^2$, và $$\|x_{j}^*\|^2 \leq \beta^{i-j}\|x_{i}^*\|^2 \qquad (1 \leq j \leq i \leq n)\text{.} \qquad (1)$$
-% Mặt khác, ta có : $$x_i = x_i^* + \displaystyle\sum_{j=1}^{i-1} \mu_{ij}x_j^*\text{,}$$ và vì $x_1^*, x_2^*, ..., x_n^*$ là trực giao nên:
+% Mặt khác, ta có : $$x_i = x_i^* + \displaystyle\sum_{j=1}^{i-1} \mu_{ij}x_j^*\text{,}$$ và vì $x_1^*, x_2^*, \dots, x_n^*$ là trực giao nên:
 % $$
 % \begin{aligned}
 % \|x_i\|^2 & = \|x_i^*\|^2 + \displaystyle\sum_{j=1}^{i-1} (\mu_{ij})^2\|x_j^*\|^2 \leq \|x_i^*\|^2 + \displaystyle\sum_{j=1}^{i-1} \frac{1}{4}\beta^{i-j}\|x_i^*\|^2\\
@@ -957,20 +963,20 @@ Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
 % Từ (1), (2) ta có:\\
 % \hspace*{4cm} $\|x_j\|^2 \leq \beta^{j-1}\|x_j^*\|^2 \leq \beta^{i-1}\|x_i\|^2 \text{.}$\\
 % ii) Theo Bổ đề 2.3. ta có :
-% $$det(L) = \|x_1^*\|.\|x_2^*\|...\|x_n^*\| \leq \|x_1\|.\|x_2\|...\|x_n\|\text{.}$$
+% $$det(L) = \|x_1^*\|.\|x_2^*\|\dots\|x_n^*\| \leq \|x_1\|.\|x_2\|\dots\|x_n\|\text{.}$$
 % Từ (2) ta có: \\
-% \hspace*{2cm}$\qquad \|x_1\|.\|x_2\|...\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}\|x_1^*\|.\|x_2^*\|...\|x_n^*\| = \beta^{\tfrac{n(n-1)}{4}}.det(L)$\\
+% \hspace*{2cm}$\qquad \|x_1\|.\|x_2\|\dots\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}\|x_1^*\|.\|x_2^*\|\dots\|x_n^*\| = \beta^{\tfrac{n(n-1)}{4}}.det(L)$\\
 % iii) Xét $j = 1$ trong i), ta có $$\|x_1\|^2 \leq \beta^{i-1}\|x_i^*\|^2 $$ với $1\leq i \leq n$.
 
-% \noindent Khi đó: $$\qquad \|x_1\|^{2n} \leq \beta^{0 + 1 +2 + ... +(n-1)}\|x_1^*\|^2.\|x_2^*\|^2...\|x_n^*\|^2 \leq \beta^{\tfrac{n(n-1)}{2}}.det(L)^2\text{.}$$
+% \noindent Khi đó: $$\qquad \|x_1\|^{2n} \leq \beta^{0 + 1 +2 + \dots +(n-1)}\|x_1^*\|^2.\|x_2^*\|^2\dots\|x_n^*\|^2 \leq \beta^{\tfrac{n(n-1)}{2}}.det(L)^2\text{.}$$
 
 % \noindent Suy ra:
 % $$ \qquad \|x_1\| \leq \beta^{\tfrac{n-1}{4}}.det(L)^{\tfrac{1}{n}}\text{.}$$
 % \hspace{2cm}
 
-% \defi{\textbf{Bổ đề 2.9.} \textit{Cho $x_1, x_2, ..., x_n$ là một cơ sở \index{cơ sở} của lưới $L$ và $x_1^*, x_2^*, ..., x_n^*$ tương ứng là phép trực giao hóa Gram-Schmidt của nó. Với $y \in L$ khác không, $$\|y\| \geq min\{\|x_1^*\|, \|x_2^*\|, ..., \|x_n^*\|\}\text{.}$$}}
+% \defi{\textbf{Bổ đề 2.9.} \textit{Cho $x_1, x_2, \dots, x_n$ là một cơ sở \index{cơ sở} của lưới $L$ và $x_1^*, x_2^*, \dots, x_n^*$ tương ứng là phép trực giao hóa Gram-Schmidt của nó. Với $y \in L$ khác không, $$\|y\| \geq min\{\|x_1^*\|, \|x_2^*\|, \dots, \|x_n^*\|\}\text{.}$$}}
 % \textit{Chứng minh.}\\
-% Cho $y$ là vector khác không bất kỳ thuộc lưới $L$ ta có : $$y = a_1x_1 + a_2x_2 + ... + a_nx_n \text{.}$$
+% Cho $y$ là vector khác không bất kỳ thuộc lưới $L$ ta có : $$y = a_1x_1 + a_2x_2 + \dots + a_nx_n \text{.}$$
 % Lấy $k$ là chỉ số lớn nhất sao cho $a_k \ne 0$. Khi đó:
 % $$
 % \begin{aligned}
@@ -981,24 +987,24 @@ Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
 % Khi đó: $$\|y\| \geq a_k^2.\|x_k^*\|^2 + \displaystyle\sum_{j=1}^{k-1} v_j^2\|x_j^*\|^2 .$$
 % Mặt khác, do $a_k$ nguyên và khác 0 nên $a_k^2 \geq 1$:
 % $$\Rightarrow \quad \|y\| \geq \|x_k^*\|^2 + \displaystyle\sum_{j=1}^{k-1} v_j^2\|x_j^*\|^2 \text{.}$$
-% Vì vậy: $$\|y\|\geq \|x_k^*\| \geq min\{\|x_1^*\|, \|x_2^*\|, ..., \|x_n^*\|\}.$$
+% Vì vậy: $$\|y\|\geq \|x_k^*\| \geq min\{\|x_1^*\|, \|x_2^*\|, \dots, \|x_n^*\|\}.$$
 % Ta có điều phải chứng minh.
 % \vspace{0.2cm}
-% \defi{\textbf{Định lý 2.10.} \textit{Nếu $x_1, x_2, ..., x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $y\in L$ là vector trong lưới khác không bất kỳ thì: $$\|x_1\| \leq \beta^{\frac{n-1}{2}}\|y\|\text{.}$$
+% \defi{\textbf{Định lý 2.10.} \textit{Nếu $x_1, x_2, \dots, x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $y\in L$ là vector trong lưới khác không bất kỳ thì: $$\|x_1\| \leq \beta^{\frac{n-1}{2}}\|y\|\text{.}$$
 % Đặc biệt, vector đầu tiên trong cơ sở rút gọn không dài hơn $\beta^{\tfrac{n-1}{2}}$ lần vector ngắn nhất \index{vector ngắn nhất} khác không của lưới \index{lưới} $L$.}}
 % \textit{Chứng minh.}\\
 % Ta có $\|x_i^*\| \geq \frac{1}{\beta}\|x_{i-1}^*\|$ với $1\leq i \leq n$. Vì $x_1^* = x_1$ nên $$\|x_1\|^2 = \|x_1^*\| \leq \beta^{n-1}\|x_n^*\|.$$
 % Do đó, với $1\leq i \leq n$ ta có : $$\|x_i^*\|^2 \geq \beta^{-(i-1)}\|x_1\|^2.$$
 % Theo Bổ đề 2.9, với vector khác 0 bất kì $y \in L$ ta có:
-% $$\|y\| \geq \min\{\|x_1^*\|, \|x_2^*\|, ..., \|x_n^*\|\} \geq \beta^{\tfrac{-(n-1)}{2}}\|x_1^*\| . $$
+% $$\|y\| \geq \min\{\|x_1^*\|, \|x_2^*\|, \dots, \|x_n^*\|\} \geq \beta^{\tfrac{-(n-1)}{2}}\|x_1^*\| . $$
 % Vì vậy, ta có điều phải chứng minh
 % \vspace{0.5cm}
 
 % \newpage
 % \defi{\textbf{Thuật toán LLL.}}
 % \begin{itemize}
-% \item Bước 1 : Nhập vào lưới $L$ với cơ sở lưới $b_1, b_2, ..., b_n$ và tham số bổ trợ $c$ với $c \geq \dfrac{4}{3}$.
-% \item Bước 2 : Tính cơ sở trực giao hóa Gram-Schmidt $b_1^*, b_2^*, ..., b_n^*$ và các hệ số trực giao $u_{ij}$.
+% \item Bước 1 : Nhập vào lưới $L$ với cơ sở lưới $b_1, b_2, \dots, b_n$ và tham số bổ trợ $c$ với $c \geq \dfrac{4}{3}$.
+% \item Bước 2 : Tính cơ sở trực giao hóa Gram-Schmidt $b_1^*, b_2^*, \dots, b_n^*$ và các hệ số trực giao $u_{ij}$.
 % \item Bước 3 : Thực hiện vòng lặp, nếu $\|b_i^*\|^2 \leq c.\|b_{i+1}^*\|^2$ tăng $i$ lên, ngược lại thực hiện hoán vị các vector $b_i$ và $b_{i+1}$, sau đó cập nhật lại cơ sở trực giao Gram-Schmidt và các hệ số của nó. \\
 % Kiểm tra xem hệ số $\|u_{ij}\| > \dfrac{1}{2}$ thực hiện thủ tục rút gọn.\\
 % Kết quả cuối cùng thu được cơ sở lưới giảm $L$.
@@ -1172,7 +1178,7 @@ Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
 % Điều này tạo nên cơ sở mới $b_1, b_2, b_3, b_4$ . Nhưng ở đây, ta chỉ quan tâm đến $b_1$. Theo Mệnh đề 2.8 ta có
 % $$
 % \begin{aligned}
-% \|b_1\| & \leq 2^{\tfrac{3}{4}}.det(v_1, ..., v_4)^{\tfrac{1}{4}} \qquad \quad \text{với} \quad \alpha = \frac{3}{4} \quad \text{hay} \quad \beta = 2 \\
+% \|b_1\| & \leq 2^{\tfrac{3}{4}}.det(v_1, \dots, v_4)^{\tfrac{1}{4}} \qquad \quad \text{với} \quad \alpha = \frac{3}{4} \quad \text{hay} \quad \beta = 2 \\
 % & = 2^{\tfrac{3}{4}}.(n^{3}Y^{6})^{\tfrac{1}{4}} = 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} \text{.}
 % \end{aligned}
 % $$
@@ -1182,7 +1188,7 @@ Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
 % \begin{frame}{Ví dụ ứng dụng}
 
 % Ta có thể viết lại:
-% $$b_1 = c_1v_1 + ... + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
+% $$b_1 = c_1v_1 + \dots + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
 % với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$ $$e_2 = c_3n + c_4a_2$$
 % \hspace*{7cm} $e_3 = c_4$.\\
 % Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n), \quad 0\leq i\leq 2$. \\
@@ -1243,12 +1249,12 @@ Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
 % Điều này tạo nên cơ sở mới $b_1, b_2, b_3, b_4$ . Nhưng ở đây, ta chỉ quan tâm đến $b_1$. Theo Mệnh đề 2.8 ta có
 % $$
 % \begin{aligned}
-% \|b_1\| & \leq 2^{\tfrac{3}{4}}.det(v_1, ..., v_4)^{\tfrac{1}{4}} \qquad \quad \text{với} \quad \alpha = \frac{3}{4} \quad \text{hay} \quad \beta = 2 \\
+% \|b_1\| & \leq 2^{\tfrac{3}{4}}.det(v_1, \dots, v_4)^{\tfrac{1}{4}} \qquad \quad \text{với} \quad \alpha = \frac{3}{4} \quad \text{hay} \quad \beta = 2 \\
 % & = 2^{\tfrac{3}{4}}.(n^{3}Y^{6})^{\tfrac{1}{4}} = 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} \text{.}
 % \end{aligned}
 % $$
 % Ta có thể viết lại:
-% $$b_1 = c_1v_1 + ... + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
+% $$b_1 = c_1v_1 + \dots + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
 % với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$ $$e_2 = c_3n + c_4a_2$$
 % \hspace*{7cm} $e_3 = c_4$.\\
 % Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n), \quad 0\leq i\leq 2$. \\
@@ -1272,19 +1278,19 @@ Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
 
 % \textbf{Tổng quát:} Giả sử hệ thống RSA có số mũ $e$ thấp và modulus $N$ được công khai, và nó được sử dụng để gửi thông báo có dạng $(M + x)^e \quad (mod \ N)$, trong đó M đã biết và $0<x<Y$.\\
 % Để phá vỡ mã hóa RSA sẽ yêu cầu giải phương trình đồng dư \index{phương trình đồng dư} $c \equiv (M + x)^e \quad (mod \ N)$. Từ đây ta có phương trình đồng dư:
-% $$x^n + a_{n-1}x^{n-1} + ... + a_2x^2 + a_1x + a_0 \equiv 0 \quad (mod \ N) \text{.}$$
+% $$x^n + a_{n-1}x^{n-1} + \dots + a_2x^2 + a_1x + a_0 \equiv 0 \quad (mod \ N) \text{.}$$
 % Trong đó $0\leq x\leq Y $ với $Y$ đã biết. Ta có được lưới bởi cơ sở như sau:
 % $$
 % \begin{aligned}
-% &\Vec{v_1} = (N, 0, 0, ..., 0, 0)\\
-% &\Vec{v_2} = (0, YN, 0, ..., 0, 0)\\
+% &\Vec{v_1} = (N, 0, 0, \dots, 0, 0)\\
+% &\Vec{v_2} = (0, YN, 0, \dots, 0, 0)\\
 % &\vdots\\
-% &\Vec{v_n} = (0, 0, 0, ..., Y^{n-1}N, 0)\\
-% &\Vec{v_{n+1} = (a_0, a_1Y, ..., a_{n-1}Y^{n-1}, Y^{n})}
+% &\Vec{v_n} = (0, 0, 0, \dots, Y^{n-1}N, 0)\\
+% &\Vec{v_{n+1} = (a_0, a_1Y, \dots, a_{n-1}Y^{n-1}, Y^{n})}
 % \end{aligned}
 % $$
-% Dùng thuật toán LLL để thực hiện giảm lưới. Ta thu được cơ sở mới sau khi giảm lưới $b_0, b_1, b_2, ..., b_{n+1}$. Ta sử dụng vector $b_0$ như vector ngắn nhất của lưới và chuyển về dạng đa thức:
-% $$b_0 + \frac{b_1}{Y}x + ... + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n}x^n \text{.}$$
+% Dùng thuật toán LLL để thực hiện giảm lưới. Ta thu được cơ sở mới sau khi giảm lưới $b_0, b_1, b_2, \dots, b_{n+1}$. Ta sử dụng vector $b_0$ như vector ngắn nhất của lưới và chuyển về dạng đa thức:
+% $$b_0 + \frac{b_1}{Y}x + \dots + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n}x^n \text{.}$$
 % Sau đó thực hiện giải phương trình đa thức tìm nghiệm nguyên bài toán \cite{7}.
 
 % \subsection{Thực hiện chương trình}
