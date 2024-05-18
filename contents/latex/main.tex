@@ -807,7 +807,39 @@ $\Rightarrow$ Suy ra cơ sở giảm của lưới $L$ là $\{(3, -1), (1, 4)\}$
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Thuật toán giảm lưới 2 chiều}
+\begin{frame}{Thuật toán giảm lưới 2 chiều}
 
+\begin{enumerate}
+\item Nhập vào cơ sở lưới 2 chiều ${b_1, b_2} \in R^2$.
+\item Nếu $\|b_1\| > \|b_2\|$, ta hoán đổi vị trí $b_1$ và $b_2$.
+\item Đặt $t$ bằng phần nguyên $\left|\dfrac{b_1.b_2}{b_1.b_1}\right|$.
+
+Nếu $t = 0$, dừng lại và kết luận là cơ sở giảm.
+
+Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
+\end{enumerate}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Thuật toán giảm lưới 2 chiều}
+
+% \begin{figure}[h]
+% \centering
+% \includegraphics[scale = 0.6]{pictures/a.10.png}
+% \label{fig:boat1}
+% \end{figure}
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Giảm lưới nhiều chiều}
+\begin{frame}{Giảm lưới nhiều chiều}
+\begin{itemize}
+\item Việc giảm cơ sở lưới nhiều chiều khó khăn hơn nhiều
+\item Thuật toán LLL sử dụng cách tiếp cận tìm kiếm các vector gần như ngắn nhất(trong thời gian đa thức)
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
