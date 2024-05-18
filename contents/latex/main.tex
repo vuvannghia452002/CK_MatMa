@@ -8,13 +8,6 @@
 \usepackage{tikz}
 \usepackage{hyperref}
 
-
-
-
- 
-
-
-
 % % \usepackage{amsmath} % For mathematical environments
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -25,7 +18,6 @@
 
 % \usepackage{amsmath}
 % \usepackage{amssymb}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginSection[]
@@ -389,12 +381,10 @@ Lấy $X$, $Y$ lần lượt là các ma trận $n \times n$ nhận $x_i$ (tươ
 Khi đó:
 
 \begin{equation} \label{equation:bo_de}
-    Y = CX
+Y = CX
 \end{equation}
 
-
-
-với $C$ là ma trận vuông $n \times n$ với các hệ số nguyên 
+với $C$ là ma trận vuông $n \times n$ với các hệ số nguyên
 và $\det(C) = \pm 1$.
 \end{block}
 \end{frame}
@@ -433,21 +423,10 @@ Thêm nữa, $B$, $C$ là các ma trận hệ số nguyên. Do đó:
 
 \textbf{Chứng minh:}
 
-Giả sử lưới $L \subset \mathbb{R}^n$ có 2 cơ sở $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$. 
-
+Giả sử lưới $L \subset \mathbb{R}^n$ có 2 cơ sở $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$.
 
 Theo bổ đề (\ref{equation:bo_de}) ta có:
 
-
-
-
-
-
-
-
-
-
-
 % nghia
 % nghia
 % nghia
@@ -467,11 +446,6 @@ Theo bổ đề (\ref{equation:bo_de}) ta có:
 % nghia
 % nghia
 % nghia
-
-
-
-
-
 
 \[
 |\det(Y)| = |\det(CX)| = |\det(C) \cdot \det(X)| = |\pm 1 \cdot \det(X)| = |\det(X)|
@@ -553,11 +527,10 @@ và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. K
 \begin{itemize}
 \item $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$
 % \item $\|x_k^*\| \leq \|x_k\|$
-\item 
-\begin{equation}  \label{equation:einstein}
-    \|x_k^*\| \leq \|x_k\|
+\item
+\begin{equation} \label{equation:einstein}
+\|x_k^*\| \leq \|x_k\|
 \end{equation}
-
 
 \item $\det(X^*) = \det(X)$
 \end{itemize}
@@ -653,9 +626,7 @@ Ta có $|\det(X^*)|$ là thể tích hình hộp $n$ chiều căng bởi các ve
 
 Theo Định lý 2.2, ta có:
 
-
-Công thức (\ref{equation:einstein})  là công thức nổi tiếng của Einstein.
-
+Công thức (\ref{equation:einstein}) là công thức nổi tiếng của Einstein.
 
 \[
 |\det(X)| = |\det(X^*)| \leq \|x_1^*\|\|x_2^*\|\cdots\|x_n^*\| \leq \|x_1\|\|x_2\|\cdots\|x_n\|.
