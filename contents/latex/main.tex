@@ -219,21 +219,39 @@ Giá trị $e$ sẽ được sử dụng trong mã hoá
 \item Tìm một số $d$ sao cho $ed - 1$ chia hết cho $\phi(n)$, hay nói cách khác $d = e^{-1} \mod \phi(n)$. Giá trị $d$ sẽ được sử dụng để giải mã
 \item Công khai khóa $K^+_B$ = (n, e) và giữ bí mật khóa $K^-_B$ = (n, d)
 \end{enumerate}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Mã hóa và giải mã RSA}
+
+\begin{columns}
+
+\begin{column}{0.6\textwidth}
+
 \begin{itemize}
+
 \item Mã hóa:
 
 \[
 c = E (m, K_B^+) = m^e \mod n
 \]
+
 \item Giải mã:
 
 \[
 m = D (c, K_B^-) = c^d \mod n
 \]
+
 \end{itemize}
+
+\end{column}
+
+\begin{column}{0.4\textwidth}
+\includegraphics[width=\textwidth]{pictures/chu-ky-so-rsa-1.jpg}
+\end{column}
+
+\end{columns}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Ví dụ về RSA}
@@ -840,8 +858,8 @@ Ngược lại, ta tính lại $b_2 = b_2 - t.b_1$ và quay lại bước 2
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Thuật toán giảm lưới   nhiều chiều}
-\begin{frame}{Thuật toán giảm lưới   nhiều chiều}
+\subsection{Thuật toán giảm lưới nhiều chiều}
+\begin{frame}{Thuật toán giảm lưới nhiều chiều}
 \begin{itemize}
 \item Việc giảm cơ sở lưới nhiều chiều khó khăn hơn nhiều
 \item Thuật toán LLL sử dụng cách tiếp cận tìm kiếm các vector gần như ngắn nhất (trong thời gian đa thức)
