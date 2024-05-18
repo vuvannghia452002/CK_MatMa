@@ -1094,12 +1094,12 @@ $$ v_3 = (0, 0, Y^2n, 0), v_4 = (a_0, a_1Y, a_2Y^2, Y^3)$$
 Điều này tạo nên cơ sở mới $b_1, b_2, b_3, b_4$. Nhưng ở đây, ta chỉ quan tâm đến $b_1$.
 
 Theo Mệnh đề 2.8 ta có:
-% Theo Mệnh đề 2.8 ta có:    tham chiếu đến công thức
-% Theo Mệnh đề 2.8 ta có:    tham chiếu đến công thức
-% Theo Mệnh đề 2.8 ta có:    tham chiếu đến công thức
-% Theo Mệnh đề 2.8 ta có:    tham chiếu đến công thức
-% Theo Mệnh đề 2.8 ta có:    tham chiếu đến công thức
-% Theo Mệnh đề 2.8 ta có:    tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có: tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có: tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có: tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có: tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có: tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có: tham chiếu đến công thức
 
 $$
 \begin{aligned}
@@ -1108,17 +1108,11 @@ $$
 \end{aligned}
 $$
 
-
-
-
-
 % Ta có thể viết lại:
 % $$b_1 = c_1v_1 + \dots + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
 % với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$ $$e_2 = c_3n + c_4a_2$$
 % \hspace*{7cm} $e_3 = c_4$.\\
 % Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n), \quad 0\leq i\leq 2$. \\
-
-
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1130,19 +1124,11 @@ với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$ $$
 \hspace*{7cm} $e_3 = c_4$.\\
 Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n), \quad 0\leq i\leq 2$. \\
 
-
-
- 
-
-
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Ví dụ ứng dụng}
 
 Ta có thể thiết lập được đa thức $$g(T) = e_3T^3 + e_2T^2 + e_1T + e_0\text{.}$$
-
-
-
 
 Khi đó, vì số nguyên $x$ thỏa mãn $f(x) \equiv 0 \quad (mod \ n) $ và vì các hệ số của $c_4f(T)$ và $g(T)$ đồng dạng với $mod(n)$ nên, $$0 \equiv c_4f(x) \equiv g(x) \quad (mod \ n)\text{.}$$
 
@@ -1174,12 +1160,6 @@ Vì $g(x) \equiv 0 \quad (mod \ n)$, nên ta có $g(x) = 0$. Từ đó, ta có t
 \subsection{Tổng quát}
 \begin{frame}{Tổng quát}
 
-
-
-
-
-    
- 
 % Lưu ý rằng phương pháp trên thay thế cho vấn đề tìm giải pháp cho giải phương trình đồng dư \index{phương trình đồng dư} $f(T) \equiv 0 \quad (mod \ n)$ bằng việc giải phương trình đa thức $g(T) = 0$. Việc giải phương trình đồng dư thường yêu cầu phân tích $n$, nhưng việc giải phương trình đa thức có thể được thực hiện bằng các phương pháp như phương pháp Newton. Theo cách tương tự, ta có thể tìm nghiệm nhỏ (nếu chúng tồn tại) cho một đa thức đồng dư bậc d, sử dụng một lưới có kích thước d + 1. Tất nhiên, d phải nhỏ để thuật toán LLL chạy trong một khoảng thời gian hợp lý. Cải tiến cho phương pháp này, Coppersmith \index{Coppersmith} đã đưa ra, một thuật toán sử dụng các lưới có nhiều chiều hơn để tìm nghiệm nhỏ cho phương trình đa thức $f(T) \equiv 0 \quad (mod \ n)$(có hệ số bậc cao nhất bằng 1) có bậc $d$. Nếu $|x| \leq n^{\frac{1}{d}}$, thì thuật toán chạy theo thời gian đa thức trong $log(n)$ và $d$.\\
 
 % \textbf{Tổng quát:} Giả sử hệ thống RSA có số mũ $e$ thấp và modulus $N$ được công khai, và nó được sử dụng để gửi thông báo có dạng $(M + x)^e \quad (mod \ N)$, trong đó M đã biết và $0<x<Y$.\\
@@ -1198,10 +1178,6 @@ Vì $g(x) \equiv 0 \quad (mod \ n)$, nên ta có $g(x) = 0$. Từ đó, ta có t
 % Dùng thuật toán LLL để thực hiện giảm lưới. Ta thu được cơ sở mới sau khi giảm lưới $b_0, b_1, b_2, \dots, b_{n+1}$. Ta sử dụng vector $b_0$ như vector ngắn nhất của lưới và chuyển về dạng đa thức:
 % $$b_0 + \frac{b_1}{Y}x + \dots + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n}x^n \text{.}$$
 % Sau đó thực hiện giải phương trình đa thức tìm nghiệm nguyên bài toán \cite{7}.
-
-
-
-
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
