@@ -463,15 +463,17 @@ Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) rất khó 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Trực giao hóa Gram-Schmidt}
 
-Cho $x_1, x_2, \ldots, x_n$ là một cơ sở trong $\mathbb{R}^n$. Trực giao hóa Gram-Schmidt của $x_1, x_2, \ldots, x_n$ là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sau:
+\begin{block}{Định nghĩa}
+
+Cho $x_1, x_2, \ldots, x_n$ là một cơ sở trong $\mathbb{R}^n$.
+Trực giao hóa Gram-Schmidt của $x_1, x_2, \ldots, x_n$
+là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sau:
 
 \begin{itemize}
-\item[(i)] $x_1 = x_1^*$,
-\item[(ii)] $x_i^* = x_i - \sum_{j=1}^{i-1} \mu_{ij} x_j^*$, \quad $2 \leq i \leq n$, \quad $\mu_{ij} = \frac{\langle x_i, x_j^* \rangle}{\langle x_j^*, x_j^* \rangle}$.
+\item $x_1 = x_1^*$,
+\item $x_i^* = x_i - \sum_{j=1}^{i-1} \mu_{ij} x_j^*$, \quad $2 \leq i \leq n$, \quad $\mu_{ij} = \frac{\langle x_i, x_j^* \rangle}{\langle x_j^*, x_j^* \rangle}$.
 \end{itemize}
 
-\begin{block}{Chú ý}
-Nếu $x_1, x_2, \ldots, x_n$ là một cơ sở của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \ldots, x_n^*$ có thể không nằm trong lưới $L$.
 \end{block}
 
 \end{frame}
