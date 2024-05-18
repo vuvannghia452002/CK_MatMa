@@ -378,6 +378,63 @@ Khi đó $Y = CX$ với $C$ là ma trận vuông $n \times n$ với các hệ s�
 \end{block}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Bổ đề}
+
+\textbf{Chứng minh:}
+
+Với mọi $y_i$ thuộc lưới với cơ sở $x_1, x_2, \ldots, x_n$ và mọi $x_i$ thuộc lưới với cơ sở $y_1, y_2, \ldots, y_n$. Khi đó:
+\[
+x_i = \sum_{j=1}^n b_{ij} y_j, \quad y_i = \sum_{j=1}^n c_{ij} x_j.
+\]
+
+Ta có thể viết gọn lại dưới dạng ma trận:
+$X = BY, \quad Y = CX.$
+
+Vì vậy ta có $X = BCX$ và $Y = CBY$. Do $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$ là cơ sở trong không gian $\mathbb{R}^n$ nên ma trận $X$, $Y$ là ma trận khả nghịch.
+
+Suy ra $BC = CB = I$ và $\det(B) \det(C) = 1$.
+
+Thêm nữa, $B$, $C$ là các ma trận hệ số nguyên. Do đó:
+\[
+\begin{cases}
+\det(B) = \det(C) = 1, \\
+\det(B) = \det(C) = -1.
+\end{cases}
+\]
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Nhận xét}
+
+\begin{block}{Nhận xét}
+Định thức của một lưới không phụ thuộc vào cách chọn cơ sở.
+\end{block}
+
+\textbf{Chứng minh:}
+
+Giả sử lưới $L \subset \mathbb{R}^n$ có hai cơ sở $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$. Theo Bổ đề ta có:
+\[
+|\det(Y)| = |\det(CX)| = |\det(C) \cdot \det(X)| = |\pm 1 \cdot \det(X)| = |\det(X)|
+\]
+
+\textbf{Ví dụ:} Đặt $\{x_1, x_2\}$ là cơ sở của lưới $L$. Với $x_1 = (1, 0)$, $x_2 = (0, 1)$. Khi đó:
+\[
+L = a_1 x_1 + a_2 x_2 \quad \text{với} \quad a_1, a_2 \in \mathbb{Z}
+\]
+
+Đặt:
+\[
+\begin{cases}
+y_1 = x_1 + 5x_2 = (1, 5) \\
+y_2 = x_2 = (0, 1)
+\end{cases}
+\]
+
+Suy ra $\{y_1, y_2\}$ là một cơ sở khác của lưới.
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
