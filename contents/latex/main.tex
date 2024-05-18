@@ -8,6 +8,13 @@
 \usepackage{tikz}
 \usepackage{hyperref}
 
+
+
+
+ 
+
+
+
 % % \usepackage{amsmath} % For mathematical environments
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -361,9 +368,9 @@ Cho \(n \geq 1 \), \(\{x_1, x_2, \ldots, x_n\}\) là một cơ sở của \(\mat
 Lưới \(n \) chiều với cơ sở \(\{x_1, x_2, \ldots, x_n\}\)
 là tập hợp \(L \) tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên:
 
-\[
+\begin{equation}
 L = \{a_1 x_1 + a_2 x_2 + \ldots + a_n x_n \mid a_i \in \mathbb{Z} \}
-\]
+\end{equation}
 
 Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lưới.
 \end{block}
@@ -379,7 +386,16 @@ Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lư�
 \begin{block}{Bổ đề}
 Cho $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$ là hai cơ sở của lưới $L \subset \mathbb{R}^n$.
 Lấy $X$, $Y$ lần lượt là các ma trận $n \times n$ nhận $x_i$ (tương ứng $y_i$) là các hàng thứ $i$.
-Khi đó $Y = CX$ với $C$ là ma trận vuông $n \times n$ với các hệ số nguyên và $\det(C) = \pm 1$.
+Khi đó:
+
+\begin{equation} \label{equation:bo_de}
+    Y = CX
+\end{equation}
+
+
+
+với $C$ là ma trận vuông $n \times n$ với các hệ số nguyên 
+và $\det(C) = \pm 1$.
 \end{block}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -417,7 +433,46 @@ Thêm nữa, $B$, $C$ là các ma trận hệ số nguyên. Do đó:
 
 \textbf{Chứng minh:}
 
-Giả sử lưới $L \subset \mathbb{R}^n$ có 2 cơ sở $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$. Theo bổ đề ta có:
+Giả sử lưới $L \subset \mathbb{R}^n$ có 2 cơ sở $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$. 
+
+
+Theo bổ đề (\ref{equation:bo_de}) ta có:
+
+
+
+
+
+
+
+
+
+
+
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+% nghia
+
+
+
+
+
+
 \[
 |\det(Y)| = |\det(CX)| = |\det(C) \cdot \det(X)| = |\pm 1 \cdot \det(X)| = |\det(X)|
 \]
@@ -599,7 +654,7 @@ Ta có $|\det(X^*)|$ là thể tích hình hộp $n$ chiều căng bởi các ve
 Theo Định lý 2.2, ta có:
 
 
-Công thức \ref{equation:einstein}  là công thức nổi tiếng của Einstein.
+Công thức (\ref{equation:einstein})  là công thức nổi tiếng của Einstein.
 
 
 \[
@@ -660,4 +715,4 @@ Công thức \ref{equation:einstein}  là công thức nổi tiếng của Einst
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \begin{equation} \label{equation:einstein}
-% Công thức \ref{eq:einstein} là công thức nổi tiếng của Einstein.
+% Công thức (\ref{equation:einstein}) là công thức nổi tiếng của Einstein.
