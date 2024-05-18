@@ -333,11 +333,11 @@ Tính toán:
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Lý thuyết lưới}
-\begin{frame}{Lý thuyết lưới}
+\section{Phương pháp lưới}
+\begin{frame}{Phương pháp lưới}
 \begin{itemize}
-\item Lý thuyết lưới là một lĩnh vực trong toán học có liên quan đến việc nghiên cứu các cấu trúc đại số và hình học của các mạng lưới được phát triển từ những năm 1940.
-\item Lý thuyết lưới được sử dụng trong nhiều lĩnh vực:
+\item Phương pháp lưới là một lĩnh vực trong toán học có liên quan đến việc nghiên cứu các cấu trúc đại số và hình học của các mạng lưới được phát triển từ những năm 1940.
+\item Phương pháp lưới được sử dụng trong nhiều lĩnh vực:
 \begin{itemize}
 \item Lĩnh vực xấp xỉ số đại số
 \item Lĩnh vực mật mã học
@@ -623,10 +623,6 @@ Theo công thức (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta c
 \]
 
 \end{frame}
-
-% \textit{Chứng minh.}\\
-% Ta có $|det(X^*)|$ là thể tích hình hộp n chiều căng bởi các vector trực giao $x_1^*, x_2^*, ..., x_n^*$ nên suy ra: $$|det(X^*)| = \|x_1^*\|\|x_2^*\|...\|x_n^*\|\text{.}$$
-% Theo Định lý 2.2, ta có $\|x_k^*\| \leq \|x_k\|$ nên $$|det(X)| = |det(X^*)| \leq \|x_1\|\|x_2\|...\|x_n\| \text{.}$$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -636,7 +632,7 @@ Theo công thức (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta c
 \section{Thuật toán LLL}
 \begin{frame}{Thuật toán LLL}
 \begin{itemize}
-\item Những ứng dụng của lý thuyết lưới trong hệ mật mã được phát triển từ khi có thuật toán rút gọn cơ sở lưới
+\item Những ứng dụng của phương pháp lưới trong hệ mật mã được phát triển từ khi có thuật toán rút gọn cơ sở lưới
 \item Thuật toán rút gọn cơ sở lưới do ba nhà toán học Arjen Lenstra, Hendrik Lenstra, László Lovász tìm ra (được viết tắt là LLL) năm 1982
 \item Ý tưởng của việc rút gọn cơ sở là thay đổi cơ sở $B$ của lưới $L$ thành một cơ sở mới $B'$ ngắn hơn sao cho $|\det(L)|$ không đổi.
 \end{itemize}
@@ -648,12 +644,28 @@ Theo công thức (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta c
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Thực hiện chương trình}
+\begin{frame}{Thực hiện chương trình}
+\begin{itemize}
+\item
+\item
+\item
+\item
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \section{Tổng kết}
 % \subsection{Tổng kết}
 % \subsubsection{Tổng kết}
 % \begin{frame}{Tổng kết}
 %
-% Trên đây là toàn văn báo cáo Đồ án 1 về chủ đề \textbf{Phương pháp lưới}. Trong đồ án này, em đã trình bày một số kiến thức cơ bản về lý thuyết lưới, tìm hiểu về thuật toán LLL và nhận thấy một phần tầm quan trọng của nó tróng lý thuyết số và mật mã.Trong bài báo cáo có giới thiệu về một số hệ mật mã như RSA và NTRU, thực hiện các cuộc tấn công vào chúng và thực hiện chạy chương trình thực nghiệm trên phần mềm SageMath.\\
+% Trên đây là toàn văn báo cáo Đồ án 1 về chủ đề \textbf{phương pháp lưới}. Trong đồ án này, em đã trình bày một số kiến thức cơ bản về phương pháp lưới, tìm hiểu về thuật toán LLL và nhận thấy một phần tầm quan trọng của nó tróng lý thuyết số và mật mã.Trong bài báo cáo có giới thiệu về một số hệ mật mã như RSA và NTRU, thực hiện các cuộc tấn công vào chúng và thực hiện chạy chương trình thực nghiệm trên phần mềm SageMath.\\
 
 % Báo
 % cáo Đồ án vẫn còn rất nhiều thiếu sót, vậy nên em rất mong được thầy và các bạn đọc cùng
