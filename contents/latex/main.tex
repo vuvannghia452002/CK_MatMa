@@ -987,34 +987,26 @@ $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Định lý}
 
-\begin{block}{Định lý}
-
-\end{block}
-
-% \defi{\textbf{Định lý 2.10.} \textit{Nếu $x_1, x_2, \dots, x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $y\in L$ là vector trong lưới khác không bất kỳ thì: $$\|x_1\| \leq \beta^{\frac{n-1}{2}}\|y\|\text{.}$$
-% Đặc biệt, vector đầu tiên trong cơ sở rút gọn không dài hơn $\beta^{\tfrac{n-1}{2}}$ lần vector ngắn nhất \index{vector ngắn nhất} khác không của lưới \index{lưới} $L$.}}
-
-% \textit{Chứng minh.}\\
-% Ta có $\|x_i^*\| \geq \frac{1}{\beta}\|x_{i-1}^*\|$ với $1\leq i \leq n$. Vì $x_1^* = x_1$ nên $$\|x_1\|^2 = \|x_1^*\| \leq \beta^{n-1}\|x_n^*\|.$$
-% Do đó, với $1\leq i \leq n$ ta có : $$\|x_i^*\|^2 \geq \beta^{-(i-1)}\|x_1\|^2.$$
-% Theo Bổ đề 2.9, với vector khác 0 bất kì $y \in L$ ta có:
-% $$\|y\| \geq \min\{\|x_1^*\|, \|x_2^*\|, \dots, \|x_n^*\|\} \geq \beta^{\tfrac{-(n-1)}{2}}\|x_1^*\| . $$
-% Vì vậy, ta có điều phải chứng minh
-% \vspace{0.5cm}
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+    \begin{block}{Định lý}
+    
+    \end{block}
+    
+    % \defi{\textbf{Định lý 2.10.} \textit{Nếu $x_1, x_2, \dots, x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $y\in L$ là vector trong lưới khác không bất kỳ thì: $$\|x_1\| \leq \beta^{\frac{n-1}{2}}\|y\|\text{.}$$
+    % Đặc biệt, vector đầu tiên trong cơ sở rút gọn không dài hơn $\beta^{\tfrac{n-1}{2}}$ lần vector ngắn nhất \index{vector ngắn nhất} khác không của lưới \index{lưới} $L$.}}
+    
+    % \textit{Chứng minh.}\\
+    % Ta có $\|x_i^*\| \geq \frac{1}{\beta}\|x_{i-1}^*\|$ với $1\leq i \leq n$. Vì $x_1^* = x_1$ nên $$\|x_1\|^2 = \|x_1^*\| \leq \beta^{n-1}\|x_n^*\|.$$
+    % Do đó, với $1\leq i \leq n$ ta có : $$\|x_i^*\|^2 \geq \beta^{-(i-1)}\|x_1\|^2.$$
+    % Theo Bổ đề 2.9, với vector khác 0 bất kì $y \in L$ ta có:
+    % $$\|y\| \geq \min\{\|x_1^*\|, \|x_2^*\|, \dots, \|x_n^*\|\} \geq \beta^{\tfrac{-(n-1)}{2}}\|x_1^*\| . $$
+    % Vì vậy, ta có điều phải chứng minh
+    % \vspace{0.5cm}
+    
+    \end{frame}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Thuật toán LLL.}
+ 
+    
 % \defi{\textbf{Thuật toán LLL.}}
 % \begin{itemize}
 % \item Bước 1 : Nhập vào lưới $L$ với cơ sở lưới $b_1, b_2, \dots, b_n$ và tham số bổ trợ $c$ với $c \geq \dfrac{4}{3}$.
@@ -1023,153 +1015,57 @@ $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $
 % Kiểm tra xem hệ số $\|u_{ij}\| > \dfrac{1}{2}$ thực hiện thủ tục rút gọn.\\
 % Kết quả cuối cùng thu được cơ sở lưới giảm $L$.
 % \item Thủ tục rút gọn: Ta sẽ rút gọn vector $b_i$ bằng cách trừ đi một bội nguyên $\|u_{ij}\|$ của $b_j$. Vì $\|u_{ij}\|$ là số nguyên gần nhất với hệ số Gram-Schmidt $u_{ij}$ nên đây là phép rút gọn tốt nhất ta có thể thực hiện, với điều kiện ràng buộc là $b_i$ vẫn nằm trong lưới ban đầu. Và cập nhật các hệ số cơ sở Gram-Schmidt.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Mô tả   hoạt động}
+ 
+    
+ 
 
-% \end{itemize}
-% \vspace{1cm}
-% \noindent Sau đây là lưu đồ mô tả cách hoạt động của thuật toán LLL.
-% \begin{figure}[h!]
-% \centering
-% \includegraphics[scale = 1.1]{a.12.png}
-% \caption{Hàm reduce.}
-% \label{fig:boat1}
-% \end{figure}
-% \newpage
-% \begin{figure}[h!]
-% \centering
-% \includegraphics[width = 1\textwidth]{a.11.3.png}
-% \caption{Thuật toán LLL.}
-% \label{fig:boat1}
-% \end{figure}
-% % \begin{figure}[h!]
-% % \centering
-% % \includegraphics[scale = 1.3]{a.11.3.png}
-% % \caption{Thuật toán LLL}
-% % \label{fig:boat1}
-% % \end{figure}
-% % Trong đó, hàm Reduce có thuật toán sau :\\
 
-% \section{Thực hiện chương trình}
-% Để triển khai và kiểm tra các thuật toán, bài báo cáo này sẽ sử dụng phần mềm SageMath \index{SageMath}. SageMath là một chương trình tính toán mã nguồn mở, cấp phép bởi GPL. Nó là sự kết hợp sức mạnh của nhiều gói source vào Python (NumPy, SciPy, matplotlib, Sympy, Maxima, GAP, FLINT, R and many more). Nhiệm vụ của Sage là tạo ra một chương trình miễn phí có thể thay thế Magma, Maple, Mathematica và Matlab. Trang web \href{https://www.sagemath.org/}{https://www.sagemath.org/}.
-% \vspace{1cm}\\
-% Chương trình thuật toán LLL:\\
 
-% \begin{lstlisting}
-% #Ham giam luoi
-% def reduce(i, B, U):
+\begin{figure}[h]
+\centering
+\includegraphics[scale = 0.6]{pictures/a.12.png}
+\caption{Hàm reduce.}
+\end{figure}
 
-% print("gia tri ma tran B: \n")
-% j = i - 1
-% while j >= 0:
-% B.set_column(i, B.column(i) - round(U[j, i]) * B.column(j))
-% U.set_column(i, U.column(i) - round(U[j, i]) * U.column(j))
-% j = j - 1
-% print(B)
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Mô tả   hoạt động}
+ 
+ 
 
-% #ham chinh gia tri ma tran bang thuat toan LLL
-% def LLL(B, c=2):
-% #Lay so hang va cot ma tran
-% n = B.nrows()
-% m = B.ncols()
-% #khoi tao ma tran
-% U = matrix(RR, m, m)
-% O = matrix(RR, n, m)
 
-% # Truc giao hoa G-S
-% for i in range(0, m):
-% U[i, i] = 1
-% O.set_column(i, B.column(i))
-% for j in range(0, i):
-% U[j, i] = (B.column(i) * O.column(j)) / (O.column(j) * O.column(j))
-% O.set_column(i, O.column(i) - U[j, i] * O.column(j))
-% reduce(i, B, U) # Goi ham recduce de bien doi ma tran
-% i += 1
-
-% # Dieu kien giam
-% i = 0
-% while i < m - 1:
-% if O.column(i) * O.column(i) <= c * O.column(i + 1) * O.column(i + 1):
-% i += 1
-% else:
-% O.set_column(i + 1, O.column(i + 1) + U[i, i + 1] * O.column(i))
-% U[i, i] = (B.column(i) * O.column(i + 1)) / (O.column(i + 1) * O.column(i + 1))
-% U[i + 1, i] = 1
-% U[i, i + 1] = 1
-% U[i + 1, i + 1] = 0
-% O.set_column(i, O.column(i) - U[i, i] * O.column(i + 1))
-% U.swap_columns(i, i + 1)
-% O.swap_columns(i, i + 1)
-% B.swap_columns(i, i + 1)
-% for k in range(i + 2, m):
-% U[i, k] = (B.column(k) * O.column(i)) / (O.column(i) * O.column(i))
-% U[i + 1, k] = (B.column(k) * O.column(i + 1)) / (O.column(i + 1) * O.column(i + 1))
-% if abs(U[i, i + 1]) > 0.5:
-% reduce(i + 1, B, U)
-% i = max(i - 1, 0)
-% return B
-
-% # Nhap du lieu tu ban phim
-
-% n = int(input("Nhap so chieu cua luoi n: "))
-% A = Matrix(ZZ, n, n)
-% for j in range(n):
-% row = input(f"Nhap hang {j+1} cua ma tran : ")
-% A[j] = list(map(int, row.split()))
-% print(A)
-% print("Ket qua giam luoi:\n")
-% res = LLL(A)
-
-% \end{lstlisting}
-
-% \newpage
-
-% \noindent \textbf{Một số kết quả thu được.}
-
-% \begin{enumerate}
-% \item \textbf{Lưới 2 chiều:} Cho cơ sở $x_1 = (2, 5), x_2 = (5, 8)$ :
-% \begin{figure}[h!]
-% \centering
-% \includegraphics[width = 0.6\textwidth]{a.6.png}
-% \caption{Chương trình thuật toán LLL với lưới 2 chiều.}
-% \label{fig:boat1}
-% \end{figure}
-% % Lưới sau khi rút gọn có cơ sở mởi $x_1 = (1, -2), x_2 = (4, 1)$.
-% % \begin{figure}[h!]
-% % \centering
-% % \includegraphics[scale = 1.1]{a.6.png}
-
-% % \label{fig:boat1}
-% % \end{figure}
-% \item \textbf{Lưới 3 chiều:} Cho cơ sở $x_1 = (1, 1, 1), x_2 = (-1, 0, 2), x_3 = (3, 5, 6)$:
-% \begin{figure}[h!]
-% \centering
-% \includegraphics[width = 0.5\textwidth]{a.7.png}
-% \caption{Chương trình thuật toán LLL với lưới 3 chiều.}
-% \label{fig:boat1}
-% \end{figure}
-% \end{enumerate}
-
+\begin{figure}[h]
+\centering
+\includegraphics[scale = 0.6]{pictures/a.11.3.png}
+\end{figure}
+    
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Ứng dụng phương pháp lưới trong hệ mật mã RSA}
-% \begin{frame}{Ứng dụng phương pháp lưới trong hệ mật mã RSA}
+\section{Ứng dụng phương pháp lưới trong hệ mật mã RSA}
+\begin{frame}{Ứng dụng phương pháp lưới trong hệ mật mã RSA}
 % \begin{block}{Bài toán}
 % Bài toán RSA với số mũ $e$ nhỏ, $m$ có giá trị lớn. Cho $m^e$, ta có $B$ với $|m-B| \leq n^{\tfrac{1}{e}}$. Tìm $m \in Z_n$
 % \end{block}
 
-% \end{frame}
+\end{frame}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{Ví dụ ứng dụng}
-% \begin{frame}{Ví dụ ứng dụng}
+\subsection{Ví dụ ứng dụng}
+\begin{frame}{Ví dụ ứng dụng}
 
 % Trong bài toán này, thông báo có dạng $m = B + x$, trong đó $B$ cố định và $|x| \leq Y$ với Y nguyên
 
 % Giả sử Bob có khóa công khai $(n, e) = (n, 3)$
 
 % Khi đó bài toán là $c \equiv (B+x)^3 \quad (mod \ n)$
-% \end{frame}
+\end{frame}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}{Ví dụ ứng dụng}
 
@@ -1382,7 +1278,6 @@ $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $
 % \centering
 % \includegraphics[width = 0.7\textwidth]{a.8.png}
 % \caption{Chương trình tấn công hệ mật mã RSA.}
-% \label{fig:boat1}
 % \end{figure}
 
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
