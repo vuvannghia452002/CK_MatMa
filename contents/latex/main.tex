@@ -1042,9 +1042,33 @@ $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ứng dụng phương pháp lưới trong hệ mật mã RSA}
 \begin{frame}{Ứng dụng phương pháp lưới trong hệ mật mã RSA}
-% \begin{block}{Bài toán}
-% Bài toán RSA với số mũ $e$ nhỏ, $m$ có giá trị lớn. Cho $m^e$, ta có $B$ với $|m-B| \leq n^{\tfrac{1}{e}}$. Tìm $m \in Z_n$
-% \end{block}
+
+    \begin{block}{Tấn công hệ mật mã RSA dựa trên phương pháp    lưới}
+
+        Alice muốn gửi Bob một tin nhắn có dạng:
+
+        \textbf{Câu trả lời là *****}
+
+
+        Trong bài toán này:
+
+        \begin{itemize}
+            \item   Bản   rõ  có dạng $m = B + x$
+            \item   $B$ cố định
+            \item   $|x| \leq Y$ với Y nguyên
+        \end{itemize}
+        
+        
+        
+        
+        
+        Ta giả sử rằng Eve biết $B, Y, n$. Vì vậy cô ấy chỉ cần tìm $x$.
+\end{block}
+
+
+
+
+
 
 \end{frame}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1130,14 +1154,25 @@ $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $
 % \begin{frame}{Tổng quát}
 
 % \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \subsection{Tấn công hệ mật mã RSA dựa trên lý thuyết lưới}
-% Alice muốn gửi Bob một tin nhắn có dạng
-% $$\text{\textit{Câu trả lời là}} **$$
-% Trong bài toán này, thông báo có dạng $m = B + x$, trong đó $B$ cố định và $|x| \leq Y$ với Y nguyên.\\
-% Sau đây là một cuộc tấn công với số mã hóa\index{mã hóa} nhỏ.\\
+
+
+
+
 % Giả sử Bob có khóa công khai $(n, e) = (n, 3)$. Khi đó bài toán là $c \equiv (B+x)^3 \quad (mod \ n)$ .\\
-% Ta giả sử rằng Eve biết $B, Y, n$ . Vì vậy cô ấy chỉ cần tìm $x$. Ta có thể tạo thành đa thức:
+
+
+% Ta có thể tạo thành đa thức:
 % $$
 % \begin{aligned}
 % f(T) & = (B+T)^3 - c = T^3 + 3BT^2 + 3B^2T + B^3 -c\\
