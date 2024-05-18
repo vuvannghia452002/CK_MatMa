@@ -114,6 +114,7 @@ Martin Edward Hellman\\(sinh 02/10/1945 - 79 tuổi)
 \end{column}
 
 \end{columns}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Khái niệm}
@@ -433,29 +434,63 @@ Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) rất khó 
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Trực giao hóa Gram-Schmidt}
+\begin{frame}{Trực giao hóa Gram-Schmidt}
+\begin{itemize}
+\item Thuật toán Gram-Schmidt cổ điển   chuyển một cơ sở bất kỳ trong $\mathbb{R}^n$ thành một cơ sở trực giao.
+\item Đây là kỹ thuật quan trọng trong thuật toán LLL.
+\end{itemize}
 
-% \subsection{Trực giao hóa Gram-Schmidt}
-% \begin{frame}{Trực giao hóa Gram-Schmidt}
-% \begin{itemize}
-% \item Phần này trình bày thuật toán Gram-Schmidt cổ điển cho việc chuyển một cơ sở bất kỳ trong $\mathbb{R}^n$ thành một cơ sở trực giao.
-% \item Đây là kỹ thuật quan trọng trong thuật toán LLL.
-% \end{itemize}
-% \end{frame}
+
+
+
+
+
+
+
+\begin{columns}
+
+\begin{column}{0.4\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.4]{pictures/Bailey_Whitfield_Diffie.png}
+\end{figure}
+\end{column}
+
+\begin{column}{0.4\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.4]{pictures/Martin_Edward_Hellman.png}
+\end{figure}
+\end{column}
+
+\end{columns}
+
+
+
+
+
+
+
+
+
+
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Trực giao hóa Gram-Schmidt}
+\begin{frame}{Trực giao hóa Gram-Schmidt}
 
-% Cho $x_1, x_2, \ldots, x_n$ là một cơ sở trong $\mathbb{R}^n$. Trực giao hóa Gram-Schmidt của $x_1, x_2, \ldots, x_n$ là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sau:
+Cho $x_1, x_2, \ldots, x_n$ là một cơ sở trong $\mathbb{R}^n$. Trực giao hóa Gram-Schmidt của $x_1, x_2, \ldots, x_n$ là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sau:
 
-% \begin{itemize}
-% \item[(i)] $x_1 = x_1^*$,
-% \item[(ii)] $x_i^* = x_i - \sum_{j=1}^{i-1} \mu_{ij} x_j^*$, \quad $2 \leq i \leq n$, \quad $\mu_{ij} = \frac{\langle x_i, x_j^* \rangle}{\langle x_j^*, x_j^* \rangle}$.
-% \end{itemize}
+\begin{itemize}
+\item[(i)] $x_1 = x_1^*$,
+\item[(ii)] $x_i^* = x_i - \sum_{j=1}^{i-1} \mu_{ij} x_j^*$, \quad $2 \leq i \leq n$, \quad $\mu_{ij} = \frac{\langle x_i, x_j^* \rangle}{\langle x_j^*, x_j^* \rangle}$.
+\end{itemize}
 
-% \begin{block}{Chú ý}
-% Nếu $x_1, x_2, \ldots, x_n$ là một cơ sở của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \ldots, x_n^*$ có thể không nằm trong lưới $L$.
-% \end{block}
+\begin{block}{Chú ý}
+Nếu $x_1, x_2, \ldots, x_n$ là một cơ sở của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \ldots, x_n^*$ có thể không nằm trong lưới $L$.
+\end{block}
 
-% \end{frame}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}{Trực giao hóa Gram-Schmidt}
 
