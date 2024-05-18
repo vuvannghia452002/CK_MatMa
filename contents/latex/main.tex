@@ -478,45 +478,61 @@ là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sa
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Trực giao hóa Gram-Schmidt}
+\begin{frame}{Định lý}
 
-% Nếu ta đặt $\mu_{ii} = 1$ và $\mu_{ij} = 0$ với $1 \leq i < j \leq n$, ta có thể viết lại dưới dạng ma trận:
 
-% \[
-% \underset{X}{\underbrace{\begin{pmatrix}
-% x_1 \\
-% x_2 \\
-% \vdots \\
-% x_n
-% \end{pmatrix}}}
-% =
-% \underset{M}{\underbrace{\begin{pmatrix}
-% 1 & 0 & \cdots & 0 \\
-% \mu_{21} & 1 & \cdots & 0 \\
-% \vdots & \vdots & \ddots & \vdots \\
-% \mu_{n1} & \mu_{n2} & \cdots & 1
-% \end{pmatrix}}}
-% \underset{X^*}{\underbrace{\begin{pmatrix}
-% x_1^* \\
-% x_2^* \\
-% \vdots \\
-% x_n^*
-% \end{pmatrix}}}
-% \]
 
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Trực giao hóa Gram-Schmidt}
+\begin{block}{Định  lý}
 
-% Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$ và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. Khi đó:
 
-% \begin{itemize}
-% \item[(i)] $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$,
-% \item[(ii)] $\|x_k^*\| \leq \|x_k\|$,
-% \item[(iii)] $\det(X^*) = \det(X)$.
-% \end{itemize}
 
-% \end{frame}
+
+Cho $x_1, x_2, \ldots, x_n$ là một cơ sở của $\mathbb{R}^n$ và $x_1^*, x_2^*, \ldots, x_n^*$ là trực giao hóa Gram-Schmidt của nó. Khi đó:
+
+\begin{itemize}
+\item  $\langle x_i^*, x_j^* \rangle = 0$ với $1 \leq i < j \leq n$,
+\item  $\|x_k^*\| \leq \|x_k\|$,
+\item  $\det(X^*) = \det(X)$.
+\end{itemize}
+
+
+
+\end{block}
+
+
+
+
+\end{frame}
+
+
+
+
+
+
+
+% \defi{\textbf{Định lý 2.2.} \textit{Cho $x_1,x_2,...,x_n$ là một cơ sở của $R^n$ và $x_1^*,x_2^*,...,x_n^*$ là trực giao hóa Gram-Schmidt của nó. Khi đó 
+% \begin{enumerate}[i)]
+%     \item $x_i^*.x_j^* = 0$ với $ 1\leq i < j \leq n$,
+%     \item $\|x_k^*\| \leq \|x_k\|$,
+%     \item $det(X^*) = det(X)$.
+% \end{enumerate}}}
+% \textbf{Chứng minh.}
+% \begin{enumerate}[i)]
+%     \item Điều này luôn đúng trong quá trình trực giao hóa Gram-Schmidt.
+%     \item Ta có $x_k = x_k^* + \displaystyle\sum_{j=1}^{k-1} \mu_{kj}.x_j^*$. Theo định lý Py-ta-go ta có :
+%     $$\|x_k\|^2 = \|x_k^*\|^2 + \displaystyle\sum_{j=1}^{k-1} (\mu_{kj})^2.\|x_j^*\|^2 \text{.}$$  
+%     Suy ra : \hspace{3cm} $\qquad \|x_k^*\| \leq \|x_k\|$.
+%     \item Ta có $X=MX^*$ (như chú ý trên)\\
+%     Mà $M$ là ma trận tam giác dưới với \index{ma trận!tam giác dưới} $\mu_{ii} = 1$.\\
+%     Do đó: $\qquad det(M) = 1 \Rightarrow{ det(X^*) = det(X)}$.
+% \end{enumerate}
+% \newpage
+% \defi{\textbf{Bổ đề 2.3.} \textit{Cho $x_1,x_2,...,x_n$ là một cơ sở của $R^n$ và $x_1^*,x_2^*,...,x_n^*$ là trực giao hóa Gram-Schmidt của nó. Ta có $$|det(X)| \leq \|x_1\|\|x_2\|...\|x_n\| \text{.}$$}}
+% \textit{Chứng minh.}\\
+% Ta có $|det(X^*)|$ là thể tích hình hộp n chiều căng bởi các vector trực giao $x_1^*,x_2^*,...,x_n^*$ nên suy ra: $$|det(X^*)| = \|x_1^*\|\|x_2^*\|...\|x_n^*\|\text{.}$$
+% Theo Định lý 2.2, ta có $\|x_k^*\| \leq \|x_k\|$ nên $$|det(X)| = |det(X^*)| \leq \|x_1\|\|x_2\|...\|x_n\| \text{.}$$
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}{Trực giao hóa Gram-Schmidt}
 
