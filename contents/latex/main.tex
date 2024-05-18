@@ -656,19 +656,20 @@ Theo công thức (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta c
 \begin{frame}{Định nghĩa cơ sở giảm}
 \begin{block}{Cơ sở giảm}
 
-Một cơ sở $\{x_1, x_2\}$ được gọi là cơ sở giảm khi và chỉ khi
+Một cơ sở $\{x_1, x_2\}$ được gọi là cơ sở giảm khi và chỉ khi:
+
 \begin{itemize}
 \item $\|x_1\| \leq \|x_2\|$,
 \item $|\mu| = \left|\dfrac{x_1.x_2}{x_1.x_1}\right| \leq \dfrac{1}{2}$.
 \end{itemize}
 
 \end{block}
-
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Định lý}
 \begin{block}{Định lý}
-Nếu $x_1, x_2$ là cơ sở rút gọn của lưới $L$ thì $x_1$ là vector khác không ngắn nhất của lưới đó.
+Nếu $x_1, x_2$ là cơ sở rút gọn của lưới $L$ 
+thì $x_1$ là vector khác không ngắn nhất của lưới đó.
 \end{block}
 
 \textbf{Chứng minh:}
@@ -683,7 +684,8 @@ Suy ra: \hspace{3cm} $\qquad 2abx_1x_2 \geq -|ab|\|x_1\|^2 $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Định lý}
 
-Do đó
+Do đó:
+
 $$
 \begin{aligned}
 \|ax_1 + bx_2\|^2 &\geq a^2\|x_1\|^2 - |ab|\|x_1\|^2 + b^2\|x_2\|^2 \\
@@ -695,10 +697,9 @@ Ta thấy $a^2 - |ab| + b^2 \in N$ và bằng 0 khi và chỉ khi $a = b = 0$.\\
 Nhưng \quad $ax_1 + bx_2 \ne 0$ \qquad $\Rightarrow$ \qquad Trường hợp $a = b = 0$ (loại).\\
 \hspace*{3cm}$\Rightarrow a^2 - |ab| + b^2 \geq 1$\\
 \hspace*{3cm}$ \Rightarrow \|ax_1 + bx_2\| \geq \|x_1\|^2$.\\
-Do đó $x_1$ là vector khác không ngắn nhất của lưới
+Do đó $x_1$ là vector khác không ngắn nhất của lưới.
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \subsection{Giảm lưới 2 chiều}
 \begin{frame}{Giảm lưới 2 chiều}
 \begin{itemize}
