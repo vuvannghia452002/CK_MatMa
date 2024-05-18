@@ -455,7 +455,7 @@ Theo công thức (\ref{equation:bo_de}) trong bổ đề, ta có:
 \begin{frame}{Vector ngắn nhất}
 
 \begin{itemize}
-\item Độ dài vector $v = (v_1, v_2, \dots, v_n)$ là: 
+\item Độ dài vector $v = (v_1, v_2, \dots, v_n)$ là:
 
 $$\|v\| = (v_1^2 + v_2^2 + \dots + v_n^2)^{\tfrac{1}{2}}$$
 
@@ -893,22 +893,16 @@ Nếu $x_1, x_2, \dots, x_n$ là một cơ sở $\alpha$-rút gọn của lướ
 và $x_1^*, x_2^*, \dots, x_n^*$ là cơ sở trực giao hóa Gram-Schmidt của nó thì:
 
 \begin{equation} \label{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu1}
-\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2 \quad \text{với}  \quad 1 \leq j \leq i \leq n
+\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2 \quad \text{với} \quad 1 \leq j \leq i \leq n
 \end{equation}
-
-
 
 \begin{equation} \label{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu2}
 \|x_1\|.\|x_2\|\dots\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L)
 \end{equation}
 
-
-
-
 \begin{equation} \label{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu3}
 \|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}}
 \end{equation}
-
 
 \end{block}
 
@@ -918,10 +912,6 @@ và $x_1^*, x_2^*, \dots, x_n^*$ là cơ sở trực giao hóa Gram-Schmidt củ
 
 \textbf{Chứng minh công thức (\ref{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu1}):}
 $\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n $
-
-
-
-
 
 % \textit{Chứng minh.}\\
 % i) Theo Định nghĩa 2.7 ta có :
@@ -940,8 +930,6 @@ $\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n $
 % Từ (1), (2) ta có:\\
 % \hspace*{4cm} $\|x_j\|^2 \leq \beta^{j-1}\|x_j^*\|^2 \leq \beta^{i-1}\|x_i\|^2 \text{.}$\\
 
-
-
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Mệnh đề}
@@ -949,84 +937,62 @@ $\|x_j\|^2 \leq \beta^{i-1}\|x_i^*\|^2$ với $1 \leq j \leq i \leq n $
 \textbf{Chứng minh công thức (\ref{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu2}):}
 $\|x_1\|.\|x_2\|\dots\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L) $
 
-
-
-
-
 % ii) Theo Bổ đề 2.3. ta có :
 % $$det(L) = \|x_1^*\|.\|x_2^*\|\dots\|x_n^*\| \leq \|x_1\|.\|x_2\|\dots\|x_n\|\text{.}$$
 % Từ (2) ta có: \\
 % \hspace*{2cm}$\qquad \|x_1\|.\|x_2\|\dots\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}\|x_1^*\|.\|x_2^*\|\dots\|x_n^*\| = \beta^{\tfrac{n(n-1)}{4}}.det(L)$\\
 
-
-
-
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Mệnh đề}
 
-    \textbf{Chứng minh công thức (\ref{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu3}):}
-    $\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $
-    
-    
-    
-    
-    
-    
-    % iii) Xét $j = 1$ trong i), ta có $$\|x_1\|^2 \leq \beta^{i-1}\|x_i^*\|^2 $$ với $1\leq i \leq n$.
-    
-    % \noindent Khi đó: $$\qquad \|x_1\|^{2n} \leq \beta^{0 + 1 +2 + \dots +(n-1)}\|x_1^*\|^2.\|x_2^*\|^2\dots\|x_n^*\|^2 \leq \beta^{\tfrac{n(n-1)}{2}}.det(L)^2\text{.}$$
-    
-    % \noindent Suy ra:
-    % $$ \qquad \|x_1\| \leq \beta^{\tfrac{n-1}{4}}.det(L)^{\tfrac{1}{n}}\text{.}$$
-    % \hspace{2cm}
-    
-    
-    \end{frame}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Bổ  đề}
+\textbf{Chứng minh công thức (\ref{equation:menh_de_thua_toan_giam_luoi_nhieu_chieu3}):}
+$\|x_1\| \leq \beta^{\tfrac{(n-1)}{4}}det(L)^{\frac{1}{n}} $
 
-    
+% iii) Xét $j = 1$ trong i), ta có $$\|x_1\|^2 \leq \beta^{i-1}\|x_i^*\|^2 $$ với $1\leq i \leq n$.
 
-    \begin{block}{Bổ  đề}
-        
-    \end{block}
-    
+% \noindent Khi đó: $$\qquad \|x_1\|^{2n} \leq \beta^{0 + 1 +2 + \dots +(n-1)}\|x_1^*\|^2.\|x_2^*\|^2\dots\|x_n^*\|^2 \leq \beta^{\tfrac{n(n-1)}{2}}.det(L)^2\text{.}$$
 
+% \noindent Suy ra:
+% $$ \qquad \|x_1\| \leq \beta^{\tfrac{n-1}{4}}.det(L)^{\tfrac{1}{n}}\text{.}$$
+% \hspace{2cm}
 
-    % \defi{\textbf{Bổ đề 2.9.} \textit{Cho $x_1, x_2, \dots, x_n$ là một cơ sở \index{cơ sở} của lưới $L$ và $x_1^*, x_2^*, \dots, x_n^*$ tương ứng là phép trực giao hóa Gram-Schmidt của nó. Với $y \in L$ khác không, $$\|y\| \geq min\{\|x_1^*\|, \|x_2^*\|, \dots, \|x_n^*\|\}\text{.}$$}}
-    
-    
-    % \textit{Chứng minh.}\\
-    % Cho $y$ là vector khác không bất kỳ thuộc lưới $L$ ta có : $$y = a_1x_1 + a_2x_2 + \dots + a_nx_n \text{.}$$
-    % Lấy $k$ là chỉ số lớn nhất sao cho $a_k \ne 0$. Khi đó:
-    % $$
-    % \begin{aligned}
-    % y & = \displaystyle\sum_{i=1}^{k} a_i.\displaystyle\sum_{j=1}^{i} \mu_{ij}x_j^* = \displaystyle\sum_{i=1}^{k}\displaystyle\sum_{j=1}^{i}a_i.\mu_{ij}.x_j^*\\
-    % & = \displaystyle\sum_{i=1}^{k}\left(\displaystyle\sum_{j=1}^{i} a_i.\mu_{ij}\right)x_j^* = a_k.x_k^* + \displaystyle\sum_{j=1}^{k-1} v_jx_j^*\text{.}
-    % \end{aligned}
-    % $$
-    % Khi đó: $$\|y\| \geq a_k^2.\|x_k^*\|^2 + \displaystyle\sum_{j=1}^{k-1} v_j^2\|x_j^*\|^2 .$$
-    % Mặt khác, do $a_k$ nguyên và khác 0 nên $a_k^2 \geq 1$:
-    % $$\Rightarrow \quad \|y\| \geq \|x_k^*\|^2 + \displaystyle\sum_{j=1}^{k-1} v_j^2\|x_j^*\|^2 \text{.}$$
-    % Vì vậy: $$\|y\|\geq \|x_k^*\| \geq min\{\|x_1^*\|, \|x_2^*\|, \dots, \|x_n^*\|\}.$$
-    % Ta có điều phải chứng minh.
-    % \vspace{0.2cm}
-        
-        
-        \end{frame}
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Bổ đề}
+
+\begin{block}{Bổ đề}
+
+\end{block}
+
+% \defi{\textbf{Bổ đề 2.9.} \textit{Cho $x_1, x_2, \dots, x_n$ là một cơ sở \index{cơ sở} của lưới $L$ và $x_1^*, x_2^*, \dots, x_n^*$ tương ứng là phép trực giao hóa Gram-Schmidt của nó. Với $y \in L$ khác không, $$\|y\| \geq min\{\|x_1^*\|, \|x_2^*\|, \dots, \|x_n^*\|\}\text{.}$$}}
+
+% \textit{Chứng minh.}\\
+% Cho $y$ là vector khác không bất kỳ thuộc lưới $L$ ta có : $$y = a_1x_1 + a_2x_2 + \dots + a_nx_n \text{.}$$
+% Lấy $k$ là chỉ số lớn nhất sao cho $a_k \ne 0$. Khi đó:
+% $$
+% \begin{aligned}
+% y & = \displaystyle\sum_{i=1}^{k} a_i.\displaystyle\sum_{j=1}^{i} \mu_{ij}x_j^* = \displaystyle\sum_{i=1}^{k}\displaystyle\sum_{j=1}^{i}a_i.\mu_{ij}.x_j^*\\
+% & = \displaystyle\sum_{i=1}^{k}\left(\displaystyle\sum_{j=1}^{i} a_i.\mu_{ij}\right)x_j^* = a_k.x_k^* + \displaystyle\sum_{j=1}^{k-1} v_jx_j^*\text{.}
+% \end{aligned}
+% $$
+% Khi đó: $$\|y\| \geq a_k^2.\|x_k^*\|^2 + \displaystyle\sum_{j=1}^{k-1} v_j^2\|x_j^*\|^2 .$$
+% Mặt khác, do $a_k$ nguyên và khác 0 nên $a_k^2 \geq 1$:
+% $$\Rightarrow \quad \|y\| \geq \|x_k^*\|^2 + \displaystyle\sum_{j=1}^{k-1} v_j^2\|x_j^*\|^2 \text{.}$$
+% Vì vậy: $$\|y\|\geq \|x_k^*\| \geq min\{\|x_1^*\|, \|x_2^*\|, \dots, \|x_n^*\|\}.$$
+% Ta có điều phải chứng minh.
+% \vspace{0.2cm}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Định lý}
-    
-    \begin{block}{Định lý}
-        
-    \end{block}
 
-     
+\begin{block}{Định lý}
+
+\end{block}
 
 % \defi{\textbf{Định lý 2.10.} \textit{Nếu $x_1, x_2, \dots, x_n$ là một cơ sở $\alpha$-rút gọn của lưới $L$ trong $R^n$ và $y\in L$ là vector trong lưới khác không bất kỳ thì: $$\|x_1\| \leq \beta^{\frac{n-1}{2}}\|y\|\text{.}$$
 % Đặc biệt, vector đầu tiên trong cơ sở rút gọn không dài hơn $\beta^{\tfrac{n-1}{2}}$ lần vector ngắn nhất \index{vector ngắn nhất} khác không của lưới \index{lưới} $L$.}}
-
 
 % \textit{Chứng minh.}\\
 % Ta có $\|x_i^*\| \geq \frac{1}{\beta}\|x_{i-1}^*\|$ với $1\leq i \leq n$. Vì $x_1^* = x_1$ nên $$\|x_1\|^2 = \|x_1^*\| \leq \beta^{n-1}\|x_n^*\|.$$
@@ -1035,10 +1001,9 @@ $\|x_1\|.\|x_2\|\dots\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L) $
 % $$\|y\| \geq \min\{\|x_1^*\|, \|x_2^*\|, \dots, \|x_n^*\|\} \geq \beta^{\tfrac{-(n-1)}{2}}\|x_1^*\| . $$
 % Vì vậy, ta có điều phải chứng minh
 % \vspace{0.5cm}
-        
-        
-        \end{frame}
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1050,9 +1015,6 @@ $\|x_1\|.\|x_2\|\dots\|x_n\| \leq \beta^{\tfrac{n(n-1)}{4}}det(L) $
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
- 
 % \defi{\textbf{Thuật toán LLL.}}
 % \begin{itemize}
 % \item Bước 1 : Nhập vào lưới $L$ với cơ sở lưới $b_1, b_2, \dots, b_n$ và tham số bổ trợ $c$ với $c \geq \dfrac{4}{3}$.
