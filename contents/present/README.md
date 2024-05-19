@@ -1,10 +1,12 @@
 <!-- @ -->
 <!-- # -->
 
-# Vận dụng phương pháp lưới tấn công RSA
 
-<!-- @ Chương mới thuật toán LLL giảm lưới -->
-<!-- @ Chương mới Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
+# Thuật toán LLL 
+<!-- 2 chiều -->
+<!-- n chiều -->
+<!-- Thuật toán LLL giảm lưới -->
+<!-- Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
 
 # Vận dụng phương pháp lưới tấn công RSA
 
