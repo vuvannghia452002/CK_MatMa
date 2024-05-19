@@ -2,9 +2,6 @@
 
 <!--! Định nghĩa Phương pháp lưới -->
 
-
-
-
 <!-- Lý thuyết về lưới = cơ sở.... -->
 <!-- -->
 <!-- x_1 , x_2 ,... , x_n độc lập tuyến tính -->
@@ -12,8 +9,6 @@
 <!-- x_1 , x_2 ,... , x_n tạo thành các vector cơ sở -->
 <!-- -->
 <!-- Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên: L = a_1 x_1 + a_2 x_2 + ... + a_n x_n -->
-
-
 
 <!-- \begin{frame}{Định nghĩa} -->
 <!-- \begin{block}{Cơ sở của không gian vector} -->
@@ -35,14 +30,8 @@
 
 <!-- ? Nguyên, +-1, det, -->
 
-
-
-
-
 <!-- !Ứng dụng, mở đầu, .... -->
 <!-- -->
-
-
 
 <!-- \section{Phương pháp lưới} -->
 <!-- \begin{frame}{Phương pháp lưới} -->
@@ -58,25 +47,7 @@
 <!-- \end{itemize} -->
 <!-- \end{frame} -->
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- !Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
-
-
-
-
-
 
 <!--! Độ dài =..... -->
 <!-- \begin{frame}{Vector ngắn nhất} -->
@@ -91,38 +62,19 @@
 <!-- -->
 <!-- \end{frame} -->
 
-
-
-
-
 <!-- @ Có nhiều vector ngắn nhất khi đi tìm gần như ngắn nhất (vì theo tg đa thức) -->
 <!-- @ Là vector đầu tiên (Chưa học LLL?????) + chứng minh -->
 
-
-
-
-
 <!-- Thuật toán LLL -->
 <!-- Ngắn hơn + trực giao hơn -->
-
-
-
-
 
 <!-- Gram-Schmidt: -->
 <!--Nếu $x_1, x_2, \dots, x_n$ là một cơ sở của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \dots, x_n^*$ có thể không nằm trong lưới $L$. -->
 <!-- Vì num là phân số.... -->
 
-
-
-
-
-
 <!-- 2 chiều -->
 <!-- n chiều -->
 <!-- Thuật toán LLL giảm lưới -->
-
-
 
 # Vận dụng tấn công RSA
 
@@ -214,3 +166,9 @@ $$b_0 + \frac{b_1}{Y}x + \dots + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n
 
 <!-- @ -->
 <!-- # -->
+
+Gõ lý thuyết
+chuyển thành latex
+Làm slide
+Công thức toán học
+Công thức tổng quát
