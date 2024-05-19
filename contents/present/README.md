@@ -1,9 +1,5 @@
 
-
-
-<!--! Thuật toán LLL -->
-<!--! Thuật toán LLL -->
-<!-- Giới thiệu  Ngắn hơn + trực giao hơn -->
+ 
 
 
 
@@ -26,9 +22,7 @@
 
 
 
-<!--! Thuật toán LLL -->
-<!-- Thuật toán LLL -->
-<!-- Ngắn hơn + trực giao hơn -->
+<!--! Thuật toán LLL --> 
 
 <!-- quy trình Gram-Schmidt: -->
 <!--Nếu $x_1, x_2, \dots, x_n$ là một cơ sở của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \dots, x_n^*$ có thể không nằm trong lưới $L$. -->
