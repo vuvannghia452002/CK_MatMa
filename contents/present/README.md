@@ -5,13 +5,13 @@
 
 
 
-Lý thuyết về lưới = cơ sở....
-
-x_1 , x_2 ,... , x_n độc lập tuyến tính
-
-x_1 , x_2 ,... , x_n tạo thành các vector cơ sở
-
-Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên: L = a_1 x_1 + a_2 x_2 + ... + a_n x_n
+<!-- Lý thuyết về lưới = cơ sở.... -->
+<!--  -->
+<!-- x_1 , x_2 ,... , x_n độc lập tuyến tính -->
+<!--  -->
+<!-- x_1 , x_2 ,... , x_n tạo thành các vector cơ sở -->
+<!--  -->
+<!-- Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên: L = a_1 x_1 + a_2 x_2 + ... + a_n x_n -->
 
 
 
@@ -33,16 +33,52 @@ Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector c
 <!-- https://www.youtube.com/watch?v=UU2EaVXkKLY&list=PL6hzlGxGIS1A-o2pQVXK-Z2qOBOvZ1XbZ -->
 <!--@ Ví dụ ảnh lưới 2 chiều  b1,b2 =>3 4 5 6  7 -->
 
+<!-- ? Nguyên, +-1, det,  -->
 
 
-\item Phương pháp lưới được sử dụng trong nhiều lĩnh vực:
-\begin{itemize}
-\item Lĩnh vực xấp xỉ số đại số
-\item Lĩnh vực mật mã học
-\item Lĩnh vực khoa học máy tính
-\item Lĩnh vực kỹ thuật thông tin
-\end{itemize}
 
+
+
+<!-- !Ứng dụng, mở đầu, .... -->
+<!-- -->
+
+
+
+<!-- \section{Phương pháp lưới} -->
+<!-- \begin{frame}{Phương pháp lưới} -->
+<!-- \begin{itemize} -->
+<!-- \item Phương pháp lưới là một lĩnh vực trong toán học có liên quan đến việc nghiên cứu các cấu trúc đại số và hình học của các mạng lưới được phát triển từ những năm 1940. -->
+<!-- \item Phương pháp lưới được sử dụng trong nhiều lĩnh vực: -->
+<!-- \begin{itemize} -->
+<!-- \item Lĩnh vực xấp xỉ số đại số -->
+<!-- \item Lĩnh vực mật mã học -->
+<!-- \item Lĩnh vực khoa học máy tính -->
+<!-- \item Lĩnh vực kỹ thuật thông tin -->
+<!-- \end{itemize} -->
+<!-- \end{itemize} -->
+<!-- \end{frame} -->
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- !Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
+
+
+
+
+
+
+<!--! Độ dài =..... -->
 <!-- \begin{frame}{Vector ngắn nhất} -->
 <!--  -->
 <!-- \begin{itemize} -->
@@ -50,8 +86,6 @@ Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector c
 <!--  -->
 <!-- $$\|v\| = (v_1^2 + v_2^2 + \dots + v_n^2)^{\tfrac{1}{2}}$$ -->
 <!--  -->
-<!-- \item Có nhiều vấn đề liên quan đến việc tìm một vector khác không ngắn nhất trong lưới. -->
-<!-- Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) rất khó để giải, khi số chiều của lưới lớn. -->
 <!--  -->
 <!-- \end{itemize} -->
 <!--  -->
@@ -61,26 +95,8 @@ Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector c
 
 
 
-
-
-
-
-Nguyên, +-1, det, 
-
-
-
-
-<!-- Ứng dụng, mở đầu, .... -->
-<!-- -->
-
-
-
-
-
-<!-- Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
-<!-- Độ dài =..... -->
 <!-- @ Có nhiều vector ngắn nhất khi đi tìm  gần như ngắn nhất (vì theo tg đa thức)  -->
-<!--@ Là vector đầu tiên + chứng minh  -->
+<!-- @ Là vector đầu tiên (Chưa học LLL?????) + chứng minh  -->
 
 
 
