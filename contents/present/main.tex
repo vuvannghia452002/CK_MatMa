@@ -6,6 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[utf8]{vietnam}
 \usepackage{tikz}
+\usepackage{calc}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{lipsum}
@@ -301,27 +302,28 @@ Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lư�
 
 
 
-    \begin{tikzpicture}
-        % Vẽ trục tọa độ
-        \draw[->] (-1,0) -- (5,0) node[right] {$x$};
-        \draw[->] (0,-2) -- (0,3) node[above] {$y$};
-        
-        % Vẽ lưới
-        \draw[very thin, gray] (-1,-2) grid (5,3);
-        
-        % Vẽ vector (1,2)
-        \draw[->, thick, blue] (0,0) -- (1,2) node[midway, above, sloped] {$b_1^*$};
-        
-        % Vẽ vector (3.6,-1.8)
-        \draw[->, thick, purple] (0,0) -- (3.6,-1.8) node[midway, above, sloped] {$b_2^*$};
-        
-        % Gắn nhãn điểm cuối vector
-        \node at (1,2) [above right] {$(1,2)$};
-        \node at (3.6,-1.8) [above right] {$(3.6,-1.8)$};
-        
-        % Vẽ ký hiệu vuông góc màu đỏ tại gốc tọa độ
-        \draw[red] (0,0) -- (0.2,0) -- (0.2,0.2) -- (0,0.2);
-    \end{tikzpicture}
+
+\begin{tikzpicture}
+    % Vẽ trục tọa độ
+    \draw[->] (-1,0) -- (5,0) node[right] {$x$};
+    \draw[->] (0,-2) -- (0,3) node[above] {$y$};
+    
+    % Vẽ lưới
+    \draw[very thin, gray] (-1,-2) grid (5,3);
+    
+    % Vẽ vector (1,2)
+    \draw[->, thick, blue] (0,0) -- (1,2) node[midway, above, sloped] {$b_1^*$};
+    
+    % Vẽ vector (3.6,-1.8)
+    \draw[->, thick, purple] (0,0) -- (3.6,-1.8) node[midway, above, sloped] {$b_2^*$};
+    
+    % Gắn nhãn điểm cuối vector
+    \node at (1,2) [above right] {$(1,2)$};
+    \node at (3.6,-1.8) [above right] {$(3.6,-1.8)$};
+    
+    % Vẽ ký hiệu vuông góc màu đỏ tại gốc tọa độ
+    \draw[red] (0,0) -- (0.1,0.2) -- (0.3,0.1) -- (0.2,-0.1);
+\end{tikzpicture}
 
 }
     
