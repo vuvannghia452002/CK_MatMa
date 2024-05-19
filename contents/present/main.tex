@@ -40,15 +40,15 @@ subsubsectionstyle=hide/hide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% % Trang tiêu đề cần có hình ảnh pictures/HUST2.jpeg
-% % Không chỉnh sửa gì
-% \begin{frame}
-% \begin{tikzpicture}[remember picture, overlay]
-% \node[anchor=center, inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth, height=\paperheight]{pictures/HUST2.jpeg}};
-% \fill[white, opacity=0.8] (current page.south west) rectangle (current page.north east);
-% \end{tikzpicture}
-% \titlepage
-% \end{frame}
+% Trang tiêu đề cần có hình ảnh pictures/HUST2.jpeg
+% Không chỉnh sửa gì
+\begin{frame}
+\begin{tikzpicture}[remember picture, overlay]
+\node[anchor=center, inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth, height=\paperheight]{pictures/HUST2.jpeg}};
+\fill[white, opacity=0.8] (current page.south west) rectangle (current page.north east);
+\end{tikzpicture}
+\titlepage
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -240,7 +240,117 @@ Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lư�
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % # ??????????????? Nguyên, +-1, det,
+\subsection{Phương pháp lưới}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Quy trình Gram-Schmidt}
+ 
+ 
+\begin{itemize}
+\item  Quy trình Gram-Schmidt  chuyển một cơ sở bất kỳ thành một   cơ sở trực giao.
+\item Đây là kỹ thuật quan trọng trong thuật toán LLL.
+\end{itemize}
 
+ 
+
+\begin{columns}
+
+\begin{column}{0.5\textwidth}
+\begin{figure}[h]
+
+
+
+
+    
+
+
+
+\resizebox{0.9\textwidth}{!}{%
+
+
+
+    \begin{tikzpicture}
+        % Vẽ trục tọa độ
+        \draw[->] (-1,0) -- (5,0) node[right] {$x$};
+        \draw[->] (0,-2) -- (0,3) node[above] {$y$};
+        
+        % Vẽ lưới
+        \draw[very thin, gray] (-1,-2) grid (5,3);
+        
+        % Vẽ vector (1,2)
+        \draw[->, thick, blue] (0,0) -- (1,2) node[midway, above, sloped] {$b_1$};
+        
+        % Vẽ vector (4,-1)
+        \draw[->, thick, red] (0,0) -- (4,-1) node[midway, above, sloped] {$b_2$};
+        
+        % Gắn nhãn điểm cuối vector
+        \node at (1,2) [above right] {$(1,2)$};
+        \node at (4,-1) [below right] {$(4,-1)$};
+    \end{tikzpicture}
+ 
+
+}
+
+\end{figure}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{figure}[h]
+
+
+\resizebox{0.9\textwidth}{!}{%
+
+
+
+ 
+    \begin{tikzpicture}
+        % Vẽ trục tọa độ
+        \draw[->] (-1,0) -- (5,0) node[right] {$x$};
+        \draw[->] (0,-2) -- (0,3) node[above] {$y$};
+        
+        % Vẽ lưới
+        \draw[very thin, blue] (-1,-2) grid (5,3);
+        
+        % Vẽ vector (1,2)
+        \draw[->, thick, purple] (0,0) -- (1,2) node[midway, above, sloped] {$b_1^*$};
+        
+        % Vẽ vector (3.6,-1.8)
+        \draw[->, thick, te] (0,0) -- (3.6,-1.8) node[midway, above, sloped] {$b_2^*$};
+        
+        % Gắn nhãn điểm cuối vector
+        \node at (1,2) [above right] {$(1,2)$};
+        \node at (3.6,-1.8) [above right] {$(3.6,-1.8)$};
+    \end{tikzpicture}
+
+}
+    
+ \end{figure}
+\end{column}
+
+\end{columns}
+
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Trực giao hóa Gram-Schmidt}
+
+% \begin{block}{Định nghĩa}
+
+% Cho $x_1, x_2, \ldots, x_n$ là một cơ sở trong $\mathbb{R}^n$.
+% Trực giao hóa Gram-Schmidt của $x_1, x_2, \ldots, x_n$
+% là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sau:
+
+% \begin{itemize}
+% \item $x_1 = x_1^*$,
+% \item $x_i^* = x_i - \sum_{j=1}^{i-1} \mu_{ij} x_j^*$, \quad $2 \leq i \leq n$, \quad $\mu_{ij} = \frac{\langle x_i, x_j^* \rangle}{\langle x_j^*, x_j^* \rangle}$.
+% \end{itemize}
+
+% \end{block}
+
+% \end{frame}
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
