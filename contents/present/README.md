@@ -1,16 +1,16 @@
 # Phương pháp lưới và Thuật toán LLL
 
-<!--! Định nghĩa   Phương pháp lưới -->
+<!--! Định nghĩa Phương pháp lưới -->
 
 
 
 
 <!-- Lý thuyết về lưới = cơ sở.... -->
-<!--  -->
+<!-- -->
 <!-- x_1 , x_2 ,... , x_n độc lập tuyến tính -->
-<!--  -->
+<!-- -->
 <!-- x_1 , x_2 ,... , x_n tạo thành các vector cơ sở -->
-<!--  -->
+<!-- -->
 <!-- Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên: L = a_1 x_1 + a_2 x_2 + ... + a_n x_n -->
 
 
@@ -20,20 +20,20 @@
 <!-- Cho \(n \geq 1 \), \(\{x_1, x_2, \ldots, x_n\}\) là một cơ sở của \(\mathbb{R}^n\). -->
 <!-- Lưới \(n \) chiều với cơ sở \(\{x_1, x_2, \ldots, x_n\}\) -->
 <!-- là tập hợp \(L \) tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên: -->
-<!--  -->
+<!-- -->
 <!-- \begin{equation} -->
 <!-- L = \{a_1 x_1 + a_2 x_2 + \ldots + a_n x_n \mid a_i \in \mathbb{Z} \} -->
 <!-- \end{equation} -->
-<!--  -->
+<!-- -->
 <!-- Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lưới. -->
 <!-- \end{block} -->
 <!-- \end{frame} -->
 
-<!-- ! Ví dụ   lưới 2 chiều -->
+<!-- ! Ví dụ lưới 2 chiều -->
 <!-- https://www.youtube.com/watch?v=UU2EaVXkKLY&list=PL6hzlGxGIS1A-o2pQVXK-Z2qOBOvZ1XbZ -->
-<!--@ Ví dụ ảnh lưới 2 chiều  b1,b2 =>3 4 5 6  7 -->
+<!--@ Ví dụ ảnh lưới 2 chiều b1,b2 =>3 4 5 6 7 -->
 
-<!-- ? Nguyên, +-1, det,  -->
+<!-- ? Nguyên, +-1, det, -->
 
 
 
@@ -80,23 +80,23 @@
 
 <!--! Độ dài =..... -->
 <!-- \begin{frame}{Vector ngắn nhất} -->
-<!--  -->
+<!-- -->
 <!-- \begin{itemize} -->
 <!-- \item Độ dài vector $v = (v_1, v_2, \dots, v_n)$ là: -->
-<!--  -->
+<!-- -->
 <!-- $$\|v\| = (v_1^2 + v_2^2 + \dots + v_n^2)^{\tfrac{1}{2}}$$ -->
-<!--  -->
-<!--  -->
+<!-- -->
+<!-- -->
 <!-- \end{itemize} -->
-<!--  -->
+<!-- -->
 <!-- \end{frame} -->
 
 
 
 
 
-<!-- @ Có nhiều vector ngắn nhất khi đi tìm  gần như ngắn nhất (vì theo tg đa thức)  -->
-<!-- @ Là vector đầu tiên (Chưa học LLL?????) + chứng minh  -->
+<!-- @ Có nhiều vector ngắn nhất khi đi tìm gần như ngắn nhất (vì theo tg đa thức) -->
+<!-- @ Là vector đầu tiên (Chưa học LLL?????) + chứng minh -->
 
 
 
@@ -110,7 +110,7 @@
 
 
 <!-- Gram-Schmidt: -->
-<!--Nếu $x_1, x_2, \dots, x_n$ là một cơ sở   của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \dots, x_n^*$ có thể không nằm trong lưới $L$. -->
+<!--Nếu $x_1, x_2, \dots, x_n$ là một cơ sở của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \dots, x_n^*$ có thể không nằm trong lưới $L$. -->
 <!-- Vì num là phân số.... -->
 
 
