@@ -1,0 +1,756 @@
+1
+00:00:00,480 --> 00:00:03,679
+Bây giờ chúng ta có thể sử dụng llll để tìm một tập hợp
+
+2
+00:00:03,679 --> 00:00:05,759
+các vectơ mạng. Bây giờ câu hỏi đặt ra là làm thế nào
+
+3
+00:00:05,759 --> 00:00:08,000
+chúng ta có thể sử dụng lll để giải
+
+4
+00:00:08,000 --> 00:00:10,360
+các bài toán mới nhất tương ứng, đặc biệt là
+
+5
+00:00:10,360 --> 00:00:13,519
+bài toán Vector ngắn nhất SVP và vì vậy hãy nhớ
+
+6
+00:00:13,519 --> 00:00:17,119
+rằng thuật toán llll của chúng ta bắt đầu với một
+
+7
+00:00:17,119 --> 00:00:20,240
+khoảng Lattis bằng một số cơ sở  vectơ cơ sở
+
+8
+00:00:20,240 --> 00:00:23,000
+và chúng ta có thể áp dụng lll để có được một số
+
+9
+00:00:23,000 --> 00:00:25,920
+tập vectơ cơ sở Quasi trực giao và một
+
+10
+00:00:25,920 --> 00:00:27,880
+tập vectơ cơ sở Graham Schmidt tương ứng
+
+11
+00:00:27,880 --> 00:00:30,400
+và vì vậy
+
+12
+00:00:30,400 --> 00:00:32,079
+câu hỏi tự nhiên đặt ra là sau khi chúng ta hoàn thành tất cả
+
+13
+00:00:32,079 --> 00:00:36,040
+công việc đó thì cơ sở lll tốt như thế nào và
+
+14
+00:00:36,040 --> 00:00:38,440
+chúng ta có thể trả lời  rằng bằng cách trả lời
+
+15
+00:00:38,440 --> 00:00:40,200
+nó giải quyết hiệu quả
+
+16
+00:00:40,200 --> 00:00:42,160
+vấn đề Vector ngắn nhất như thế nào khi tìm
+
+17
+00:00:42,160 --> 00:00:45,440
+Vector khác 0 ngắn nhất trong mạng vì vậy chúng ta hãy xem xét
+
+18
+00:00:45,440 --> 00:00:46,920
+một số sơ bộ giả sử
+
+19
+00:00:46,920 --> 00:00:48,920
+chúng ta thực sự đã tìm thấy cơ sở LL.
+
+20
+00:00:48,920 --> 00:00:50,840
+Hãy nhớ rằng trước hết chúng ta có thể dựa vào điều sau đây
+
+21
+00:00:50,840 --> 00:00:54,079
+mu IJ phải  hãy
+
+22
+00:00:54,079 --> 00:00:58,039
+nhớ nhỏ hơn một nửa mu là
+
+23
+00:00:58,039 --> 00:01:01,480
+ngôi sao VI VJ trên ngôi sao VJ bình phương nên một lần nữa, các
+
+24
+00:01:01,480 --> 00:01:03,920
+vectơ sao là các cơ sở ở giữa nhạt
+
+25
+00:01:03,920 --> 00:01:05,840
+các vectơ không được gắn dấu sao là các
+
+26
+00:01:05,840 --> 00:01:09,080
+vectơ cơ sở Lattis và chúng ta biết rằng tích số chấm này
+
+27
+00:01:09,080 --> 00:01:11,680
+trên các Định mức sẽ
+
+28
+00:01:11,680 --> 00:01:14,119
+nhỏ hơn  một nửa và lý do chúng tôi biết
+
+29
+00:01:14,119 --> 00:01:16,119
+điều này là vì chúng tôi đã giảm tất cả
+
+30
+00:01:16,119 --> 00:01:19,600
+các vectơ latus của mình bằng giá trị làm tròn của
+
+31
+00:01:19,600 --> 00:01:23,960
+mui JV nên nếu giá trị này lớn hơn một nửa thì
+
+32
+00:01:23,960 --> 00:01:27,320
+chúng tôi vẫn sẽ giảm thêm để
+
+33
+00:01:27,320 --> 00:01:30,200
+thực hiện điều khác mà chúng tôi có thể  dựa
+
+34
+00:01:30,200 --> 00:01:33,399
+vào điều kiện rửa uh Norm
+
+35
+00:01:33,399 --> 00:01:35,600
+VK sẽ lớn hơn hoặc bằng
+
+36
+00:01:35,600 --> 00:01:40,000
+3/4 mu k k - 1 bình phương,
+
+37
+00:01:40,000 --> 00:01:42,079
+v.v., chúng tôi biết điều này bởi vì bất cứ khi nào điều này
+
+38
+00:01:42,079 --> 00:01:45,200
+không đúng, chúng tôi đã hoán đổi các vectơ của mình
+
+39
+00:01:45,200 --> 00:01:50,159
+xung quanh, vì vậy nếu chúng tôi đã tìm thấy  cơ sở LL của chúng tôi,
+
+40
+00:01:50,159 --> 00:01:51,920
+chúng tôi biết điều này phải đúng vì
+
+41
+00:01:51,920 --> 00:01:54,399
+nếu không thì chúng tôi đã hoàn thành và chúng tôi biết điều này
+
+42
+00:01:54,399 --> 00:01:56,439
+phải đúng một lần nữa bởi vì nếu không thì
+
+43
+00:01:56,439 --> 00:01:58,320
+chúng tôi đã không hoàn thành và có một số
+
+44
+00:01:58,320 --> 00:02:00,200
+khoản khấu trừ ngay lập tức mà chúng tôi có thể thực hiện từ
+
+45
+00:02:00,200 --> 00:02:03,240
+điều này vì vậy hãy bắt đầu với
+
+46
+00:02:03,240 --> 00:02:06,360
+vectơ cơ sở Graham Schmid  vì vậy bởi vì M của chúng ta
+
+47
+00:02:06,360 --> 00:02:08,520
+sẽ nhỏ hơn một nửa nên điều này
+
+48
+00:02:08,520 --> 00:02:10,758
+cho tôi biết rằng một phần tư sẽ
+
+49
+00:02:10,758 --> 00:02:13,920
+lớn hơn bình phương và một chút
+
+50
+00:02:13,920 --> 00:02:16,040
+thử nghiệm với các bất đẳng thức
+
+51
+00:02:16,040 --> 00:02:18,400
+sẽ cho tôi biết rằng biểu thức ở đây
+
+52
+00:02:18,400 --> 00:02:21,000
+xuất hiện trong bất đẳng thức pitash là
+
+53
+00:02:21,000 --> 00:02:23,200
+
+
+54
+00:02:23,200 --> 00:02:26,360
+bây giờ sẽ lớn hơn 2 vì điều kiện rửa phải được
+
+55
+00:02:26,360 --> 00:02:27,280
+
+
+56
+00:02:27,280 --> 00:02:31,200
+thỏa mãn Tôi biết rằng star squ phải
+
+57
+00:02:31,200 --> 00:02:34,120
+lớn hơn hoặc bằng VK
+
+58
+00:02:34,120 --> 00:02:35,680
+trừ1 star
+
+59
+00:02:35,680 --> 00:02:39,560
+squ này nhưng tôi biết rằng giá trị này lớn hơn
+
+60
+00:02:39,560 --> 00:02:42,560
+một nửa nên điều đó cho tôi biết rằng giá trị này
+
+61
+00:02:42,560 --> 00:02:45,720
+lớn hơn  hơn 1/2 của các vectơ trước đó
+
+62
+00:02:45,720 --> 00:02:48,879
+và do đó, trên thực tế,
+
+63
+00:02:48,879 --> 00:02:50,879
+điều kiện rửa này chuyển thành
+
+64
+00:02:50,879 --> 00:02:54,000
+yêu cầu về kích thước theo độ lớn tương đối
+
+65
+00:02:54,000 --> 00:02:57,200
+của các vectơ cơ sở Grab M, tất
+
+66
+00:02:57,200 --> 00:02:59,440
+cả đều là cơ sở để chúng ta có thể áp dụng điều này
+
+67
+00:02:59,440 --> 00:03:04,560
+về chất lượng nhiều lần và vì vậy tôi có thể tìm thấy
+
+68
+00:03:04,560 --> 00:03:06,319
+sau đó  nếu tôi áp dụng điều này nhiều lần thì ngôi
+
+69
+00:03:06,319 --> 00:03:09,200
+sao VK lớn hơn một nửa lớn hơn
+
+70
+00:03:09,200 --> 00:03:12,799
+một nửa, v.v. và nói chung, tôi
+
+71
+00:03:12,799 --> 00:03:14,040
+có thể
+
+72
+00:03:14,040 --> 00:03:17,440
+Cascade VK star 2 phải lớn hơn
+
+73
+00:03:17,440 --> 00:03:22,400
+hoặc bằng 1 2^ 2 vk- 2^ 2 và nói
+
+74
+00:03:22,400 --> 00:03:25,040
+chung là  nói với tôi rằng tôi có thể so sánh bất kỳ
+
+75
+00:03:25,040 --> 00:03:28,720
+thừa số cơ sở nào với hệ số cơ sở đầu tiên của gr bit
+
+76
+00:03:28,720 --> 00:03:30,200
+
+
+77
+00:03:30,200 --> 00:03:31,920
+và điều đó quan trọng vì hãy nhớ trong
+
+78
+00:03:31,920 --> 00:03:34,680
+quy trình gram Schmid,
+
+79
+00:03:34,680 --> 00:03:37,720
+hệ số cơ sở gram Schmid đầu tiên sẽ là
+
+80
+00:03:37,720 --> 00:03:39,680
+
+
+81
+00:03:39,680 --> 00:03:41,920
+Vector đầu tiên một lần nữa chúng ta có thể nói điều gì đó
+
+82
+00:03:41,920 --> 00:03:44,319
+khác ở đây vì vậy hãy nhớ  Các vectơ cơ sở mạng VK của chúng ta
+
+83
+00:03:44,319 --> 00:03:46,599
+có liên quan đến
+
+84
+00:03:46,599 --> 00:03:49,959
+các vectơ cơ sở Graham Schmidt VK Star bằng cách
+
+85
+00:03:49,959 --> 00:03:52,120
+rút gọn nên chúng ta sẽ lấy VK
+
+86
+00:03:52,120 --> 00:03:54,120
+chúng ta sẽ trừ đi phần
+
+87
+00:03:54,120 --> 00:03:56,360
+song song với tất cả các
+
+88
+00:03:56,360 --> 00:03:59,400
+thừa số cơ sở gram khác và chúng ta sẽ  sắp xếp lại
+
+89
+00:03:59,400 --> 00:04:02,799
+một chút để nó cho tôi biết BK là
+
+90
+00:04:02,799 --> 00:04:05,040
+Vector cơ sở của Graham Schmid cộng với sản
+
+91
+00:04:05,040 --> 00:04:07,799
+phẩm chấm của cả đống
+
+92
+00:04:07,799 --> 00:04:11,599
+vectơ bây giờ VK dovk à, nó chỉ là một
+
+93
+00:04:11,599 --> 00:04:14,400
+tích DOT với
+
+94
+00:04:15,519 --> 00:04:17,918
+chính nó và hơn thế nữa về phía Le. Tôi
+
+95
+00:04:17,918 --> 00:04:20,358
+có VK vuông góc trên
+
+96
+00:04:20,358 --> 00:04:24,320
+phía bên phải Tôi có ngôi sao VK Ngôi sao VK ở đó
+
+97
+00:04:24,320 --> 00:04:26,160
+và sau đó tôi có tất cả các tích số chấm khác
+
+98
+00:04:26,160 --> 00:04:28,199
+ở đây và điều cần
+
+99
+00:04:28,199 --> 00:04:30,479
+nhớ là vì các vectơ ngôi sao này
+
+100
+00:04:30,479 --> 00:04:33,759
+là các vectơ cơ sở gram SCH nên
+
+101
+00:04:33,759 --> 00:04:35,919
+chúng sẽ trực giao nên tích do
+
+102
+00:04:35,919 --> 00:04:38,080
+sẽ bằng 0 bất cứ lúc nào I
+
+103
+00:04:38,080 --> 00:04:41,800
+và J khác nhau nên tất cả các tích số chấm này đều
+
+104
+00:04:41,800 --> 00:04:44,680
+bị hủy hoặc bị loại bỏ bởi vì
+
+105
+00:04:44,680 --> 00:04:47,639
+chúng đều bằng 0 với một
+
+106
+00:04:47,639 --> 00:04:52,320
+ngoại lệ bất kỳ Vector nào nhân với chính nó và vì vậy
+
+107
+00:04:52,320 --> 00:04:57,680
+điều đó sẽ cho tôi mu i i bình phương v i r
+
+108
+00:04:57,680 --> 00:05:00,400
+sared và tôi  sắp bao gồm
+
+109
+00:05:00,400 --> 00:05:02,039
+tổng của tất cả
+
+110
+00:05:02,039 --> 00:05:05,400
+các vectơ đó bây giờ tôi biết rằng nói chung
+
+111
+00:05:05,400 --> 00:05:07,800
+các giá trị mu của tôi nhỏ hơn một nửa nên
+
+112
+00:05:07,800 --> 00:05:10,479
+điều đó cho tôi biết rằng nếu tôi thay thế cái này
+
+113
+00:05:10,479 --> 00:05:13,840
+bằng cái gì đó lớn hơn mu nhỏ
+
+114
+00:05:13,840 --> 00:05:16,560
+hơn một nửa thì phải là  chưa đến một
+
+115
+00:05:16,560 --> 00:05:18,880
+phần tư tôi sẽ thay thế cái này bằng cái gì đó
+
+116
+00:05:18,880 --> 00:05:22,199
+lớn hơn Tôi nhận được
+
+117
+00:05:22,199 --> 00:05:24,440
+bất đẳng thức này và điều đó cho tôi biết là
+
+118
+00:05:24,440 --> 00:05:27,479
+một cái gì đó rất hữu ích các vectơ cơ sở mạng
+
+119
+00:05:27,479 --> 00:05:30,840
+sẽ nhỏ hơn các
+
+120
+00:05:30,840 --> 00:05:32,440
+
+
+121
+00:05:32,440 --> 00:05:35,240
+vectơ cơ sở Graham Schmid tương ứng cộng với tổng của tất cả các vectơ cơ sở
+
+122
+00:05:35,240 --> 00:05:38,720
+Graham trước đó  Các vectơ cơ sở Schmid
+
+123
+00:05:39,039 --> 00:05:41,400
+Vâng, chúng tôi muốn có thể
+
+124
+00:05:41,400 --> 00:05:43,600
+mô tả nó một cách
+
+125
+00:05:43,600 --> 00:05:45,720
+tinh tế hơn một chút vì vậy điều chúng tôi muốn làm là
+
+126
+00:05:45,720 --> 00:05:47,800
+tìm giới hạn của tổng của K
+
+127
+00:05:47,800 --> 00:05:50,400
+trừ1 thừa số gam đầu tiên một lần nữa những gì chúng tôi có
+
+128
+00:05:50,400 --> 00:05:52,280
+ở đây là chúng tôi có  tổng của K
+
+129
+00:05:52,280 --> 00:05:55,120
+trừ 1 gam hệ số cơ bản Schmid đầu tiên mà chúng ta
+
+130
+00:05:55,120 --> 00:05:57,919
+muốn tìm giới hạn của đại lượng này
+
+131
+00:05:57,919 --> 00:06:00,199
+bởi vì mặc dù bất đẳng thức này đúng
+
+132
+00:06:00,199 --> 00:06:03,240
+và hợp lệ nhưng nó hơi xấu một chút vì vậy
+
+133
+00:06:03,240 --> 00:06:05,960
+hãy xem chúng ta có thể làm tốt điều gì. Chìa khóa cần
+
+134
+00:06:05,960 --> 00:06:09,440
+nhớ ở đây là  bất kỳ cơ sở gram Schmid nào
+
+135
+00:06:09,440 --> 00:06:13,000
+Vector đều thỏa mãn mối quan hệ này
+
+136
+00:06:13,000 --> 00:06:15,720
+với vectơ cơ sở gram Schmid trước đó
+
+137
+00:06:15,720 --> 00:06:18,520
+và một lần nữa hãy nhớ rằng chúng ta có thể Xếp tầng
+
+138
+00:06:18,520 --> 00:06:20,759
+điều này sao cho điều này cũng sẽ
+
+139
+00:06:20,759 --> 00:06:24,080
+đúng 2^bình phương cho vectơ thứ hai trước đó,
+
+140
+00:06:24,080 --> 00:06:26,880
+v.v. cho tất cả các vectơ khác
+
+141
+00:06:26,880 --> 00:06:28,520
+và cuối cùng chúng ta  đi xuống
+
+142
+00:06:28,520 --> 00:06:30,039
+vectơ cơ sở đầu tiên đó
+
+143
+00:06:30,039 --> 00:06:34,479
+và hệ số ở đó 1/ 2^
+
+144
+00:06:34,479 --> 00:06:36,919
+kus1 hãy hoán đổi lũy thừa
+
+145
+00:06:36,919 --> 00:06:39,560
+của 2 vì những gì tôi có ở đây ở phía bên
+
+146
+00:06:39,560 --> 00:06:42,240
+phải là các vectơ là
+
+147
+00:06:42,240 --> 00:06:44,280
+những giá trị mà tôi muốn cộng lại với nhau
+
+148
+00:06:44,280 --> 00:06:46,240
+nên nếu tôi  cộng các giá trị này lại với nhau
+
+149
+00:06:46,240 --> 00:06:48,400
+ở phía bên phải Tôi có tổng bình phương
+
+150
+00:06:48,400 --> 00:06:51,160
+độ lớn của tất cả
+
+151
+00:06:51,160 --> 00:06:53,599
+các vectơ cơ sở gr mid của tôi và ở phía
+
+152
+00:06:53,599 --> 00:06:55,960
+bên trái tôi có độ lớn của
+
+153
+00:06:55,960 --> 00:06:58,840
+K lấy Vector cơ sở Schmid với
+
+154
+00:06:58,840 --> 00:07:02,680
+hệ số 2 2 S  2 cub và vân vân trên
+
+155
+00:07:02,680 --> 00:07:05,960
+tổng này ở đây và bây giờ tôi có thể cộng tất cả những thứ đó lại
+
+156
+00:07:05,960 --> 00:07:08,039
+với nhau vì vậy tôi sẽ xem xét kỹ
+
+157
+00:07:08,039 --> 00:07:10,479
+đây đây là một chuỗi hình học nên
+
+158
+00:07:10,479 --> 00:07:12,800
+tôi có một công thức tính tổng chuỗi hình học
+
+159
+00:07:12,800 --> 00:07:15,360
+mà tôi có thể áp dụng và vì vậy nó
+
+160
+00:07:15,360 --> 00:07:17,240
+sẽ  cho tôi biểu thức này ở
+
+161
+00:07:17,240 --> 00:07:20,280
+đây vẫn là k^ S và đây vẫn là
+
+162
+00:07:20,280 --> 00:07:22,319
+tổng bình phương độ lớn
+
+163
+00:07:22,319 --> 00:07:25,639
+của tất cả các vectơ cơ số gam đó và nó sẽ
+
+164
+00:07:25,639 --> 00:07:27,720
+đơn giản hóa điều đó và một lần nữa tôi sẽ kết hợp điều này
+
+165
+00:07:27,720 --> 00:07:29,599
+với kết quả trước đó của chúng tôi một lần nữa chúng tôi đã tìm thấy
+
+166
+00:07:29,599 --> 00:07:33,199
+rằng  độ lớn của vectơ K lce bình phương
+
+167
+00:07:33,199 --> 00:07:34,759
+nhỏ hơn hoặc bằng độ lớn của
+
+168
+00:07:34,759 --> 00:07:36,800
+các cơ sở K Graham Schmidt Vector
+
+169
+00:07:36,800 --> 00:07:40,840
+bình phương cộng với 1 14 tổng của tất cả các
+
+170
+00:07:40,840 --> 00:07:43,360
+vectơ cơ sở sạn còn lại tất cả các
+
+171
+00:07:43,360 --> 00:07:45,319
+
+
+172
+00:07:45,319 --> 00:07:48,840
+vectơ cơ sở sạn trước đó bản thân tổng này nhỏ
+
+173
+00:07:48,840 --> 00:07:51,479
+hơn giá trị này nên  Tôi sẽ thay thế
+
+174
+00:07:51,479 --> 00:07:54,960
+cái này bằng cái gì đó
+
+175
+00:07:56,039 --> 00:07:58,400
+lớn hơn và bây giờ chúng ta hãy xem rõ đây
+
+176
+00:07:58,400 --> 00:08:01,199
+đều là hình vuông VK star R nên tôi có thể cộng hai cái này lại
+
+177
+00:08:01,199 --> 00:08:03,479
+
+
+178
+00:08:03,479 --> 00:08:06,360
+với nhau và cái này sẽ là 2
+
+179
+00:08:06,360 --> 00:08:11,919
+đến K trừ 2 - 12 và tôi có thể mang nó đi
+
+180
+00:08:11,919 --> 00:08:16,520
+khắp nơi nhưng  đó là 2 mũ K - 2 cộng một nửa
+
+181
+00:08:16,520 --> 00:08:19,400
+chắc chắn sẽ nhỏ hơn 2
+
+182
+00:08:19,400 --> 00:08:21,680
+mũ K trừ một nên tôi sẽ thay
+
+183
+00:08:21,680 --> 00:08:23,440
+toàn bộ hệ số này ở đây bằng
+
+184
+00:08:23,440 --> 00:08:26,000
+một số lớn hơn một chút 2^
+
+185
+00:08:26,000 --> 00:08:28,319
+K trừ một và điều này mang lại cho chúng ta nhiều
+
+186
+00:08:28,319 --> 00:08:32,320
+kết quả rõ ràng hơn về cách
+
+187
+00:08:32,320 --> 00:08:34,440
+các vectơ cơ sở mạng của chúng ta liên quan đến các vectơ cơ sở Graham Schmidt của chúng ta
+
+188
+00:08:34,440 --> 00:08:37,000
+
+
+189
+00:08:37,000 --> 00:08:40,000
+
+

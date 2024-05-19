@@ -1,0 +1,860 @@
+1
+00:00:00,199 --> 00:00:02,080
+vì vậy hãy tiếp tục thảo luận về cách
+
+2
+00:00:02,080 --> 00:00:04,720
+llll giải quyết vấn đề Vector ngắn nhất một cách hiệu quả
+
+3
+00:00:04,720 --> 00:00:07,080
+và xem xét nhanh
+
+4
+00:00:07,080 --> 00:00:09,360
+các kết quả chính của chúng ta cho đến nay. ừ giả sử tôi có một
+
+5
+00:00:09,360 --> 00:00:12,360
+mạng đã được llll rút gọn thành một
+
+6
+00:00:12,360 --> 00:00:14,759
+tập hợp các vectơ cơ sở và
+
+7
+00:00:14,759 --> 00:00:17,039
+vectơ cơ sở gram Schmid tương ứng.
+
+8
+00:00:17,039 --> 00:00:18,840
+trong trường hợp đó, chúng ta có
+
+9
+00:00:18,840 --> 00:00:22,279
+kết quả đầu tiên sau đây đối với bất kỳ K nào bình phương
+
+10
+00:00:22,279 --> 00:00:25,800
+độ lớn của cơ sở K gment Vector
+
+11
+00:00:25,800 --> 00:00:28,000
+lớn hơn hoặc bằng bình phương
+
+12
+00:00:28,000 --> 00:00:30,599
+độ lớn của cơ sở gram trước đó
+
+13
+00:00:30,599 --> 00:00:33,600
+Vector nhân với một nửa bây giờ điều này
+
+14
+00:00:33,600 --> 00:00:35,879
+không nhất thiết phải nói rằng  cái này
+
+15
+00:00:35,879 --> 00:00:38,239
+lớn hơn nhưng nó nói lên rằng nó lớn
+
+16
+00:00:38,239 --> 00:00:40,879
+hơn một số phần của Vector trước đó. Nói
+
+17
+00:00:40,879 --> 00:00:43,680
+chung, chúng ta có thể xếp tầng
+
+18
+00:00:43,680 --> 00:00:46,680
+xuống vectơ cơ sở lừa đảo đầu tiên đó bằng cách
+
+19
+00:00:46,680 --> 00:00:49,920
+áp dụng liên tục
+
+20
+00:00:49,920 --> 00:00:53,680
+bất đẳng thức này và cuối cùng
+
+21
+00:00:53,680 --> 00:00:56,120
+bản thân các vectơ cơ sở Lattis có liên quan đến
+
+22
+00:00:56,120 --> 00:00:58,359
+vectơ cơ sở gram Schmid bởi điều này
+
+23
+00:00:58,359 --> 00:01:00,239
+bất đẳng thức bình phương độ
+
+24
+00:01:00,239 --> 00:01:01,719
+lớn của vectơ mạng
+
+25
+00:01:01,719 --> 00:01:05,600
+nhỏ hơn 2^ K trừ1 bình
+
+26
+00:01:05,600 --> 00:01:08,119
+phương độ lớn của
+
+27
+00:01:08,119 --> 00:01:10,640
+vectơ cơ sở K gr Schmid và điều này dẫn đến một
+
+28
+00:01:10,640 --> 00:01:13,080
+kết quả khá ngạc nhiên vì vậy hãy lấy
+
+29
+00:01:13,080 --> 00:01:15,759
+cơ sở lce của tôi và gam Schmid của chúng ta  vectơ cơ sở
+
+30
+00:01:15,759 --> 00:01:18,600
+và hãy xem xét bất kỳ vectơ v nào
+
+31
+00:01:18,600 --> 00:01:21,200
+trong mạng để vectơ v này là
+
+32
+00:01:21,200 --> 00:01:24,240
+sự kết hợp tuyến tính của các vectơ cơ sở
+
+33
+00:01:24,240 --> 00:01:26,240
+cho mạng trong đó các hệ số
+
+34
+00:01:26,240 --> 00:01:28,560
+của tổ hợp tuyến tính đó bây giờ đều sẽ
+
+35
+00:01:28,560 --> 00:01:31,840
+là số nguyên
+
+36
+00:01:32,479 --> 00:01:36,560
+vì cơ sở gr là cơ sở nên
+
+37
+00:01:36,560 --> 00:01:38,880
+vectơ này  v Tôi phải có khả năng biểu diễn
+
+38
+00:01:38,880 --> 00:01:40,840
+điều này dưới dạng tổ hợp tuyến tính của các
+
+39
+00:01:40,840 --> 00:01:43,040
+vectơ cơ sở gramit trong đó
+
+40
+00:01:43,040 --> 00:01:45,920
+các hệ số ở đây sẽ là
+
+41
+00:01:45,920 --> 00:01:47,439
+số thực. Tôi không đảm bảo chúng
+
+42
+00:01:47,439 --> 00:01:49,360
+sẽ là số nguyên và tôi nghi ngờ rằng
+
+43
+00:01:49,360 --> 00:01:51,479
+chúng sẽ không như vậy bởi vì
+
+44
+00:01:51,479 --> 00:01:53,719
+Các vectơ cơ sở Graham Schmid không
+
+45
+00:01:53,719 --> 00:01:56,200
+bao gồm
+
+46
+00:01:56,200 --> 00:01:58,240
+các thành phần số nguyên tuy nhiên tôi muốn tìm
+
+47
+00:01:58,240 --> 00:02:00,039
+mối quan hệ giữa
+
+48
+00:02:00,039 --> 00:02:02,840
+các hệ số của vectơ cơ sở ltis
+
+49
+00:02:02,840 --> 00:02:04,719
+và các hệ số của Vector cơ sở giữa gravy
+
+50
+00:02:04,719 --> 00:02:06,680
+vì vậy hãy bắt đầu bằng cách
+
+51
+00:02:06,680 --> 00:02:09,239
+biểu thị vectơ v này như hai
+
+52
+00:02:09,239 --> 00:02:11,038
+thứ khác nhau  trước hết là
+
+53
+00:02:11,038 --> 00:02:14,200
+sự kết hợp tuyến tính của các vectơ cơ sở lce và
+
+54
+00:02:14,200 --> 00:02:16,440
+sau đó là sự kết hợp tuyến tính của các
+
+55
+00:02:16,440 --> 00:02:18,480
+vectơ cơ sở gr mid và vì nó giống
+
+56
+00:02:18,480 --> 00:02:21,080
+nhau trong cả hai trường hợp nên cả hai đều
+
+57
+00:02:21,080 --> 00:02:23,480
+bằng nhau nên bây giờ những gì tôi sẽ làm là
+
+58
+00:02:23,480 --> 00:02:24,959
+tôi sẽ làm  để tận dụng thực tế là
+
+59
+00:02:24,959 --> 00:02:26,720
+tích chấm sẽ giúp chúng ta
+
+60
+00:02:26,720 --> 00:02:29,879
+cô lập một trong các hệ số ở
+
+61
+00:02:29,879 --> 00:02:34,519
+đây vì vậy nếu tôi chấm cả hai tích với ừm
+
+62
+00:02:34,519 --> 00:02:37,160
+một số Vector cơ sở grm thì cái nào thực sự không
+
+63
+00:02:37,160 --> 00:02:39,720
+quan trọng vì các vectơ cơ sở Gramm
+
+64
+00:02:39,720 --> 00:02:42,280
+hầu hết đều trực giao
+
+65
+00:02:42,280 --> 00:02:44,000
+Các sản phẩm chấm ở phía bên phải
+
+66
+00:02:44,000 --> 00:02:46,040
+sẽ biến mất, sản phẩm duy nhất tôi
+
+67
+00:02:46,040 --> 00:02:49,040
+còn lại là sản phẩm do VK star
+
+68
+00:02:49,040 --> 00:02:50,599
+với VK
+
+69
+00:02:50,599 --> 00:02:53,280
+star và điều đó có nghĩa là
+
+70
+00:02:53,280 --> 00:02:56,879
+sản phẩm chấm bên phải ngôi sao VK hầu hết các
+
+71
+00:02:56,879 --> 00:02:58,800
+sản phẩm này đều biến mất  đi và cái còn lại
+
+72
+00:02:58,800 --> 00:03:01,360
+tôi còn lại là cái này và
+
+73
+00:03:01,360 --> 00:03:04,799
+ngôi sao VK.  vkar sẽ là vkar bình phương
+
+74
+00:03:04,799 --> 00:03:05,640
+
+
+75
+00:03:05,640 --> 00:03:09,400
+độ lớn trong khi đó hãy nhớ rằng
+
+76
+00:03:09,400 --> 00:03:12,040
+quá trình rút gọn cơ sở gram Schmid của tôi
+
+77
+00:03:12,040 --> 00:03:15,440
+mang lại cho tôi v i Star as v i ltis cơ sở
+
+78
+00:03:15,440 --> 00:03:19,200
+Vector trừ đi tổng của các tích chấm
+
+79
+00:03:19,200 --> 00:03:22,560
+với các vectơ cơ sở graur trước đó
+
+80
+00:03:22,560 --> 00:03:26,280
+vì vậy nếu tôi chấm đúng giá trị với VK
+
+81
+00:03:26,280 --> 00:03:32,280
+star  Ngôi sao VI VK VI làm ngôi sao VK trừ đi
+
+82
+00:03:32,280 --> 00:03:35,200
+tổng này ở đây và một lần nữa tất cả
+
+83
+00:03:35,200 --> 00:03:37,439
+các vectơ này trên thực tế là trực giao nên
+
+84
+00:03:37,439 --> 00:03:40,640
+thuật ngữ này bị loại bỏ hoàn toàn và do đó
+
+85
+00:03:40,640 --> 00:03:45,720
+ngôi sao VI VK giống với ngôi sao VI VK sản
+
+86
+00:03:45,720 --> 00:03:48,879
+phẩm chấm của hai vectơ cơ sở gram Schmid
+
+87
+00:03:48,879 --> 00:03:52,720
+sẽ  hoàn toàn giống
+
+88
+00:03:52,720 --> 00:03:55,519
+với tích vô hướng của
+
+89
+00:03:55,519 --> 00:03:57,680
+vectơ cơ sở Graham Schmidt với
+
+90
+00:03:57,680 --> 00:04:00,400
+vectơ cơ sở mạng tương ứng,
+
+91
+00:04:00,400 --> 00:04:03,519
+hầu hết các tích vô hướng ở đây
+
+92
+00:04:03,519 --> 00:04:06,760
+sẽ bằng 0 vì I và K là
+
+93
+00:04:06,760 --> 00:04:08,480
+các số khác nhau và vectơ cơ sở gr
+
+94
+00:04:08,480 --> 00:04:10,480
+là trực giao, có nghĩa là
+
+95
+00:04:10,480 --> 00:04:12,439
+hầu hết các sản phẩm này cũng sẽ
+
+96
+00:04:12,439 --> 00:04:14,120
+bằng
+
+97
+00:04:14,120 --> 00:04:16,759
+0 và lần duy nhất chúng ta không nhận được
+
+98
+00:04:16,759 --> 00:04:20,478
+giá trị 0 là khi K uh khi tôi và K bằng
+
+99
+00:04:20,478 --> 00:04:23,440
+nhau nên nếu tôi bằng K VK thì sao
+
+100
+00:04:23,440 --> 00:04:26,639
+VK có giống VK không  ngôi sao.
+
+101
+00:04:26,639 --> 00:04:30,160
+Ngôi sao VK là bình phương độ lớn của
+
+102
+00:04:30,160 --> 00:04:33,039
+ngôi sao VK. Điều thú vị về điều này
+
+103
+00:04:33,039 --> 00:04:34,880
+không phải là điều ngạc nhiên nhưng chắc chắn đó là
+
+104
+00:04:34,880 --> 00:04:36,880
+một trong những điều ngạc nhiên đó
+
+105
+00:04:36,880 --> 00:04:38,360
+là chúng ta biết rằng
+
+106
+00:04:38,360 --> 00:04:40,720
+các vectơ cơ sở Graham Schmid là trực giao. Chúng ta biết
+
+107
+00:04:40,720 --> 00:04:42,639
+rằng các vectơ cơ sở mạng
+
+108
+00:04:42,639 --> 00:04:44,320
+nói chung không phải là  sẽ
+
+109
+00:04:44,320 --> 00:04:47,759
+trực giao hoàn hảo nhưng mọi Vector mạng
+
+110
+00:04:47,759 --> 00:04:50,199
+sẽ trực giao với mọi
+
+111
+00:04:50,199 --> 00:04:52,160
+vectơ cơ sở gram Schmid ngoại
+
+112
+00:04:52,160 --> 00:04:54,759
+trừ Vector cơ sở Graham Schmid
+
+113
+00:04:54,759 --> 00:04:56,320
+mà nó sẽ không
+
+114
+00:04:56,320 --> 00:04:57,479
+trực giao
+
+115
+00:04:57,479 --> 00:05:00,240
+và vì vậy bây giờ chúng ta có thể hoàn thành một
+
+116
+00:05:00,240 --> 00:05:03,120
+thật ngạc nhiên vì vậy bây giờ nếu tôi tìm thấy cùng một
+
+117
+00:05:03,120 --> 00:05:04,639
+Vector được biểu thị trong
+
+118
+00:05:04,639 --> 00:05:06,960
+các pha Graham Schmid so với cùng một Vector được biểu thị bằng cách
+
+119
+00:05:06,960 --> 00:05:09,680
+sử dụng Vector cơ sở lce. Tôi bắt đầu với
+
+120
+00:05:09,680 --> 00:05:12,320
+việc tôi tạo thành tích chấm và ở
+
+121
+00:05:12,320 --> 00:05:14,199
+phía bên phải rằng các tích chấm sẽ
+
+122
+00:05:14,199 --> 00:05:16,600
+bằng 0 trên
+
+123
+00:05:16,600 --> 00:05:19,280
+ngoại lệ duy nhất của ngôi sao VK ở phía bên trái,
+
+124
+00:05:19,280 --> 00:05:21,960
+các tích số chấm đều sẽ bằng 0
+
+125
+00:05:21,960 --> 00:05:23,639
+ngoại trừ tích số chấm
+
+126
+00:05:23,639 --> 00:05:27,639
+với VK và do đó điều đó mang lại cho tôi AK ltis
+
+127
+00:05:27,639 --> 00:05:31,080
+Vector hấp dẫn giữa các vector faes Vector BK
+
+128
+00:05:31,080 --> 00:05:35,039
+lấy cơ sở Schmid Vector squ tuy nhiên chúng tôi
+
+129
+00:05:35,039 --> 00:05:36,919
+xác định được rằng
+
+130
+00:05:36,919 --> 00:05:40,400
+2 sản phẩm này sản phẩm này làm giống
+
+131
+00:05:40,400 --> 00:05:42,000
+
+
+132
+00:05:42,000 --> 00:05:44,759
+sản phẩm chấm kia mà kết quả này lại đây
+
+133
+00:05:44,759 --> 00:05:49,240
+VK vkar là vi.
+
+134
+00:05:49,680 --> 00:05:53,080
+vkar vì vậy điều đó cho tôi biết rằng hai cái đó
+
+135
+00:05:53,080 --> 00:05:54,880
+sẽ giống nhau nên một lần nữa
+
+136
+00:05:54,880 --> 00:05:57,039
+tích vô hướng của các cơ sở ltis với
+
+137
+00:05:57,039 --> 00:05:59,080
+các cơ sở Graham Schmid sẽ
+
+138
+00:05:59,080 --> 00:06:00,759
+giống như tích vô hướng của
+
+139
+00:06:00,759 --> 00:06:03,639
+cơ sở gram Schmid với cơ sở gram Schmid
+
+140
+00:06:03,639 --> 00:06:05,000
+bây giờ  nói rằng hai tích vô hướng này
+
+141
+00:06:05,000 --> 00:06:06,680
+sẽ giống nhau
+
+142
+00:06:06,680 --> 00:06:10,280
+và điều đó cho tôi biết rằng A của tôi
+
+143
+00:06:10,280 --> 00:06:13,840
+bằng B của tôi nói cách khác là
+
+144
+00:06:13,840 --> 00:06:15,880
+thật ngạc nhiên nếu tôi có một vectơ là
+
+145
+00:06:15,880 --> 00:06:18,960
+tổ hợp tuyến tính của các vectơ mạng của tôi
+
+146
+00:06:18,960 --> 00:06:21,520
+thì tôi có thể biểu thị Vector đó dưới dạng một
+
+147
+00:06:21,520 --> 00:06:23,199
+sự kết hợp tuyến tính của
+
+148
+00:06:23,199 --> 00:06:26,800
+các hệ số cơ sở Graham Schmid của tôi sử dụng
+
+149
+00:06:26,800 --> 00:06:30,240
+các hệ số giống hệt nhau nên tất cả các số nguyên này
+
+150
+00:06:30,240 --> 00:06:32,240
+nhất thiết có nghĩa là tất cả các số nguyên
+
+151
+00:06:32,240 --> 00:06:35,919
+này cũng phải là số nguyên mặc dù
+
+152
+00:06:35,919 --> 00:06:38,880
+nhìn chung các vectơ cơ sở lus này
+
+153
+00:06:38,880 --> 00:06:41,360
+các vectơ cơ sở gr mid này sẽ không
+
+154
+00:06:41,360 --> 00:06:43,720
+có các thành phần số nguyên nên  hãy đặt
+
+155
+00:06:43,720 --> 00:06:45,680
+mọi thứ lại với nhau, giả sử tôi có một số
+
+156
+00:06:45,680 --> 00:06:47,280
+Vector thực sự giải được
+
+157
+00:06:47,280 --> 00:06:49,280
+bài toán Vector ngắn nhất cho khoảng ltis bằng những
+
+158
+00:06:49,280 --> 00:06:51,240
+
+
+159
+00:06:51,240 --> 00:06:52,960
+
+
+160
+00:06:52,960 --> 00:06:55,680
+vectơ cơ sở gram Schmid tương ứng vì nó là một Vector mạng. Tôi
+
+161
+00:06:55,680 --> 00:06:58,879
+phải có Vector này là tổng của
+
+162
+00:06:58,879 --> 00:07:01,879
+một tổ hợp tuyến tính nào đó của
+
+163
+00:07:01,879 --> 00:07:04,280
+các vectơ cơ sở ltis trong đó ít nhất một trong các
+
+164
+00:07:04,280 --> 00:07:07,599
+AIS khác 0 nên điều đó cho tôi biết AKsqu
+
+165
+00:07:07,599 --> 00:07:10,639
+lớn hơn hoặc bằng
+
+166
+00:07:10,639 --> 00:07:13,240
+1 vì các hệ số giống nhau có thể được
+
+167
+00:07:13,240 --> 00:07:15,039
+sử dụng để thu được V bằng cách sử dụng
+
+168
+00:07:15,039 --> 00:07:17,800
+cơ sở Graham Schmid, chúng ta cũng có cùng một Vector đó là
+
+169
+00:07:17,800 --> 00:07:19,560
+tổng của  một sự kết hợp tuyến tính của
+
+170
+00:07:19,560 --> 00:07:22,240
+các vectơ cơ sở Graham Schmid trong đó tôi biết ít
+
+171
+00:07:22,240 --> 00:07:25,960
+nhất một trong số này là số nguyên
+
+172
+00:07:25,960 --> 00:07:27,560
+lớn hơn có giá trị tuyệt đối
+
+173
+00:07:27,560 --> 00:07:30,199
+lớn hơn hoặc bằng một
+
+174
+00:07:30,199 --> 00:07:32,280
+để cho tôi biết rằng bình phương
+
+175
+00:07:32,280 --> 00:07:34,759
+độ lớn lớn hơn hoặc bằng
+
+176
+00:07:34,759 --> 00:07:39,680
+bình phương  của VK a
+
+177
+00:07:41,759 --> 00:07:46,000
+^ bình phương lớn hơn hoặc bằng
+
+178
+00:07:46,000 --> 00:07:48,400
+1 nên tôi biết rằng bình phương
+
+179
+00:07:48,400 --> 00:07:50,520
+độ lớn phải chắc chắn lớn
+
+180
+00:07:50,520 --> 00:07:53,720
+hơn hoặc bằng vk2 một lần nữa
+
+181
+00:07:53,720 --> 00:07:56,599
+thay thế giá trị này bằng giá trị
+
+182
+00:07:56,599 --> 00:07:58,879
+nhỏ hơn và điều đó cho tôi biết rằng
+
+183
+00:07:58,879 --> 00:08:02,400
+độ lớn udesqu  của Vector ngắn nhất của tôi là
+
+184
+00:08:02,400 --> 00:08:08,479
+1/2 đến k^^ 2 Kus 1 V1 2 đối với một số giá trị
+
+185
+00:08:08,479 --> 00:08:10,440
+của K, chúng tôi không hoàn toàn chắc chắn về giá trị nào
+
+186
+00:08:10,440 --> 00:08:13,560
+nhưng chúng tôi biết rằng K như vậy phải tồn tại tốt, giá trị
+
+187
+00:08:13,560 --> 00:08:15,479
+nhỏ nhất là bao nhiêu. Tôi có thể làm tốt điều này
+
+188
+00:08:15,479 --> 00:08:18,360
+vì hệ số  ở đây
+
+189
+00:08:18,360 --> 00:08:20,680
+nhỏ hơn khi K lớn hơn
+
+190
+00:08:20,680 --> 00:08:23,759
+giá trị lớn nhất có thể có của K sẽ là n nên
+
+191
+00:08:23,759 --> 00:08:26,840
+trường hợp xấu nhất uh V ^2 thay thế
+
+192
+00:08:26,840 --> 00:08:29,599
+giá trị này bằng giá trị thậm chí còn nhỏ hơn 1/ 2^ n
+
+193
+00:08:29,599 --> 00:08:34,599
+trừ1 V1 độ lớn bình phương sao và một
+
+194
+00:08:34,599 --> 00:08:36,880
+lưu ý cuối cùng hãy nhớ gram
+
+195
+00:08:36,880 --> 00:08:39,320
+Các vectơ cơ sở Schmid được hình thành bằng cách sử dụng
+
+196
+00:08:39,320 --> 00:08:41,839
+phép khử Gramm nhưng vectơ Gramm đầu tiên trong số đó
+
+197
+00:08:41,839 --> 00:08:45,000
+cũng là
+
+198
+00:08:45,000 --> 00:08:48,360
+vectơ latus đầu tiên, do đó, điều đó cho tôi biết rằng
+
+199
+00:08:48,360 --> 00:08:49,920
+bất kể Vector nào ngắn nhất trong
+
+200
+00:08:49,920 --> 00:08:54,680
+latus sẽ lớn hơn
+
+201
+00:08:54,680 --> 00:08:59,720
+một phần nào đó của  đầu tiên trong số các
+
+202
+00:08:59,720 --> 00:09:03,440
+vectơ l l l ltis và vì vậy nói chung tôi
+
+203
+00:09:03,440 --> 00:09:05,800
+đi đến kết luận sau đây bất kỳ
+
+204
+00:09:05,800 --> 00:09:07,880
+Vector nào khác 0 trong mạng đều phải
+
+205
+00:09:07,880 --> 00:09:09,959
+thỏa mãn bất đẳng thức này, nghĩa là
+
+206
+00:09:09,959 --> 00:09:12,880
+Vector ngắn nhất cũng phải thỏa mãn
+
+207
+00:09:12,880 --> 00:09:15,160
+bất đẳng thức đó và sắp xếp lại mọi thứ một
+
+208
+00:09:15,160 --> 00:09:19,000
+chút, điều này có nghĩa là lce đầu tiên của chúng ta
+
+209
+00:09:19,000 --> 00:09:22,519
+Vector cơ sở V1 phải nằm trong lũy ​​thừa
+
+210
+00:09:22,519 --> 00:09:25,320
+hai lũy thừa n -1 /2 * độ dài của
+
+211
+00:09:25,320 --> 00:09:27,480
+bất kỳ Vector ngắn nhất thực tế nào
+
+212
+00:09:27,480 --> 00:09:30,839
+sẽ là và do đó, cơ sở rút gọn sẽ
+
+213
+00:09:30,839 --> 00:09:33,320
+cho phép chúng ta giải SVP trong
+
+214
+00:09:33,320 --> 00:09:38,000
+hệ số 2^ nus1 này  /
+
+215
+00:09:38,000 --> 00:09:41,000
+2
+

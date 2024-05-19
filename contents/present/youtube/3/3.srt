@@ -1,0 +1,2404 @@
+1
+00:00:00,919 --> 00:00:04,120
+xin chào, tôi là David Wong. Tôi là sinh viên
+
+2
+00:00:04,120 --> 00:00:05,839
+thạc sĩ mật mã tại Đại học
+
+3
+00:00:05,839 --> 00:00:08,639
+Bordeaux. Tôi hiện cũng là thực tập sinh tại
+
+4
+00:00:08,639 --> 00:00:11,559
+Dịch vụ mật mã và
+
+5
+00:00:11,559 --> 00:00:13,880
+video này sẽ giải thích về
+
+6
+00:00:13,880 --> 00:00:16,760
+hai cuộc tấn công vào RSA sử dụng phương pháp
+
+7
+00:00:16,760 --> 00:00:19,480
+giảm latis  kỹ thuật cuộc tấn công đầu tiên
+
+8
+00:00:19,480 --> 00:00:22,400
+sẽ là cuộc tấn công của Copper Smith, người
+
+9
+00:00:22,400 --> 00:00:24,400
+đầu tiên phát hiện ra rằng bạn có thể
+
+10
+00:00:24,400 --> 00:00:29,400
+tấn công RSA bằng isis và sau đó chúng ta sẽ xem cách
+
+11
+00:00:29,400 --> 00:00:32,558
+Grave Letter đơn giản hóa cuộc tấn công này như thế nào. Cuộc tấn
+
+12
+00:00:32,558 --> 00:00:34,360
+công thứ hai là một
+
+13
+00:00:34,360 --> 00:00:36,640
+cuộc tấn công giống như Smith được phát hiện bởi  Bon và
+
+14
+00:00:36,640 --> 00:00:39,399
+Dery và đó cũng là bức thư được
+
+15
+00:00:39,399 --> 00:00:43,079
+Herman và May đơn giản hóa, vì vậy trước tiên chúng ta hãy tự
+
+16
+00:00:43,079 --> 00:00:45,600
+nhắc nhở bản thân một cách ngắn gọn RSA là gì để
+
+17
+00:00:45,600 --> 00:00:48,280
+chúng ta cùng thống nhất RSA là một
+
+18
+00:00:48,280 --> 00:00:51,399
+hệ thống mật mã khóa công khai được phát minh cách đây 30 năm
+
+19
+00:00:51,399 --> 00:00:54,320
+và nó cho phép chúng ta mã hóa và ký tên.
+
+20
+00:00:54,320 --> 00:00:56,079
+Tôi sẽ chỉ giải thích phần mã hóa
+
+21
+00:00:56,079 --> 00:00:57,399
+vì việc ký kết gần như là một
+
+22
+00:00:57,399 --> 00:00:58,600
+
+
+23
+00:00:58,600 --> 00:01:00,920
+thao tác nghịch đảo nên trước tiên để mã hóa bạn cần
+
+24
+00:01:00,920 --> 00:01:04,119
+tạo khóa chung và
+
+25
+00:01:04,119 --> 00:01:07,000
+khóa riêng. Liên kết với khóa chung,
+
+26
+00:01:07,000 --> 00:01:09,400
+khóa chung bao gồm
+
+27
+00:01:09,400 --> 00:01:13,000
+số mũ chung e và n lớn  mô-đun
+
+28
+00:01:13,000 --> 00:01:15,240
+khóa riêng có cùng Big N,
+
+29
+00:01:15,240 --> 00:01:18,080
+cùng một mô-đun và cũng có số mũ riêng
+
+30
+00:01:18,080 --> 00:01:19,320
+
+
+31
+00:01:19,320 --> 00:01:22,479
+D để mã hóa tin nhắn M bạn chỉ cần lấy
+
+32
+00:01:22,479 --> 00:01:24,720
+số của mình M bạn nâng nó lên lũy thừa
+
+33
+00:01:24,720 --> 00:01:27,000
+của E số mũ công khai bạn lấy
+
+34
+00:01:27,000 --> 00:01:29,280
+số đó theo modulo n và cho bạn
+
+35
+00:01:29,280 --> 00:01:31,880
+văn bản mật mã và để giải mã văn bản mật mã đó, bạn
+
+36
+00:01:31,880 --> 00:01:33,920
+làm tương tự nhưng với
+
+37
+00:01:33,920 --> 00:01:37,320
+số mũ riêng thì điều này hiệu quả vì e và D
+
+38
+00:01:37,320 --> 00:01:39,280
+
+
+39
+00:01:39,280 --> 00:01:42,479
+nghịch đảo lẫn nhau để tạo ra e và D trước tiên bạn
+
+40
+00:01:42,479 --> 00:01:45,079
+cần tạo p và Q hai số nguyên tố
+
+41
+00:01:45,079 --> 00:01:47,200
+và N mô đun sẽ là
+
+42
+00:01:47,200 --> 00:01:49,240
+phép nhân của p và
+
+43
+00:01:49,240 --> 00:01:53,280
+Q, thật dễ dàng tìm thấy D và E nhờ
+
+44
+00:01:53,280 --> 00:01:55,320
+số nguyên tố PN q và đó là lý do tại sao chúng tôi nói
+
+45
+00:01:55,320 --> 00:01:57,920
+rằng tính bảo mật của RSA được giảm xuống
+
+46
+00:01:57,920 --> 00:02:00,600
+thành hệ số của n vì vậy nếu bạn có thể
+
+47
+00:02:00,600 --> 00:02:03,039
+tìm thấy một trong các Prime bằng cách phân tích n chẳng
+
+48
+00:02:03,039 --> 00:02:05,640
+hạn  thì về cơ bản bạn có thể tìm thấy
+
+49
+00:02:05,640 --> 00:02:08,800
+khóa riêng nếu bạn chỉ có khóa chung.
+
+50
+00:02:08,800 --> 00:02:11,200
+Có một số cách tấn công
+
+51
+00:02:11,200 --> 00:02:13,879
+RSA và cũng có một số mục tiêu. Điều đầu tiên
+
+52
+00:02:13,879 --> 00:02:16,040
+là phải biết bạn muốn gì, bạn
+
+53
+00:02:16,040 --> 00:02:17,879
+muốn khôi phục văn bản pl hay bạn
+
+54
+00:02:17,879 --> 00:02:20,160
+muốn khôi phục văn bản pl?  khóa riêng và nhân tiện,
+
+55
+00:02:20,160 --> 00:02:21,800
+việc khôi phục khóa riêng được
+
+56
+00:02:21,800 --> 00:02:23,720
+gọi là phá vỡ hoàn toàn vì nếu bạn
+
+57
+00:02:23,720 --> 00:02:25,480
+khôi phục khóa riêng thì bạn có thể
+
+58
+00:02:25,480 --> 00:02:27,640
+giải mã mọi thứ bạn muốn và bạn
+
+59
+00:02:27,640 --> 00:02:29,560
+hoàn toàn phá vỡ
+
+60
+00:02:29,560 --> 00:02:30,680
+hệ thống, bạn đã phá vỡ hoàn toàn hệ thống,
+
+61
+00:02:30,680 --> 00:02:33,800
+các cuộc tấn công bạn có thể thấy trong tin tức
+
+62
+00:02:33,800 --> 00:02:36,440
+và  các lỗ hổng thông thường đang được
+
+63
+00:02:36,440 --> 00:02:39,519
+phát hiện thường được thực hiện trong
+
+64
+00:02:39,519 --> 00:02:43,959
+phần triển khai của hệ thống mật mã
+
+65
+00:02:43,959 --> 00:02:45,959
+vì tấn công toán học rất
+
+66
+00:02:45,959 --> 00:02:49,400
+khó nhưng một số người, một số nhà nghiên cứu
+
+67
+00:02:49,400 --> 00:02:52,480
+đã nghĩ tại sao không tấn công một
+
+68
+00:02:52,480 --> 00:02:53,959
+
+
+69
+00:02:53,959 --> 00:02:57,519
+mô hình thoải mái hơn, ví dụ như mô hình mà chúng ta có
+
+70
+00:02:57,519 --> 00:02:59,280
+quyền truy cập vào một bài báo cung cấp  cho chúng tôi một
+
+71
+00:02:59,280 --> 00:03:02,239
+phần của thông điệp hoặc có thể chúng tôi biết
+
+72
+00:03:02,239 --> 00:03:04,920
+giá trị gần đúng của một trong các số nguyên tố
+
+73
+00:03:04,920 --> 00:03:08,200
+hoặc có thể số mũ riêng tư
+
+74
+00:03:08,200 --> 00:03:10,280
+quá nhỏ và sau này tôi sẽ định nghĩa ý tôi là
+
+75
+00:03:10,280 --> 00:03:14,040
+quá nhỏ và trong
+
+76
+00:03:14,040 --> 00:03:16,360
+những mô hình thoải mái đó, các nhà nghiên cứu đã phát hiện ra rằng
+
+77
+00:03:16,360 --> 00:03:18,959
+nó hơi nhỏ  dễ hơn, không dễ nhưng
+
+78
+00:03:18,959 --> 00:03:21,560
+dễ hơn một chút khi tấn công toán
+
+79
+00:03:21,560 --> 00:03:24,280
+học của U RSA vì vậy hãy để tôi
+
+80
+00:03:24,280 --> 00:03:26,799
+giới thiệu ltis nếu bạn chưa biết nó là
+
+81
+00:03:26,799 --> 00:03:29,159
+gì, nó khá đơn giản nếu bạn
+
+82
+00:03:29,159 --> 00:03:31,400
+nghĩ về không gian Vector chẳng hạn ở bên
+
+83
+00:03:31,400 --> 00:03:33,280
+trái bạn có  hai vectơ vì vậy đó là
+
+84
+00:03:33,280 --> 00:03:36,000
+cơ sở của không gian Vector của chúng ta và bạn
+
+85
+00:03:36,000 --> 00:03:38,840
+có thể thực hiện bất kỳ kết hợp tuyến tính nào của các
+
+86
+00:03:38,840 --> 00:03:41,159
+vectơ đó để bạn có thể nhân chúng với
+
+87
+00:03:41,159 --> 00:03:44,120
+các số vô hướng, giả sử là số thực và sau đó
+
+88
+00:03:44,120 --> 00:03:46,599
+bạn có thể cộng các vectơ mới mà bạn
+
+89
+00:03:46,599 --> 00:03:48,920
+đã nhân với nhau, ví dụ như
+
+90
+00:03:48,920 --> 00:03:50,680
+bạn có thể lấy  Vector đầu tiên nhân
+
+91
+00:03:50,680 --> 00:03:54,000
+với 3,7 và bạn cộng nó với vectơ thứ hai
+
+92
+00:03:54,000 --> 00:03:56,720
+nhân với trừ1 và điều đó mang lại cho
+
+93
+00:03:56,720 --> 00:03:58,480
+bạn một Vector khác vẫn nằm trong
+
+94
+00:03:58,480 --> 00:04:01,840
+không gian vectơ và bạn có được
+
+95
+00:04:01,840 --> 00:04:04,239
+không gian Vector liền kề này được tạo thành từ tất cả các
+
+96
+00:04:04,239 --> 00:04:07,000
+kết hợp khác nhau của hai vectơ đó  Bây
+
+97
+00:04:07,000 --> 00:04:10,760
+giờ các vectơ tưởng tượng rằng bạn không thể
+
+98
+00:04:10,760 --> 00:04:12,840
+nhân chúng với Học giả với
+
+99
+00:04:12,840 --> 00:04:15,239
+số thực và bạn chỉ có thể nhân
+
+100
+00:04:15,239 --> 00:04:17,720
+chúng với số nguyên, điều đó có nghĩa là bạn
+
+101
+00:04:17,720 --> 00:04:19,519
+vẫn có cơ sở giống nhau nhưng bạn chỉ có thể
+
+102
+00:04:19,519 --> 00:04:23,520
+thực hiện theo U kết hợp tuyến tính trong
+
+103
+00:04:23,520 --> 00:04:26,120
+các số nguyên mà nó cung cấp cho bạn một tập hợp  của
+
+104
+00:04:26,120 --> 00:04:29,479
+các điểm trong không gian và đây là ltis, nó là
+
+105
+00:04:29,479 --> 00:04:32,080
+một không gian rời rạc, có nghĩa là nếu bạn
+
+106
+00:04:32,080 --> 00:04:34,639
+lấy bất kỳ điểm nào trong không gian đó, bạn sẽ
+
+107
+00:04:34,639 --> 00:04:37,080
+có thể tìm thấy một hình cầu có tâm quanh
+
+108
+00:04:37,080 --> 00:04:40,120
+điểm đó chỉ chứa điểm đó,
+
+109
+00:04:40,120 --> 00:04:43,520
+điều này không thể thực hiện được trong uh a  Ví dụ,
+
+110
+00:04:43,520 --> 00:04:46,240
+không gian số thực thực, vì
+
+111
+00:04:46,240 --> 00:04:50,080
+vậy atis về cơ bản là thế này, nó là
+
+112
+00:04:50,080 --> 00:04:53,120
+một không gian được kéo dài bởi
+
+113
+00:04:53,120 --> 00:04:55,080
+sự kết hợp tuyến tính của một số vectơ nhưng trong
+
+114
+00:04:55,080 --> 00:04:57,039
+các số nguyên và điều đó thật thú vị vì trong
+
+115
+00:04:57,039 --> 00:05:00,560
+mật mã, chúng ta thường chơi với
+
+116
+00:05:00,560 --> 00:05:03,000
+các số nguyên và chúng tôi muốn tìm một
+
+117
+00:05:03,000 --> 00:05:05,440
+mô hình toán học  nó gần giống với những gì
+
+118
+00:05:05,440 --> 00:05:09,000
+chúng tôi đang làm đúng và điều thú vị
+
+119
+00:05:09,000 --> 00:05:12,240
+về ltis là chúng tôi có tất cả
+
+120
+00:05:12,240 --> 00:05:14,600
+những công cụ đó, đặc biệt là công cụ
+
+121
+00:05:14,600 --> 00:05:16,600
+được tạo ra bởi những người tự do có
+
+122
+00:05:16,600 --> 00:05:18,560
+tên bắt đầu bằng chữ L nên nó được
+
+123
+00:05:18,560 --> 00:05:21,759
+gọi là l l l và
+
+124
+00:05:21,759 --> 00:05:25,960
+thuật toán này cho phép chúng tôi  để tìm một
+
+125
+00:05:25,960 --> 00:05:28,280
+cơ sở nhỏ hơn nếu bạn có một nếu bạn cho nó một
+
+126
+00:05:28,280 --> 00:05:30,240
+cơ sở của ltis thì trên đó bạn có
+
+127
+00:05:30,240 --> 00:05:33,520
+lce này với hai vectơ giống như một
+
+128
+00:05:33,520 --> 00:05:34,880
+cơ sở ngẫu nhiên hai
+
+129
+00:05:34,880 --> 00:05:38,720
+vectơ và L làm điều đó là nó
+
+130
+00:05:38,720 --> 00:05:42,400
+tìm thấy hai vectơ mới nhỏ hơn
+
+131
+00:05:42,400 --> 00:05:45,400
+và trải dài trên cùng một mạng
+
+132
+00:05:45,400 --> 00:05:47,600
+nên ltis không thay đổi nhưng cơ sở
+
+133
+00:05:47,600 --> 00:05:49,160
+
+
+134
+00:05:49,160 --> 00:05:51,880
+ngắn hơn, sau đó chúng ta sẽ hiểu tại sao nó
+
+135
+00:05:51,880 --> 00:05:55,039
+giúp ích cho chúng ta nhưng những ý tưởng cơ bản mà bạn
+
+136
+00:05:55,039 --> 00:05:58,280
+cung cấp rằng cơ sở thuật toán đó
+
+137
+00:05:58,280 --> 00:06:01,759
+mang lại cho bạn cơ sở mới với
+
+138
+00:06:01,759 --> 00:06:05,800
+các vectơ ngắn hơn và bạn  có một công thức chính xác
+
+139
+00:06:05,800 --> 00:06:08,800
+cho Bond trên của các vectơ mới đó
+
+140
+00:06:08,800 --> 00:06:11,080
+và điều đó sẽ giúp chúng ta rất
+
+141
+00:06:11,080 --> 00:06:13,840
+nhiều vì vậy cuộc tấn công đầu tiên chúng ta sẽ thấy là
+
+142
+00:06:13,840 --> 00:06:16,840
+cuộc tấn công coer Smith coer Smith và anh ta là
+
+143
+00:06:16,840 --> 00:06:21,319
+người đầu tiên sử dụng ltis để tấn công
+
+144
+00:06:21,319 --> 00:06:25,400
+RSA nên anh ta đang nghĩ về  mô hình
+
+145
+00:06:25,400 --> 00:06:27,199
+mô hình ban đầu trong đó bạn chỉ đang
+
+146
+00:06:27,199 --> 00:06:29,599
+cố gắng tìm một tin nhắn từ
+
+147
+00:06:29,599 --> 00:06:31,759
+văn bản Mật mã và khóa chung để bạn
+
+148
+00:06:31,759 --> 00:06:33,560
+biết C bạn biết e bạn biết n nhưng bạn
+
+149
+00:06:33,560 --> 00:06:34,919
+không biết M và bạn đang cố gắng tìm
+
+150
+00:06:34,919 --> 00:06:37,599
+cái đó và cái đó khó cái đó rất khó vậy
+
+151
+00:06:37,599 --> 00:06:40,080
+nếu bạn biết một phần của tin nhắn thì sao
+
+152
+00:06:40,080 --> 00:06:41,919
+nếu tin nhắn đó luôn
+
+153
+00:06:41,919 --> 00:06:44,440
+giống như mật khẩu ngày nay và
+
+154
+00:06:44,440 --> 00:06:46,720
+mật khẩu sẽ có nghĩa là ở đây trong
+
+155
+00:06:46,720 --> 00:06:49,240
+phương trình này bạn biết m0 nhưng bạn không biết
+
+156
+00:06:49,240 --> 00:06:52,160
+x0  và bạn đang cố gắng tìm
+
+157
+00:06:52,160 --> 00:06:54,840
+x0 và bạn có thể biến nó thành một
+
+158
+00:06:54,840 --> 00:06:58,039
+phương trình nên việc
+
+159
+00:06:58,039 --> 00:07:00,000
+hiểu cách bạn
+
+160
+00:07:00,000 --> 00:07:02,199
+dịch nó thành một phương trình thực sự không quan trọng lắm nhưng nếu bạn
+
+161
+00:07:02,199 --> 00:07:03,599
+muốn dành thời gian để hiểu thì bạn có thể
+
+162
+00:07:03,599 --> 00:07:05,800
+tạm dừng video  và chỉ cần hiểu điều đó
+
+163
+00:07:05,800 --> 00:07:08,479
+nhưng ý tưởng ở đây là coper Smith
+
+164
+00:07:08,479 --> 00:07:11,800
+đưa ra một thuật toán để tìm nghiệm của
+
+165
+00:07:11,800 --> 00:07:15,560
+một modulo đa thức n khi các nghiệm
+
+166
+00:07:15,560 --> 00:07:16,680
+
+
+167
+00:07:16,680 --> 00:07:19,319
+đủ nhỏ và bằng cách tìm các nghiệm bạn sẽ tìm ra
+
+168
+00:07:19,319 --> 00:07:21,120
+nghiệm của bài toán của chúng ta
+
+169
+00:07:21,120 --> 00:07:24,319
+vì vậy hãy tìm nghiệm của một
+
+170
+00:07:24,319 --> 00:07:28,240
+modulo đa thức  n khá là
+
+171
+00:07:28,240 --> 00:07:29,360
+khó, chúng tôi thực sự không biết cách thực
+
+172
+00:07:29,360 --> 00:07:30,160
+hiện
+
+173
+00:07:30,160 --> 00:07:32,280
+nhưng nếu chúng tôi có một đa thức trên các
+
+174
+00:07:32,280 --> 00:07:34,960
+số nguyên và có gốc của nó trên
+
+175
+00:07:34,960 --> 00:07:36,720
+các số nguyên thì chúng tôi biết cách thực hiện,
+
+176
+00:07:36,720 --> 00:07:38,360
+chúng tôi có các kỹ thuật cho việc đó, ví
+
+177
+00:07:38,360 --> 00:07:40,479
+dụ như Hệ số  đa thức và chỉ
+
+178
+00:07:40,479 --> 00:07:44,199
+đọc các nghiệm nhưng mod và không
+
+179
+00:07:44,199 --> 00:07:47,639
+quá nhiều không dễ dàng nên ý tưởng đầu tiên của
+
+180
+00:07:47,639 --> 00:07:51,080
+coper Smith là tìm một
+
+181
+00:07:51,080 --> 00:07:54,240
+đa thức G khác ở đây có cùng
+
+182
+00:07:54,240 --> 00:07:57,440
+nghiệm với bài toán F của chúng ta nhưng trên
+
+183
+00:07:57,440 --> 00:07:59,599
+các số nguyên và sau đó sẽ dễ dàng  được
+
+184
+00:07:59,599 --> 00:08:02,800
+rồi, vậy làm thế nào để chúng ta tìm được
+
+185
+00:08:02,800 --> 00:08:04,400
+đa thức mới có cùng nghiệm nhưng trên
+
+186
+00:08:04,400 --> 00:08:08,280
+các số nguyên hogra gr rằng uh
+
+187
+00:08:08,280 --> 00:08:10,759
+đơn giản hóa cuộc tấn công vài năm
+
+188
+00:08:10,759 --> 00:08:14,479
+sau đó mang lại cho chúng ta định lý tuyệt đẹp này vì vậy
+
+189
+00:08:14,479 --> 00:08:17,319
+hãy tưởng tượng hãy tưởng tượng bạn có cái này
+
+190
+00:08:17,319 --> 00:08:20,840
+G uh đa thức này mà  có
+
+191
+00:08:20,840 --> 00:08:23,280
+nghiệm mà chúng ta đang tìm modulo n và chúng ta
+
+192
+00:08:23,280 --> 00:08:24,879
+biết rằng nghiệm này
+
+193
+00:08:24,879 --> 00:08:28,599
+đủ nhỏ, nó bị giới hạn trên bởi X lớn bên phải
+
+194
+00:08:28,599 --> 00:08:32,519
+nên chúng ta biết B ở trên cho gốc này
+
+195
+00:08:32,519 --> 00:08:36,440
+và hog gr cho chúng ta biết rằng nếu chúng ta có
+
+196
+00:08:36,440 --> 00:08:39,279
+điểm thứ hai  phần thứ hai của
+
+197
+00:08:39,279 --> 00:08:41,760
+đa thức đó phương trình này là
+
+198
+00:08:41,760 --> 00:08:44,600
+chuẩn của một đa thức mới được tạo từ
+
+199
+00:08:44,600 --> 00:08:48,080
+đa thức thứ nhất và giới hạn trên và
+
+200
+00:08:48,080 --> 00:08:51,000
+nếu Chuẩn này bị giới hạn trên bởi một
+
+201
+00:08:51,000 --> 00:08:53,760
+số cụ thể thì chúng ta biết rằng
+
+202
+00:08:53,760 --> 00:08:55,560
+đa thức này có gốc từ các
+
+203
+00:08:55,560 --> 00:08:58,120
+số nguyên và  vì vậy chúng ta có thể tính nghiệm của nó
+
+204
+00:08:58,120 --> 00:08:59,880
+trên các số nguyên trong
+
+205
+00:08:59,880 --> 00:09:02,680
+mô-đun n vì nó
+
+206
+00:09:02,680 --> 00:09:07,800
+dễ hơn nên làm cách nào để chúng ta tìm ra loại
+
+207
+00:09:07,800 --> 00:09:10,560
+đa thức đó. Ý tưởng ở đây là chúng ta
+
+208
+00:09:10,560 --> 00:09:14,800
+có thể tạo ra một số đa thức
+
+209
+00:09:14,800 --> 00:09:16,800
+có cùng Căn nguyên như
+
+210
+00:09:16,800 --> 00:09:20,920
+bài toán F của chúng ta và kết hợp  họ sử dụng
+
+211
+00:09:20,920 --> 00:09:23,519
+phép toán tuyến tính trên các số nguyên nên chúng tôi giữ nguyên
+
+212
+00:09:23,519 --> 00:09:26,800
+các gốc nên chúng tôi có một
+
+213
+00:09:26,800 --> 00:09:30,880
+nhóm Pol đang tạo ra một
+
+214
+00:09:30,880 --> 00:09:34,480
+đa thức mới có cùng gốc và cái nào
+
+215
+00:09:34,480 --> 00:09:36,480
+có hệ số nhỏ nên nếu
+
+216
+00:09:36,480 --> 00:09:38,760
+bạn lấy chuẩn của đa thức mới này,
+
+217
+00:09:38,760 --> 00:09:41,000
+bạn sẽ nhận được thứ gì đó  đủ nhỏ để
+
+218
+00:09:41,000 --> 00:09:43,279
+nó bị giới hạn trên bởi điều này được thôi
+
+219
+00:09:43,279 --> 00:09:44,880
+nhưng điều này thật khó vì chúng ta thực sự không
+
+220
+00:09:44,880 --> 00:09:48,680
+biết cách tạo ra tất cả các pol
+
+221
+00:09:48,680 --> 00:09:51,120
+có cùng gốc với vấn đề của chúng ta
+
+222
+00:09:51,120 --> 00:09:52,399
+uh điều chúng ta có thể làm là chúng ta có thể
+
+223
+00:09:52,399 --> 00:09:54,240
+tạo ra tất cả các pol đó  có
+
+224
+00:09:54,240 --> 00:09:57,720
+cùng gốc nhưng module n mũ
+
+225
+00:09:57,720 --> 00:10:00,240
+M và điều này dễ dàng hơn vì chúng ta có
+
+226
+00:10:00,240 --> 00:10:02,000
+rất nhiều thủ thuật và sau này bạn sẽ thấy
+
+227
+00:10:02,000 --> 00:10:04,240
+chúng ta có thể làm điều đó như thế nào nhưng về cơ bản chúng ta chỉ
+
+228
+00:10:04,240 --> 00:10:07,440
+cần nhân với n mũ^ M hoặc chúng ta có thể
+
+229
+00:10:07,440 --> 00:10:10,000
+nâng đa thức Pol của chúng ta lên lũy thừa M
+
+230
+00:10:10,000 --> 00:10:11,440
+và những thứ tương
+
+231
+00:10:11,440 --> 00:10:15,240
+tự và vì vậy, vấn đề của chúng ta
+
+232
+00:10:15,240 --> 00:10:19,279
+bây giờ là tìm một đa thức có
+
+233
+00:10:19,279 --> 00:10:22,160
+cùng nghiệm với bài toán của chúng ta nhưng modul n theo
+
+234
+00:10:22,160 --> 00:10:26,760
+^ M và có hệ số nhỏ
+
+235
+00:10:26,760 --> 00:10:29,680
+sao cho chuẩn của poal mới này  được
+
+236
+00:10:29,680 --> 00:10:32,640
+đề xuất bởi điều này và sau đó chúng ta biết rằng chúng ta
+
+237
+00:10:32,640 --> 00:10:34,519
+có thể tìm ra nghiệm của
+
+238
+00:10:34,519 --> 00:10:37,839
+các số nguyên, vậy làm thế nào để chúng ta kết hợp
+
+239
+00:10:37,839 --> 00:10:39,279
+các đa thức đó lại
+
+240
+00:10:39,279 --> 00:10:43,240
+với nhau như trong đó
+
+241
+00:10:43,240 --> 00:10:46,959
+Kỹ thuật rút gọn mà chúng ta vừa thấy cho các latex
+
+242
+00:10:46,959 --> 00:10:49,839
+rất rất rất hữu ích vì vậy kỹ thuật tuyệt vời này
+
+243
+00:10:49,839 --> 00:10:53,120
+đi kèm với hai  những thứ mà chúng
+
+244
+00:10:53,120 --> 00:10:56,040
+ta quan tâm, nó chỉ thực
+
+245
+00:10:56,040 --> 00:10:59,519
+hiện phép toán tuyến tính số nguyên như tôi đã nói trước đây nếu bạn
+
+246
+00:10:59,519 --> 00:11:01,800
+đưa ra cơ sở thì nó sẽ thay đổi cơ sở nhưng
+
+247
+00:11:01,800 --> 00:11:05,200
+nó vẫn giữ nguyên ltis và đó là
+
+248
+00:11:05,200 --> 00:11:07,160
+bởi vì nó chỉ thực hiện các phép toán tuyến tính số nguyên
+
+249
+00:11:07,160 --> 00:11:09,480
+và nếu bạn thực hiện
+
+250
+00:11:09,480 --> 00:11:11,279
+các phép toán tuyến tính số nguyên trên
+
+251
+00:11:11,279 --> 00:11:15,320
+pols bạn giữ gốc bạn bảo tồn
+
+252
+00:11:15,320 --> 00:11:18,040
+gốc điều thứ hai tốt cho
+
+253
+00:11:18,040 --> 00:11:22,839
+chúng tôi là lll L cung cấp cho chúng tôi
+
+254
+00:11:22,839 --> 00:11:26,360
+các vectơ ngắn ngắn hơn và đặc biệt là một vectơ mà
+
+255
+00:11:26,360 --> 00:11:27,880
+chúng tôi sẽ gọi là Vector ngắn nhất của
+
+256
+00:11:27,880 --> 00:11:31,079
+cơ sở mới uh và nếu bạn
+
+257
+00:11:31,079 --> 00:11:33,200
+nhớ uh chúng tôi có  giới hạn trên của
+
+258
+00:11:33,200 --> 00:11:35,399
+tất cả các vectơ mới của cơ sở mới
+
+259
+00:11:35,399 --> 00:11:39,160
+mà tôi sẽ tìm thấy và đặc biệt là trên Vector
+
+260
+00:11:39,160 --> 00:11:40,839
+đầu tiên đó
+
+261
+00:11:40,839 --> 00:11:43,680
+ở đây vì vậy tôi đã không nói với bạn
+
+262
+00:11:43,680 --> 00:11:46,480
+trước đó cách thực hiện điều này. cách
+
+263
+00:11:46,480 --> 00:11:49,040
+tạo tất cả các pol có
+
+264
+00:11:49,040 --> 00:11:51,839
+cùng gốc với chúng tôi  vấn đề nhưng modu n
+
+265
+00:11:51,839 --> 00:11:56,880
+với^ M vì vậy đây là cách làm lại nếu bạn
+
+266
+00:11:56,880 --> 00:11:59,240
+muốn biết chính xác tại
+
+267
+00:11:59,240 --> 00:12:01,519
+sao họ có cùng một tuyến đường nhưng mô-đun
+
+268
+00:12:01,519 --> 00:12:04,279
+n đến^ M bạn có thể tạm dừng video Tôi sẽ
+
+269
+00:12:04,279 --> 00:12:06,519
+chỉ giải thích những gì họ
+
+270
+00:12:06,519 --> 00:12:09,240
+đạt được uh  đầu tiên để họ có cùng
+
+271
+00:12:09,240 --> 00:12:11,200
+Căn gốc nhưng họ cũng giới thiệu một
+
+272
+00:12:11,200 --> 00:12:13,480
+đơn thức mới, mỗi lần lặp của
+
+273
+00:12:13,480 --> 00:12:17,240
+chuỗi đa thức này sẽ giới thiệu một
+
+274
+00:12:17,240 --> 00:12:20,760
+đơn thức mới và vì vậy điều này rất rất hữu ích
+
+275
+00:12:20,760 --> 00:12:24,199
+vì khi chúng ta chèn tất cả
+
+276
+00:12:24,199 --> 00:12:27,760
+đa thức vào Ma trận đại
+
+277
+00:12:27,760 --> 00:12:30,079
+diện cho cơ sở  của L
+
+278
+00:12:30,079 --> 00:12:33,040
+nó sẽ cho chúng ta một Ma trận tam giác và
+
+279
+00:12:33,040 --> 00:12:35,320
+biết nếu chúng ta muốn biết định thức
+
+280
+00:12:35,320 --> 00:12:37,839
+của ma trận đó thì nó chỉ là tích của
+
+281
+00:12:37,839 --> 00:12:40,800
+tất cả các số hạng của đường chéo
+
+282
+00:12:40,800 --> 00:12:43,279
+bên phải và như chúng ta đã thấy trước khi
+
+283
+00:12:43,279 --> 00:12:44,839
+định thức
+
+284
+00:12:44,839 --> 00:12:48,399
+là các phần quan trọng của
+
+285
+00:12:48,399 --> 00:12:54,440
+giới hạn trên của Vector ngắn nhất của chúng ta sau L
+
+286
+00:12:54,440 --> 00:12:57,560
+LM vì vậy hãy quay lại sơ đồ của chúng ta để
+
+287
+00:12:57,560 --> 00:13:00,480
+có được bài toán đúng F và chúng ta đang
+
+288
+00:13:00,480 --> 00:13:03,440
+cố gắng tìm các nghiệm modu n và để
+
+289
+00:13:03,440 --> 00:13:05,240
+làm được điều đó chúng ta đang cố gắng tìm một
+
+290
+00:13:05,240 --> 00:13:07,560
+đa thức khác có cùng điểm chung  Các nghiệm
+
+291
+00:13:07,560 --> 00:13:11,519
+nhưng mô đun n the^ m và nếu
+
+292
+00:13:11,519 --> 00:13:13,760
+đa thức đó tuân theo điểm thứ hai của
+
+293
+00:13:13,760 --> 00:13:15,720
+một hogra gr
+
+294
+00:13:15,720 --> 00:13:18,079
+bất đẳng thức này thì chúng ta có thể tìm nghiệm
+
+295
+00:13:18,079 --> 00:13:21,000
+trên các số nguyên được rồi và chúng ta nói rằng
+
+296
+00:13:21,000 --> 00:13:24,600
+chúng ta có thể làm điều đó bằng cách kết hợp nhiều
+
+297
+00:13:24,600 --> 00:13:28,959
+pol uh vậy đó là cái mới của chúng ta  sơ đồ được rồi
+
+298
+00:13:28,959 --> 00:13:31,519
+và thật nhanh chóng, chúng ta tạo ra một loạt
+
+299
+00:13:31,519 --> 00:13:33,600
+các đa thức có cùng nghiệm với
+
+300
+00:13:33,600 --> 00:13:38,399
+bài toán F của chúng ta nhưng theo modulo n với^ M,
+
+301
+00:13:38,399 --> 00:13:41,880
+chúng ta tạo ra một ma trận với tất cả các phép toán
+
+302
+00:13:41,880 --> 00:13:43,920
+đó sẽ là
+
+303
+00:13:43,920 --> 00:13:47,480
+cơ sở của ltis của chúng ta, chúng ta đưa cơ sở đó cho
+
+304
+00:13:47,480 --> 00:13:50,600
+L  nó mang lại cho chúng ta một cơ sở mới và
+
+305
+00:13:50,600 --> 00:13:53,519
+Vector ngắn nhất thực ra là Bing
+
+306
+00:13:53,519 --> 00:13:55,560
+Mill mà chúng ta đang tìm kiếm
+
+307
+00:13:55,560 --> 00:13:58,639
+nhưng nếu bạn nhìn kỹ vào
+
+308
+00:13:58,639 --> 00:14:00,639
+sơ đồ, bạn có thể thấy rằng chúng ta đang điều chỉnh
+
+309
+00:14:00,639 --> 00:14:05,440
+nó giống như các hàm của X nhân với
+
+310
+00:14:05,440 --> 00:14:09,759
+X lớn của chúng ta là  giới hạn trên của
+
+311
+00:14:09,759 --> 00:14:12,759
+Rễ của chúng ta vậy tại sao vậy để tôi
+
+312
+00:14:12,759 --> 00:14:16,639
+giải thích hãy nhớ thuộc tính của L chúng ta
+
+313
+00:14:16,639 --> 00:14:20,120
+biết rằng cơ sở mới sau L sẽ
+
+314
+00:14:20,120 --> 00:14:22,240
+có một Vector ngắn nhất sẽ bị
+
+315
+00:14:22,240 --> 00:14:24,519
+giới hạn trên bởi định thức và
+
+316
+00:14:24,519 --> 00:14:27,560
+một số số đúng, chúng ta biết
+
+317
+00:14:27,560 --> 00:14:30,839
+điều đó và chúng ta cũng vậy  muốn tìm một
+
+318
+00:14:30,839 --> 00:14:33,680
+đa thức mới tuân theo công thức đó
+
+319
+00:14:33,680 --> 00:14:38,480
+điểm thứ hai của định lý HRA GRS làm thế nào để
+
+320
+00:14:38,480 --> 00:14:41,240
+chúng ta kết hợp cả hai cái đó tốt hãy giả sử
+
+321
+00:14:41,240 --> 00:14:43,000
+rằng đa thức mà chúng ta đang tìm
+
+322
+00:14:43,000 --> 00:14:45,519
+kiếm thực sự là vectơ ngắn nhất và
+
+323
+00:14:45,519 --> 00:14:48,519
+đó là tất cả những gì chúng ta phải làm  vì vậy nếu
+
+324
+00:14:48,519 --> 00:14:52,120
+chúng ta nhìn lại sơ đồ của mình thay vì
+
+325
+00:14:52,120 --> 00:14:52,920
+cho
+
+326
+00:14:52,920 --> 00:14:56,920
+nó đa thức, chúng ta sẽ cho nó một
+
+327
+00:14:56,920 --> 00:14:58,639
+đa thức mới giống như
+
+328
+00:14:58,639 --> 00:15:01,120
+đa thức tổng hợp với giới hạn trên của
+
+329
+00:15:01,120 --> 00:15:07,279
+các nghiệm để sẽ cho chúng ta một
+
+330
+00:15:07,279 --> 00:15:10,399
+đa thức như vậy và khi chúng ta có loại
+
+331
+00:15:10,399 --> 00:15:13,160
+a  đã chuyển poal, thực sự rất
+
+332
+00:15:13,160 --> 00:15:18,160
+dễ dàng để chuyển đổi nó trở lại chỉ g
+
+333
+00:15:18,160 --> 00:15:19,959
+g của
+
+334
+00:15:19,959 --> 00:15:24,279
+X được rồi tuyệt vời chúng tôi biết cách thực hiện
+
+335
+00:15:24,279 --> 00:15:27,480
+Ma trận của mình, chúng tôi biết cách thực hiện mọi thứ uh
+
+336
+00:15:27,480 --> 00:15:31,120
+nhưng với giá trị nào của X cho loại
+
+337
+00:15:31,120 --> 00:15:35,759
+gốc nào và M đó là gì  chúng tôi sử dụng trong
+
+338
+00:15:35,759 --> 00:15:40,040
+thuật toán của mình để làm được điều đó chúng tôi phải
+
+339
+00:15:40,040 --> 00:15:43,639
+hiểu rằng từ hai
+
+340
+00:15:43,639 --> 00:15:46,560
+bất đẳng thức đó, Copper Smith đã tìm ra rằng
+
+341
+00:15:46,560 --> 00:15:50,399
+định thức bị giới hạn bởi công thức này
+
+342
+00:15:50,399 --> 00:15:53,959
+mà bạn có thể đơn giản hóa thành công thức này
+
+343
+00:15:53,959 --> 00:15:55,680
+vì một số số hạng
+
+344
+00:15:55,680 --> 00:15:57,680
+không đáng kể so với
+
+345
+00:15:57,680 --> 00:16:02,440
+n và sau đó bạn  có một định lý nói
+
+346
+00:16:02,440 --> 00:16:05,720
+chính xác giá trị nào của M với
+
+347
+00:16:05,720 --> 00:16:09,560
+giá trị nào của uh n và thứ nguyên của
+
+348
+00:16:09,560 --> 00:16:13,800
+Ma trận của chúng ta và giá trị nào của x lớn X
+
+349
+00:16:13,800 --> 00:16:18,519
+thì với loại căn bậc ba nào, chúng ta
+
+350
+00:16:18,519 --> 00:16:21,720
+có phương pháp này và chúng ta có thể tìm thấy
+
+351
+00:16:21,720 --> 00:16:24,600
+gốc uh điều này còn hơn thế nữa
+
+352
+00:16:24,600 --> 00:16:27,160
+ceramus đưa ra một loại
+
+353
+00:16:27,160 --> 00:16:29,519
+định lý tổng quát hơn mà bạn có thể thấy
+
+354
+00:16:29,519 --> 00:16:34,920
+anh ấy sử dụng uh b làm modulo trong đa thức
+
+355
+00:16:34,920 --> 00:16:39,920
+khi B siêu lớn hơn uh n nâng
+
+356
+00:16:39,920 --> 00:16:42,720
+rais lên lũy thừa Beta Và điều này là
+
+357
+00:16:42,720 --> 00:16:45,120
+do bạn có thể áp dụng  kỹ thuật này
+
+358
+00:16:45,120 --> 00:16:47,240
+ngay cả khi bạn không biết mô-đun và
+
+359
+00:16:47,240 --> 00:16:51,199
+điều này cho phép chúng tôi tấn công RSA dưới
+
+360
+00:16:51,199 --> 00:16:54,560
+các góc độ khác nhau, chẳng hạn như nếu bạn có
+
+361
+00:16:54,560 --> 00:16:56,839
+xấp xỉ một trên số nguyên tố thì bạn
+
+362
+00:16:56,839 --> 00:17:00,040
+có thể làm được, bạn có thể chuyển vấn đề đó
+
+363
+00:17:00,040 --> 00:17:02,560
+thành mô-đun đa thức một trong số
+
+364
+00:17:02,560 --> 00:17:05,079
+Prime và  nếu bạn không biết số nguyên tố đó
+
+365
+00:17:05,079 --> 00:17:07,119
+thì không vấn đề gì vì bạn vẫn có thể
+
+366
+00:17:07,119 --> 00:17:10,240
+sử dụng thuật toán đó nhưng tôi sẽ không giải thích
+
+367
+00:17:10,240 --> 00:17:12,599
+điều đó trong video đó. Nếu bạn quan tâm, bạn
+
+368
+00:17:12,599 --> 00:17:15,359
+có thể xem các bài viết khác nhau mà tôi sẽ
+
+369
+00:17:15,359 --> 00:17:19,000
+liên kết dưới video đó sau này
+
+370
+00:17:19,000 --> 00:17:22,000
+vào năm 2000, Bunny và Dery đã phát hiện ra một cuộc tấn công
+
+371
+00:17:22,000 --> 00:17:26,799
+vào RSA bằng cách sử dụng một cuộc tấn công giống như Coer Smith nên
+
+372
+00:17:26,799 --> 00:17:30,640
+chúng ta đã thấy định lý Coer Smith là một
+
+373
+00:17:30,640 --> 00:17:33,840
+kỹ thuật để tìm các nghiệm nhỏ của một số
+
+374
+00:17:33,840 --> 00:17:36,600
+modulo đa thức
+
+375
+00:17:36,600 --> 00:17:40,520
+n và coper Smith cũng đưa ra lý thuyết của cô ấy
+
+376
+00:17:40,520 --> 00:17:42,280
+nên nó không phải là một định lý  chứng minh
+
+377
+00:17:42,280 --> 00:17:44,600
+bất cứ điều gì nhưng anh ấy đã đưa ra một
+
+378
+00:17:44,600 --> 00:17:49,480
+kỹ thuật chung để tấn công đa thức với
+
+379
+00:17:49,480 --> 00:17:51,679
+nhiều
+
+380
+00:17:51,679 --> 00:17:55,440
+ẩn số và Bunny và dery đã sử dụng kỹ thuật đó
+
+381
+00:17:55,440 --> 00:17:58,600
+trên P variat pols để tấn công RSA vì vậy hãy
+
+382
+00:17:58,600 --> 00:18:01,559
+xem bây giờ nó sẽ thú vị hơn như thế nào
+
+383
+00:18:01,559 --> 00:18:03,200
+vì chúng ta sẽ thấy một
+
+384
+00:18:03,200 --> 00:18:05,320
+hoàn toàn bị hỏng nên chúng tôi đang cố gắng tìm
+
+385
+00:18:05,320 --> 00:18:08,280
+khóa riêng từ khóa chung vì vậy nếu
+
+386
+00:18:08,280 --> 00:18:10,600
+bạn nhớ tạo khóa riêng
+
+387
+00:18:10,600 --> 00:18:12,400
+và khóa chung được liên kết với
+
+388
+00:18:12,400 --> 00:18:15,679
+nhau, chúng tôi cần trước tiên tạo hai
+
+389
+00:18:15,679 --> 00:18:18,159
+số nguyên tố p và Q
+
+390
+00:18:18,159 --> 00:18:22,159
+đúng và RSA hoạt động vì bạn  có
+
+391
+00:18:22,159 --> 00:18:26,480
+phương trình này bạn có e và D
+
+392
+00:18:26,480 --> 00:18:29,280
+Mô-đun nghịch đảo lẫn nhau Theo
+
+393
+00:18:29,280 --> 00:18:31,640
+hàm đúng Hàm ERS nếu bạn không
+
+394
+00:18:31,640 --> 00:18:34,919
+biết tại sao tôi khuyên bạn nên kiểm tra Wikipedia
+
+395
+00:18:34,919 --> 00:18:37,880
+và một số Lý thuyết nhóm. Nó khá dễ dàng
+
+396
+00:18:37,880 --> 00:18:40,760
+để truy cập và nó cho phép bạn
+
+397
+00:18:40,760 --> 00:18:42,480
+hiểu rất nhiều về toán học  đằng sau
+
+398
+00:18:42,480 --> 00:18:46,679
+RSA, vì vậy bạn chuyển đổi nó thành
+
+399
+00:18:46,679 --> 00:18:49,919
+số nguyên và bạn loại bỏ các phần riêng tư
+
+400
+00:18:49,919 --> 00:18:52,760
+uh bằng cách đặt mô-đun phương trình
+
+401
+00:18:52,760 --> 00:18:55,640
+E số mũ công khai và sau đó bạn có
+
+402
+00:18:55,640 --> 00:18:59,760
+phương trình này có hai ẩn số
+
+403
+00:18:59,760 --> 00:19:05,520
+nên ở đây K có thể là X và trừ P trừ Q
+
+404
+00:19:05,520 --> 00:19:08,360
+có thể là Y  và đó là hai
+
+405
+00:19:08,360 --> 00:19:11,039
+ẩn số của chúng ta và chúng ta có đa thức và
+
+406
+00:19:11,039 --> 00:19:13,960
+chúng ta đang cố gắng tìm nghiệm modulo e
+
+407
+00:19:13,960 --> 00:19:17,200
+được nên chúng ta chỉ chuyển đổi vấn đề của mình
+
+408
+00:19:17,200 --> 00:19:20,120
+thành một đa thức với annun và nếu tôi
+
+409
+00:19:20,120 --> 00:19:21,440
+tìm thấy liệu chúng ta có tìm thấy nghiệm của
+
+410
+00:19:21,440 --> 00:19:24,159
+modu đa thức E thì  chúng ta tìm thấy
+
+411
+00:19:24,159 --> 00:19:26,679
+khóa riêng, điều quan trọng là phải
+
+412
+00:19:26,679 --> 00:19:28,240
+xem để hiểu chính xác cách chúng ta
+
+413
+00:19:28,240 --> 00:19:30,440
+chuyển đổi dạng bài toán thành
+
+414
+00:19:30,440 --> 00:19:32,880
+đa thức đó. Biết rằng kỹ thuật mà chúng ta
+
+415
+00:19:32,880 --> 00:19:36,400
+sắp xem là tìm nghiệm của đa thức a b
+
+416
+00:19:36,400 --> 00:19:37,360
+Vari
+
+417
+00:19:37,360 --> 00:19:40,559
+một cách hiệu quả khi nó modulo
+
+418
+00:19:40,559 --> 00:19:43,000
+một số nào đó và nếu  bạn muốn
+
+419
+00:19:43,000 --> 00:19:44,320
+hiểu cách chúng tôi chuyển đổi vấn đề đó
+
+420
+00:19:44,320 --> 00:19:46,200
+thành đa thức đó, hãy tạm dừng
+
+421
+00:19:46,200 --> 00:19:49,520
+video và xem qua nó. Điều
+
+422
+00:19:49,520 --> 00:19:52,480
+khá thú vị với Copper Smith là chúng ta
+
+423
+00:19:52,480 --> 00:19:55,720
+có thể sử dụng định lý chính xác này cho
+
+424
+00:19:55,720 --> 00:19:58,840
+phân cực có răng nên ở đây bạn có HRA gr cho phân cực có
+
+425
+00:19:58,840 --> 00:20:01,039
+chính xác  điều tương tự ngoại trừ nó
+
+426
+00:20:01,039 --> 00:20:04,159
+không phải là modulo n lũy thừa M lần này nó là modul e
+
+427
+00:20:04,159 --> 00:20:07,200
+ra lũy thừa M và chúng ta có
+
+428
+00:20:07,200 --> 00:20:09,640
+giới hạn trên của căn X và
+
+429
+00:20:09,640 --> 00:20:13,280
+giới hạn trên dưới gốc
+
+430
+00:20:13,280 --> 00:20:16,120
+y được rồi vì vậy về cơ bản chúng ta có thể sử dụng
+
+431
+00:20:16,120 --> 00:20:18,760
+kỹ thuật tương tự như  trước đó với thời điểm này là
+
+432
+00:20:18,760 --> 00:20:21,159
+đa thức VAR ngoại trừ việc ở cuối
+
+433
+00:20:21,159 --> 00:20:24,360
+khi chúng ta tìm thấy G mới có
+
+434
+00:20:24,360 --> 00:20:26,679
+gốc trên các số nguyên, chúng ta gặp
+
+435
+00:20:26,679 --> 00:20:32,600
+vấn đề, hãy tưởng tượng một PO như xal y bạn có thể
+
+436
+00:20:32,600 --> 00:20:36,240
+có vô số
+
+437
+00:20:36,240 --> 00:20:39,799
+giải pháp vô hạn và đó là lý do tại sao như vậy  pols
+
+438
+00:20:39,799 --> 00:20:42,679
+bạn cần ít nhất hai
+
+439
+00:20:42,679 --> 00:20:46,520
+đa thức độc lập để có thể tìm ra
+
+440
+00:20:46,640 --> 00:20:49,600
+nghiệm và cách tìm
+
+441
+00:20:49,600 --> 00:20:51,919
+tốt hai polin đó nếu bạn nhớ tính chất
+
+442
+00:20:51,919 --> 00:20:55,360
+của lll chúng ta có giới hạn trên cho tất cả
+
+443
+00:20:55,360 --> 00:20:58,360
+các vectơ mới của cơ sở, các cơ sở mới
+
+444
+00:20:58,360 --> 00:21:00,320
+và chúng ta chỉ cần lấy  hai
+
+445
+00:21:00,320 --> 00:21:03,559
+vectơ ngắn nhất và sơ đồ của chúng tôi trở thành
+
+446
+00:21:03,559 --> 00:21:05,280
+sơ đồ này trong đó chúng tôi chỉ sử dụng hai
+
+447
+00:21:05,280 --> 00:21:08,159
+vectơ ngắn nhất, chúng tôi biến đổi chúng trở lại
+
+448
+00:21:08,159 --> 00:21:11,720
+thành G1 và G2 và chúng tôi có thể sử dụng
+
+449
+00:21:11,720 --> 00:21:14,559
+thuật toán kết quả để tìm nghiệm
+
+450
+00:21:14,559 --> 00:21:17,640
+trên các số nguyên hoặc chúng tôi cũng có thể
+
+451
+00:21:17,640 --> 00:21:20,760
+sử dụng cơ sở lấy ner  ừ, tôi sẽ
+
+452
+00:21:20,760 --> 00:21:22,679
+không giải thích điều đó trong video đó nên nếu
+
+453
+00:21:22,679 --> 00:21:24,640
+bạn muốn biết chính xác cách thức hoạt động,
+
+454
+00:21:24,640 --> 00:21:27,520
+bạn có thể
+
+455
+00:21:27,520 --> 00:21:32,039
+tự mình tìm kiếm để với kỹ thuật này, bạn
+
+456
+00:21:32,039 --> 00:21:34,720
+tính toán các giới hạn như trước đó và
+
+457
+00:21:34,720 --> 00:21:37,279
+bạn đạt đến điểm mà bạn biết mình
+
+458
+00:21:37,279 --> 00:21:40,200
+có thể làm được  cái này bạn có thể tìm thấy
+
+459
+00:21:40,200 --> 00:21:43,880
+khóa riêng nếu khóa riêng nhỏ hơn n
+
+460
+00:21:43,880 --> 00:21:46,480
+được nâng lên lũy thừa
+
+461
+00:21:46,480 --> 00:21:48,880
+0,28 được rồi, bạn có giới hạn về
+
+462
+00:21:48,880 --> 00:21:50,200
+khóa riêng và bạn biết rằng
+
+463
+00:21:50,200 --> 00:21:52,120
+khóa riêng đủ nhỏ, chúng tôi có thể tìm thấy
+
+464
+00:21:52,120 --> 00:21:53,080
+
+
+465
+00:21:53,080 --> 00:21:56,200
+kết quả và notor và dery
+
+466
+00:21:56,200 --> 00:21:59,039
+tự hỏi liệu chúng ta có thể làm tốt hơn không
+
+467
+00:21:59,039 --> 00:22:02,120
+và vâng, họ đồng ý vì nếu bạn nhìn vào
+
+468
+00:22:02,120 --> 00:22:04,840
+Ma trận đó thì đó là Ma trận mà chúng ta
+
+469
+00:22:04,840 --> 00:22:08,000
+sử dụng làm cơ sở cho ltis mà chúng ta sẽ
+
+470
+00:22:08,000 --> 00:22:10,600
+cung cấp cho LL và đó là chuỗi
+
+471
+00:22:10,600 --> 00:22:12,240
+đa thức trong
+
+472
+00:22:12,240 --> 00:22:16,120
+hàng và chúng ta có thể thấy  rằng trong
+
+473
+00:22:16,120 --> 00:22:19,480
+đường chéo, một số số hạng có hại,
+
+474
+00:22:19,480 --> 00:22:22,880
+chúng quá lớn và chúng càng lớn thì
+
+475
+00:22:22,880 --> 00:22:26,240
+định thức sẽ càng lớn
+
+476
+00:22:26,240 --> 00:22:29,039
+và bóng trên trên
+
+477
+00:22:29,039 --> 00:22:32,440
+Vector ngắn nhất của chúng ta sẽ càng tệ hơn. Hãy nhớ rằng
+
+478
+00:22:32,440 --> 00:22:35,760
+chúng ta đang cố gắng nhỏ để tìm một
+
+479
+00:22:35,760 --> 00:22:38,200
+đa thức mới với  các hệ số ngắn nên
+
+480
+00:22:38,200 --> 00:22:41,880
+với một đoạn ngắn có Norm nhỏ để chúng ta có thể
+
+481
+00:22:41,880 --> 00:22:44,760
+tìm nghiệm của các số nguyên nên chúng ta
+
+482
+00:22:44,760 --> 00:22:47,799
+phải tìm định thức nhỏ nhất
+
+483
+00:22:47,799 --> 00:22:51,240
+có thể để nó hoạt động trên Ma trận này
+
+484
+00:22:51,240 --> 00:22:56,200
+và hai pol ở đây đang làm hỏng
+
+485
+00:22:56,200 --> 00:23:00,000
+định thức, vậy tại sao không loại bỏ chúng
+
+486
+00:23:00,000 --> 00:23:03,120
+vậy  chúng ta loại bỏ chúng và bây giờ chúng ta có
+
+487
+00:23:03,120 --> 00:23:06,159
+Ma trận hình chữ nhật và do đó chúng ta không thể
+
+488
+00:23:06,159 --> 00:23:08,640
+tính định thức và biết rằng
+
+489
+00:23:08,640 --> 00:23:11,640
+sẽ rất khó để biết chính xác
+
+490
+00:23:11,640 --> 00:23:14,480
+giới hạn trên của
+
+491
+00:23:14,480 --> 00:23:16,480
+hai vectơ mới của
+
+492
+00:23:16,480 --> 00:23:19,480
+cơ sở mới và bnny dery đã làm điều đó bằng cách
+
+493
+00:23:19,480 --> 00:23:22,080
+phát minh ra  khái niệm về
+
+494
+00:23:22,080 --> 00:23:24,159
+ma trận lũy tiến về mặt hình học nhưng điều này hơi
+
+495
+00:23:24,159 --> 00:23:27,480
+phức tạp và đầy hy vọng, may mắn thay,
+
+496
+00:23:27,480 --> 00:23:29,000
+Herman và May
+
+497
+00:23:29,000 --> 00:23:32,320
+sau một vài năm đã tìm ra một
+
+498
+00:23:32,320 --> 00:23:37,960
+kỹ thuật để tránh tất cả sự phức tạp này
+
+499
+00:23:37,960 --> 00:23:40,440
+với Ma trận hình chữ nhật mà họ
+
+500
+00:23:40,440 --> 00:23:43,320
+gọi đó là
+
+501
+00:23:43,320 --> 00:23:46,200
+sự tuyến tính hóa tuyến tính không được giải và nó chỉ là một
+
+502
+00:23:46,200 --> 00:23:50,480
+sự thay thế  bạn lấy pol của bạn
+
+503
+00:23:50,480 --> 00:23:53,159
+à vấn đề của bạn và bạn
+
+504
+00:23:53,159 --> 00:23:58,000
+thay thế 1 + x MTI thành Y bằng U và bạn
+
+505
+00:23:58,000 --> 00:24:00,159
+làm điều đó trong tất cả các pol bạn
+
+506
+00:24:00,159 --> 00:24:03,799
+tạo ra và nó mang lại cho bạn một Ma trận mới một
+
+507
+00:24:03,799 --> 00:24:08,480
+cơ sở mới với sự thay thế
+
+508
+00:24:08,480 --> 00:24:10,039
+và thực ra là Ma trận
+
+509
+00:24:10,039 --> 00:24:12,640
+Ma trận mới có hình tam giác và điều đó thật
+
+510
+00:24:12,640 --> 00:24:14,840
+tuyệt vời vì chúng ta biết có thể tính định thức
+
+511
+00:24:14,840 --> 00:24:18,120
+một cách dễ dàng và thực sự
+
+512
+00:24:18,120 --> 00:24:20,720
+thực hiện phép thay thế ở đây ngay từ
+
+513
+00:24:20,720 --> 00:24:23,360
+đầu, chúng ta có thể thực hiện phép
+
+514
+00:24:23,360 --> 00:24:25,840
+thay thế trở lại khi chúng ta hoàn thành
+
+515
+00:24:25,840 --> 00:24:27,799
+bài toán và nó không thay đổi bất cứ điều gì
+
+516
+00:24:27,799 --> 00:24:31,679
+nó chỉ thay đổi Ma trận của chúng ta và chúng ta  có thể
+
+517
+00:24:31,679 --> 00:24:33,240
+tính định thức và chúng ta có thể
+
+518
+00:24:33,240 --> 00:24:36,240
+tính giới hạn dễ dàng hơn và
+
+519
+00:24:36,240 --> 00:24:38,399
+chắc chắn đã phát hiện ra rằng bằng cách làm điều đó
+
+520
+00:24:38,399 --> 00:24:41,080
+bằng cách loại bỏ đa thức có hại khỏi
+
+521
+00:24:41,080 --> 00:24:42,440
+danh sách
+
+522
+00:24:42,440 --> 00:24:45,080
+pol, chúng ta có thể
+
+523
+00:24:45,080 --> 00:24:48,279
+tìm thấy khóa riêng nếu khóa riêng
+
+524
+00:24:48,279 --> 00:24:52,480
+nhỏ hơn n được nâng lên^
+
+525
+00:24:52,480 --> 00:24:56,240
+0292  và đó được gọi là ràng buộc Bonet và Fey
+
+526
+00:24:56,240 --> 00:24:59,760
+nên
+
+527
+00:24:59,760 --> 00:25:04,120
+cá nhân tôi đã cắt hai cuộc tấn công coer
+
+528
+00:25:04,120 --> 00:25:06,640
+tấn công SMI và cuộc tấn công Bunny và dery vì vậy
+
+529
+00:25:06,640 --> 00:25:08,159
+nếu bạn muốn tìm hiểu sâu
+
+530
+00:25:08,159 --> 00:25:10,799
+hơn về vấn đề này và muốn
+
+531
+00:25:10,799 --> 00:25:13,399
+hiểu rõ hơn, bạn có thể truy cập
+
+532
+00:25:13,399 --> 00:25:16,840
+GitHub và bạn có thể tìm thấy của tôi  repo uh và
+
+533
+00:25:16,840 --> 00:25:19,240
+bạn có thể thử sử dụng và bạn có thể thử
+
+534
+00:25:19,240 --> 00:25:21,399
+đọc mã và có thể điều đó sẽ giúp
+
+535
+00:25:21,399 --> 00:25:23,120
+bạn thêm một chút
+
+536
+00:25:23,120 --> 00:25:27,960
+uh chỉ là kết quả mang tính thông tin đồng
+
+537
+00:25:27,960 --> 00:25:30,679
+Smith khá nhanh mang lại kết quả tốt
+
+538
+00:25:30,679 --> 00:25:32,799
+mỗi khi nó là một định lý nên tôi biết
+
+539
+00:25:32,799 --> 00:25:34,919
+mỗi lần nó sẽ như vậy  công việc và tôi
+
+540
+00:25:34,919 --> 00:25:37,960
+chưa bao giờ mất nhiều hơn một giây bất kể
+
+541
+00:25:37,960 --> 00:25:40,919
+kích thước để tìm ra kết quả Bunny và
+
+542
+00:25:40,919 --> 00:25:45,760
+dery phức tạp hơn nên ở đây Delta
+
+543
+00:25:45,760 --> 00:25:50,240
+là ừm nên Delta nằm trong công thức n đến
+
+544
+00:25:50,240 --> 00:25:52,679
+the^ Delta được cho là lớn hơn
+
+545
+00:25:52,679 --> 00:25:53,799
+
+
+546
+00:25:53,799 --> 00:25:56,960
+khóa riêng của chúng tôi và nếu  ví dụ: số mũ riêng
+
+547
+00:25:56,960 --> 00:25:59,520
+
+
+548
+00:25:59,520 --> 00:26:03,480
+nhỏ hơn n tăng lũy ​​thừa
+
+549
+00:26:03,480 --> 00:26:05,480
+0,27 thì chúng tôi
+
+550
+00:26:05,480 --> 00:26:08,520
+mất khoảng 2 phút để tìm
+
+551
+00:26:08,520 --> 00:26:10,000
+
+
+552
+00:26:10,000 --> 00:26:13,440
+giải pháp nếu chúng tôi lớn hơn thế
+
+553
+00:26:13,440 --> 00:26:16,440
+nếu khóa riêng của chúng tôi lớn hơn số đó
+
+554
+00:26:16,440 --> 00:26:19,840
+thì sẽ mất nhiều thời gian hơn và tôi đã không làm như vậy
+
+555
+00:26:19,840 --> 00:26:21,840
+có đủ thời gian với chiếc máy nhỏ của tôi
+
+556
+00:26:21,840 --> 00:26:24,480
+để mang lại bất kỳ kết quả tốt nào vì vậy điều
+
+557
+00:26:24,480 --> 00:26:25,960
+này là
+
+558
+00:26:25,960 --> 00:26:29,320
+do khi bạn có giá trị lớn hơn cho
+
+559
+00:26:29,320 --> 00:26:31,399
+khóa riêng tư, bạn phải tăng
+
+560
+00:26:31,399 --> 00:26:33,360
+kích thước của
+
+561
+00:26:33,360 --> 00:26:37,520
+ltis và độ phức tạp của thuật toán bị
+
+562
+00:26:37,520 --> 00:26:41,120
+chi phối bởi độ phức tạp  của llll
+
+563
+00:26:41,120 --> 00:26:44,480
+nên latis càng lớn thì
+
+564
+00:26:44,480 --> 00:26:48,399
+sẽ càng mất nhiều thời gian để tính
+
+565
+00:26:48,399 --> 00:26:53,000
+cơ sở mới nên về mặt lý thuyết chúng ta có thể tính
+
+566
+00:26:53,000 --> 00:26:55,480
+khóa riêng cho các khóa riêng lớn hơn
+
+567
+00:26:55,480 --> 00:26:59,720
+nhưng phải mất một thời gian dài nên
+
+568
+00:26:59,720 --> 00:27:03,120
+Bon và Dery đã đi đến kết luận
+
+569
+00:27:03,120 --> 00:27:06,520
+với kết quả đó  là
+
+570
+00:27:06,919 --> 00:27:09,840
+0,292 nhưng họ nghĩ đó là một
+
+571
+00:27:09,840 --> 00:27:13,039
+kết quả không tự nhiên và họ nghĩ rằng
+
+572
+00:27:13,039 --> 00:27:16,279
+bạn có thể tìm ra kết quả tốt hơn nhưng trong 15
+
+573
+00:27:16,279 --> 00:27:20,159
+năm không ai tìm thấy kết quả như vậy và
+
+574
+00:27:20,159 --> 00:27:22,720
+thực ra ừ một nhóm
+
+575
+00:27:22,720 --> 00:27:26,960
+các nhà nghiên cứu Trung Quốc ừ tại T Tina uh
+
+576
+00:27:26,960 --> 00:27:30,200
+Đại học Bắc Kinh đã tìm thấy điều đó và tôi  không
+
+577
+00:27:30,200 --> 00:27:31,679
+biết tờ giấy đó có hợp pháp không. Tôi chưa
+
+578
+00:27:31,679 --> 00:27:34,799
+thực sự xem xét nó nhưng có vẻ như
+
+579
+00:27:34,799 --> 00:27:38,080
+giới hạn đã được tính toán sai và bạn
+
+580
+00:27:38,080 --> 00:27:41,799
+không thể tìm thấy khóa riêng cho một
+
+581
+00:27:41,799 --> 00:27:45,720
+số lượng lớn như vậy nếu bạn muốn tìm
+
+582
+00:27:45,720 --> 00:27:48,200
+khóa riêng lớn và kỹ thuật này cũng đang được sử dụng
+
+583
+00:27:48,200 --> 00:27:51,559
+mất nhiều thời gian những gì bạn có thể làm là bạn có thể
+
+584
+00:27:51,559 --> 00:27:56,519
+thực hiện cuộc tấn công của chú thỏ với
+
+585
+00:27:56,519 --> 00:27:59,039
+giá trị D nhỏ và nếu nó không tìm thấy bất kỳ
+
+586
+00:27:59,039 --> 00:28:01,880
+kết quả nào thì bạn biết nó lớn hơn và
+
+587
+00:28:01,880 --> 00:28:04,519
+bạn có thể thử thực hiện tìm kiếm toàn diện bằng
+
+588
+00:28:04,519 --> 00:28:06,880
+Brute Force để tìm  giá trị của
+
+589
+00:28:06,880 --> 00:28:08,440
+
+
+590
+00:28:08,440 --> 00:28:13,279
+khóa riêng nên bây giờ là phần cuối của video của tôi. Tôi
+
+591
+00:28:13,279 --> 00:28:15,360
+hy vọng bạn hiểu mọi thứ. Đây
+
+592
+00:28:15,360 --> 00:28:17,440
+chỉ là video thứ hai của tôi cố gắng giải thích
+
+593
+00:28:17,440 --> 00:28:20,039
+một bài viết trong video này thực tế là
+
+594
+00:28:20,039 --> 00:28:24,399
+nhiều bài viết và tôi sẽ nói rõ hơn trong
+
+595
+00:28:24,399 --> 00:28:27,279
+các video tiếp theo và tôi hy vọng  uh bạn có thể
+
+596
+00:28:27,279 --> 00:28:29,120
+hiểu rõ hơn về
+
+597
+00:28:29,120 --> 00:28:31,519
+hai cuộc tấn công đó nhờ có tôi nhờ
+
+598
+00:28:31,519 --> 00:28:33,919
+video đó, vì vậy hãy theo dõi nhiều
+
+599
+00:28:33,919 --> 00:28:35,720
+video hơn và bạn cũng có thể kiểm tra blog của tôi trong
+
+600
+00:28:35,720 --> 00:28:39,519
+các liên kết bên dưới video đó, cảm ơn các bạn,
+
+601
+00:28:39,519 --> 00:28:42,519
+chúc mừng
+

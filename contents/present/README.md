@@ -47,24 +47,6 @@
 <!-- \end{itemize} -->
 <!-- \end{frame} -->
 
-<!-- !Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
-
-<!--! Độ dài =..... -->
-<!-- \begin{frame}{Vector ngắn nhất} -->
-<!-- -->
-<!-- \begin{itemize} -->
-<!-- \item Độ dài vector $v = (v_1, v_2, \dots, v_n)$ là: -->
-<!-- -->
-<!-- $$\|v\| = (v_1^2 + v_2^2 + \dots + v_n^2)^{\tfrac{1}{2}}$$ -->
-<!-- -->
-<!-- -->
-<!-- \end{itemize} -->
-<!-- -->
-<!-- \end{frame} -->
-
-<!-- @ Có nhiều vector ngắn nhất khi đi tìm gần như ngắn nhất (vì theo tg đa thức) -->
-<!-- @ Là vector đầu tiên (Chưa học LLL?????) + chứng minh -->
-<!-- @Có thể đưa xuống sau LLL -->
 
 
 
@@ -73,6 +55,10 @@
 <!-- Giới thiệu  Ngắn hơn + trực giao hơn -->
 
 
+<!-- quy trình Gram-Schmidt: -->
+<!-- quy trình Gram-Schmidt: -->
+<!-- quy trình Gram-Schmidt: -->
+<!-- quy trình Gram-Schmidt: -->
 <!-- quy trình Gram-Schmidt: -->
 
 
@@ -114,6 +100,39 @@
 <!-- 2 chiều -->
 <!-- n chiều -->
 <!-- Thuật toán LLL giảm lưới -->
+
+
+
+
+
+
+<!-- !Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
+
+<!--! Độ dài =..... -->
+<!-- \begin{frame}{Vector ngắn nhất} -->
+<!-- -->
+<!-- \begin{itemize} -->
+<!-- \item Độ dài vector $v = (v_1, v_2, \dots, v_n)$ là: -->
+<!-- -->
+<!-- $$\|v\| = (v_1^2 + v_2^2 + \dots + v_n^2)^{\tfrac{1}{2}}$$ -->
+<!-- -->
+<!-- -->
+<!-- \end{itemize} -->
+<!-- -->
+<!-- \end{frame} -->
+
+<!-- @ Có nhiều vector ngắn nhất khi đi tìm gần như ngắn nhất (vì theo tg đa thức) -->
+<!-- @ Là vector đầu tiên (Chưa học LLL?????) + chứng minh -->
+<!-- @Có thể đưa xuống sau LLL -->
+
+<!-- youtube -->
+<!-- youtube -->
+<!-- youtube -->
+<!-- youtube -->
+<!-- youtube -->
+<!-- youtube -->
+<!-- youtube -->
+<!-- youtube -->
 
 # Vận dụng tấn công RSA
 

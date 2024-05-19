@@ -1,0 +1,36 @@
+1
+00:00:00,199 --> 00:00:17,039
+vì vậy hãy tiếp tục thảo luận về cách llll giải quyết vấn đề Vector ngắn nhất một cách hiệu quả và xem xét nhanh các kết quả chính của chúng ta cho đến nay. ừ giả sử tôi có một mạng đã được llll rút gọn thành một tập hợp các vectơ cơ sở và vectơ cơ sở gram Schmid tương ứng.
+
+2
+00:00:17,039 --> 00:01:36,560
+trong trường hợp đó, chúng ta có kết quả đầu tiên sau đây đối với bất kỳ K nào bình phương độ lớn của cơ sở K gment Vector lớn hơn hoặc bằng bình phương độ lớn của cơ sở gram trước đó Vector nhân với một nửa bây giờ điều này không nhất thiết phải nói rằng  cái này lớn hơn nhưng nó nói lên rằng nó lớn hơn một số phần của Vector trước đó. Nói chung, chúng ta có thể xếp tầng xuống vectơ cơ sở lừa đảo đầu tiên đó bằng cách áp dụng liên tục bất đẳng thức này và cuối cùng bản thân các vectơ cơ sở Lattis có liên quan đến vectơ cơ sở gram Schmid bởi điều này bất đẳng thức bình phương độ lớn của vectơ mạng nhỏ hơn 2^ K trừ1 bình phương độ lớn của vectơ cơ sở K gr Schmid và điều này dẫn đến một kết quả khá ngạc nhiên vì vậy hãy lấy cơ sở lce của tôi và gam Schmid của chúng ta  vectơ cơ sở và hãy xem xét bất kỳ vectơ v nào trong mạng để vectơ v này là sự kết hợp tuyến tính của các vectơ cơ sở cho mạng trong đó các hệ số của tổ hợp tuyến tính đó bây giờ đều sẽ là số nguyên vì cơ sở gr là cơ sở nên
+
+3
+00:01:36,560 --> 00:02:46,040
+vectơ này  v Tôi phải có khả năng biểu diễn điều này dưới dạng tổ hợp tuyến tính của các vectơ cơ sở gramit trong đó các hệ số ở đây sẽ là số thực. Tôi không đảm bảo chúng sẽ là số nguyên và tôi nghi ngờ rằng chúng sẽ không như vậy bởi vì Các vectơ cơ sở Graham Schmid không bao gồm các thành phần số nguyên tuy nhiên tôi muốn tìm mối quan hệ giữa các hệ số của vectơ cơ sở ltis và các hệ số của Vector cơ sở giữa gravy vì vậy hãy bắt đầu bằng cách biểu thị vectơ v này như hai thứ khác nhau  trước hết là sự kết hợp tuyến tính của các vectơ cơ sở lce và sau đó là sự kết hợp tuyến tính của các vectơ cơ sở gr mid và vì nó giống nhau trong cả hai trường hợp nên cả hai đều bằng nhau nên bây giờ những gì tôi sẽ làm là tôi sẽ làm  để tận dụng thực tế là tích chấm sẽ giúp chúng ta cô lập một trong các hệ số ở đây vì vậy nếu tôi chấm cả hai tích với ừm một số Vector cơ sở grm thì cái nào thực sự không quan trọng vì các vectơ cơ sở Gramm hầu hết đều trực giao Các sản phẩm chấm ở phía bên phải sẽ biến mất, sản phẩm duy nhất tôi
+
+4
+00:02:46,040 --> 00:04:16,759
+còn lại là sản phẩm do VK star với VK star và điều đó có nghĩa là sản phẩm chấm bên phải ngôi sao VK hầu hết các sản phẩm này đều biến mất  đi và cái còn lại tôi còn lại là cái này và ngôi sao VK.  vkar sẽ là vkar bình phương  độ lớn trong khi đó hãy nhớ rằng quá trình rút gọn cơ sở gram Schmid của tôi mang lại cho tôi v i Star as v i ltis cơ sở Vector trừ đi tổng của các tích chấm với các vectơ cơ sở graur trước đó vì vậy nếu tôi chấm đúng giá trị với VK star  Ngôi sao VI VK VI làm ngôi sao VK trừ đi tổng này ở đây và một lần nữa tất cả các vectơ này trên thực tế là trực giao nên thuật ngữ này bị loại bỏ hoàn toàn và do đó ngôi sao VI VK giống với ngôi sao VI VK sản phẩm chấm của hai vectơ cơ sở gram Schmid sẽ  hoàn toàn giống với tích vô hướng của vectơ cơ sở Graham Schmidt với vectơ cơ sở mạng tương ứng, hầu hết các tích vô hướng ở đây sẽ bằng 0 vì I và K là các số khác nhau và vectơ cơ sở gr là trực giao, có nghĩa là hầu hết các sản phẩm này cũng sẽ bằng 0 và lần duy nhất chúng ta không nhận được
+
+5
+00:04:16,759 --> 00:04:26,639
+giá trị 0 là khi K uh khi tôi và K bằng nhau nên nếu tôi bằng K VK thì sao VK có giống VK không  ngôi sao.
+
+6
+00:04:26,639 --> 00:05:35,039
+Ngôi sao VK là bình phương độ lớn của ngôi sao VK. Điều thú vị về điều này không phải là điều ngạc nhiên nhưng chắc chắn đó là một trong những điều ngạc nhiên đó là chúng ta biết rằng các vectơ cơ sở Graham Schmid là trực giao. Chúng ta biết rằng các vectơ cơ sở mạng nói chung không phải là  sẽ trực giao hoàn hảo nhưng mọi Vector mạng sẽ trực giao với mọi vectơ cơ sở gram Schmid ngoại trừ Vector cơ sở Graham Schmid mà nó sẽ không trực giao và vì vậy bây giờ chúng ta có thể hoàn thành một thật ngạc nhiên vì vậy bây giờ nếu tôi tìm thấy cùng một Vector được biểu thị trong các pha Graham Schmid so với cùng một Vector được biểu thị bằng cách sử dụng Vector cơ sở lce. Tôi bắt đầu với việc tôi tạo thành tích chấm và ở phía bên phải rằng các tích chấm sẽ bằng 0 trên ngoại lệ duy nhất của ngôi sao VK ở phía bên trái, các tích số chấm đều sẽ bằng 0 ngoại trừ tích số chấm với VK và do đó điều đó mang lại cho tôi AK ltis Vector hấp dẫn giữa các vector faes Vector BK lấy cơ sở Schmid Vector squ tuy nhiên chúng tôi
+
+7
+00:05:35,039 --> 00:05:49,240
+xác định được rằng 2 sản phẩm này sản phẩm này làm giống  sản phẩm chấm kia mà kết quả này lại đây VK vkar là vi.
+
+8
+00:05:49,680 --> 00:06:58,879
+vkar vì vậy điều đó cho tôi biết rằng hai cái đó sẽ giống nhau nên một lần nữa tích vô hướng của các cơ sở ltis với các cơ sở Graham Schmid sẽ giống như tích vô hướng của cơ sở gram Schmid với cơ sở gram Schmid bây giờ  nói rằng hai tích vô hướng này sẽ giống nhau và điều đó cho tôi biết rằng A của tôi bằng B của tôi nói cách khác là thật ngạc nhiên nếu tôi có một vectơ là tổ hợp tuyến tính của các vectơ mạng của tôi thì tôi có thể biểu thị Vector đó dưới dạng một sự kết hợp tuyến tính của các hệ số cơ sở Graham Schmid của tôi sử dụng các hệ số giống hệt nhau nên tất cả các số nguyên này nhất thiết có nghĩa là tất cả các số nguyên này cũng phải là số nguyên mặc dù nhìn chung các vectơ cơ sở lus này các vectơ cơ sở gr mid này sẽ không có các thành phần số nguyên nên  hãy đặt mọi thứ lại với nhau, giả sử tôi có một số Vector thực sự giải được bài toán Vector ngắn nhất cho khoảng ltis bằng những   vectơ cơ sở gram Schmid tương ứng vì nó là một Vector mạng. Tôi phải có Vector này là tổng của
+
+9
+00:06:58,879 --> 00:08:18,360
+một tổ hợp tuyến tính nào đó của các vectơ cơ sở ltis trong đó ít nhất một trong các AIS khác 0 nên điều đó cho tôi biết AKsqu lớn hơn hoặc bằng 1 vì các hệ số giống nhau có thể được sử dụng để thu được V bằng cách sử dụng cơ sở Graham Schmid, chúng ta cũng có cùng một Vector đó là tổng của  một sự kết hợp tuyến tính của các vectơ cơ sở Graham Schmid trong đó tôi biết ít nhất một trong số này là số nguyên lớn hơn có giá trị tuyệt đối lớn hơn hoặc bằng một để cho tôi biết rằng bình phương độ lớn lớn hơn hoặc bằng bình phương  của VK a ^ bình phương lớn hơn hoặc bằng 1 nên tôi biết rằng bình phương độ lớn phải chắc chắn lớn hơn hoặc bằng vk2 một lần nữa thay thế giá trị này bằng giá trị nhỏ hơn và điều đó cho tôi biết rằng độ lớn udesqu  của Vector ngắn nhất của tôi là 1/2 đến k^^ 2 Kus 1 V1 2 đối với một số giá trị của K, chúng tôi không hoàn toàn chắc chắn về giá trị nào nhưng chúng tôi biết rằng K như vậy phải tồn tại tốt, giá trị nhỏ nhất là bao nhiêu. Tôi có thể làm tốt điều này vì hệ số  ở đây
+
