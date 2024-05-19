@@ -25,3 +25,4 @@ là kỹ thuật quan trọng trong thuật toán LLL
 <!-- trang 40 -->
 
 
+x+1+1 = x + 2
