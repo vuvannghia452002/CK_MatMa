@@ -1,0 +1,228 @@
+1
+00:00:00,330 --> 00:00:09,510
+Bây giờ chúng ta hãy xem các giải pháp cho bài tập phá RSA này.  Tôi bắt đầu với một vài ghi chú.  Đầu tiên, tôi nói bây giờ chúng ta sẽ sử dụng số có hai chữ số.
+
+2
+00:00:10,020 --> 00:00:26,010
+Vậy A là 0001, Z là 25. Điều đó làm cho mọi thứ trở nên đẹp đẽ và có cùng kích thước.  Tôi nói rằng văn bản mã hóa sau đây không chứa phần đệm, nghĩa là bạn có thể phá vỡ chúng bằng các phương pháp tôi đã mô tả trong khóa học.
+
+3
+00:00:26,550 --> 00:00:34,920
+Và cuối cùng, tôi nói bạn có thể thực hiện những phép tính này bằng máy tính hoặc Wolfram Alpha.  Vì vậy, hãy làm câu hỏi một.
+
+4
+00:00:34,920 --> 00:00:43,980
+Và tôi yêu cầu bạn mã hóa từ voi thành số có hai chữ số để hiểu ý đó.  Vì vậy, con voi là từ.
+
+5
+00:00:44,460 --> 00:01:02,970
+Vì vậy, con voi.  Và sau đó tôi yêu cầu bạn viết cho chúng tôi số có hai chữ số.  Vậy đó là số không 411 không 415 0700 13 và 19.
+
+6
+00:01:04,510 --> 00:01:23,050
+Ông chia từ thành các khối gồm hai chữ cái và viết các giá trị số của mỗi khối.  Vì vậy, bây giờ chúng ta sẽ chia từ thành các khối gồm hai chữ cái e l, e, p, h, a và an t và sẽ viết các giá trị của chúng.
+
+7
+00:01:23,050 --> 00:01:52,350
+Và đó chỉ là 0411. 041507001319. Bây giờ chúng tôi sẽ mã hóa các khối này bằng RSA.  Với mô đun m bằng 2773 và khóa mã hóa E bằng 1147, điều này không quá khó thực hiện với máy tính.
+
+8
+00:01:52,350 --> 00:02:07,420
+Làm thế nào bạn có thể nói nếu một giờ viết bị chặn?  Và nếu không.  Như thế.  Chúng tôi có các giá trị số của chúng tôi.  04110415.
+
+9
+00:02:08,760 --> 00:02:30,110
+07001319. Và bây giờ chúng ta đánh nó bằng công thức p sang lũy ​​thừa e và.  Và vâng, với máy tính của chúng ta, chúng ta có thể nói rằng đó sẽ là 1816 1429.
+
+10
+00:02:31,330 --> 00:02:51,980
+1225. Và 1511. Vậy những số điện thoại đó sẽ là bản mã.  Nhưng tôi muốn chỉ ra rằng điều này ẩn đi tần số của chữ E và nó ẩn đi chữ A, vốn luôn bằng 0 cho đến nay.
+
+11
+00:02:52,190 --> 00:03:02,090
+Bây giờ nó cũng đang che giấu A đó.  Vì vậy, bây giờ chúng ta hãy xem xét một số phương pháp RSA phá vỡ.  Vì vậy, những điều này đã được mô tả trong ghi chú khóa học.
+
+12
+00:03:02,340 --> 00:03:19,850
+Chúng ta hãy xem xét.  Vì vậy, chúng tôi có một bản mã bị đánh cắp ở đây.  Vậy chúng ta có ba số ở đây.  Nó được gửi bằng RSA không có phần đệm và khóa công khai M bằng 2773 và E bằng 1147 chính là những con số tôi đã sử dụng trước đây.
+
+13
+00:03:20,360 --> 00:03:29,510
+Vì vậy, hãy xử lý thông điệp gốc bằng cách sử dụng phương pháp tấn công bằng văn bản gốc đã chọn.  Vì vậy, chúng tôi nghĩ văn bản mã hóa là một trong bốn từ có thể có.
+
+14
+00:03:29,810 --> 00:03:36,920
+Vì vậy, vì tất cả đều có chủ đề động vật nên bạn có thể đặt cầy mangut, thỏ hoặc gấu trúc.  Đó là từ nào?
+
+15
+00:03:36,950 --> 00:03:45,560
+Vì vậy, thực sự, chúng tôi chỉ kiểm tra bốn từ này bằng cách sử dụng khóa chung và sau đó xem từ nào khớp với văn bản mật mã bị đánh cắp.
+
+16
+00:03:45,980 --> 00:03:57,060
+Chà, chúng ta có ba số ở đây, và chúng giống như sáu chữ cái hoặc tám chữ cái.  Vì vậy, chúng được viết theo khối và nó có thể là một từ có sáu chữ cái trong khối hai.
+
+17
+00:03:57,080 --> 00:04:08,840
+Vì vậy tôi sẽ loại trừ Mongoose ngay lập tức.  Vậy là cầy mangut quá dài.  Mongoose quá dài.  Bây giờ, đó sẽ là một vấn đề nếu nó có phần đệm.
+
+18
+00:04:09,560 --> 00:04:16,760
+Nếu nó có phần đệm thì phần đệm sẽ làm cho tất cả các từ này có cùng độ dài, điều này khiến cho việc tìm ra từ nào là từ nào trở nên khó khăn hơn.
+
+19
+00:04:17,570 --> 00:04:28,950
+Bây giờ chúng ta hãy kiểm tra một số từ khỉ đầu chó, thỏ hoặc gấu trúc.  Hãy kiểm tra hai chữ cái đầu tiên của rabbit hoặc raccoon vì cả hai đều bắt đầu bằng chữ R và sau đó là A.
+
+20
+00:04:29,480 --> 00:04:56,600
+Vì vậy, nếu tôi mã hóa r a, thì r a được mã hóa thành 1700. Và hãy đánh giá trị đó bằng khóa chung.  Đối với khóa công khai, chúng tôi tăng 1700 lên số mã hóa, 1147, và con số đó sẽ bằng 1015 vào tháng 3.
+
+21
+00:04:57,800 --> 00:05:12,800
+2000 đến 773. Thế đấy.  2773. Nó khớp với khối đầu tiên của bản mã.  Vì thế.  Ồ, đó là một manh mối.
+
+22
+00:05:13,040 --> 00:05:21,620
+Vì vậy, anh ấy sẽ không quay lại. Tôi nghĩ đó là thỏ hoặc gấu mèo, nhưng tôi sẽ kiểm tra cặp chữ cái tiếp theo để tìm hiểu.
+
+23
+00:05:22,260 --> 00:05:32,630
+Tôi sẽ sử dụng.  Hãy thử gấu trúc.  Thế là cô ấy dùng chữ C.  Vì vậy nếu tôi sử dụng C L, tôi sẽ nhận được 0214.
+
+24
+00:05:34,290 --> 00:05:55,680
+Và tôi sẽ đánh nó.  Với khóa mã hóa.  Và nếu tôi làm điều đó, tôi sẽ đạt được mục tiêu.  Vào tháng 3 năm 2773 AU trùng với giờ đen thứ hai nên rất có thể sẽ có gấu trúc.
+
+25
+00:05:55,690 --> 00:06:09,250
+Và nếu muốn, bạn có thể thử nghiệm B.B. ở Rabbit và bạn sẽ thấy rằng nó không hoạt động.  Vì vậy, nếu bạn làm điều đó, bạn kiểm tra B.B. nó sẽ là 0101.
+
+26
+00:06:10,720 --> 00:06:23,470
+Và nếu chúng ta mã hóa nó bằng khóa mã hóa thì nó sẽ là 1353. Nhưng nó không khớp với văn bản mã hóa.
+
+27
+00:06:24,280 --> 00:06:30,790
+Vì vậy, vâng, gấu trúc nghe có vẻ phù hợp với tôi.  Và thực sự, nếu bạn tiếp tục đi, tôi sẽ kiểm tra dãy nhà cuối cùng ở đó.
+
+28
+00:06:31,030 --> 00:06:47,090
+Chữ O và đó sẽ là một cho.  Một ba.  Và nếu bạn mã hóa điều đó.  Không có gì ngạc nhiên, nhưng nó sẽ mã hóa thành khối cuối cùng trong văn bản mật mã.
+
+29
+00:06:47,240 --> 00:06:58,610
+Vậy rốt cuộc nó là từ gấu trúc.  Được rồi, vậy chúng ta hãy xem câu hỏi thứ ba.  Chúng ta lại có một hòn đá trong bản mã.
+
+30
+00:06:58,880 --> 00:07:12,290
+Đó là những giá trị.  Tôi đã không sử dụng RSA mà không có phần đệm và khóa chung như trước.  Lần này tôi quyết định sử dụng một cuộc tấn công bằng bản mã đã chọn bằng cách sử dụng x bằng hai.
+
+31
+00:07:12,830 --> 00:07:20,840
+Vì vậy, trước hết, chúng ta sẽ xem xét X đó trong mã nguyên tố của chúng ta.  Vì vậy, được rồi, thủ tướng.  Tôi biết điều đó có nghĩa là gì.
+
+32
+00:07:21,830 --> 00:07:30,530
+Vậy chúng ta có thể có thuật toán Euclid ở đây.  Nhưng nó không quá khó.  Thuật toán Euclid.  Vì vậy, chúng tôi làm điều đó.
+
+33
+00:07:31,040 --> 00:07:44,300
+Vì vậy, chúng ta đang tìm cách chứng minh X và M. Được rồi, số nguyên tố.  Đúng vậy.  M là 2773 ở bên trái.  Cái đó bằng cái gì đó nhân hai cái gì đó.
+
+34
+00:07:45,410 --> 00:07:55,880
+Hóa ra hệ số ở đó là 1386 và phần còn lại là một.  Và điều đó kết thúc thuật toán Euclid ngay lập tức đối với chúng ta.
+
+35
+00:07:55,910 --> 00:08:07,370
+Điều đó thật tuyệt.  Vì vậy, vâng, tất cả đều k nguyên tố.  Ước chung lớn nhất sẽ là 1.  Vậy nghịch đảo nhân của X theo modulo m là bao nhiêu?
+
+36
+00:08:07,850 --> 00:08:19,100
+Vâng, tôi cần đảo ngược thuật toán Euclid ở đây để tôi có một tổ hợp bằng nhau của các số ban đầu, tức là hai.
+
+37
+00:08:20,800 --> 00:08:40,570
+Và.  2773. Chà, điều đó khá dễ để đảo ngược.  Và đó chỉ là một lô của 2773 trừ đi 1386.
+
+38
+00:08:40,840 --> 00:08:50,140
+Vì vậy, bây giờ nó thực sự là -1386 ở đó.  Vậy hệ số đó sẽ nghịch đảo.  Vậy nếu x bằng hai.
+
+39
+00:08:51,780 --> 00:09:04,910
+Nếu X bằng hai thì nghịch đảo mà tôi sẽ gọi là x gạch ngang.  Bằng -1386, và tôi có thể để nó như thế, nhưng hãy làm cho nó dương.
+
+40
+00:09:05,240 --> 00:09:23,910
+Và vì vậy tôi sẽ chỉ thêm mô đun để tạo thành 1387. Một lần nữa, đó là ở MOD 2773. Hãy tiếp tục.  Vì vậy, phần tiếp theo yêu cầu bạn tính X lũy thừa e.
+
+41
+00:09:23,910 --> 00:09:44,220
+Và vì vậy chúng ta biết x là gì.  Đó là hai, chúng ta biết E là gì.  Bây giờ là 1147 nhưng vẫn phải sử dụng máy tính vì câu trả lời sẽ là 1134 và đó là vào tháng Ba.
+
+42
+00:09:45,750 --> 00:09:58,000
+2773. Sau đó Phần D yêu cầu bạn tạo mật mã thứ hai.  C2, bằng C1 nhân với giá trị đó, vừa được tính ra.
+
+43
+00:09:58,660 --> 00:10:23,100
+Vì vậy, vì vậy c1.  Là bản mã, là a178.  1735. Và 0903. Và chúng ta đang nhân số đó để có được C, chúng ta đang nhân số đó với giá trị bằng chính số 1134.
+
+44
+00:10:24,730 --> 00:10:41,780
+Và chúng tôi nhận được.  21961423. Và 0765. Vậy đó cũng là mật mã của chúng tôi, không có nghĩa gì cả, nhưng đó là mật mã giả của chúng tôi.
+
+45
+00:10:42,260 --> 00:10:51,410
+Bây giờ tôi đã có thể giải mã được hai mật mã và tôi sẽ nhận được bản giải mã trông như thế này.  Tin nhắn ban đầu là gì?
+
+46
+00:10:52,620 --> 00:11:14,510
+Vì vậy, chúng ta có 0061. Số 0 từ 0 đến 6. Và 1208. Bây giờ, khi bạn đã giải mã được nó, kết quả là nó chỉ là một văn bản đơn giản nhân với x và mod m.
+
+47
+00:11:15,520 --> 00:11:28,060
+Vì vậy, bây giờ hãy kết thúc để có được văn bản đơn giản, nhân số này với X. Vì vậy, chúng ta lấy dòng ở trên rồi nhân nó với x nghịch đảo và đó là mod và.
+
+48
+00:11:29,230 --> 00:11:40,090
+Chúng ta đã tính nghịch đảo X, đó là 1387 từ phần B. Vì vậy, tôi đang nhân với giá trị đó và tôi đang thực hiện điều đó trong số học mô-đun.
+
+49
+00:11:40,360 --> 00:11:56,440
+Và câu trả lời cuối cùng sẽ là 1417. 0013. Không sáu.  Không bốn.  Và cuối cùng, chúng ta có được hai chữ cái.
+
+50
+00:11:57,550 --> 00:12:08,560
+Những gì chúng ta nhận được khi biến nó thành các chữ cái, chúng ta nhận được o, o, a và g e.  Đó là sự trở lại của sự bất ngờ.  Quả cam.
+
+51
+00:12:08,570 --> 00:12:19,870
+Thế đấy.  Vì vậy, màu cam sẽ quay trở lại giống như chúng ta đã làm ở đầu khóa học này.  Cuối cùng, chúng ta hãy xem câu hỏi về một viên đá khác trong bản mã.
+
+52
+00:12:20,320 --> 00:12:29,100
+Vì vậy, một câu hỏi dành cho SAS.  Ở đây chúng ta có một bản mã bị đánh cắp.  Nó được gửi bằng RSA không có phần đệm và cùng khóa chung mà chúng tôi đã có trước đây.
+
+53
+00:12:29,110 --> 00:12:45,820
+Mô-đun M bằng 2773 và khóa mã hóa E bằng 1147. Lần này tôi sẽ yêu cầu bạn giải mã này bằng cách tập trung mô-đun và xử lý thông điệp gốc.
+
+54
+00:12:46,120 --> 00:13:00,160
+Và tôi sẽ không cung cấp cho bạn giải pháp cho câu trả lời này.  Tôi sẽ để điều này như một thử thách.  Đây là câu hỏi cuối cùng của chúng tôi trong khóa học và tôi nghĩ sẽ rất tuyệt nếu coi đó là một thử thách đối với những phần thưởng không có giải thưởng của chúng tôi.
+
+55
+00:13:00,340 --> 00:13:12,670
+Chúng tôi đang chơi vì vinh quang.  Nhưng nếu bạn thực hiện tốt câu trả lời này, bạn có thể gửi tin nhắn cho tôi nếu muốn, trên Udemy, nói với tôi rằng bạn đã giải quyết được tin nhắn này và tôi sẽ không gửi cho bạn bất kỳ giải thưởng nào.
+
+56
+00:13:12,880 --> 00:13:20,170
+Nhưng tôi sẽ gửi cho bạn một số lời chúc mừng.  Vâng, chúng tôi chỉ đang chơi trò tự mãn ở đây thôi, chúc bạn may mắn với điều đó.
+
+57
+00:13:20,590 --> 00:13:31,480
+Vì vậy, đó là thử thách cuối cùng và đó là video giải pháp cuối cùng. Vì vậy tôi hy vọng bạn sẽ thích những video bài giảng tiếp theo.
+

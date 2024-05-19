@@ -1,0 +1,168 @@
+1
+00:00:00,360 --> 00:00:09,090
+Hãy để tôi quay lại ý tưởng về chiếc hộp bị khóa một lần nữa.  Vì vậy, lần này hãy tưởng tượng tôi muốn phát miễn phí cho mọi người một hộp.
+
+2
+00:00:09,090 --> 00:00:14,550
+Mọi người đều có thể có một chiếc hộp và mọi người đều có thể có một ổ khóa.  Tôi đang tặng ổ khóa.  Mọi người đều có thể có một cái.
+
+3
+00:00:14,790 --> 00:00:20,940
+Và nếu bạn muốn gửi cho tôi một tin nhắn bí mật, hãy bỏ nó vào hộp, khóa nó bằng ổ khóa và gửi cho tôi.
+
+4
+00:00:21,240 --> 00:00:28,680
+Vì vậy, điều đó có nghĩa là nếu nó bị đánh cắp, nó sẽ bị khóa bằng ổ khóa.  Nhưng nếu ai đó muốn lấy trộm chìa khóa thì họ không thể.
+
+5
+00:00:28,680 --> 00:00:37,470
+Bởi vì tôi đã không đưa chìa khóa cho ai cả.  Chỉ có tôi mới có chìa khóa, một chìa khóa riêng bí mật mà tôi có thể dùng để mở ổ khóa.
+
+6
+00:00:37,890 --> 00:00:45,150
+Đây là ý tưởng của RSA, nhưng chúng ta hãy xem nó trông như thế nào về mặt toán học.  Vì vậy, chúng tôi sẽ đi đến ghi chú của chúng tôi cho việc này.
+
+7
+00:00:45,600 --> 00:00:52,410
+Vì vậy, những gì tôi sắp làm là cung cấp cho bạn quy trình RSA để bắt đầu đọc câu này.
+
+8
+00:00:52,770 --> 00:01:00,750
+Nếu thực tế không thể suy ra khóa giải mã từ khóa mã hóa thì hệ thống được gọi là bất đối xứng.
+
+9
+00:01:00,990 --> 00:01:09,840
+Điều này cho phép bạn tự do xuất bản khóa mã hóa được gọi là khóa chung trong khi vẫn giữ bí mật khóa giải mã được gọi là khóa riêng.
+
+10
+00:01:10,320 --> 00:01:28,260
+RSA là một ví dụ về hệ thống bất đối xứng.  Vì vậy, về cơ bản điều này giống như có một ổ khóa.  Vì vậy, có một phương pháp để khóa và sau đó có một phương pháp khác để mở khóa và rất khó để tìm ra khóa giải mã cho khóa mã hóa.
+
+11
+00:01:28,620 --> 00:01:35,730
+Vì vậy, hãy mô tả quy trình chung bằng cách sử dụng số nhỏ nhất có thể.  Vì vậy, tôi sẽ mô tả cách thức hoạt động của quy trình này.
+
+12
+00:01:36,030 --> 00:01:53,820
+Vì vậy, RSA đã được thiết lập.  Vì vậy, chúng ta cần hai số nguyên tố và tôi sẽ gọi những số nguyên tố này.  Q một.  Và Q2 là thành viên chính của chúng tôi và chúng tôi sẽ đặt em bằng Q1 lần.
+
+13
+00:01:53,820 --> 00:02:08,820
+Q2, chúng ta sẽ đặt một thứ gọi là A bằng Q1.  Trừ một trong ngoặc nhân với Q hai trừ một trong ngoặc như thế.
+
+14
+00:02:09,810 --> 00:02:20,670
+Và chúng ta sẽ chọn một số E. Số này nhỏ hơn số nguyên tố được mã hóa thành a.  Được rồi.  Đó là sự thiết lập.
+
+15
+00:02:21,120 --> 00:02:35,820
+Vậy chúng ta có hai số nguyên tố và sau đó tất cả những điều này được suy ra từ hai số nguyên tố đó.  Và do đó, khóa mã hóa có thể là số bất kỳ, nhưng bây giờ nó phải nhỏ hơn và k nguyên tố đến 8 để mã hóa.
+
+16
+00:02:36,540 --> 00:02:52,260
+Vì vậy, nếu chúng ta muốn mã hóa một chữ cái trong bản rõ P thành một bản mã, đó là chữ C, chúng ta sử dụng công thức c này.  Nó đồng dạng với p lũy thừa e tại mod m.
+
+17
+00:02:53,890 --> 00:03:08,590
+Quý ngài.  E là khóa mã hóa của bạn và theo nhiều cách, bạn có thể coi công thức đó rất giống với công thức mã hóa cộng, công thức mã hóa nhân mà chúng ta đã thấy ở Phần một.
+
+18
+00:03:09,070 --> 00:03:15,040
+Nhưng lần này chúng ta không cộng, không nhân, chúng ta lấy giá trị của bản rõ và nâng lên lũy thừa.
+
+19
+00:03:16,150 --> 00:03:25,580
+Vì thế các số E và M. Công bố và khóa công khai trước đây để hiểu rõ hơn về thông điệp.  Mọi người đều được phép biết điều đó.
+
+20
+00:03:26,120 --> 00:03:35,240
+Vì vậy, khi tạo mật mã này, bạn chỉ cần cho đi giá trị E và M để người khác có thể gửi cho bạn những tin nhắn bí mật.
+
+21
+00:03:36,650 --> 00:03:50,270
+Ví dụ.  Vì vậy hãy.  Q một bằng.  Đó là số nguyên tố và.  Q tới.  Bằng năm.  Đó là một số nguyên tố khác.
+
+22
+00:03:50,990 --> 00:04:02,240
+Vậy thiết lập của chúng ta là gì?  Chúng ta có M, đó là mô đun của chúng ta.  M bằng hai lần năm.  Bạn nhân các số nguyên tố và tất nhiên bạn sẽ có được 10.
+
+23
+00:04:03,140 --> 00:04:14,690
+Và A và a bằng nhau.  Vâng, chúng ta trừ đi một từ mỗi số nguyên tố và sau đó nhân lên.  Vậy nó là một nhân bốn, bằng bốn.
+
+24
+00:04:16,090 --> 00:04:25,250
+Và bây giờ chúng ta sẽ chọn số mũ hoặc khóa mã hóa e bằng.  Bây giờ nó phải nhỏ hơn và k nguyên tố a.
+
+25
+00:04:25,730 --> 00:04:42,550
+Trong ví dụ nhỏ này, chúng ta thực sự không có nhiều sự lựa chọn.  Vậy bằng ba.  Chúng ta sẽ có các lựa chọn khi sử dụng số lớn hơn, nhưng những số mà chúng ta sắp làm việc phải nhỏ hơn giá trị và mô đun.
+
+26
+00:04:43,180 --> 00:04:51,430
+Vì vậy, tôi định gửi cho bạn một tin nhắn, nhưng tôi bị hạn chế ở đây vì tôi chỉ có một ví dụ nhỏ, vì vậy tôi sẽ sử dụng các chữ cái ít hơn mười.
+
+27
+00:04:51,970 --> 00:04:58,720
+Vì vậy, đây là tin nhắn.  Trứng ung.  Được rồi, thật không may là tôi đã có một bữa sáng tồi tệ.  Tôi đang gửi tin nhắn trứng xấu.
+
+28
+00:04:59,140 --> 00:05:08,380
+Và trong các giá trị số, thì ong là một, từ 0 đến 3, v.v.  Và bây giờ tôi sẽ giải quyết vấn đề đó bằng một công thức.
+
+29
+00:05:08,590 --> 00:05:27,080
+Công thức là mật mã phù hợp với.  AP có thể cung cấp năng lượng cho e vào tháng 3 hoặc một cách dễ dàng trước khi tôi thực sự chia tay các bước mojo, tôi sẽ đến e Peter Power E trước và vì vậy E là ba.
+
+30
+00:05:27,380 --> 00:05:42,470
+Vì vậy, tôi đang giữ những con số.  Được rồi, vậy một lập phương là 102203 lập phương là 27 ba nhân ba nhân ba bốn nhân bốn nhân bốn nhân bốn là 64 và sáu lập phương.
+
+31
+00:05:42,680 --> 00:05:53,690
+Tôi sẽ nói lại với bạn là 216 và 216.  Vậy đó là P mũ E và bây giờ chúng ta sẽ thực hiện bước modulo và đó là số mười của tôi.
+
+32
+00:05:53,690 --> 00:06:00,980
+Ồ, điều đó thật dễ dàng.  Mười của tôi vì nó là phần dư của phép chia cho mười.  Nó chỉ là chữ số cuối cùng.
+
+33
+00:06:01,460 --> 00:06:13,370
+Vậy đó sẽ là một số 07a cho số sáu và số sáu.  Và đó chính là mật mã bạn đã gửi.  Vì vậy, bạn gửi nó như tin nhắn của bạn.
+
+34
+00:06:13,970 --> 00:06:25,130
+Và quy trình là vậy.  Nó thực sự không khó đến thế.  Nó không khó hơn phép nhân, không thực sự, hay phép cộng được nâng lên thành lũy thừa ở đây.
+
+35
+00:06:26,090 --> 00:06:33,170
+Nhưng tiếp theo chúng ta sẽ xem xét cách bạn giải mã tin nhắn này.  Bây giờ, đây là nơi chúng ta sẽ làm khá nhiều việc.
+
+36
+00:06:33,590 --> 00:06:42,980
+Vì vậy có khá nhiều công việc liên quan đến việc giải mã những tin nhắn này.  Trên thực tế, chúng ta hãy xem những gì chúng ta cần để giải mã một tin nhắn.
+
+37
+00:06:43,370 --> 00:06:54,080
+Vì vậy, chuyển sang phần giải mã RSA tiếp theo, chúng ta sẽ phải tìm khóa giải mã.  Tôi gọi nó là D để giải mã vì đây là điều chúng tôi muốn.
+
+38
+00:06:54,680 --> 00:07:06,530
+Bản rõ đồng dạng với lũy thừa C.  D Vậy đó là quy trình tương tự mod m nhưng nó chỉ đảo ngược những gì chúng ta đã làm trước đây.
+
+39
+00:07:06,560 --> 00:07:16,400
+Vì vậy, nếu tôi gõ nó vào mật mã, tôi sẽ lấy lại được bức thư gốc.  Vậy nói cách khác, chúng ta cần tìm số d sao cho.
+
+40
+00:07:16,970 --> 00:07:45,350
+Vì vậy, tôi muốn bản rõ đồng dư với C lũy thừa D Và c0c là bản rõ lũy thừa e trong ngoặc và trong đó là lũy thừa của D, nhưng nó đồng dư hoặc bằng p lũy thừa e lần  D bởi vì đó là cách hoạt động của số mũ, đó là cách hoạt động của lũy thừa.
+
+41
+00:07:46,220 --> 00:08:02,450
+Và đây sẽ là số học mod m.  Vì vậy, đó là những gì chúng tôi đang tìm kiếm.  Chúng tôi đang tìm kiếm một giá trị nào đó đúng, ba kết quả tiếp theo sẽ cho thấy D tồn tại và cách tìm thấy nó.
+
+42
+00:08:02,750 --> 00:08:13,580
+Nhưng tôi nghĩ chúng ta sẽ tạm dừng ở đây và tôi sẽ đưa kết quả vào video tiếp theo.  Chúng ta sẽ có một số kết quả toán học thực tế có tên toán học phù hợp.
+

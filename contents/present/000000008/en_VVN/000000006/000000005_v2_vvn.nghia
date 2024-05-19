@@ -1,0 +1,264 @@
+1
+00:00:00,600 --> 00:00:09,660
+Bây giờ chúng ta đã có những kết quả toán học này, chúng ta nên sẵn sàng xem xét việc giải mã RSA.  Vì vậy, hãy ghi chép và chúng ta bắt đầu.
+
+2
+00:00:09,870 --> 00:00:16,590
+Vì vậy, việc giải mã RSA ở đây sẽ sử dụng Định lý nhỏ Fermat và định lý số dư Trung Hoa.
+
+3
+00:00:17,220 --> 00:00:26,080
+Vì vậy, trước tiên chúng ta sẽ nhớ lại việc thiết lập RSA.  Nếu bạn còn nhớ cách chúng tôi thiết lập RSA thì có hai số nguyên tố là Q1 và Q2.
+
+4
+00:00:26,100 --> 00:00:36,060
+Đúng vậy.  Nhưng trong. Vậy chúng ta có các số nguyên tố Q1, Q2.  Chúng ta có môđun M, bằng Q một nhân Q hai.
+
+5
+00:00:36,720 --> 00:00:46,110
+Chúng ta có cái này gọi là A, nó bằng Q một trừ một trong ngoặc nhân với Q hai trừ một.
+
+6
+00:00:46,890 --> 00:00:56,460
+Và chúng ta có E, là khóa mã hóa, và đó là số nguyên tố K nguyên tố A là thiết lập RSA.
+
+7
+00:00:57,390 --> 00:01:18,930
+Bây giờ có một khóa giải mã trong đó loại đẳng thức giải mã sao cho x mũ e nhân d đồng dư với x mark m nên tôi khẳng định nó tồn tại một khóa giải mã sẽ đưa bạn trở lại giá trị ban đầu.
+
+8
+00:01:19,720 --> 00:01:48,740
+Đẹp với mọi số nguyên x.  Khóa giải mã là nghịch đảo nhân của E modulo a.  Và tôi e nhân d bằng với một mod a nên vâng, điều đó thực sự khá ngạc nhiên vì mod a sắp ra mắt ở đây thay vì là mod Q mod A Yeah.
+
+9
+00:01:49,220 --> 00:01:57,470
+Khóa giải mã là nghịch đảo nhân của E modulo a Vâng, tôi phải chứng minh điều này nên chúng ta hãy làm điều đó.
+
+10
+00:01:57,470 --> 00:02:20,370
+Đây là bằng chứng của chúng tôi.  Vì vậy, nếu chúng ta có E và một số nguyên tố CO là một phần của thiết lập, nếu ở dạng số nguyên tố A-OK, thì tiếng chuông cảnh báo e và một số nguyên tố cùng có nghĩa là chúng ta có thể thực hiện điều này s nhân e cộng t thời a bằng một.
+
+11
+00:02:22,700 --> 00:02:40,760
+Chắc chắn rồi.  Tương tự, khi đó chúng ta nói s e đồng dư với một mod a s vì t a là bội số của A biến mất.
+
+12
+00:02:41,540 --> 00:02:59,720
+Vì vậy, chúng ta có 1 trên 1 mod a do đó nghịch đảo nhân của E modulo a là s.  Đó là hệ số ở phía trước chữ E và hãy để khóa giải mã D bằng s.
+
+13
+00:03:00,620 --> 00:03:21,620
+Vì vậy, điều này tồn tại.  Chúng tôi biết nó tồn tại vì những gì chúng tôi vừa nói.  Vì vậy, điều này tồn tại.  Nhưng liệu nó có giải mã được các thông điệp để chỉ ra rằng x lũy thừa e d đồng dạng với x mod m với mọi số nguyên x.
+
+14
+00:03:22,370 --> 00:03:31,610
+Những gì chúng ta sẽ làm trước tiên là chứng minh điều đó đúng trong mod q một và chúng ta sẽ chứng minh điều đó đúng trong Mod Q hai.
+
+15
+00:03:32,600 --> 00:03:44,000
+Sau đó, bạn có thể sử dụng định lý số dư Trung Hoa, để chứng minh rằng nó đúng theo modulo m, mà tôi có thể sẽ viết ở đây, đó là Q một nhân Q hai.
+
+16
+00:03:47,710 --> 00:04:08,410
+Vì vậy, hãy phá vỡ điều này và chứng minh nó đúng vào tháng Ba.  Q một.  Vâng, đầu tiên, nếu Q ai chia X, thì x bằng 0 mod q một vì x sẽ là bội số của Q một.
+
+17
+00:04:09,640 --> 00:04:24,280
+Nhưng tương tự x với lũy thừa nó sẽ đồng dư với giếng, bằng 0 với lũy thừa bằng 0.  Và vào tháng ba.
+
+18
+00:04:24,280 --> 00:04:51,270
+Q một.  Vì vậy, không gây tranh cãi lắm khi nói trong trường hợp đó X mũ Eddie bằng x mod q10 bằng 0 mà chúng ta đang nói ở đó, nhưng đó là nếu xq1 chia x mặt khác, nếu Q người ta không chia x.
+
+19
+00:04:53,230 --> 00:05:08,650
+Nếu Q không chia hết X thì chúng ta sẽ sử dụng định lý chắc chắn Arsenal, Định lý nhỏ Fermat.  Được rồi, vậy có một điều chúng ta sẽ cần đầu tiên là X lũy thừa A và tôi quan tâm xem nó bằng bao nhiêu.
+
+20
+00:05:09,040 --> 00:05:21,040
+Và thế là X lũy thừa.  A Cái gì là cái gì?  Của nó.  Q Một trừ một.  Nhân với Q hai trừ một.  Vì vậy tôi sẽ đặt X vào lũy thừa.
+
+21
+00:05:21,610 --> 00:05:31,270
+Q Một trừ một trong ngoặc, rồi đó là lũy thừa.  Q Hai trừ một.  Và đó là vì A đang nhân hai thứ đó lại với nhau.
+
+22
+00:05:32,110 --> 00:05:41,620
+Và vào tháng ba.  Q Một, tôi sẽ viết ở phía bên phải ở đây.  Mar. Q One chỉ để nhắc nhở chúng ta đang ở đâu trong tháng Ba.
+
+23
+00:05:41,650 --> 00:05:56,710
+Q Một phép tính.  Chúng ta có thể sử dụng một định lý trung tâm mỏng ở đây, vậy là chúng ta có một số nguyên lũy thừa trừ một mà trở thành một trong ngoặc, và đó là lũy thừa.
+
+24
+00:05:57,640 --> 00:06:08,240
+Q Hai trừ một.  Vì vậy, nó đã thay đổi thành một từ Fair Master thành bảy.  Và bây giờ chúng ta đã có một sức mạnh của một cái gì đó, đó là một.
+
+25
+00:06:09,340 --> 00:06:21,360
+Được rồi.  Vì vậy X và lũy thừa A bằng một sức mạnh.  Q một.  Và bây giờ, vì chúng ta biết rằng e nhân D bằng.
+
+26
+00:06:22,950 --> 00:06:33,210
+Được rồi.  Một điểm cộng.  Nói cách khác, e nhân d y trong đó nghịch đảo của nhau, có nghĩa là chúng ta có công thức này.
+
+27
+00:06:35,240 --> 00:06:53,540
+Khi đó với một số nguyên k ta có.  Nói về sức mạnh, Eddie.  Tôi tự hỏi điều gì sẽ xảy ra.  Khi nó đồng dạng với x lũy thừa k a cộng một.
+
+28
+00:06:55,210 --> 00:07:07,890
+Vâng.  Đó là phù hợp với.  Nếu tôi chia nhỏ phép tính đó, thì đó sẽ là X lũy thừa A trong ngoặc vuông lũy ​​thừa k.
+
+29
+00:07:10,350 --> 00:07:22,470
+Và sau đó nhân với X. Tôi nói, thưa Nghị sĩ, cho đến nay những cái này đều bằng nhau, tất cả những cái đó đều bằng nhau.  Và sau đó điều này phù hợp và đây là nơi chúng ta có thể thực hiện phép thay thế.
+
+30
+00:07:22,470 --> 00:07:32,730
+Vì vậy, một lần nữa, trong mod q một số học, vì vậy tôi ở ngay vế phải, dấu ngoặc đó chúng ta có thể thay thế bằng dòng X trước lũy thừa bằng một.
+
+31
+00:07:32,880 --> 00:07:46,130
+Vì vậy, dấu ngoặc đó là một lũy thừa K nhân với x và nó bằng một với lũy thừa một và nhân với x, do đó bằng x.
+
+32
+00:07:46,740 --> 00:08:03,480
+Và đó là những gì tôi đang cố gắng thể hiện.  Dù bằng cách nào, chúng ta có sự tương đồng nhỏ này mà tôi đang cố gắng chứng minh là đúng trong Mod Q một và bằng lập luận hoàn toàn giống nhau, nó cũng sẽ đúng trong mod q.
+
+33
+00:08:04,590 --> 00:08:10,320
+Tôi thực sự không cần phải nói lại lập luận đó nữa, vì nó hoàn toàn giống nhau.  Nó chỉ sử dụng một số nguyên tố thay vì số nguyên tố khác.
+
+34
+00:08:11,040 --> 00:08:26,340
+Vậy nó đúng ở mod q one và nó sẽ đúng ở mod q two.  Và vì cả hai đều là số nguyên tố, nên vì Q1 và Q2 là số nguyên tố, chúng ta sẽ sử dụng định lý số dư Trung Hoa, có nghĩa là bây giờ nó đúng theo mod m.
+
+35
+00:08:28,320 --> 00:08:38,960
+Bằng Q1 nhân Q2.  Kết thúc bằng chứng.  Và.  Đúng.  Được rồi.  Ý tôi là, bạn sẽ cần một chút thời gian để tiếp thu cuộc phỏng vấn này.
+
+36
+00:08:39,040 --> 00:08:49,070
+Nếu bạn không hiểu được tất cả ngay lập tức, tôi sẽ không mong đợi bạn sẽ làm được.  Nhưng tất cả điều đó phải là sự thật.  Nếu bạn dành một chút thời gian để đọc lại và tiếp thu nó trong thời gian của riêng bạn.
+
+37
+00:08:49,580 --> 00:09:08,030
+Tất cả những điều đó đều đúng và hiệu quả.  Vậy là chúng ta đã có phương pháp giải mã.  Khóa giải mã là nghịch đảo nhân của E và modulo thực chất là khóa giải mã.
+
+38
+00:09:08,060 --> 00:09:21,530
+Nói cách khác, nếu bạn muốn tìm khóa giải mã của mình, thì đó là hệ số của e trong một cái gì đó như se cộng t a bằng một.
+
+39
+00:09:22,790 --> 00:09:27,680
+Và làm thế nào bạn có thể tìm thấy điều này?  Vì vậy chúng tôi đang tìm kiếm cái này ở đây.  Hệ số đứng trước E. Bạn sẽ tìm nó như thế nào?
+
+40
+00:09:28,490 --> 00:09:36,050
+Bạn có thể chỉ nhận thấy nó nếu bạn đang sử dụng số nhỏ.  Nếu bạn để ý thì không sao cả.  Tuyệt vời.  Nhưng nếu không bạn có thể sử dụng thuật toán Euclid.
+
+41
+00:09:36,710 --> 00:09:56,360
+Quay lại những gì chúng ta đã làm ở phần một, mật mã nhân.  Bạn sẽ sử dụng thuật toán Euclid để có thể viết một thuật toán dưới dạng kết hợp của E và A, với hệ số đó là giá trị mà chúng ta đang tìm kiếm để giải mã.
+
+42
+00:09:56,870 --> 00:10:07,260
+Vì vậy, hy vọng bạn có thể thấy rằng tất cả những công việc khó khăn mà chúng tôi đã làm trong Phần một thực sự đã đặt nền móng cho chúng tôi cho phần này.
+
+43
+00:10:07,280 --> 00:10:21,870
+Bây giờ ở đây là cuối cùng.  Vì vậy, hãy làm một ví dụ về giải mã.  Vì vậy, hãy có a bằng bốn và E bằng ba ở dạng một bush.
+
+44
+00:10:21,880 --> 00:10:33,180
+Vì vậy, chúng tôi chỉ sử dụng ví dụ mà chúng tôi đã có trước đây khi tôi mã hóa một tin nhắn bằng RSA và để nhắc bạn rằng A là E bằng ba khi đó.
+
+45
+00:10:33,210 --> 00:10:42,330
+Đúng vậy, tôi cần phải viết một cái dưới dạng kết hợp những thứ này để bạn có thể sử dụng thuật toán tạo ra, mặc dù đó là những con số nhỏ.
+
+46
+00:10:42,330 --> 00:10:57,750
+Vì vậy, tôi nghĩ rằng tôi có thể nhận thấy rằng bảy lần ba là 21 cộng trừ năm lần bốn là -20 bằng một.
+
+47
+00:10:57,750 --> 00:11:08,280
+Vì vậy, tôi có thể để ý điều đó và viết hệ số này ở đây trước số 3 là khóa giải mã để chúng ta có thể dùng D bằng 7.
+
+48
+00:11:09,250 --> 00:11:22,760
+Tôi bằng bảy làm khóa giải mã của chúng tôi.  Vì vậy, chúng ta đã có ví dụ trước đó khi tôi mã hóa tin nhắn và mật mã hóa ra là 107466.
+
+49
+00:11:26,690 --> 00:11:40,340
+Và sau đó bạn sẽ giải được mật mã đó bằng công thức giải mã của chúng tôi.  P bằng C lũy thừa d.  Được rồi, hãy làm việc đó lúc bảy giờ.
+
+50
+00:11:40,350 --> 00:11:47,520
+Vậy một lũy thừa bảy là một số không lũy ​​thừa bảy là không bảy lũy thừa bảy.  Bây giờ nó bắt đầu lớn lên.
+
+51
+00:11:47,820 --> 00:11:59,160
+Và vâng, nếu bạn muốn làm giấy và bút này bằng tay, bạn có thể chia nhỏ nó ra và tìm những cách thông minh để làm cho các phần của phép tính nhỏ hơn hoặc nhờ máy tính thực hiện.
+
+52
+00:11:59,430 --> 00:12:14,400
+Và tôi sẽ chăm chỉ viết ra nó là gì.  Đó là 823.543.  Bây giờ chúng ta sẽ chuyển sang số bốn lũy thừa bảy tiếp theo.
+
+53
+00:12:15,030 --> 00:12:34,900
+Bây giờ, con số lớn, 16,384, sáu lũy thừa bảy.  Một con số lớn khác, 279.000 279.936.  Và chúng ta sẽ lại nhận được điều tương tự ở đây.
+
+54
+00:12:35,290 --> 00:12:48,540
+279.936.  Phải.  Modulo M và nó đã quay trở lại khoảng trống.  Modulo M. Vì vậy bây giờ chúng ta sẽ chia cho mô đun của chúng ta.
+
+55
+00:12:48,550 --> 00:12:59,800
+Và trong ví dụ nhỏ này, môđun của chúng ta là 10.  Quay trở lại ví dụ trước của chúng tôi.  Vì vậy chúng ta chia cho 10 để tìm số dư là 103466.
+
+56
+00:13:00,040 --> 00:13:07,990
+Biến nó trở lại thành chữ cái.  Bạn nhận được tin nhắn ban đầu.  Quả trứng mà chúng ta có trước đây và tôi nói nó sẽ giải mã được tin nhắn của chúng ta.
+
+57
+00:13:08,560 --> 00:13:19,030
+Tôi sẽ chỉ ra điều gì đó ở đây trong câu bên dưới.  Lưu ý rằng tôi có thể sử dụng d bằng ba ở đây làm khóa giải mã.
+
+58
+00:13:19,030 --> 00:13:30,640
+Và tôi có thể làm được điều này ba nhân ba là chín cộng trừ hai nhân bốn là trừ tám, và nó bằng một.
+
+59
+00:13:31,390 --> 00:13:40,450
+Vì vậy, đó là các giá trị của tôi là tám và ba và bốn và hệ số là ba ở phía trước khóa mã hóa.
+
+60
+00:13:40,870 --> 00:13:53,020
+Tôi chỉ không muốn bạn nghĩ rằng khóa mã hóa và khóa giải mã D phải giống nhau vì trong ví dụ nhỏ đó, khóa mã hóa và khóa giải mã đều là ba.
+
+61
+00:13:53,140 --> 00:13:59,230
+Điều đó không đúng nói chung.  Đó là lý do tại sao tôi làm nó theo một cách hơi khác ở đây, chỉ để nhấn mạnh quan điểm đó.
+
+62
+00:14:00,370 --> 00:14:15,250
+Vậy là bạn đã có nó và khóa giải mã.  Tuy nhiên, trên thực tế, RSA là một thuật toán tương đối chậm nên nó được sử dụng rất nhiều để mã hóa trực tiếp các tin nhắn văn bản thuần túy.
+
+63
+00:14:15,490 --> 00:14:29,020
+Vì vậy, những gì tôi đã cho bạn thấy ở đây là tôi và Cipher trong một tin nhắn sử dụng RSA, được gọi là RSA trong sách giáo khoa, bạn dạy RSA như thế nào, nhưng thực tế bạn sẽ không sử dụng nó theo cách này.
+
+64
+00:14:29,140 --> 00:14:42,550
+Thay vào đó, RSA được sử dụng để mã hóa khóa, do đó bạn có thể trao đổi khóa với nhau và sau đó bạn có thể có khóa để sử dụng trong bất kỳ mật mã nào bạn muốn sử dụng khóa.
+
+65
+00:14:42,880 --> 00:14:53,080
+Vì vậy, sau đó bạn có thể sử dụng nó trong một số loại mật mã đơn giản hơn.  Vì vậy, trong thực tế, tôi luôn nói rằng đó chỉ là một cách trao đổi khóa khác.
+
+66
+00:14:54,310 --> 00:15:08,380
+Phải.  Vậy đó là mã hóa và giải mã RSA.  Nhưng chúng ta sẽ tiếp tục phá vỡ RSA.  Bây giờ, hãy tưởng tượng bạn là người xấu ở đây muốn phá vỡ một trong những tin nhắn này.
+

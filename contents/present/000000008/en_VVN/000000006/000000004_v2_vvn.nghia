@@ -1,0 +1,212 @@
+1
+00:00:00,210 --> 00:00:21,630
+Vì vậy, trong video trước, chúng ta vừa thấy rằng chúng ta sẽ thử tạo bộ giải mã RSA và chúng ta thấy rằng chúng ta cần một khóa giải mã tuân theo quy tắc này ở đây trong đó p lũy thừa e nhân mod m sẽ đưa bạn trở lại bản rõ ban đầu  thư.
+
+2
+00:00:22,080 --> 00:00:33,780
+Tôi khẳng định rằng điều này tồn tại và tôi sẽ chỉ cho bạn cách tìm ra nó.  Nhưng trước khi chúng ta hiểu được điều đó, tôi sẽ cần một vài kết quả toán học được gọi là Định lý nhỏ Fermat và Định lý số dư Trung Hoa.
+
+3
+00:00:33,780 --> 00:00:43,920
+Chúng ta hãy nhìn vào những kết quả này.  Và đây là những kết quả đúng đắn.  Chúng thực sự được gọi là các định lý và chúng thực sự có những cái tên cho bạn thấy rằng chúng là những kết quả toán học thực sự và cũng là những kết quả quan trọng.
+
+4
+00:00:44,670 --> 00:00:50,730
+Vì vậy, hãy bắt đầu với một định lý nhỏ nổi tiếng mang tên Ferma.  Có thể bạn đã nghe nói về Định lý cuối cùng của Fermat.
+
+5
+00:00:51,030 --> 00:00:59,220
+Đây là Định lý nhỏ của Fermat.  Đây là một sự thật về số nguyên tố.  Vì vậy, đây chỉ là một sự thật nhỏ về số nguyên tố.
+
+6
+00:00:59,400 --> 00:01:10,560
+Hãy xem nó là gì.  Vậy hãy lấy Q. Nếu Q là số nguyên tố và X là số nguyên thì đây là sự thật nhỏ của tôi.
+
+7
+00:01:10,560 --> 00:01:26,830
+Vậy x số nguyên tố Q rất quan trọng thì đây là sự thật của tôi.  X lên sức mạnh.  Q trừ một bằng một mode.
+
+8
+00:01:27,070 --> 00:01:38,720
+Q. Được rồi.  Có vẻ giống như một số thực tế toán học.  Tuy nhiên, chúng tôi sẽ chứng minh điều đó.  Chúng ta hãy xem bằng chứng về điều này.
+
+9
+00:01:39,230 --> 00:01:53,480
+Vì vậy, chúng ta đã nói rằng X và Q là nguyên tố cùng nhau.  X là số nguyên của chúng tôi và Q là số nguyên tố nằm trong đó k prime ồ k prime chuông cảnh báo và tôi biết k prime nghĩa là gì.
+
+10
+00:01:53,480 --> 00:02:09,740
+Nó có nghĩa là tồn tại các số nguyên, s và t sao cho tôi có thể viết một tổ hợp s x cộng t q bằng một vì một sẽ là ước chung lớn nhất của chúng.
+
+11
+00:02:10,370 --> 00:02:18,560
+Vậy chúng ta có cái này ở đây x cộng hai bằng một trong hầu hết số học Q, đó là những gì tôi sẽ viết tiếp theo.
+
+12
+00:02:19,070 --> 00:02:38,480
+T Q sẽ biến mất khi bội số của Q bằng 0 nên tôi có thể viết đây là s x đồng dư với một mod q.  Và điều đó có nghĩa là X có nghịch đảo phép nhân, đó là s.
+
+13
+00:02:39,630 --> 00:02:53,580
+Mô-đun IQ.  Nói cách khác, s là nghịch đảo của x.  Họ hủy bỏ, vì vậy bạn nhận được 1ak.  Vậy x số nguyên đó có số nghịch đảo nhân và tôi thậm chí đã cho bạn biết nó là gì.
+
+14
+00:02:53,580 --> 00:03:08,250
+Đó là tiếp theo.  Hãy tưởng tượng chúng ta có hai bội số của x, đây là bội số và rất nhiều của x và giả sử nó bằng n nhiều x mod q.
+
+15
+00:03:09,690 --> 00:03:23,010
+Nếu điều đó xảy ra, chúng ta có thể nhân cả hai vế với s, điều này sẽ triệt tiêu x và bạn sẽ nhận được m đồng dư với n mod Q.
+
+16
+00:03:24,330 --> 00:03:32,460
+Bây giờ điều đó sẽ giúp ích cho chúng ta vì điều đó có nghĩa là không có hai mục nào trong danh sách này có thể giống nhau.  Vậy thì sao?  Danh sách là gì?
+
+17
+00:03:32,970 --> 00:03:53,610
+x2x3x bạn hiểu ý tưởng về x, v.v. lên đến hai trừ một x.  Không có giá trị nào trong số đó có thể đồng dư theo modulo Q vì chúng đều có hệ số x khác nhau.
+
+18
+00:03:55,810 --> 00:04:06,700
+Điều này có nghĩa là danh sách chỉ là danh sách này và được viết theo một cách khác.  Điều này có nghĩa là danh sách chỉ đơn giản là những gì còn lại trong tháng Ba?
+
+19
+00:04:06,730 --> 00:04:23,440
+Q Đó là từ 1 đến 3 chấm, chấm, chấm.  Q Trừ một theo modulo.  Q mặc dù có thể theo một thứ tự khác.  Vì vậy, nó có thể không hẳn là cùng một danh sách theo cùng một thứ tự, nhưng đó là cùng một danh sách.
+
+20
+00:04:24,520 --> 00:04:35,740
+Nếu cả hai danh sách đều giống nhau, việc nhân tất cả các số hạng trong mỗi danh sách sẽ cho kết quả đúng.  Làm thôi nào.  Tôi sẽ nhân danh sách này trước.
+
+21
+00:04:35,740 --> 00:04:45,220
+Danh sách đầu tiên chúng tôi có với x2x3x, nhân mọi thứ lại với nhau.  Vậy bạn sẽ nhận được gì?  Chúng ta sẽ nhận được một X nhân hai X nhân ba x.
+
+22
+00:04:45,730 --> 00:04:55,390
+Tất cả các hệ số sẽ là một nhân, hai nhân ba nhân bốn, về mặt quang học trừ một, tức là Q trừ một giai thừa.
+
+23
+00:04:56,410 --> 00:05:05,260
+Và liệu tôi có biết x cùng nhau x nhân x nhân x nhân x bằng q trừ một.  Rất nhiều x.  Tôi sẽ viết nó như
+
+24
+00:05:07,120 --> 00:05:19,000
+X lên sức mạnh.  Q trừ một viết nó theo cách đó và nó bằng và nhân mọi thứ với nhau trong danh sách thứ hai vì nó là cùng một danh sách.
+
+25
+00:05:19,450 --> 00:05:29,890
+Vì vậy, tôi sẽ nhân tất cả các giá trị này với nhau trên giây, tức là một lần, hai lần, ba lần về mặt quang học trừ một, tức là Q trừ một giai thừa.
+
+26
+00:05:30,430 --> 00:05:46,860
+Và hãy nhớ rằng tất cả điều này đều ở dạng số học mod q vì Q là số nguyên tố.  Nó là nguyên tố chung cho tất cả các số nguyên, từ 1 đến 3, về mặt quang học trừ một.
+
+27
+00:05:49,160 --> 00:05:56,270
+Và nó là nguyên tố chung của một số như thế, thì số đó sẽ nghịch đảo và bạn có thể loại bỏ nó để loại bỏ nó.
+
+28
+00:05:56,540 --> 00:06:07,250
+Vì vậy, chúng ta có thể loại bỏ các giai thừa này.  Vì vậy chúng ta có thể loại bỏ số hạng Q trừ đi một giai thừa ở cả hai vế.
+
+29
+00:06:08,870 --> 00:06:18,820
+Và sau đó điều này để lại những gì chúng ta nhận được.  Vì vậy, chúng tôi chỉ cần loại bỏ khóa trừ đi một giai thừa.  Chúng ta sẽ đưa X lên quyền lực.
+
+30
+00:06:18,830 --> 00:06:30,060
+Q trừ một bằng một.  Cái gì q?  Và một lần nữa, đó là.  Và bằng chứng.  Đó là điều tôi đang cố gắng chứng minh.
+
+31
+00:06:30,080 --> 00:06:45,370
+Đó là sự phân tích công bằng.  Nói như vậy thì bạn vẫn chưa biết chúng ta sẽ làm gì với điều này.  Nhưng chúng ta hãy xem xét một ví dụ về thị trường thất bại và hãy sử dụng một số con số để thấy nó hoạt động như thế nào khi lấy x bằng bốn.
+
+32
+00:06:46,660 --> 00:06:58,840
+Là một số nguyên và một số nguyên tố.  Giả sử a q bằng năm.  Vậy thì chúng ta hãy xem xét kỹ, Định lý R0 chắc chắn nói lên điều gì?
+
+33
+00:06:58,840 --> 00:07:10,720
+Nói Lấy X, bằng bốn lũy thừa Q trừ một s năm trừ một sẽ bằng bốn lũy thừa.
+
+34
+00:07:10,720 --> 00:07:30,940
+Vâng, hãy viết rằng trong đó bằng bốn lũy thừa bốn và nó bằng 256. Nhưng đây là điều quan trọng đồng dạng với một mod năm, và đó không phải là sự trùng hợp ngẫu nhiên.
+
+35
+00:07:30,940 --> 00:07:37,690
+Đó là một kết luận được đảm bảo bởi Định lý nhỏ của Fermi.  Đó chính xác là những gì tôi đã mong đợi ở Định lý nhỏ.
+
+36
+00:07:37,960 --> 00:07:43,630
+Và đó không phải là một sự trùng hợp ngẫu nhiên.  Nó được đảm bảo sẽ xảy ra.  Điều đó sẽ luôn xảy ra trong mọi trường hợp.
+
+37
+00:07:44,110 --> 00:07:56,860
+Fair Master Định lý hai Định lý tiếp theo của chúng tôi.  Tôi sẽ nói thẳng lại định lý tiếp theo của chúng ta.  Lý thuyết hay với cái tên Định lý số dư Trung Hoa cho cái này nếu.
+
+38
+00:07:58,150 --> 00:08:22,050
+A đồng dạng cần được đánh dấu và.  Và a đồng dư với mod n.  Vì vậy chúng ta có hai cuộc hội thảo ở đây.  Vậy nếu điều đó đúng với M và N.
+
+39
+00:08:23,150 --> 00:08:37,170
+Các số nguyên tố cùng nhau nên chúng là các số nguyên tố chung.  Sau đây là kết luận của chúng tôi.  A đồng dạng được đánh dấu m lần kết thúc.
+
+40
+00:08:38,330 --> 00:08:55,700
+Vì vậy, nếu bạn có một đồng dư đúng hiện đại và một đồng dư đúng mod n với các giá trị mô đun k nguyên tố này thì đồng dư đó vẫn đúng theo mod m và tôi sẽ chứng minh bằng chứng đó.
+
+41
+00:08:58,610 --> 00:09:15,730
+Lấy và a này bằng nhau.  Chúng ta hãy xem thiết lập của chúng ta thực sự là modem.  Và một.  Tương đương để trở thành người mẫu rồi.
+
+42
+00:09:16,140 --> 00:09:30,330
+Bây giờ chúng ta quay trở lại định nghĩa của chúng ta về số học mô-đun và từ định nghĩa về mô-đun.  Tôi có thể cho bạn biết tồn tại các số nguyên được gọi trong K1 và K2.
+
+43
+00:09:31,260 --> 00:09:43,950
+Tôi sẽ đặt nó ở đây trong khoảng trống này sao cho hiệu của A và B là bội số của mô đun.  Vì vậy, trong trường hợp của chúng tôi, chúng tôi có một điểm trừ.
+
+44
+00:09:43,950 --> 00:10:04,510
+B bằng k1m.  Và A trừ B bằng K đến N. Đó là định nghĩa của số học mô-đun.  Vì vậy, vâng, A-trừ B ở đây và A trừ B ở đây.
+
+45
+00:10:04,810 --> 00:10:20,190
+Vì vậy tôi chỉ có thể nói những điều này là bình đẳng.  k1m bằng k đến n.  Được rồi.  Do đó m chia đúng k cho n.
+
+46
+00:10:22,550 --> 00:10:44,530
+Đúng, K2 n này là bội số của m và chia hết K2 n, nhưng vì m.  Một mã số nguyên tố.  Điều đó có nghĩa là M không chia hết và nó phải chia hết q.
+
+47
+00:10:45,470 --> 00:10:55,220
+Điều này có nghĩa là m chia hết k cho.  Và do đó tồn tại một số nguyên khác, hãy gọi nó là K ba.
+
+48
+00:10:56,600 --> 00:11:15,920
+Tồn tại một số nguyên k ba sao cho k hai bằng k3m.  Vậy K2 cũng là bội số của em.  Và cuối cùng, chúng ta có thể kết luận A trừ B.
+
+49
+00:11:17,740 --> 00:11:45,610
+Nó bằng K với N. Tôi biết rằng từ dòng thứ hai ở đây trong chứng minh nó là gì nhưng k hai bây giờ có thể được thay thế bằng k3m nên cái này bằng k ba và N và thực sự là như vậy bởi vì  là định nghĩa đồng dư của B mod.
+
+50
+00:11:46,970 --> 00:11:55,940
+Mn và cách chứng minh.  Rất tốt.  Vì vậy, tiếng Trung vẫn ở đó.  Vì vậy, bây giờ chúng tôi đã có nó trong túi của chúng tôi.
+
+51
+00:11:55,940 --> 00:12:05,660
+Chúng tôi đã có điều đó dưới thắt lưng của chúng tôi.  Và chúng ta sẽ sử dụng hai kết quả này cho việc sắp tới, đó là tìm cách giải mã RSA.
+
+52
+00:12:05,990 --> 00:12:14,870
+Vì vậy, kết quả giải mã này là cái mà chúng tôi gọi là hệ quả tất yếu.  Đó là một hệ quả dễ dàng của một định lý hoặc mệnh đề.
+
+53
+00:12:15,310 --> 00:12:22,130
+Như tôi đã nói, việc giải mã là hệ quả tất yếu của kết quả.  Chúng tôi vừa mới làm xong.  Tuyệt vời.  Và người Trung Quốc vẫn là một định lý.
+

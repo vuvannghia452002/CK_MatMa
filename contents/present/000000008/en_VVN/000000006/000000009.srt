@@ -1,0 +1,211 @@
+1
+00:00:00,210 --> 00:00:04,800
+So we're coming near the end of our course now, but we've got a couple of more sections to go.
+
+2
+00:00:05,070 --> 00:00:11,370
+And I just want to end off by showing you a way to authenticate who is sending your message, and it
+
+3
+00:00:11,370 --> 00:00:12,900
+uses RSA.
+
+4
+00:00:12,900 --> 00:00:16,500
+So we call this signatures or digital signatures.
+
+5
+00:00:16,740 --> 00:00:21,540
+And if I go to our notes, in fact, I'm not asking you to write anything in for this part.
+
+6
+00:00:22,050 --> 00:00:24,240
+I'm just going to explain the method.
+
+7
+00:00:24,690 --> 00:00:34,350
+So the intention of RSA is to in cipher using your value e and then decipher using the value D but in
+
+8
+00:00:34,350 --> 00:00:37,290
+fact the rows of E and D are interchangeable.
+
+9
+00:00:37,290 --> 00:00:43,560
+You could in fact and cipher your message using the value D and then decipher the message using the
+
+10
+00:00:43,560 --> 00:00:45,240
+value B if you wanted to.
+
+11
+00:00:45,660 --> 00:00:52,380
+This has a very important function in authenticating messages, so consider two correspondence.
+
+12
+00:00:52,380 --> 00:00:56,700
+John and Mary, I think I want you to give Alice and Bob a day off.
+
+13
+00:00:56,700 --> 00:01:02,790
+So John and Mary are sending each of the messages, each have their own public key, which are known
+
+14
+00:01:02,790 --> 00:01:07,800
+to everyone, and each have their own private key known only to themselves.
+
+15
+00:01:08,160 --> 00:01:12,000
+Let's say Mary's public key is giving you some values.
+
+16
+00:01:12,330 --> 00:01:27,210
+E is 8023 modulus 24,257 and John's Public Key E 8993 and a modulus of 11,435.
+
+17
+00:01:27,210 --> 00:01:28,950
+These are this is the public information.
+
+18
+00:01:29,790 --> 00:01:35,400
+Now, John is going to send a message and it says, meet you at six, John.
+
+19
+00:01:35,730 --> 00:01:41,880
+So he signs off with his name that John and written in blocks we might break this up into blocks remember
+
+20
+00:01:41,880 --> 00:01:47,730
+that prevents frequency analysis so I've broken it open two blocks of two there so we've got meet you
+
+21
+00:01:47,730 --> 00:01:54,780
+at six John or in numbers I now turn those into numbers like that so we get these blocks of numbers.
+
+22
+00:01:55,380 --> 00:02:02,460
+The last two of those blocks, the last well, eight digits is the signature, John.
+
+23
+00:02:02,880 --> 00:02:05,420
+Now, how can Mary know that?
+
+24
+00:02:05,430 --> 00:02:07,770
+The message really is from John?
+
+25
+00:02:08,280 --> 00:02:18,030
+One way is for John to use his private key John and ciphers his signature using his private key so that
+
+26
+00:02:18,030 --> 00:02:21,240
+it reads this value like these numbers here.
+
+27
+00:02:22,230 --> 00:02:23,970
+So now we have this message.
+
+28
+00:02:24,240 --> 00:02:33,660
+But John has insisted the signature at the end using his private key John now in ciphers that message
+
+29
+00:02:33,870 --> 00:02:35,880
+using Mary's public key.
+
+30
+00:02:35,880 --> 00:02:41,850
+So now takes all of that including his signature at the end and in cipher is that with Mary's public
+
+31
+00:02:42,090 --> 00:02:44,520
+key then sends it to Mary.
+
+32
+00:02:45,030 --> 00:02:54,660
+Mary receives the message she will then decrypted using her private key to produce this message.
+
+33
+00:02:55,380 --> 00:03:00,000
+And Mary will then extract that last bit at the end the signature.
+
+34
+00:03:00,570 --> 00:03:09,390
+And knowing that the message is supposed to be from John, Mary applies John's public key to his signature
+
+35
+00:03:09,630 --> 00:03:11,460
+to get these values here.
+
+36
+00:03:11,460 --> 00:03:17,190
+So Mary is now decrypting that bit at the end, using John's public key.
+
+37
+00:03:17,760 --> 00:03:21,120
+Finally putting all this together, Mary will get the message.
+
+38
+00:03:21,120 --> 00:03:23,010
+Meet you at six, John.
+
+39
+00:03:23,550 --> 00:03:27,330
+And the only one who could have made that possible is John himself.
+
+40
+00:03:27,570 --> 00:03:36,540
+The only person who could have encrypted that signature at the end with John's private key is John himself.
+
+41
+00:03:36,690 --> 00:03:37,890
+That is the idea.
+
+42
+00:03:38,910 --> 00:03:46,260
+Note, though, just like before with RSA, it is more secure to use different RSA keys for encryption
+
+43
+00:03:46,260 --> 00:03:46,920
+and signing.
+
+44
+00:03:47,250 --> 00:03:48,720
+So you might have to RSA.
+
+45
+00:03:48,720 --> 00:03:53,910
+He's going on and you will still need padding and breaking open the blocks and all those things.
+
+46
+00:03:53,910 --> 00:03:58,920
+We need to prevent people from stealing our messages using RSA.
+
+47
+00:03:59,880 --> 00:04:04,110
+Yes, padding should be used for message signing as it is for message encryption.
+
+48
+00:04:04,560 --> 00:04:11,640
+Okay, so that's a really clever idea and that's all I wanted to say about signatures, but a really
+
+49
+00:04:11,720 --> 00:04:14,040
+clever way of using RSA.
+
+50
+00:04:14,880 --> 00:04:21,960
+Now we really are getting near the end and that's the end of public key cryptography.
+
+51
+00:04:22,350 --> 00:04:29,670
+And then just as the very last thing, I want you to take a brief look at the future of cryptography.
+
+52
+00:04:29,670 --> 00:04:31,380
+So one more video.
+
+53
+00:04:31,380 --> 00:04:33,060
+I'm going to have a look at the future.

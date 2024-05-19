@@ -1,0 +1,168 @@
+1
+00:00:00,480 --> 00:00:10,260
+Bây giờ là lúc xem xét các giải pháp cho bài tập về mũ bảo hiểm TV.  Vì vậy, tôi đã yêu cầu bạn thử tính toán những hệ quả này mà không cần máy tính.
+
+2
+00:00:10,650 --> 00:00:18,870
+Vì vậy, tôi hy vọng bạn đã thử điều đó.  Câu hỏi thứ nhất cho biết Tính giá trị dương thấp nhất của ba cấp cho mod 80.
+
+3
+00:00:19,080 --> 00:00:38,340
+Vì vậy, nếu tôi viết lũy thừa ba cho số đó bằng hoặc đếm đến 81, tương đương với một mod tám sáu, khá đơn giản để bắt đầu, hãy sử dụng câu trả lời của bạn ở trên để chứng minh rằng ba lũy thừa 316 đang tiến tới một mod  80.
+
+4
+00:00:38,820 --> 00:00:57,460
+Vì vậy, chúng ta có thể chia nhỏ ba lũy thừa 360. Nó bằng ba lũy thừa, bốn lũy thừa 79. Và điều đó tương ứng với việc bây giờ chúng ta thay ba lũy thừa bốn bằng một và đó là lũy thừa 79, và đó  đồng dư với một mod 80.
+
+5
+00:00:57,480 --> 00:01:10,650
+Thế đấy.  Đó là phần cuối của câu hỏi chứng minh rằng lũy ​​thừa năm và cộng một bằng 0 mod 1024 cho mọi số nguyên.
+
+6
+00:01:10,650 --> 00:01:24,390
+N. Vậy hãy thử điều đó.  Vâng, chúng ta bắt đầu bằng cách quan sát rằng 4 mũ 2 lũy thừa năm là 1024, bằng 0 mod 1 đến 4.
+
+7
+00:01:25,350 --> 00:01:36,810
+Vì vậy, nếu chúng ta quan tâm đến bốn lũy thừa năm và cộng một, chúng ta có thể chia nó ra và chúng ta có thể viết là bốn lũy thừa, năm lũy thừa n nhân với bốn.
+
+8
+00:01:37,350 --> 00:01:45,960
+Và điều đó phù hợp với dấu ngoặc được thay thế bằng số 0 mũ lũy thừa nhân bốn và nó sắp bằng 0 nhân bốn.
+
+9
+00:01:46,050 --> 00:02:00,960
+Đó là số 0 trong mod 1 đến 4 và điều đó luôn đúng với mọi số nguyên n.  Câu 3 Tính lũy thừa 11 và Mẫu 101 cho các giá trị DN hai, ba, bốn, năm và mười.
+
+10
+00:02:01,260 --> 00:02:11,100
+Vì vậy, hãy làm điều đó.  Hãy bắt đầu với 11 bình phương.  Vậy 11 bình phương bằng 121. Đẹp đấy.  Tương ứng với 20
+
+11
+00:02:11,400 --> 00:02:35,150
+Trong mod 101. Bây giờ chúng ta xem xét lũy thừa tiếp theo mà nó được lập phương.  Vâng, chúng ta có thể sử dụng câu trả lời mà chúng ta đã có trước đó để có thể xét 11 bình phương rồi nhân nó với 11, thay 11 bình phương bằng 20 rồi nhân với 11 chúng ta được 220 và nó bằng 18 MOD 101.
+
+12
+00:02:37,420 --> 00:02:43,360
+Nếu chúng ta chuyển sang lũy ​​thừa tiếp theo và thậm chí tới lũy thừa bốn, bạn có thể chia nó theo nhiều cách khác nhau.
+
+13
+00:02:43,660 --> 00:02:56,830
+Tôi sẽ xem xét 11 bình phương.  Bình phương.  Vì vậy, nếu nó phù hợp để thay thế dấu ngoặc bằng 20 và sau đó chúng ta bình phương số đó, nó sẽ cho chúng ta 400.
+
+14
+00:02:57,430 --> 00:03:09,800
+Và trong phần này, chúng ta sẽ có 97 MOD 101. Và nếu chúng ta xét 11 mũ 5, một lần nữa, bạn có thể chia số này theo nhiều cách khác nhau.
+
+15
+00:03:10,160 --> 00:03:20,090
+Tôi sẽ xét 11 bình phương.  11 khối.  11 bình phương có thể được thay thế bằng 2011 lập phương có thể được thay thế bằng 18.
+
+16
+00:03:21,050 --> 00:03:35,140
+Vậy chúng ta có 360. Và nó bằng với 57. Mod 101. Và cuối cùng, chúng ta đang xét 11 mũ 10.
+
+17
+00:03:35,920 --> 00:03:52,930
+Một lần nữa, bạn có thể chia nhỏ điều đó theo nhiều cách.  Những gì tôi đã làm là Tiến sĩ 11 đến bình phương mạnh mẽ để lấy 11 lũy thừa 8 rồi nhân với 11 bình phương và nó bằng với lũy thừa 11 của nó là 97.
+
+18
+00:03:53,140 --> 00:03:59,650
+Nhưng thực ra tôi sẽ viết nó là âm bốn, vì điều đó sẽ làm cho cuộc sống của tôi dễ dàng hơn.  Và điều đó trở thành bình phương.
+
+19
+00:03:59,920 --> 00:04:19,310
+Và sau đó nhân nó với 11 bình phương, bằng 20. Vậy chúng ta sẽ có 16 nhân 20. 16 nhân 20, bằng 320, và khi đó nó bằng 17 MOD 101.
+
+20
+00:04:20,240 --> 00:04:28,260
+Vì vậy, nó hơi quy mô một chút, nhưng bạn thực sự có thể thực hiện những phép tính này bằng tay.  Bây giờ chúng ta hãy xem câu hỏi thứ tư.
+
+21
+00:04:28,830 --> 00:04:33,780
+Vì vậy, đây là câu hỏi thứ tư.  Và chúng ta sẽ sử dụng Steffi Howe trong trao đổi khóa để tạo khóa chung.
+
+22
+00:04:34,080 --> 00:04:43,260
+Chúng ta có bộ tạo X bằng 11 và mô đun Q bằng 101. Vì vậy, trước hết, chúng ta sẽ tạo khóa chung của Alice.
+
+23
+00:04:43,560 --> 00:04:53,950
+Vì vậy, nếu số nguyên bí mật của Alice là a bằng 13, hãy tính X ở chế độ hỗ trợ năng lượng.  Q Vậy chúng ta đang xét lũy thừa 11.
+
+24
+00:04:53,970 --> 00:05:02,940
+A Vậy đó là lũy thừa 13 trong Mod 101 để chúng ta có thể sử dụng các câu trả lời mà chúng ta đã tìm ra để giúp chúng ta ở đây.
+
+25
+00:05:02,950 --> 00:05:11,370
+Vì vậy, nó có thể được viết là lũy thừa 11, mười nhân 11 lập phương hoặc bất kỳ cách nào khác mà bạn muốn làm.
+
+26
+00:05:11,640 --> 00:05:26,500
+Nhưng lũy ​​thừa 11, mười là 17. 11, Kate trở thành 18. Và sau đó bạn có thể tính nó bằng 306. Nó bằng với ba mod một mà tôi muốn.
+
+27
+00:05:31,420 --> 00:05:40,750
+Bây giờ chúng ta xem phần của Bob trong việc này.  Số nguyên bí mật của Bob là Big 20 và chúng ta có thể thực hiện phép tính tương tự 11 lũy thừa 20.
+
+28
+00:05:41,230 --> 00:05:55,210
+Vậy làm thế nào chúng ta có thể phá vỡ điều đó?  Chúng ta có thể lấy 11 lũy thừa mười và sau đó bình phương 11 lũy thừa mười trong đó 1717 bình phương là 289.
+
+29
+00:05:56,050 --> 00:06:10,980
+Và khi đó nó sẽ trở thành 87 MOD 101. Cuối cùng, chúng ta sẽ tính bí mật chung X lũy thừa A Nhân B và đó là ở mod Q.
+
+30
+00:06:11,430 --> 00:06:17,820
+Bây giờ bạn có thể làm điều này bằng cách xem phần bí mật của Alice trước rồi sau đó sử dụng số bí mật của Bob.
+
+31
+00:06:18,090 --> 00:06:25,950
+Hoặc bạn có thể làm điều đó theo cách khác.  Tôi sẽ bắt đầu với bí mật của Alice.  Có vẻ dễ dàng hơn, vậy nên phần bí mật của Alice là ba.
+
+32
+00:06:26,280 --> 00:06:37,560
+Và sau đó chúng ta sẽ căn cứ vào số bí mật Bob, bằng 23 lũy thừa 20. Bây giờ, tôi thực sự không tìm ra cách dễ dàng để thực hiện phép tính này, nhưng tôi đã làm theo cách này.
+
+33
+00:06:37,920 --> 00:06:56,010
+Chúng ta có thể chia nó thành ba lũy thừa bốn lũy thừa năm, có thể viết là 81 lũy thừa năm, mà trong mô đun này, là 101, tôi sẽ viết nó là -20 lũy thừa năm.
+
+34
+00:06:56,760 --> 00:07:10,870
+Khi đó, số đó có thể được tính toán khá dễ dàng vì nó là một số tròn đẹp.  Đó là -3 triệu 200.000.  Vì vậy, đó là một con số lớn.
+
+35
+00:07:10,870 --> 00:07:19,180
+Nhưng mô-đun rất dễ dàng.  Vì vậy, với một chút công việc, bạn thực sự có thể chứng minh rằng nó bằng với 84 và mod một mà tôi muốn.
+
+36
+00:07:22,540 --> 00:07:33,850
+Và.  Tại sao chúng ta không thể sử dụng bộ tạo x bằng mười và do đó nó sẽ không tạo ra tất cả các giá trị có thể có trong modulo 101.
+
+37
+00:07:34,270 --> 00:07:44,080
+Chỉ để chứng tỏ rằng chúng ta có thể xét 10 bình phương.  Và đó sẽ là 100. Tôi muốn ở mod một.  Mười.  Dễ thương.
+
+38
+00:07:45,730 --> 00:08:04,610
+Nó sẽ là 91. Trong Mod 101. Mười lũy thừa cho.  Nó sẽ là một.  Marge 101 và mười lũy thừa năm.
+
+39
+00:08:05,350 --> 00:08:14,520
+Và hóa ra là 10 trên 101 của tôi. Và từ đó, mô hình sẽ lặp lại.  Vì vậy, chúng tôi không tạo ra tất cả các giá trị có thể.
+
+40
+00:08:14,530 --> 00:08:25,990
+Một cách khác để thấy điều đó là chú ý rằng mười bình phương, tức là 100, bằng trừ một trong mod 101.
+
+41
+00:08:27,010 --> 00:08:49,150
+Vì vậy, xu hướng lũy ​​thừa của nó sẽ tiến tới âm một bình phương, bằng một trong mod 101 và do đó lũy thừa mười cho pn trong đó bất kỳ số nguyên nào sẽ chung cho một mod 101 bất kể giá trị nào  số nguyên là
+
+42
+00:08:49,390 --> 00:08:56,260
+Vì vậy, một lần nữa, bạn không tạo ra tất cả các giá trị có thể có ở đó.  Được rồi.  Tiếp theo, chúng ta sẽ xem xét tất cả a.
+

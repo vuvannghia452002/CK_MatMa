@@ -1,0 +1,196 @@
+1
+00:00:00,180 --> 00:00:11,740
+Đã đến lúc xem xét các giải pháp cho bài tập RSA.  Và tôi bắt đầu bằng một lưu ý nói rằng bạn hoàn toàn có thể sử dụng máy tính để thực hiện những phép tính này.
+
+2
+00:00:11,760 --> 00:00:18,990
+Tôi khuyên dùng Wolfram Alpha dot com và đó chính xác là những gì tôi đã sử dụng khi tự mình thực hiện những phép tính này.
+
+3
+00:00:18,990 --> 00:00:34,290
+Vì vậy không có lý do gì bạn không thể làm được điều đó.  Vì vậy, chúng ta sẽ mã hóa từ nói dối bằng cách sử dụng RSA với mô đun m bằng 1241 và khóa mã hóa E bằng 5 và kết quả sẽ là bốn số.
+
+4
+00:00:34,500 --> 00:00:51,240
+Vì vậy chúng ta hãy nhìn vào đó.  Vì vậy, Lyon là từ.  Quay trở lại với tên các loài động vật và chúng ta viết rằng trong số L trở thành số 11, tôi trở thành số 8, trở thành số 14 và trở thành số 13.
+
+5
+00:00:51,480 --> 00:01:01,980
+Và khi đó chúng ta sẽ sử dụng công thức nào khi nó là P mũ E và đó là Mount M?  Như tôi đã nói, tôi chỉ sử dụng Wolfram Alpha cho việc này.
+
+6
+00:01:02,190 --> 00:01:18,170
+Và đây là những giá trị tôi nhận được.  Vậy 962 502. 471 và 234. Và đó sẽ là bản mã.  Chúng ta hãy xem câu hỏi thứ hai.
+
+7
+00:01:19,010 --> 00:01:27,350
+Chúng tôi muốn tạo một sơ đồ RSA với hai số nguyên tố Q1 và Q2 là 23 và 179. Mô đun là gì?
+
+8
+00:01:27,740 --> 00:01:41,660
+Mô đun có nghĩa là nhân hai số nguyên tố đó với nhau 23 với 179, và nó sẽ bằng 4117. Sử dụng sơ đồ, tính giá trị của a.
+
+9
+00:01:41,720 --> 00:01:52,040
+Nếu bạn nhớ a đang lấy đi một từ mỗi số nguyên tố.  Vậy chúng ta đang xét 23 trừ một và nhân nó với 179 trừ một.
+
+10
+00:01:52,520 --> 00:02:07,370
+Và nếu chúng ta làm điều đó, thì đó là 22 nhân 278 bằng 3916. Và bây giờ sử dụng sơ đồ này, lựa chọn khóa mã hóa e nhỏ nhất có thể là bao nhiêu.
+
+11
+00:02:07,760 --> 00:02:32,860
+Vì vậy, điều quan trọng về khóa mã hóa.  Nó phải là số nguyên tố a.  Đúng vậy.  Cái đó trong. Và cái giếng là gì, a bằng 3916, mà nếu bạn chia nó ra thành các thừa số, nó sẽ là 2 bình phương nhân 11 nhân 89.
+
+12
+00:02:33,220 --> 00:02:41,740
+Vì vậy, giá trị tốt cho E sẽ bằng ba.  Nó là số nguyên tố k và nó cũng sẽ là giá trị nguyên tố k nhỏ nhất.
+
+13
+00:02:41,980 --> 00:02:50,590
+Hoàn hảo.  Vì vậy, đây là sử dụng RSA và khóa mã hóa nhỏ nhất, mã hóa từ giả mạo.  Vậy chúng ta đi đây.
+
+14
+00:02:50,590 --> 00:03:08,750
+Nói lời là lửng.  Là a d, g, e, r, chúng ta viết dưới dạng số.  Đó là 136 417. Tôi biết chúng ta đang sử dụng công thức RSA, đó là sức mạnh của pizza, một mod và.
+
+15
+00:03:10,480 --> 00:03:28,030
+Và rất nhiều trong số này khá dễ thực hiện vì chúng là những con số nhỏ.  E là 3, nên chúng ta giữ các số này là 1, từ 0 đến 27, 216, chúng ta có 64 và số khó duy nhất là 17 lập phương.
+
+16
+00:03:28,300 --> 00:03:37,840
+Nhưng tôi sẽ nói với bạn rằng câu trả lời sẽ là 796, đó là trong bùn và số học.  Vì vậy, đó là câu trả lời cuối cùng.
+
+17
+00:03:37,840 --> 00:03:47,480
+Đó sẽ là bản mã của bạn.  Chúng ta hãy xem các câu hỏi tiếp theo.  Vì vậy, câu hỏi thứ ba.  Giải mã những con số này.
+
+18
+00:03:47,480 --> 00:03:55,550
+Vì vậy, chúng tôi đã có được số văn bản mã hóa bằng cách sử dụng RSA với mô đun m bằng 187 và khóa giải mã D bằng ba.
+
+19
+00:03:55,880 --> 00:04:02,420
+Và sau đó chúng ta sẽ nhận được các chữ cái trong bảng chữ cái.  Chúng ta sẽ nhận được tin nhắn lại.  Vì vậy, thực sự đây là thủ tục tương tự.
+
+20
+00:04:02,510 --> 00:04:12,200
+Và nếu tôi viết ra các số trước, thì đó cũng là quy trình tương tự như trước đây và bây giờ chúng tôi chỉ sử dụng số giải mã.
+
+21
+00:04:12,200 --> 00:04:38,870
+Vì vậy, chúng ta đạt được nó với công thức là P mũ D theo mod m và bằng 187. Và nếu chúng ta làm lại điều đó, tôi chỉ cần sử dụng Wolfram Alpha và chúng ta có 1914, 22, 0 13 và sau đó nó có thể chuyển thành các chữ cái và  nó là tu c và nó là hai lon.
+
+22
+00:04:40,280 --> 00:04:50,990
+Chúng ta hãy xem xét câu hỏi bốn và năm.  Chúng tôi muốn tạo một lược đồ RSA với hai số nguyên tố.  Q Một là 60, 61 và.
+
+23
+00:04:50,990 --> 00:05:07,160
+Q hai là 223. Mô đun là gì?  Mô-đun đang nhân các số nguyên tố với nhau.  Và chúng ta sẽ nhận được mô đun 13.603 bằng cách sử dụng sơ đồ này.
+
+24
+00:05:07,160 --> 00:05:30,250
+Tính giá trị của A sao cho A bằng.  61 trừ một nhân với 223 trừ một.  Vậy 60 nhân 222. Vậy nó sẽ là 13.320 nếu khóa mã hóa khá lớn.
+
+25
+00:05:30,250 --> 00:05:42,100
+Số 1903, chìa khóa giải mã là gì?  Vì vậy, để làm được điều này, chúng ta cần phải biết một công thức.  Chúng ta cần phải tìm ra một biểu hiện của điều này.
+
+26
+00:05:42,100 --> 00:05:54,520
+Dạng một bằng ba lần E cộng t, a, rồi B ​​ở đây hệ số của E sẽ là khóa giải mã.
+
+27
+00:05:54,700 --> 00:06:12,730
+Và điều đó có thể được thực hiện bằng thuật toán Euclid.  Nó lại ở đó nữa.  Vì vậy, chúng ta hãy đi vào đó.  Vì vậy, bằng cách sử dụng thuật toán Euclid, trước hết, chúng ta sẽ đặt giá trị của a ở vế trái là Y 13,320, và nó sẽ bằng để tạo ra một thứ gì đó.
+
+28
+00:06:13,740 --> 00:06:25,680
+Thời gian 1903 cộng với thứ gì đó và thứ đó ở đây hóa ra là hệ số phân biệt giới tính và phần còn lại của năm 1902.
+
+29
+00:06:26,340 --> 00:06:39,640
+Và bây giờ nếu bạn dịch chuyển mọi thứ qua 1903 bằng với bạn có thể bằng một lô của 1902 cộng một.  Chưa hẳn đã kết thúc thuật toán Euclid rồi.
+
+30
+00:06:39,660 --> 00:06:51,990
+Điều đó thật tuyệt.  Và bây giờ chúng ta đảo ngược điều đó để có thể viết một bằng 1903 -1902.  Và chúng tôi sẽ chỉ thay thế.
+
+31
+00:06:53,440 --> 00:07:09,520
+1902. Với dòng trước đó được thay thế là 1902. Thay thế bằng 13.320 trừ sáu.  Rất nhiều năm 1903.
+
+32
+00:07:09,880 --> 00:07:23,260
+Và chúng ta làm sạch cái này để chúng ta sẽ có cộng 6, rất nhiều 1903 cộng với số chúng ta có lúc đầu.  Vậy đó là cộng bảy lô.
+
+33
+00:07:24,240 --> 00:07:38,100
+Của 1903 trừ đi 13.320.  Và hệ số này có đứng trước 1903, là khóa mã hóa không?
+
+34
+00:07:38,550 --> 00:07:52,290
+Vậy a d bằng bảy.  Tôi đã đưa cho bạn một con số tương đối nhỏ để làm việc đó.  Vì vậy, bây giờ chúng ta sẽ sử dụng khóa giải mã đó để giải mã văn bản mã hóa cuối cùng, cuối cùng của chúng ta, ở đây.
+
+35
+00:07:53,480 --> 00:08:08,030
+Vì vậy, hãy làm điều đó.  Vì vậy, đó là những con số này.  12.521.  12.397.  10,139 và 99. Và chúng ta sẽ sử dụng khóa giải mã.
+
+36
+00:08:08,030 --> 00:08:20,600
+Vì vậy, mỗi dữ liệu của chúng tôi hiện có bảy dữ liệu trong mô hình.  Và chúng tôi đã giải quyết được phần A và nếu chúng tôi làm lại điều đó, tôi chỉ cần dùng máy tính để làm.
+
+37
+00:08:20,700 --> 00:08:36,750
+Đó là 15, 14, 13 và 24. Và đó sẽ là P, o và Y. Tôi đã tặng bạn một con ngựa con.  Thật tuyệt vời.  Và cuối cùng là câu hỏi thứ năm.
+
+38
+00:08:37,530 --> 00:08:45,730
+Cùng một ý tưởng, thực sự?  Chỉ với những con số cứng.  Vì vậy, câu hỏi năm.  Chúng tôi muốn tạo sơ đồ RSA với các số nguyên tố này.
+
+39
+00:08:46,030 --> 00:09:00,990
+Vì vậy bây giờ các số nguyên tố lớn hơn một chút.  Trăm 13 257. Môđun là nhân chúng với nhau.  Mà nếu chúng ta nhân chúng lại với nhau thì nó là 29,041 a.
+
+40
+00:09:02,060 --> 00:09:10,810
+Có nghĩa là trừ một số từ mỗi số nguyên tố và nhân số đó với nhau.  Mà nếu chúng ta làm vậy, điều đó sẽ mang lại cho chúng ta một giá trị.
+
+41
+00:09:11,050 --> 00:09:23,190
+28.672.  Và bây giờ chúng ta đã có khóa mã hóa, số này là 18.847.  Chìa khóa giải mã là gì?  Phương pháp tương tự như trước đây.
+
+42
+00:09:23,200 --> 00:09:32,410
+Chỉ là số lượng lớn hơn.  Và nó có thể được thực hiện bằng thuật toán Euclid.  Vì vậy, chúng ta sẽ sử dụng thuật toán Euclid theo cách giống hệt như trước đây để tính kết quả này.
+
+43
+00:09:33,430 --> 00:09:45,670
+Câu trả lời thực ra có một, hai, ba, bốn, năm, sáu bước, sau đó bạn đảo ngược các bước đó.  Tôi sẽ không viết chúng ra chỉ để ngắn gọn mà giải pháp hoàn chỉnh nằm trong tài nguyên đi kèm với video này.
+
+44
+00:09:46,390 --> 00:10:10,780
+Vì vậy, tôi sẽ bỏ qua phần cuối và nói với bạn rằng sau khi đảo ngược thuật toán Euclid, bạn nhận được một bằng 607 nhân với 18.847 -399, nhân với giá trị của a là 28.000.
+
+45
+00:10:12,270 --> 00:10:26,440
+672. Và hệ số ở phía trước E là 607, vậy D bằng 607. Đó là khóa giải mã của bạn.
+
+46
+00:10:26,890 --> 00:10:39,650
+Và sau đó tôi yêu cầu bạn giải mã một tin nhắn.  Sử dụng khóa giải mã đó.  Và nếu chúng ta làm điều đó, thì sẽ không có gì ngạc nhiên ở đây cả.
+
+47
+00:10:39,680 --> 00:10:47,690
+Vì vậy, đây là những con số của chúng tôi.  Và chúng tôi sẽ sử dụng máy tính để giúp chúng tôi.  Và có một số không ở đó.
+
+48
+00:10:47,690 --> 00:11:07,800
+Vì vậy, đó phải là một mối tương quan.  Và nếu tôi chỉ viết những con số này.  Đúng.  Công thức của chúng ta vẫn như trước vì khóa giải mã là 607 và chúng ta nhận được 15 bốn không 13.
+
+49
+00:11:08,640 --> 00:11:24,190
+20 và 19. Chúng ta nhận được gì?  Chúng tôi nhận được p e a.  Và hai bạn.  Vâng, chúng tôi có đậu phộng.  Thật tuyệt vời.  Được rồi, đó là bài luận của chúng tôi.
+

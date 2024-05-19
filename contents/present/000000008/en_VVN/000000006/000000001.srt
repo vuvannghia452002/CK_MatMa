@@ -1,0 +1,995 @@
+1
+00:00:00,240 --> 00:00:04,350
+Now it's time to bring our story up to date with modern Internet encryption.
+
+2
+00:00:04,530 --> 00:00:09,330
+I talked about having that locked box idea and sending your message to your friend.
+
+3
+00:00:09,540 --> 00:00:17,190
+Now, I said that the code breaker, the spy could brute force this open to smashing the box open.
+
+4
+00:00:17,890 --> 00:00:19,560
+I talked about picking the lock.
+
+5
+00:00:19,830 --> 00:00:22,560
+And I also talked about someone stealing the key.
+
+6
+00:00:22,740 --> 00:00:28,230
+So this is going to be another way of preventing people from stealing the key because we're not going
+
+7
+00:00:28,230 --> 00:00:30,060
+to give out any keys.
+
+8
+00:00:30,180 --> 00:00:32,370
+So this is called public key cryptography.
+
+9
+00:00:32,490 --> 00:00:37,110
+So let's go to our notes and we'll have a look at our first example of this.
+
+10
+00:00:37,260 --> 00:00:39,360
+We'll start with just a little introduction here.
+
+11
+00:00:39,750 --> 00:00:48,030
+So a cipher system is symmetric or one key if it is easy to reduce the decryption key from the encryption
+
+12
+00:00:48,030 --> 00:00:48,420
+key.
+
+13
+00:00:48,690 --> 00:00:51,630
+In practice, these two keys are often identical.
+
+14
+00:00:51,780 --> 00:00:54,930
+So that's kind of what we've been seeing so far.
+
+15
+00:00:55,110 --> 00:01:01,890
+So something like an additive cipher, multiplicative cipher, or even a general substitution cipher.
+
+16
+00:01:02,220 --> 00:01:08,430
+You can work out the inverse key from the original key.
+
+17
+00:01:08,880 --> 00:01:12,500
+This creates the problem of exchanging keys without the keys being stolen.
+
+18
+00:01:12,510 --> 00:01:19,020
+So if you are the spy and you steal the key, then you will be able to decode the messages to solve
+
+19
+00:01:19,020 --> 00:01:19,620
+this problem.
+
+20
+00:01:20,070 --> 00:01:23,850
+Two schemes were developed that don't require any secret channels.
+
+21
+00:01:24,090 --> 00:01:27,600
+You don't have to exchange keys in any sort of secret way.
+
+22
+00:01:27,810 --> 00:01:30,720
+So this is known as public key cryptography.
+
+23
+00:01:30,840 --> 00:01:32,720
+So there are no secrets involved.
+
+24
+00:01:32,730 --> 00:01:34,260
+You can just give away the keys.
+
+25
+00:01:34,860 --> 00:01:41,730
+The first was devised by Diffie and Hellman in 1976, and the second was devised by Rivest Shamir and
+
+26
+00:01:41,730 --> 00:01:44,010
+Adelman in 1977.
+
+27
+00:01:44,370 --> 00:01:50,370
+We're going to describe both these ideas, along with some small examples, but the first that we're
+
+28
+00:01:50,370 --> 00:01:53,790
+going to look at is the Diffie Hellman Key Exchange.
+
+29
+00:01:54,510 --> 00:02:03,360
+So the idea with this one is you both create the two participants, both create part of a shared key.
+
+30
+00:02:03,900 --> 00:02:05,880
+So they start with a shared base.
+
+31
+00:02:06,600 --> 00:02:08,610
+The first person creates part of the key.
+
+32
+00:02:08,820 --> 00:02:10,980
+The second person creates part of the key.
+
+33
+00:02:11,220 --> 00:02:13,230
+They then exchange what they've made.
+
+34
+00:02:13,440 --> 00:02:15,600
+They both then complete the key.
+
+35
+00:02:15,810 --> 00:02:21,570
+And those two participants will have a complete key each which they can use for sending each of other
+
+36
+00:02:21,900 --> 00:02:22,500
+messages.
+
+37
+00:02:22,710 --> 00:02:29,130
+But then if you have the spy who wants to steal the keys, well, you're sending only partial keys backwards
+
+38
+00:02:29,130 --> 00:02:29,700
+and forwards.
+
+39
+00:02:29,700 --> 00:02:30,570
+So that's the idea.
+
+40
+00:02:30,870 --> 00:02:32,940
+But we'll do that in a more mathematical way.
+
+41
+00:02:33,570 --> 00:02:40,830
+So the idea of Diffie Hellman Key Exchange is to create, like I said, a shared key, starting with
+
+42
+00:02:40,830 --> 00:02:41,820
+a shared base.
+
+43
+00:02:42,150 --> 00:02:48,240
+Each participant makes a partial key, which are then exchanged and used to complete the final shared
+
+44
+00:02:48,240 --> 00:02:48,600
+key.
+
+45
+00:02:49,080 --> 00:02:56,430
+Here are or here is an example using exponents where all exchanges can be made on an insecure channel.
+
+46
+00:02:56,440 --> 00:03:00,570
+So you can pass this information backwards and forwards in public.
+
+47
+00:03:01,110 --> 00:03:10,710
+So let Q be a prime key for a prime instead of P for prime, because we used plot already for plaintext
+
+48
+00:03:10,710 --> 00:03:11,130
+letters.
+
+49
+00:03:11,400 --> 00:03:13,710
+So Q is a prime number.
+
+50
+00:03:14,520 --> 00:03:26,970
+Then there exists an integer x, right, such that the powers of x generate all values modulo q.
+
+51
+00:03:27,450 --> 00:03:28,970
+So that's just something that is true.
+
+52
+00:03:28,980 --> 00:03:30,450
+I'm giving this to you as a fact.
+
+53
+00:03:30,690 --> 00:03:38,670
+So when you're working in modulo Q arithmetic and Q is a prime, then there will be an integer that
+
+54
+00:03:38,670 --> 00:03:45,420
+can then generate all the possible values modulo Q which if you remember all the possible remainders
+
+55
+00:03:45,720 --> 00:03:54,540
+modulo Q So step one of this key exchange you've got Alyson Bob as they as we traditionally have.
+
+56
+00:03:55,050 --> 00:03:58,530
+And first of all, they share their common information.
+
+57
+00:03:58,860 --> 00:04:01,800
+And common information is it's a modulus of.
+
+58
+00:04:01,800 --> 00:04:07,560
+Q So you can tell people what that number is and the generator.
+
+59
+00:04:07,560 --> 00:04:10,770
+X Again, you can tell people what that is.
+
+60
+00:04:11,730 --> 00:04:18,390
+Then step two Alice has a secret integer and we'll call that a a for Alice.
+
+61
+00:04:19,740 --> 00:04:24,480
+And Alice will calculate this value X to the power.
+
+62
+00:04:24,480 --> 00:04:26,910
+A So it's X to the power.
+
+63
+00:04:26,930 --> 00:04:34,260
+A So we're talking about X times, x times X a number of times, and that will be in modern Q arithmetic.
+
+64
+00:04:35,600 --> 00:04:41,600
+So you'll have a smaller number than not because and most Q arithmetic means you look at the remainder.
+
+65
+00:04:42,440 --> 00:04:44,030
+And Bob will do the same.
+
+66
+00:04:44,330 --> 00:04:52,910
+Bob has a secret integer B for Bob and calculates using that generator that everyone knows using x.
+
+67
+00:04:53,210 --> 00:04:55,130
+Raising to the power b this time.
+
+68
+00:04:55,580 --> 00:04:58,670
+And that is in mod q arithmetic.
+
+69
+00:04:59,360 --> 00:05:03,470
+So Alice and Bob have made partial keys and they now swap.
+
+70
+00:05:04,220 --> 00:05:06,110
+So they swap those partial keys.
+
+71
+00:05:06,620 --> 00:05:15,260
+And then finally Alice is going to calculate X to the power B that is Bob's partial key and raise that
+
+72
+00:05:15,260 --> 00:05:22,670
+to Alice's secret number, which is a switch X to the power B to the power A and that will be mod Q.
+
+73
+00:05:25,490 --> 00:05:26,360
+And Bob.
+
+74
+00:05:26,900 --> 00:05:33,890
+Well, Bob takes Odyssey's partial key, which is exit the power aid and raises to his secret number.
+
+75
+00:05:34,280 --> 00:05:35,690
+So brazen to Power B.
+
+76
+00:05:36,170 --> 00:05:37,700
+Now we've got X to the power, eh?
+
+77
+00:05:37,700 --> 00:05:41,750
+To the power B, and that is a mod Q arithmetic.
+
+78
+00:05:42,680 --> 00:05:44,690
+So that's what is in Bob have done.
+
+79
+00:05:45,590 --> 00:05:49,790
+But this is great because they have created a shared key.
+
+80
+00:05:50,390 --> 00:05:52,340
+This is a shared key because.
+
+81
+00:05:53,810 --> 00:06:01,070
+X to the power A to the power B is going to be congruent to.
+
+82
+00:06:01,970 --> 00:06:09,900
+I put this in a bracket now x the power of B to the power a mod q is going to mean that I was in power
+
+83
+00:06:09,950 --> 00:06:11,750
+will now have the same value.
+
+84
+00:06:11,750 --> 00:06:17,450
+They're going to have the same numerical value which they will be able to use to encrypt and decrypt
+
+85
+00:06:17,450 --> 00:06:17,820
+messages.
+
+86
+00:06:17,870 --> 00:06:18,890
+This is only the key.
+
+87
+00:06:18,890 --> 00:06:21,590
+This is not sending the message itself.
+
+88
+00:06:21,830 --> 00:06:27,920
+So he's now created a number and they both got the same number and then they can use that in whatever
+
+89
+00:06:28,070 --> 00:06:30,230
+cipher they've decided to use.
+
+90
+00:06:30,470 --> 00:06:32,180
+And it might be something simple.
+
+91
+00:06:32,330 --> 00:06:36,170
+It might be something like a multiplicative cipher.
+
+92
+00:06:36,170 --> 00:06:43,400
+That is what some of the code l gammel encryption uses this idea and then takes that secret number they've
+
+93
+00:06:43,400 --> 00:06:51,740
+created in a multiplicative cipher, using this as a multiplicative key in modulo Q.
+
+94
+00:06:52,250 --> 00:06:58,880
+It's a split in that last gap that so it doesn't even have to be a difficult cipher once you've exchanged
+
+95
+00:06:59,030 --> 00:06:59,570
+the key.
+
+96
+00:07:01,160 --> 00:07:06,440
+Okay, let's do an example of this with some small numbers so that you get a better feel for it.
+
+97
+00:07:06,950 --> 00:07:16,190
+So let's take an X to be two, X equals two and we'll have a prime number, and that is Q And that is
+
+98
+00:07:16,190 --> 00:07:22,760
+going to be, I'm going to say 29 as my prime number, starting with this base.
+
+99
+00:07:22,760 --> 00:07:25,370
+So that is public information that everyone can know.
+
+100
+00:07:26,120 --> 00:07:29,870
+The two participants use the secret integers.
+
+101
+00:07:30,170 --> 00:07:38,600
+Let's say Alice has picked a equals five and Bob has picked B equals 12 and they're going to create
+
+102
+00:07:38,600 --> 00:07:39,920
+their partial keys.
+
+103
+00:07:40,490 --> 00:07:41,480
+So what does that mean?
+
+104
+00:07:41,480 --> 00:07:45,980
+So they take the generator, which is two, and I'm going to do Alice first.
+
+105
+00:07:45,980 --> 00:07:53,840
+So two to the power A, which is five and that will be well we can just calculate that if you want to.
+
+106
+00:07:54,050 --> 00:07:55,670
+That is equal to 32.
+
+107
+00:07:56,150 --> 00:08:08,120
+So two to the power five and we're in March 29 arithmetic here that is congruent to three Mar 29 arithmetic
+
+108
+00:08:08,960 --> 00:08:12,590
+because there is three left over and what is Bob going to do?
+
+109
+00:08:12,800 --> 00:08:14,930
+So I'll end here and then Bob.
+
+110
+00:08:15,890 --> 00:08:23,690
+Bob is taking that generator to raising two secret number 12 and he's going to create something quite
+
+111
+00:08:23,690 --> 00:08:28,130
+large actually that in this case 4096.
+
+112
+00:08:29,090 --> 00:08:32,030
+And then we're interested in that value.
+
+113
+00:08:32,030 --> 00:08:40,610
+In my 29 arithmetic, which I will tell you right now, is a seven mod 29.
+
+114
+00:08:40,820 --> 00:08:46,880
+You can get a calculator, a computer to work that out, but I am going to show you methods of working
+
+115
+00:08:46,880 --> 00:08:49,280
+out something like that for yourself by hand.
+
+116
+00:08:49,760 --> 00:08:53,750
+But now we are going to exchange those values.
+
+117
+00:08:53,750 --> 00:08:56,000
+So Alice and Bob exchange their values.
+
+118
+00:08:56,240 --> 00:09:05,020
+Alice receives Bob's value and it was seven and will raise seven to hash secret number, which is a
+
+119
+00:09:05,510 --> 00:09:06,050
+five.
+
+120
+00:09:06,320 --> 00:09:07,670
+So it's to the power five.
+
+121
+00:09:08,150 --> 00:09:10,970
+And then that is something I'm going to tell you what it is.
+
+122
+00:09:11,660 --> 00:09:20,930
+16,807 and we go and was that in mod 29 arithmetic?
+
+123
+00:09:20,930 --> 00:09:29,150
+Again, just let me tell you, it is congruent to 16 mod 29 and what's Bob going to do?
+
+124
+00:09:30,650 --> 00:09:38,900
+So Bob has received Alice's number, which was a three, and that's going to be raised to the power
+
+125
+00:09:38,930 --> 00:09:44,540
+12, and that is whether it's going to be equal to a very large number,
+
+126
+00:09:45,020 --> 00:09:50,660
+531,441.
+
+127
+00:09:51,200 --> 00:09:58,220
+And again, I will tell you that that is congruent to 16 March 29, which is nice because you get the
+
+128
+00:09:58,220 --> 00:10:00,980
+same number as we expected to.
+
+129
+00:10:00,980 --> 00:10:09,410
+The two participants now have a shared key of 16, and they can use that however they want in whatever
+
+130
+00:10:09,410 --> 00:10:10,250
+cipher they want.
+
+131
+00:10:11,510 --> 00:10:18,530
+Now, in real life, the values of A, B and Q are much larger.
+
+132
+00:10:20,390 --> 00:10:26,840
+So when you're really using this procedure, you will be using larger values of A, B and Q.
+
+133
+00:10:26,840 --> 00:10:29,630
+You're going to get some very large numbers in these calculations.
+
+134
+00:10:30,200 --> 00:10:36,170
+Again, you could do these with computers and things, however, and when I was taught how to do modular
+
+135
+00:10:36,170 --> 00:10:42,320
+arithmetic in this kind of thing, and I was taught how to do it by hand because we didn't really have
+
+136
+00:10:42,590 --> 00:10:44,420
+the computers around to do this for us.
+
+137
+00:10:44,810 --> 00:10:47,480
+And yeah, so I'm going to teach you how to do it by hand.
+
+138
+00:10:47,840 --> 00:10:52,820
+So often you can do this by hand if you notice by observation.
+
+139
+00:10:53,190 --> 00:11:00,360
+And some sort of way to break up the calculation so that some parts of the calculation are easy numbers,
+
+140
+00:11:00,360 --> 00:11:08,760
+like small numbers, so that some parts of the calculation become zero mod, whatever one might, whatever
+
+141
+00:11:08,760 --> 00:11:10,920
+or two might, whatever it is.
+
+142
+00:11:11,670 --> 00:11:16,560
+Those zeros, ones and twos then obviously are very easy to start calculating.
+
+143
+00:11:16,740 --> 00:11:19,380
+I'll show you an example of how you might do that.
+
+144
+00:11:19,410 --> 00:11:22,560
+So this is you trying to do something by hand.
+
+145
+00:11:23,040 --> 00:11:26,880
+So to calculate to to the power.
+
+146
+00:11:27,240 --> 00:11:30,180
+12 March 29.
+
+147
+00:11:30,480 --> 00:11:37,050
+So what I'm not going to do I'm not going to calculate to to the power 12 but I might notice by observation
+
+148
+00:11:37,260 --> 00:11:39,160
+something that is easy to use.
+
+149
+00:11:39,180 --> 00:11:49,770
+Maybe I'll see that two to the power five which is 32 that is congruent to three Mar 29.
+
+150
+00:11:52,240 --> 00:11:55,840
+And then there's two to the power 12.
+
+151
+00:11:57,440 --> 00:12:05,750
+We could break it up to to the power 12 and that is equal to if you are happy with how powers work,
+
+152
+00:12:06,080 --> 00:12:12,380
+we could break up the two to the power 12 into two to the power five squared.
+
+153
+00:12:12,860 --> 00:12:15,440
+Due to the power five squared is two to power ten.
+
+154
+00:12:15,920 --> 00:12:18,770
+And what's this over two squared.
+
+155
+00:12:19,280 --> 00:12:20,810
+And that would be two to power 12.
+
+156
+00:12:21,500 --> 00:12:27,510
+So I've broken it up and I can replace because it's modular arithmetic, I can replace two to the power
+
+157
+00:12:27,530 --> 00:12:35,990
+five with this much nicer number three so that two, two power five in the bracket is now three.
+
+158
+00:12:35,990 --> 00:12:39,710
+So it's three squared and two squared.
+
+159
+00:12:40,160 --> 00:12:42,040
+So I'll just leave us two squared for now.
+
+160
+00:12:42,050 --> 00:12:43,490
+But obviously that is four.
+
+161
+00:12:44,360 --> 00:12:49,370
+And so that then is congruent to three squared times two squared.
+
+162
+00:12:50,330 --> 00:12:58,430
+So we can do that however you want nine times four and that then becomes 36.
+
+163
+00:12:59,890 --> 00:13:07,600
+Much more manageable and then that is congruent to seven mod 29, which is what we expected.
+
+164
+00:13:07,780 --> 00:13:09,310
+That is what I had before.
+
+165
+00:13:10,180 --> 00:13:12,340
+So yes, you can do these things by hand.
+
+166
+00:13:12,370 --> 00:13:14,470
+Again, it is really just by observation.
+
+167
+00:13:14,770 --> 00:13:18,790
+So you just sort of notice some easy numbers and then break up the calculation.
+
+168
+00:13:19,810 --> 00:13:22,390
+Even though x.
+
+169
+00:13:23,360 --> 00:13:28,760
+Q and extra power a mod q.
+
+170
+00:13:30,490 --> 00:13:36,380
+An X to the power of B mod q are sent in the clear.
+
+171
+00:13:36,400 --> 00:13:41,260
+So on an insecure channel you just you can just exchange these numbers and everyone can find them if
+
+172
+00:13:41,260 --> 00:13:41,890
+they want to.
+
+173
+00:13:42,160 --> 00:13:48,970
+It's still very difficult for your spy or codebreaker to work out what X to do.
+
+174
+00:13:48,970 --> 00:13:57,340
+Power A, B mod q will be, which is the shared key.
+
+175
+00:13:58,150 --> 00:14:04,030
+It's very difficult to work that out from the information you've stolen, and this is called the discrete,
+
+176
+00:14:04,030 --> 00:14:06,970
+logarithmic or logarithm problem.
+
+177
+00:14:08,350 --> 00:14:16,390
+That is a hard thing to solve, which is why we can use it at the procedure created a shared key because
+
+178
+00:14:16,390 --> 00:14:20,140
+the order of the exponents didn't matter and in other words they commute.
+
+179
+00:14:20,140 --> 00:14:23,470
+We talked about computing before we talk about computing ciphers.
+
+180
+00:14:23,800 --> 00:14:25,210
+This is kind of the same idea.
+
+181
+00:14:25,210 --> 00:14:30,520
+Although we're not committing to ciphers here, we're using a procedure that commits to create the shared
+
+182
+00:14:30,520 --> 00:14:30,880
+key.
+
+183
+00:14:31,990 --> 00:14:35,050
+So the order of exponents, I don't matter.
+
+184
+00:14:35,380 --> 00:14:36,040
+They can mute.
+
+185
+00:14:36,670 --> 00:14:43,540
+And you could use this same idea with any other procedure that has some element that can meet.
+
+186
+00:14:43,720 --> 00:14:48,640
+So you could replace exponents with any operation that commutes.
+
+187
+00:14:48,880 --> 00:14:49,780
+So here's an example.
+
+188
+00:14:50,050 --> 00:14:56,140
+Nothing like the exponents, and it's called elliptic curve cryptography, which is something we use
+
+189
+00:14:56,140 --> 00:14:57,880
+today on the internet.
+
+190
+00:14:58,360 --> 00:15:00,400
+And so to exchange keys.
+
+191
+00:15:00,730 --> 00:15:07,780
+So elliptic curve cryptography uses curves with our own kind of addition.
+
+192
+00:15:08,710 --> 00:15:15,940
+Adding two points on the curve is defined to be the operation of drawing a straight line through the
+
+193
+00:15:15,940 --> 00:15:22,420
+points, finding where the line intersects on the curve, and then reflecting that point in the x axis.
+
+194
+00:15:22,420 --> 00:15:24,880
+Let me just break down for I said there.
+
+195
+00:15:25,240 --> 00:15:27,340
+So this is called an electric curve.
+
+196
+00:15:27,340 --> 00:15:28,750
+There's a picture there underneath.
+
+197
+00:15:29,380 --> 00:15:30,970
+So it's this wiggly curve.
+
+198
+00:15:31,300 --> 00:15:34,030
+So a particular kind of mathematical curve.
+
+199
+00:15:34,600 --> 00:15:42,760
+And I've got 2.2, I've got point Q on point R and I've drawn a line through Q and on and intersects
+
+200
+00:15:42,760 --> 00:15:46,120
+the curve one more time at a third point.
+
+201
+00:15:46,480 --> 00:15:47,020
+There it is.
+
+202
+00:15:47,440 --> 00:15:51,700
+And I, what I do next is I actually reflect that in the x axis.
+
+203
+00:15:51,700 --> 00:15:57,490
+So I actually get a point down here and I call that point Q plus R.
+
+204
+00:15:58,030 --> 00:16:05,740
+Now, this rather strange definition of addition does work a lot like the addition you would know,
+
+205
+00:16:05,980 --> 00:16:09,850
+and importantly it would commute as well.
+
+206
+00:16:10,660 --> 00:16:18,070
+So, yes, importantly, this definition of addition can meet multiples of a point, can be found quickly
+
+207
+00:16:18,250 --> 00:16:20,980
+by combination of doubling and addition.
+
+208
+00:16:20,980 --> 00:16:27,100
+So let's say I want you to work out a multiple of Q so I've got my Q here and if I want to work out
+
+209
+00:16:27,100 --> 00:16:27,880
+a multiple Okay.
+
+210
+00:16:27,880 --> 00:16:29,470
+Well, first thing I could do is double it.
+
+211
+00:16:29,860 --> 00:16:38,620
+So I'd have Q plus Q would mean drawing a line here through Q itself and then it would intersect.
+
+212
+00:16:39,070 --> 00:16:44,230
+So probably quite high up over here, I would intersect and create a point to.
+
+213
+00:16:44,260 --> 00:16:52,600
+Q Then I could double to get four Q and I could double for Q and get eight Q So it's very easy to double
+
+214
+00:16:52,870 --> 00:16:58,060
+that point, and then I could work out multiples of Q using those values.
+
+215
+00:16:58,330 --> 00:17:06,580
+And if I wanted to work out ten lots of Q, I would take eight plus two lots of Q, add those together
+
+216
+00:17:06,910 --> 00:17:13,690
+with this operation so we can find multiples of a point by doubling and then adding.
+
+217
+00:17:14,740 --> 00:17:16,930
+Now we're going to create a key.
+
+218
+00:17:17,170 --> 00:17:22,630
+So this is the same idea as Stephanie Hellman, but using this elliptic curve.
+
+219
+00:17:23,410 --> 00:17:30,490
+So the two participants, they're going to start by sharing a starting point, which I'm going to call
+
+220
+00:17:30,490 --> 00:17:36,190
+P capital P, so they share a starting point, common knowledge.
+
+221
+00:17:36,520 --> 00:17:38,740
+They know the curve, they know the starting point.
+
+222
+00:17:39,460 --> 00:17:43,450
+Each participant then create a secret multiple of P.
+
+223
+00:17:44,950 --> 00:17:47,260
+So let's say we have our Alison Bob.
+
+224
+00:17:47,740 --> 00:17:57,730
+Alice creates a lots of P and Bob creates B, lots of P, so some multiple of that a point which are
+
+225
+00:17:57,730 --> 00:17:58,480
+then exchanged.
+
+226
+00:17:58,540 --> 00:18:00,550
+So they swap those points.
+
+227
+00:18:01,150 --> 00:18:10,780
+Both participants, they multiply those exchanged points by their secret value to create a point A,
+
+228
+00:18:10,840 --> 00:18:18,490
+B, P, and the coordinates of that point can be used as the shared key.
+
+229
+00:18:18,490 --> 00:18:20,650
+So you get a value using the coordinates.
+
+230
+00:18:20,650 --> 00:18:25,660
+At that point, you can then use that value as a key.
+
+231
+00:18:25,660 --> 00:18:29,380
+Again, it could be in any other site that you want, could be a multiple.
+
+232
+00:18:29,530 --> 00:18:31,430
+Negative cipher fi, something like that.
+
+233
+00:18:32,660 --> 00:18:37,850
+It's very difficult to work out the final point from this information that is exchanged.
+
+234
+00:18:38,060 --> 00:18:41,090
+So information that is public is the electric curve.
+
+235
+00:18:41,420 --> 00:18:43,850
+The starting point is public information.
+
+236
+00:18:44,300 --> 00:18:51,290
+Then if you're a spy, you might steal a lots of P and be lots of P, but even with that stolen information
+
+237
+00:18:51,670 --> 00:18:55,310
+at that final point is very difficult to work out.
+
+238
+00:18:55,700 --> 00:19:00,140
+And this is even harder if the calculations are done in modular arithmetic.
+
+239
+00:19:00,140 --> 00:19:06,170
+So the way I've described it so far, I've done it with a curve, like like a graph, like a curve you
+
+240
+00:19:06,170 --> 00:19:08,030
+might see on a graph.
+
+241
+00:19:08,300 --> 00:19:14,450
+I bet you could do all these calculations in modular arithmetic as well, so they wouldn't be a nice
+
+242
+00:19:14,450 --> 00:19:20,930
+continuous curve like that, but it would be the same sort of idea just in modular arithmetic, and
+
+243
+00:19:20,930 --> 00:19:24,200
+that would make the point seem completely unrelated.
+
+244
+00:19:24,200 --> 00:19:31,280
+You're just exchanging what seems like random points, very difficult then to work out your shared key.
+
+245
+00:19:31,670 --> 00:19:32,630
+So that's tricky.
+
+246
+00:19:32,660 --> 00:19:38,900
+Hellman Exchange a brilliant idea and it is used today to exchange keys.
+
+247
+00:19:39,560 --> 00:19:45,380
+But next, I'm going to show you another idea that is used again, public key cryptography.
+
+248
+00:19:45,380 --> 00:19:50,720
+Another example of that, and that is called RSA, are also used on the Internet.
+
+249
+00:19:50,720 --> 00:19:52,820
+Well, have a look at that in the next video.

@@ -1,0 +1,735 @@
+1
+00:00:00,330 --> 00:00:04,980
+Now let's take a look at the solutions for this breaking RSA exercises.
+
+2
+00:00:05,190 --> 00:00:06,600
+I start with a few notes.
+
+3
+00:00:07,050 --> 00:00:09,510
+First, I say we're going to use two digit numbers now.
+
+4
+00:00:10,020 --> 00:00:15,000
+So A is 0001, Z is 25.
+
+5
+00:00:15,230 --> 00:00:17,880
+That just makes things nice and same size.
+
+6
+00:00:18,570 --> 00:00:24,810
+I say that the following ciphertext contain no padding, which means you can break them using the methods
+
+7
+00:00:24,810 --> 00:00:26,010
+I described in the course.
+
+8
+00:00:26,550 --> 00:00:32,430
+And finally, I say you can perform these calculations with a computer or Wolfram Alpha.
+
+9
+00:00:32,760 --> 00:00:34,920
+So let's do question one.
+
+10
+00:00:34,920 --> 00:00:41,910
+And I ask you to encode the word elephant as two digit numbers just to get that point across.
+
+11
+00:00:42,150 --> 00:00:43,980
+So elephant is the word.
+
+12
+00:00:44,460 --> 00:00:45,870
+So elephant.
+
+13
+00:00:47,520 --> 00:00:49,830
+And then I'm asking you to write us two digit numbers.
+
+14
+00:00:49,900 --> 00:00:56,010
+So that is zero 411 zero 415
+
+15
+00:00:57,150 --> 00:01:02,970
+0700 13 and 19.
+
+16
+00:01:04,510 --> 00:01:10,750
+He split the word into blocks of two letters and write the numerical values of each block.
+
+17
+00:01:10,990 --> 00:01:21,210
+So we are now going to split the word into blocks of two letters e l, e, p, h, a and an t, and
+
+18
+00:01:21,220 --> 00:01:23,050
+will write the values of that.
+
+19
+00:01:23,050 --> 00:01:25,810
+And that is just 0411.
+
+20
+00:01:27,380 --> 00:01:33,860
+041507001319.
+
+21
+00:01:35,800 --> 00:01:40,150
+We are now going to encrypt these blocks using RSA.
+
+22
+00:01:41,160 --> 00:01:52,350
+With modulus m equals 2773 and encryption key E equals 1147, which is not too hard to do with a computer.
+
+23
+00:01:52,350 --> 00:01:56,100
+How can you say if a writing hour blocks?
+
+24
+00:01:57,260 --> 00:01:57,920
+And if not.
+
+25
+00:02:00,280 --> 00:02:01,000
+Like that.
+
+26
+00:02:01,330 --> 00:02:03,040
+We have our numerical values.
+
+27
+00:02:03,790 --> 00:02:07,420
+04110415.
+
+28
+00:02:08,760 --> 00:02:12,360
+07001319.
+
+29
+00:02:14,400 --> 00:02:18,930
+And now we hit it with the formula p to the power e mode and.
+
+30
+00:02:20,270 --> 00:02:26,330
+And yes, with our computers we can to say that that is going to be 1816
+
+31
+00:02:27,320 --> 00:02:30,110
+1429.
+
+32
+00:02:31,330 --> 00:02:34,450
+1225.
+
+33
+00:02:35,540 --> 00:02:39,110
+And 1511.
+
+34
+00:02:39,110 --> 00:02:42,680
+So those phone numbers will be the ciphertext.
+
+35
+00:02:42,980 --> 00:02:50,240
+But I want to point out that this hides the frequency of the letter E and it hides that A, which has
+
+36
+00:02:50,240 --> 00:02:51,980
+always been zero so far.
+
+37
+00:02:52,190 --> 00:02:54,410
+Now it's hiding that A as well.
+
+38
+00:02:55,940 --> 00:02:59,390
+So now let's have a look at some breaking RSA methods.
+
+39
+00:02:59,720 --> 00:03:02,090
+So these were described in the course notes.
+
+40
+00:03:02,340 --> 00:03:03,080
+Let's take a look.
+
+41
+00:03:03,230 --> 00:03:05,880
+So we have a stolen ciphertext reading here.
+
+42
+00:03:05,900 --> 00:03:07,340
+So we've got three numbers here.
+
+43
+00:03:07,820 --> 00:03:18,710
+It was sent using RSA without padding and a public key of M equals 2773 and E equals 1147 is the same
+
+44
+00:03:18,710 --> 00:03:19,850
+numbers I used before.
+
+45
+00:03:20,360 --> 00:03:25,310
+So work out the original message using a chosen plaintext attack.
+
+46
+00:03:25,970 --> 00:03:29,510
+So we think the ciphertext is one of these four possible words.
+
+47
+00:03:29,810 --> 00:03:35,360
+So because it's all animal themed, you might be putting mongoose, rabbit or raccoon.
+
+48
+00:03:35,750 --> 00:03:36,920
+Which word is it?
+
+49
+00:03:36,950 --> 00:03:43,940
+So really, we just test out these four words using the public key and then see which one matches the
+
+50
+00:03:43,940 --> 00:03:45,560
+stolen ciphertext.
+
+51
+00:03:45,980 --> 00:03:52,070
+Well, we've got three numbers here, and these are like six letter words or eight letter words.
+
+52
+00:03:52,070 --> 00:03:57,060
+So they're written in blocks and it's probably a six letter word in blocks of two.
+
+53
+00:03:57,080 --> 00:03:59,630
+So I'm going to exclude Mongoose straight away.
+
+54
+00:03:59,810 --> 00:04:01,160
+So a mongoose is too long.
+
+55
+00:04:02,150 --> 00:04:05,150
+Mongoose is too long.
+
+56
+00:04:05,810 --> 00:04:08,840
+Now, that would be a problem if it had padding.
+
+57
+00:04:09,560 --> 00:04:14,930
+If it has padding, then the padding makes all these words the same length, which makes it harder to
+
+58
+00:04:14,930 --> 00:04:16,760
+work out which one is which.
+
+59
+00:04:17,570 --> 00:04:21,350
+Now let's test out some of these words baboon, rabbit or raccoon.
+
+60
+00:04:21,680 --> 00:04:28,490
+Let's test out the first two letters of rabbit or raccoon because they both start with an R and then
+
+61
+00:04:28,490 --> 00:04:28,950
+A.
+
+62
+00:04:29,480 --> 00:04:37,280
+So if I encrypt r a, then r a is encoded as 1700.
+
+63
+00:04:37,850 --> 00:04:40,710
+And let's hit that with the public key.
+
+64
+00:04:40,710 --> 00:04:52,520
+To the public key, we take 1700 raise to the encryption number, 1147, and that is going to be congruent
+
+65
+00:04:52,520 --> 00:04:56,600
+to 1015 in March.
+
+66
+00:04:57,800 --> 00:05:01,700
+2000 to 773.
+
+67
+00:05:01,700 --> 00:05:02,150
+There we go.
+
+68
+00:05:02,270 --> 00:05:04,370
+2773.
+
+69
+00:05:06,330 --> 00:05:10,820
+That matches the first block of the ciphertext.
+
+70
+00:05:10,820 --> 00:05:11,210
+So.
+
+71
+00:05:11,660 --> 00:05:12,800
+Oh, that's a clue.
+
+72
+00:05:13,040 --> 00:05:19,220
+So he's not going to be back in I think it's rabbit or it's raccoon, but I'm going to test the next
+
+73
+00:05:19,790 --> 00:05:21,620
+pair of letters to find out.
+
+74
+00:05:22,260 --> 00:05:23,660
+I'm going to use.
+
+75
+00:05:24,560 --> 00:05:25,820
+Let's try raccoon.
+
+76
+00:05:25,820 --> 00:05:27,650
+So she used the C oh.
+
+77
+00:05:28,550 --> 00:05:32,630
+So if I use the C L, I'm going to get 0214.
+
+78
+00:05:34,290 --> 00:05:35,490
+And I going to hit that.
+
+79
+00:05:36,890 --> 00:05:38,150
+With the encryption key.
+
+80
+00:05:39,930 --> 00:05:44,550
+And if I do that, I'm going to get to go for for.
+
+81
+00:05:45,850 --> 00:05:55,680
+In March 2773 AU That matches the second black hour, so it's probably going to be raccoon.
+
+82
+00:05:55,690 --> 00:06:03,660
+And if you wanted to, you could test out B.B. here in Rabbit and you'll find that it will not work.
+
+83
+00:06:03,670 --> 00:06:09,250
+So if you do that, you test out B.B. it would be 0101.
+
+84
+00:06:10,720 --> 00:06:20,500
+And if we encrypt that with our encryption key, that is going to be 1353.
+
+85
+00:06:20,500 --> 00:06:23,470
+But it doesn't match the ciphertext.
+
+86
+00:06:24,280 --> 00:06:26,770
+So yes, raccoon sounds right to me.
+
+87
+00:06:26,920 --> 00:06:30,790
+And indeed, if you keep going, e check out the last block there.
+
+88
+00:06:31,030 --> 00:06:35,350
+The O and that would be one for.
+
+89
+00:06:36,300 --> 00:06:37,110
+One three.
+
+90
+00:06:37,680 --> 00:06:38,760
+And if you encrypt that.
+
+91
+00:06:40,010 --> 00:06:47,090
+No surprises, but it will encrypt to be the final block in the cipher text.
+
+92
+00:06:47,240 --> 00:06:49,640
+So it is the word raccoon after all.
+
+93
+00:06:50,390 --> 00:06:53,360
+Okay, so let's have a look at question three.
+
+94
+00:06:56,450 --> 00:06:58,610
+We've got a stone in ciphertext again.
+
+95
+00:06:58,880 --> 00:07:00,380
+Those are the values.
+
+96
+00:07:00,570 --> 00:07:05,090
+I wasn't using RSA without padding and the same public key as before.
+
+97
+00:07:05,600 --> 00:07:12,290
+This time I've decided to use a chosen ciphertext attack using x equals two.
+
+98
+00:07:12,830 --> 00:07:17,930
+So first of all, we're going to have a look and see that X in our code prime.
+
+99
+00:07:18,410 --> 00:07:19,820
+So, okay, prime.
+
+100
+00:07:19,820 --> 00:07:20,840
+I know what that means.
+
+101
+00:07:21,830 --> 00:07:24,710
+So we could do have Euclid's algorithm here.
+
+102
+00:07:25,820 --> 00:07:26,780
+But it's not too hard.
+
+103
+00:07:27,080 --> 00:07:28,160
+Euclid's algorithm.
+
+104
+00:07:29,480 --> 00:07:30,530
+So we do that.
+
+105
+00:07:31,040 --> 00:07:33,370
+So we're looking to show that X and M.
+
+106
+00:07:33,380 --> 00:07:34,130
+Okay, prime.
+
+107
+00:07:34,520 --> 00:07:34,920
+That's right.
+
+108
+00:07:34,940 --> 00:07:38,750
+M which is 2773 on the left.
+
+109
+00:07:39,410 --> 00:07:44,300
+That is equal to something times two to something.
+
+110
+00:07:45,410 --> 00:07:52,580
+It turns out that the coefficient there is 1386 and the remainder is one.
+
+111
+00:07:52,940 --> 00:07:55,880
+And that ends Euclid's algorithm straight away for us.
+
+112
+00:07:55,910 --> 00:07:56,540
+That's nice.
+
+113
+00:07:56,870 --> 00:07:59,480
+So, yes, they all k prime.
+
+114
+00:07:59,480 --> 00:08:02,180
+The greatest common divisor will be one.
+
+115
+00:08:02,780 --> 00:08:07,370
+So what is the multiplicative inverse of X in modulo m?
+
+116
+00:08:07,850 --> 00:08:16,100
+Well, I need to reverse Euclid's algorithm here so that I have one equal some sort of combination of
+
+117
+00:08:16,100 --> 00:08:19,100
+the original numbers, which is two.
+
+118
+00:08:20,800 --> 00:08:21,400
+And.
+
+119
+00:08:23,770 --> 00:08:26,950
+2773.
+
+120
+00:08:27,770 --> 00:08:29,770
+Well, that's quite easy to reverse.
+
+121
+00:08:30,130 --> 00:08:40,570
+And so that's just one lot of 2773 and subtracting the 1386.
+
+122
+00:08:40,840 --> 00:08:45,430
+So now it's actually a -1386 there.
+
+123
+00:08:45,700 --> 00:08:48,820
+So it's that coefficient that will be the inverse.
+
+124
+00:08:48,820 --> 00:08:50,140
+So if x equals two.
+
+125
+00:08:51,780 --> 00:08:56,480
+If X equals two, then the inverse, which I'll call x dash.
+
+126
+00:08:57,620 --> 00:09:04,910
+Is congruent to the -1386, and I could leave it like that, but let's make it positive.
+
+127
+00:09:05,240 --> 00:09:10,700
+And so I'll just add on the modulus to make it 1387.
+
+128
+00:09:11,360 --> 00:09:16,640
+Again, that is in MOD 2773.
+
+129
+00:09:18,000 --> 00:09:18,950
+Let's continue.
+
+130
+00:09:18,960 --> 00:09:23,910
+So the next part asks you to work out X to the power e in mind.
+
+131
+00:09:23,910 --> 00:09:26,430
+And so we know what x is.
+
+132
+00:09:26,430 --> 00:09:28,830
+It's two, we know what E is.
+
+133
+00:09:29,880 --> 00:09:44,220
+It is 1147 and yet use a computer because the answer is going to be 1134 and that's in March.
+
+134
+00:09:45,750 --> 00:09:48,840
+2773.
+
+135
+00:09:50,350 --> 00:09:53,470
+Part D then asks you to create a second cipher.
+
+136
+00:09:53,470 --> 00:09:58,000
+C2, which is C1 multiplied by that value, just worked out.
+
+137
+00:09:58,660 --> 00:10:00,490
+So, so c1.
+
+138
+00:10:01,690 --> 00:10:06,340
+Is the ciphertext, which is a178.
+
+139
+00:10:07,750 --> 00:10:08,950
+1735.
+
+140
+00:10:10,740 --> 00:10:13,920
+And 0903.
+
+141
+00:10:15,000 --> 00:10:23,100
+And we're multiplying that to get C to we're multiplying that by the value is just what out the 1134.
+
+142
+00:10:24,730 --> 00:10:25,540
+And we get.
+
+143
+00:10:26,570 --> 00:10:30,350
+21961423.
+
+144
+00:10:32,020 --> 00:10:34,450
+And 0765.
+
+145
+00:10:36,590 --> 00:10:41,780
+So that is our cipher too, which doesn't mean anything, but that is our fake cipher.
+
+146
+00:10:42,260 --> 00:10:48,890
+I am now able to have cipher two deciphered and I will receive a decryption which looks like this.
+
+147
+00:10:49,340 --> 00:10:51,410
+What was the original message?
+
+148
+00:10:52,620 --> 00:10:57,300
+So we have our 0061.
+
+149
+00:10:59,870 --> 00:11:01,760
+Our zero 0 to 6.
+
+150
+00:11:03,350 --> 00:11:05,870
+And 1208.
+
+151
+00:11:06,170 --> 00:11:13,830
+Now, when you have that deciphered, the result is that it's just a plain text multiplied by x and
+
+152
+00:11:13,850 --> 00:11:14,510
+mod m.
+
+153
+00:11:15,520 --> 00:11:21,040
+So now to finish off to get the plain text, which is multiply this thing by the X in.
+
+154
+00:11:21,850 --> 00:11:28,060
+So we've taking the line above and then multiply that by x inverse and that's in mod and.
+
+155
+00:11:29,230 --> 00:11:35,380
+X inverse we worked out, which was the 1387 that was from part B.
+
+156
+00:11:35,710 --> 00:11:40,090
+So I'm multiplying by that value and I'm doing that in modular arithmetic.
+
+157
+00:11:40,360 --> 00:11:45,910
+And the final answer is going to be 1417.
+
+158
+00:11:47,160 --> 00:11:49,470
+0013.
+
+159
+00:11:51,010 --> 00:11:51,790
+Zero six.
+
+160
+00:11:52,870 --> 00:11:53,890
+Zero four.
+
+161
+00:11:54,280 --> 00:11:56,440
+And finally, we turn out two letters.
+
+162
+00:11:57,550 --> 00:12:06,230
+What we get when we turn it into letters, we get o, o, a and g e.
+
+163
+00:12:06,250 --> 00:12:07,890
+It's a return of the surprise.
+
+164
+00:12:07,900 --> 00:12:08,560
+Orange.
+
+165
+00:12:08,570 --> 00:12:09,280
+There you go.
+
+166
+00:12:09,490 --> 00:12:14,500
+So orange is coming back just like we had at the beginning of this course.
+
+167
+00:12:15,460 --> 00:12:19,870
+Finally, let's have a look at question for another stone in ciphertext.
+
+168
+00:12:20,320 --> 00:12:21,490
+So a question for SAS.
+
+169
+00:12:21,820 --> 00:12:23,680
+Here we have a stolen ciphertext.
+
+170
+00:12:24,370 --> 00:12:29,100
+It was sent using RSA without padding and the same public key we've had before.
+
+171
+00:12:29,110 --> 00:12:36,850
+Modulus M equal to 2773 and encryption key E equal to 1147.
+
+172
+00:12:37,210 --> 00:12:44,380
+This time I'm going to ask you to break this cipher by centralising the modulus and working out the
+
+173
+00:12:44,380 --> 00:12:45,820
+original message.
+
+174
+00:12:46,120 --> 00:12:50,290
+And I'm not going to give you the solution to this answer.
+
+175
+00:12:50,290 --> 00:12:53,130
+I'm going to leave this as a challenge.
+
+176
+00:12:53,140 --> 00:12:58,900
+This was our last question for the course, and I think it would be nice to leave that as a challenge
+
+177
+00:12:58,900 --> 00:13:00,160
+to our no prizes.
+
+178
+00:13:00,340 --> 00:13:01,570
+We are playing for glory.
+
+179
+00:13:01,570 --> 00:13:07,210
+But if you do get this answer really well done, you can send me a message if you like, on Udemy,
+
+180
+00:13:07,570 --> 00:13:12,670
+telling me that you have solved this message and I will send you no prizes whatsoever.
+
+181
+00:13:12,880 --> 00:13:15,220
+But I will send you some congratulations.
+
+182
+00:13:15,730 --> 00:13:20,170
+Yes, we're just playing for smugness here, so good luck with that.
+
+183
+00:13:20,590 --> 00:13:26,710
+So that's the final challenge and that is the final solution video.
+
+184
+00:13:27,250 --> 00:13:31,480
+So I hope you enjoy the next couple of lecture videos.

@@ -1,0 +1,88 @@
+1
+00:00:00,210 --> 00:00:12,900
+Vậy là chúng ta sắp kết thúc khóa học, nhưng chúng ta vẫn còn một vài phần nữa phải học.  Và tôi chỉ muốn kết thúc bằng cách chỉ cho bạn cách xác thực ai đang gửi tin nhắn của bạn và cách này sử dụng RSA.
+
+2
+00:00:12,900 --> 00:00:21,540
+Vì vậy chúng tôi gọi đây là chữ ký hoặc chữ ký số.  Và nếu tôi xem lại phần ghi chú của chúng ta, trên thực tế, tôi không yêu cầu bạn viết bất cứ điều gì cho phần này.
+
+3
+00:00:22,050 --> 00:00:37,290
+Tôi chỉ định giải thích phương pháp.  Vì vậy, mục đích của RSA là mã hóa bằng cách sử dụng giá trị e của bạn và sau đó giải mã bằng giá trị D nhưng trên thực tế, các hàng E và D có thể hoán đổi cho nhau.
+
+4
+00:00:37,290 --> 00:00:45,240
+Trên thực tế, bạn có thể mã hóa tin nhắn của mình bằng giá trị D và sau đó giải mã tin nhắn bằng giá trị B nếu bạn muốn.
+
+5
+00:00:45,660 --> 00:00:56,700
+Điều này có chức năng rất quan trọng trong việc xác thực tin nhắn, vì vậy hãy xem xét hai sự tương ứng.  John và Mary, tôi nghĩ tôi muốn bạn cho Alice và Bob nghỉ một ngày.
+
+6
+00:00:56,700 --> 00:01:07,800
+Vì vậy, John và Mary đang gửi từng tin nhắn, mỗi người có khóa công khai riêng, khóa này được mọi người biết và mỗi người có khóa riêng chỉ có chính họ biết.
+
+7
+00:01:08,160 --> 00:01:27,210
+Giả sử khóa công khai của Mary đang mang lại cho bạn một số giá trị.  E là 8023 mô-đun 24.257 và Khóa công khai của John E 8993 và mô-đun là 11.435.
+
+8
+00:01:27,210 --> 00:01:35,400
+Đây là những thông tin công khai.  Bây giờ, John sẽ gửi một tin nhắn với nội dung: Gặp anh lúc sáu giờ, John.
+
+9
+00:01:35,730 --> 00:01:54,780
+Vì vậy, anh ấy ký tên của mình rằng John và viết thành các khối chúng ta có thể chia nó thành các khối. Hãy nhớ rằng điều đó ngăn cản việc phân tích tần số nên tôi đã chia nó thành hai khối gồm hai khối ở đó vì vậy chúng tôi sẽ gặp bạn lúc sáu giờ John hoặc theo số tôi  bây giờ hãy biến chúng thành những con số như vậy để ta có được những khối số này.
+
+10
+00:01:55,380 --> 00:02:05,420
+Hai khối cuối cùng, cái giếng cuối cùng, tám chữ số là chữ ký, John.  Bây giờ, làm sao Mary có thể biết được điều đó?
+
+11
+00:02:05,430 --> 00:02:21,240
+Tin nhắn thực sự là từ John?  Một cách là John sử dụng khóa riêng John và mã hóa chữ ký của anh ấy bằng khóa riêng của anh ấy để nó đọc giá trị này giống như những con số ở đây.
+
+12
+00:02:22,230 --> 00:02:35,880
+Vì vậy, bây giờ chúng tôi có tin nhắn này.  Nhưng John đã nhấn mạnh rằng chữ ký ở cuối bằng khóa riêng của anh ấy John hiện đang mã hóa thông điệp bằng khóa chung của Mary.
+
+13
+00:02:35,880 --> 00:02:44,520
+Vì vậy, bây giờ lấy tất cả những thứ đó bao gồm cả chữ ký của anh ấy ở cuối và trong mật mã có khóa công khai của Mary rồi gửi nó cho Mary.
+
+14
+00:02:45,030 --> 00:03:00,000
+Mary nhận được tin nhắn, sau đó cô sẽ giải mã bằng khóa riêng của mình để tạo ra tin nhắn này.  Và Mary sau đó sẽ trích xuất bit cuối cùng ở cuối chữ ký.
+
+15
+00:03:00,570 --> 00:03:11,460
+Và biết rằng tin nhắn được cho là của John, Mary áp dụng khóa công khai của John vào chữ ký của anh ấy để có được những giá trị này ở đây.
+
+16
+00:03:11,460 --> 00:03:21,120
+Vì vậy, Mary hiện đang giải mã bit đó ở cuối bằng cách sử dụng khóa chung của John.  Cuối cùng đặt tất cả những điều này lại với nhau, Mary sẽ nhận được tin nhắn.
+
+17
+00:03:21,120 --> 00:03:36,540
+Gặp anh lúc sáu giờ, John.  Và người duy nhất có thể làm được điều đó chính là John.  Người duy nhất có thể mã hóa chữ ký đó ở cuối bằng khóa riêng của John chính là John.
+
+18
+00:03:36,690 --> 00:03:46,920
+Đó là ý tưởng.  Tuy nhiên, xin lưu ý, giống như trước đây với RSA, sẽ an toàn hơn khi sử dụng các khóa RSA khác nhau để mã hóa và ký.
+
+19
+00:03:47,250 --> 00:03:53,910
+Vì vậy, bạn có thể phải RSA.  Anh ấy đang tiếp tục và bạn vẫn sẽ cần đệm và phá vỡ các khối và tất cả những thứ đó.
+
+20
+00:03:53,910 --> 00:04:04,110
+Chúng tôi cần ngăn chặn mọi người lấy cắp tin nhắn của chúng tôi bằng RSA.  Có, nên sử dụng phần đệm để ký tin nhắn cũng như để mã hóa tin nhắn.
+
+21
+00:04:04,560 --> 00:04:14,040
+Được rồi, đó là một ý tưởng thực sự thông minh và đó là tất cả những gì tôi muốn nói về chữ ký, nhưng đó là một cách sử dụng RSA thực sự thông minh.
+
+22
+00:04:14,880 --> 00:04:29,670
+Bây giờ chúng ta thực sự đang tiến gần đến điểm kết thúc và đó là sự kết thúc của mật mã khóa công khai.  Và điều cuối cùng, tôi muốn bạn có một cái nhìn ngắn gọn về tương lai của mật mã.
+

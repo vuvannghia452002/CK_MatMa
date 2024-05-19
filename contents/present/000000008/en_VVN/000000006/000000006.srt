@@ -1,0 +1,619 @@
+1
+00:00:00,180 --> 00:00:04,170
+It's time to take a look at the solutions for the RSA exercises.
+
+2
+00:00:04,470 --> 00:00:11,740
+And I start with a note saying that you are perfectly welcome to use a computer to work out these computations.
+
+3
+00:00:11,760 --> 00:00:18,990
+I recommend Wolfram Alpha dot com and that is exactly what I used when doing these calculations myself.
+
+4
+00:00:18,990 --> 00:00:22,260
+So there is no reason why you can't do that as well.
+
+5
+00:00:22,500 --> 00:00:31,860
+So we're going to encrypt the word lie in using RSA with modulus m equal 1241 and encryption key E equals
+
+6
+00:00:31,860 --> 00:00:34,290
+five and the result will be four numbers.
+
+7
+00:00:34,500 --> 00:00:35,940
+So let's take a look at that.
+
+8
+00:00:35,940 --> 00:00:37,530
+So Lyon is the word.
+
+9
+00:00:38,760 --> 00:00:47,700
+Going back to our animal names and we write that in numbers L becomes an 11, I becomes an eight oh,
+
+10
+00:00:47,730 --> 00:00:51,240
+becomes a 14 and becomes a 13.
+
+11
+00:00:51,480 --> 00:00:58,980
+And then what is the formula we're going to use when it's P to the power E and that is Mount M?
+
+12
+00:00:59,490 --> 00:01:01,980
+Like I said, I just use Wolfram Alpha for this.
+
+13
+00:01:02,190 --> 00:01:03,990
+And these were the values I got.
+
+14
+00:01:03,990 --> 00:01:07,560
+So 962 502.
+
+15
+00:01:08,690 --> 00:01:13,160
+471 and 234.
+
+16
+00:01:13,580 --> 00:01:15,680
+And that would be the ciphertext.
+
+17
+00:01:16,130 --> 00:01:18,170
+Let's take a look at question two.
+
+18
+00:01:19,010 --> 00:01:25,850
+We want to create an RSA scheme with two primes, Q1 and Q2, which are 23 and 179.
+
+19
+00:01:26,090 --> 00:01:27,350
+What is the modulus?
+
+20
+00:01:27,740 --> 00:01:38,360
+The modulus means multiplying those two primes together 23 times 179, and that is going to be 4117.
+
+21
+00:01:39,140 --> 00:01:41,660
+Using the scheme, calculate the value for a.
+
+22
+00:01:41,720 --> 00:01:45,650
+If you remember a is taking away one from each prime.
+
+23
+00:01:46,100 --> 00:01:52,040
+So we're looking at 23 minus one and multiplying that by 179 minus one.
+
+24
+00:01:52,520 --> 00:02:01,610
+And if we do that, that's 22 times 278 that that is equal to 3916.
+
+25
+00:02:02,590 --> 00:02:07,370
+And now using this scheme, what is the smallest possible choice of encryption key e.
+
+26
+00:02:07,760 --> 00:02:10,150
+So the important thing about the encryption key.
+
+27
+00:02:11,930 --> 00:02:13,520
+It must be prime to a.
+
+28
+00:02:15,350 --> 00:02:15,710
+That's right.
+
+29
+00:02:15,720 --> 00:02:16,130
+That in.
+
+30
+00:02:19,660 --> 00:02:29,890
+And what is a well, a is 3916, which if you break that down into its factors, it's two squared times
+
+31
+00:02:29,890 --> 00:02:32,860
+11 times 89.
+
+32
+00:02:33,220 --> 00:02:37,620
+So a good value for E would be equals three.
+
+33
+00:02:37,630 --> 00:02:41,740
+It is k prime and also it would be the smallest k prime value.
+
+34
+00:02:41,980 --> 00:02:42,520
+Perfect.
+
+35
+00:02:43,540 --> 00:02:48,900
+So this is using RSA and the smallest encryption key, encrypt the word forger.
+
+36
+00:02:49,360 --> 00:02:50,590
+So here we go.
+
+37
+00:02:50,590 --> 00:02:51,730
+Say the word is badger.
+
+38
+00:02:52,420 --> 00:02:57,370
+Be a d, g, e, r, which we are writing as numbers.
+
+39
+00:02:57,730 --> 00:03:02,200
+That is 136 417.
+
+40
+00:03:03,600 --> 00:03:08,750
+I know we're using our RSA formula, which is pizza power, a mod and.
+
+41
+00:03:10,480 --> 00:03:13,840
+And a lot of these are quite easy to work out because they're small numbers.
+
+42
+00:03:14,080 --> 00:03:25,060
+The E is three, so we're keeping these numbers to be one, a 0 to 27, a 216, we get a 64 and then
+
+43
+00:03:25,060 --> 00:03:28,030
+the only difficult one is the 17 cubed.
+
+44
+00:03:28,300 --> 00:03:35,590
+But I will tell you that the answer will be 796, and that's in mud and arithmetic.
+
+45
+00:03:35,920 --> 00:03:37,840
+So that is the final answer.
+
+46
+00:03:37,840 --> 00:03:39,460
+That will be your ciphertext.
+
+47
+00:03:40,090 --> 00:03:42,940
+Let's take a look at the next questions.
+
+48
+00:03:43,360 --> 00:03:44,590
+So question three.
+
+49
+00:03:46,040 --> 00:03:47,480
+Decrypt these numbers.
+
+50
+00:03:47,480 --> 00:03:55,100
+So we've got our ciphertext numbers using RSA with modulus m equals 187 and a decryption key D equals
+
+51
+00:03:55,100 --> 00:03:55,550
+three.
+
+52
+00:03:55,880 --> 00:03:58,460
+And then we should get letters of the alphabet.
+
+53
+00:03:58,460 --> 00:03:59,660
+We should get a message back.
+
+54
+00:03:59,930 --> 00:04:02,420
+So really this is the same procedure.
+
+55
+00:04:02,510 --> 00:04:11,000
+And if I write down the numbers first, it's the same procedure as before and we just using a decrypt
+
+56
+00:04:11,420 --> 00:04:12,200
+number now.
+
+57
+00:04:12,200 --> 00:04:19,760
+So we hit it with our formula is P to the power D in mod m and being 187.
+
+58
+00:04:20,210 --> 00:04:32,750
+And if we do that again, I just used Wolfram Alpha and we had 1914, 22, zero 13 and then that can
+
+59
+00:04:32,750 --> 00:04:38,870
+get turned into letters and it is t u c and it is two can.
+
+60
+00:04:40,280 --> 00:04:43,090
+Let's have a look at questions four and five.
+
+61
+00:04:45,350 --> 00:04:48,410
+We want to create an RSA scheme with two primes.
+
+62
+00:04:48,800 --> 00:04:50,990
+Q One is 60, 61 and.
+
+63
+00:04:50,990 --> 00:04:53,060
+Q two is 223.
+
+64
+00:04:53,090 --> 00:04:54,230
+What is the modulus?
+
+65
+00:04:55,130 --> 00:04:58,460
+The modulus is multiplying the primes together.
+
+66
+00:04:59,990 --> 00:05:07,160
+And we will get a modulus of 13,603 using this scheme.
+
+67
+00:05:07,160 --> 00:05:11,240
+Calculate the value of A to A equals.
+
+68
+00:05:13,090 --> 00:05:17,230
+61 minus one multiplied by 223 minus one.
+
+69
+00:05:17,830 --> 00:05:21,730
+So 60 times 222.
+
+70
+00:05:22,600 --> 00:05:30,250
+So that is going to be 13,320 if the encryption key is quite big.
+
+71
+00:05:30,250 --> 00:05:33,820
+Number 1903, what is the decryption key?
+
+72
+00:05:34,390 --> 00:05:39,130
+So to do this, we need to know a formula.
+
+73
+00:05:39,130 --> 00:05:42,100
+We need to work out an expression of this.
+
+74
+00:05:42,100 --> 00:05:54,070
+Form one equals three times E plus t, a, and then B here the coefficient of E will be the decryption
+
+75
+00:05:54,070 --> 00:05:54,520
+key.
+
+76
+00:05:54,700 --> 00:05:57,450
+And that can be done with Euclid's algorithm.
+
+77
+00:05:57,460 --> 00:05:58,300
+There it is again.
+
+78
+00:05:58,600 --> 00:05:59,920
+So let's have a go at that.
+
+79
+00:06:00,550 --> 00:06:05,650
+So using Euclid's algorithm, first of all, we're going to put our values for a on the left hand side
+
+80
+00:06:05,650 --> 00:06:12,730
+is Y 13,320, and that is going to be equal to make something.
+
+81
+00:06:13,740 --> 00:06:23,730
+Times 1903 plus something and that sort of thing here turns out to be a sexist coefficient and a remainder
+
+82
+00:06:23,730 --> 00:06:25,680
+of 1902.
+
+83
+00:06:26,340 --> 00:06:35,670
+And now if you shift things across 1903 is equal to you can be one lot of 1902 plus one.
+
+84
+00:06:36,000 --> 00:06:39,640
+Not actually ends Euclid's algorithm already.
+
+85
+00:06:39,660 --> 00:06:40,290
+That's nice.
+
+86
+00:06:40,590 --> 00:06:50,190
+And now we reversed that so that we can write one is equal to 1903 -1902.
+
+87
+00:06:50,730 --> 00:06:51,990
+And we'll just replace.
+
+88
+00:06:53,440 --> 00:06:55,120
+1902.
+
+89
+00:06:55,360 --> 00:07:00,790
+With the previous line which was replaced 1902.
+
+90
+00:07:00,940 --> 00:07:06,280
+Replace it with 13,320 minus six.
+
+91
+00:07:06,280 --> 00:07:09,520
+Lots of 1903.
+
+92
+00:07:09,880 --> 00:07:19,900
+And we clean this up so we'll have a plus six, lots of 1903 plus the one we had at the beginning.
+
+93
+00:07:20,410 --> 00:07:23,260
+So that is a plus seven lots.
+
+94
+00:07:24,240 --> 00:07:32,040
+Of 1903 minus the 13,320.
+
+95
+00:07:32,640 --> 00:07:38,100
+And is this coefficient in front of the 1903, which was the encryption key?
+
+96
+00:07:38,550 --> 00:07:41,580
+So a d is equal to seven.
+
+97
+00:07:42,030 --> 00:07:44,730
+I gave you a relatively small number to work with that.
+
+98
+00:07:45,300 --> 00:07:52,290
+So we're going to use that decryption key now to decrypt our final, final ciphertext, which is here.
+
+99
+00:07:53,480 --> 00:07:54,260
+So let's do that.
+
+100
+00:07:54,650 --> 00:07:56,000
+So it's these numbers.
+
+101
+00:07:56,330 --> 00:07:58,430
+12,521.
+
+102
+00:07:59,000 --> 00:08:01,190
+12,397.
+
+103
+00:08:01,640 --> 00:08:04,580
+10,139 and 99.
+
+104
+00:08:05,750 --> 00:08:08,030
+And we're going to use our decryption key.
+
+105
+00:08:08,030 --> 00:08:11,720
+So each of our data is now seven in model.
+
+106
+00:08:13,740 --> 00:08:20,600
+And we worked out in part A and if we do that again, I just used a computer to do it.
+
+107
+00:08:20,700 --> 00:08:26,400
+It was 15, 14, 13 and 24.
+
+108
+00:08:27,450 --> 00:08:32,300
+And that will be give us a P, o and Y.
+
+109
+00:08:32,310 --> 00:08:33,400
+I've given you a pony.
+
+110
+00:08:33,420 --> 00:08:33,930
+How nice.
+
+111
+00:08:34,800 --> 00:08:36,750
+And finally, question five.
+
+112
+00:08:37,530 --> 00:08:38,880
+Same idea, really?
+
+113
+00:08:38,880 --> 00:08:40,290
+Just with hard numbers.
+
+114
+00:08:40,510 --> 00:08:41,490
+So question five.
+
+115
+00:08:43,270 --> 00:08:45,730
+We want to create an RSA scheme with these primes.
+
+116
+00:08:46,030 --> 00:08:47,440
+So slightly bigger primes now.
+
+117
+00:08:47,680 --> 00:08:49,930
+Hundred 13 257.
+
+118
+00:08:50,470 --> 00:08:53,380
+The modulus is multiplying those together.
+
+119
+00:08:54,420 --> 00:09:00,990
+Which if we do multiply those together, it's 29,041 a.
+
+120
+00:09:02,060 --> 00:09:06,770
+Means subtracting one from each prime and multiplying that together.
+
+121
+00:09:07,900 --> 00:09:10,810
+Which if we do, that will give us a value.
+
+122
+00:09:11,050 --> 00:09:14,470
+28,672.
+
+123
+00:09:15,790 --> 00:09:20,610
+And now we've got an encryption key, which is this 18,847.
+
+124
+00:09:20,620 --> 00:09:21,770
+What is the decryption key?
+
+125
+00:09:21,820 --> 00:09:23,190
+Same method as before.
+
+126
+00:09:23,200 --> 00:09:24,640
+Just larger numbers.
+
+127
+00:09:24,880 --> 00:09:27,340
+And it can be done with Euclid's algorithm.
+
+128
+00:09:27,670 --> 00:09:32,410
+So we're going to use Euclid's algorithm exactly the same way as before to calculate this.
+
+129
+00:09:33,430 --> 00:09:38,890
+The answer actually has one, two, three, four, five, six steps in it, and then you reverse those.
+
+130
+00:09:38,930 --> 00:09:44,950
+I'm not going to write them out just for brevity, but the complete solution is in the resources with
+
+131
+00:09:44,950 --> 00:09:45,670
+this video.
+
+132
+00:09:46,390 --> 00:09:54,400
+So I will just skip to the end and tell you that after reversing Euclid's algorithm, you get one equals
+
+133
+00:09:54,400 --> 00:10:00,880
+607 multiplied by the 18,847
+
+134
+00:10:02,110 --> 00:10:10,780
+-399, multiplied by the value for a which is the 28,000.
+
+135
+00:10:12,270 --> 00:10:13,710
+672.
+
+136
+00:10:17,170 --> 00:10:24,760
+And it's the coefficient here in front of E which is 607, so D equals 607.
+
+137
+00:10:24,760 --> 00:10:26,440
+That is your decrypt key.
+
+138
+00:10:26,890 --> 00:10:29,710
+And then I do ask you to decrypt a message.
+
+139
+00:10:32,420 --> 00:10:34,250
+Using that decryption key.
+
+140
+00:10:34,760 --> 00:10:39,650
+And if we do that, well, there's no surprises here.
+
+141
+00:10:39,680 --> 00:10:42,410
+So these are our numbers.
+
+142
+00:10:42,920 --> 00:10:45,710
+And we are going to use the computer to help us out.
+
+143
+00:10:46,490 --> 00:10:47,690
+And there is a zero there.
+
+144
+00:10:47,690 --> 00:10:48,850
+So that should be a correlate.
+
+145
+00:10:49,870 --> 00:10:52,210
+And if I just write in these numbers.
+
+146
+00:10:55,260 --> 00:10:55,650
+Yes.
+
+147
+00:10:55,680 --> 00:11:07,800
+Our formula is just as before because the decryption key is 607 and we get 15 four zero 13.
+
+148
+00:11:08,640 --> 00:11:11,800
+20 and 19.
+
+149
+00:11:11,970 --> 00:11:12,900
+What do we get?
+
+150
+00:11:13,230 --> 00:11:16,740
+We get p e a.
+
+151
+00:11:17,830 --> 00:11:19,490
+And you two.
+
+152
+00:11:19,530 --> 00:11:20,650
+Yeah, we got peanut.
+
+153
+00:11:21,160 --> 00:11:21,880
+How nice.
+
+154
+00:11:22,300 --> 00:11:24,190
+Okay, so that is our essay.
+
+155
+00:11:24,550 --> 00:11:27,850
+And next, we'll be looking at breaking RSA.
