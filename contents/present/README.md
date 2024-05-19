@@ -3,11 +3,8 @@
 
 # Vận dụng phương pháp lưới tấn công RSA
 
-
-<!-- @ Chương mới  thuật toán LLL  giảm lưới -->
-<!-- @ Chương mới  Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
-
-
+<!-- @ Chương mới thuật toán LLL giảm lưới -->
+<!-- @ Chương mới Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
 
 # Vận dụng phương pháp lưới tấn công RSA
 
@@ -60,8 +57,8 @@ Ta có được lưới bởi cơ sở như sau:
 $$ -->
 
 <!-- # Lý thuyết về lưới = cơ sở.... -->
-<!-- #   x_1 ,  x_2 ,... ,  x_n   độc lập  tuyến tính -->
-<!-- #   x_1 ,  x_2 ,... ,  x_n     tạo thành   các vector cơ sở    -->
+<!-- # x_1 , x_2 ,... , x_n độc lập tuyến tính -->
+<!-- # x_1 , x_2 ,... , x_n tạo thành các vector cơ sở -->
 <!-- # Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên: L = a_1 x_1 + a_2 x_2 + ... + a_n x_n -->
 
 <!-- !Thực hiện giảm lưới -->
@@ -70,8 +67,8 @@ Dùng thuật toán LLL để thực hiện giảm lưới
 
 Ta thu được cơ sở mới sau khi giảm lưới $b_0, b_1, b_2, \dots, b_{n+1}$
 
-<!--  @ Dùng thuật toán LLL để thực hiện giảm lưới -->
-<!-- @ Chương mới  thuật toán LLL  giảm lưới -->
+<!-- @ Dùng thuật toán LLL để thực hiện giảm lưới -->
+<!-- @ Chương mới thuật toán LLL giảm lưới -->
 
 <!-- !Tìm vector ngắn nhất -->
 
@@ -82,7 +79,7 @@ $$b_0 + \frac{b_1}{Y}x + \dots + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n
 => Cuối cùng, thực hiện giải phương trình đa thức tìm nghiệm nguyên bài toán.
 
 <!-- @ Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
-<!-- @ Chương mới  Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
+<!-- @ Chương mới Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
 
 <!-- ! -->
 
