@@ -1,4 +1,5 @@
-# Phương pháp lưới và  Thuật toán LLL
+# Phương pháp lưới và Thuật toán LLL
+
 <!-- Phương pháp lưới -->
 <!-- Định nghĩa -->
 
@@ -9,17 +10,9 @@ x_1 , x_2 ,... , x_n độc lập tuyến tính
 x_1 , x_2 ,... , x_n tạo thành các vector cơ sở
 
 Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên: L = a_1 x_1 + a_2 x_2 + ... + a_n x_n
+
 <!-- Ứng dụng, mở đầu, .... -->
-<!--  -->
-
-
-
-
-
-
-
-
-
+<!-- -->
 
 <!-- Thuật toán LLL -->
 
@@ -27,13 +20,6 @@ Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector c
 <!-- n chiều -->
 <!-- Thuật toán LLL giảm lưới -->
 <!-- Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
-
-
-
-
-
-
-
 
 # Vận dụng tấn công RSA
 
@@ -101,7 +87,7 @@ $$b_0 + \frac{b_1}{Y}x + \dots + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n
 
 <!--@ Gauuusss... -->
 
-<!-- ! -->
+<!-- !Ví dụ: https://www.youtube.com/watch?v=vxS0DZE_Lvs -->
 
 <!-- det L = |det(x_1, x_2,..., x_n)| -->
 
