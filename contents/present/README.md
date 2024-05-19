@@ -1,16 +1,39 @@
-# Phương pháp lưới
+# Phương pháp lưới và  Thuật toán LLL
+<!-- Phương pháp lưới -->
+<!-- Định nghĩa -->
 
-<!-- # Lý thuyết về lưới = cơ sở.... -->
-<!-- # x_1 , x_2 ,... , x_n độc lập tuyến tính -->
-<!-- # x_1 , x_2 ,... , x_n tạo thành các vector cơ sở -->
-<!-- # Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên: L = a_1 x_1 + a_2 x_2 + ... + a_n x_n -->
+Lý thuyết về lưới = cơ sở....
 
-# Thuật toán LLL
+x_1 , x_2 ,... , x_n độc lập tuyến tính
+
+x_1 , x_2 ,... , x_n tạo thành các vector cơ sở
+
+Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên: L = a_1 x_1 + a_2 x_2 + ... + a_n x_n
+<!-- Ứng dụng, mở đầu, .... -->
+<!--  -->
+
+
+
+
+
+
+
+
+
+
+<!-- Thuật toán LLL -->
 
 <!-- 2 chiều -->
 <!-- n chiều -->
 <!-- Thuật toán LLL giảm lưới -->
 <!-- Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
+
+
+
+
+
+
+
 
 # Vận dụng tấn công RSA
 
