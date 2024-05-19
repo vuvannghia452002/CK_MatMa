@@ -1,7 +1,6 @@
 # Phương pháp lưới và Thuật toán LLL
 
-<!-- Phương pháp lưới -->
-<!-- Định nghĩa -->
+<!-- Định nghĩa   Phương pháp lưới -->
 
 Lý thuyết về lưới = cơ sở....
 
@@ -11,15 +10,54 @@ x_1 , x_2 ,... , x_n tạo thành các vector cơ sở
 
 Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên: L = a_1 x_1 + a_2 x_2 + ... + a_n x_n
 
+
+<!--@ Ví dụ ảnh lưới 2 chiều  b1,b2 =>3 4 5 6  7 -->
+
+
+
+
+Nguyên, +-1, det, 
+
+
+
+
 <!-- Ứng dụng, mở đầu, .... -->
 <!-- -->
 
+
+
+
+
+<!-- Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
+<!-- Độ dài =..... -->
+<!-- @ Có nhiều vector ngắn nhất khi đi tìm  gần như ngắn nhất (vì theo tg đa thức)  -->
+<!--@ Là vector đầu tiên + chứng minh  -->
+
+
+
+
+
 <!-- Thuật toán LLL -->
+<!-- Ngắn hơn + trực giao hơn -->
+
+
+
+
+
+<!-- Gram-Schmidt: -->
+<!--Nếu $x_1, x_2, \dots, x_n$ là một cơ sở   của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \dots, x_n^*$ có thể không nằm trong lưới $L$. -->
+<!-- Vì num là phân số.... -->
+
+
+
+
+
 
 <!-- 2 chiều -->
 <!-- n chiều -->
 <!-- Thuật toán LLL giảm lưới -->
-<!-- Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
+
+
 
 # Vận dụng tấn công RSA
 
@@ -71,6 +109,8 @@ Ta có được lưới bởi cơ sở như sau:
 \end{aligned}
 $$ -->
 
+<!-- @ Tại sao lại có công thức lưới qui định ntn? -->
+
 <!-- !Thực hiện giảm lưới -->
 
 Dùng thuật toán LLL để thực hiện giảm lưới
@@ -81,9 +121,13 @@ Ta thu được cơ sở mới sau khi giảm lưới $b_0, b_1, b_2, \dots, b_{
 
 Ta sử dụng vector $b_0$ như vector ngắn nhất của lưới và chuyển về dạng đa thức:
 
+<!-- @ chia cho m^xxxxxx -->
+
 $$b_0 + \frac{b_1}{Y}x + \dots + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n}x^n $$
 
 => Cuối cùng, thực hiện giải phương trình đa thức tìm nghiệm nguyên bài toán
+
+<!-- @tìm đc x1 x2 x3 xét thêm x<y để suy ra x -->
 
 <!--@ Gauuusss... -->
 
