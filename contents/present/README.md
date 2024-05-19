@@ -27,7 +27,13 @@ Giả sử hệ thống RSA có:
 Chúng ta có thể chuyển đổi vấn đề này thành bài toán vectơ ngắn nhất, sau đó sử dụng LLL để giải nó.
 
 <!-- # Thống nhất kí hiệu và biến -->
-<!--! Bài toán -->
+<!-- # Thống nhất kí hiệu và biến -->
+
+
+
+
+
+<!--! Phương pháp lưới -->
 
 Để phá vỡ mã hóa RSA yêu cầu giải phương trình đồng dư $c \equiv (M + x)^e \quad (mod \ N)$
 
@@ -55,11 +61,17 @@ Dùng thuật toán LLL để thực hiện giảm lưới
 
 Ta thu được cơ sở mới sau khi giảm lưới $b_0, b_1, b_2, \dots, b_{n+1}$
 
+<!-- # Dùng thuật toán LLL để thực hiện giảm lưới -->
+
+<!-- !Tìm vector ngắn nhất -->
+
 Ta sử dụng vector $b_0$ như vector ngắn nhất của lưới và chuyển về dạng đa thức:
 
 $$b_0 + \frac{b_1}{Y}x + \dots + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n}x^n $$
 
-Sau đó thực hiện giải phương trình đa thức tìm nghiệm nguyên bài toán.
+=> Cuối cùng, thực hiện giải phương trình đa thức tìm nghiệm nguyên bài toán.
+
+<!--# Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
 
 <!-- ! -->
 
@@ -68,8 +80,6 @@ Sau đó thực hiện giải phương trình đa thức tìm nghiệm nguyên b
 <!-- Bổ đề trang 26???? -->
 
 <!-- Định thức của một lưới không phụ thuộc vào cách chọn cơ sở. -->
-
-<!-- Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->
 
 <!-- Gram-Schmidt -->
 
