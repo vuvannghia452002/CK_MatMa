@@ -70,6 +70,35 @@
 
 <!--! Thuật toán LLL -->
 <!--! Thuật toán LLL -->
+<!-- Giới thiệu  Ngắn hơn + trực giao hơn -->
+
+
+<!-- quy trình Gram-Schmidt: -->
+
+
+
+<!-- Điều kiện 1 -->
+
+
+<!-- Điều kiện 2 -->
+
+
+
+<!-- Mã giả -->
+
+<!-- Ví dụ -->
+
+
+
+
+<!-- Xin chào! Bạn có thể vui lòng giải thích mục đích của dòng: bk = bk - [uk,j]bj là gì không? -->
+<!-- quy trình Gram Schmidt làm cho cơ sở trực giao -->
+<!-- Tuy nhiên, trong LLL chúng ta đang làm việc trong một mạng nên không thể đảm bảo tính trực giao. -->
+<!-- Để làm được điều đó, chúng ta cần u_{k,j} là một số nguyên. -->
+<!-- Điều này tạo ra một cơ sở "đủ trực giao" trong khi vẫn còn trong mạng -->
+
+
+
 
 
 
@@ -78,7 +107,7 @@
 <!-- Thuật toán LLL -->
 <!-- Ngắn hơn + trực giao hơn -->
 
-<!-- Gram-Schmidt: -->
+<!-- quy trình Gram-Schmidt: -->
 <!--Nếu $x_1, x_2, \dots, x_n$ là một cơ sở của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \dots, x_n^*$ có thể không nằm trong lưới $L$. -->
 <!-- Vì num là phân số.... -->
 
@@ -166,7 +195,7 @@ $$b_0 + \frac{b_1}{Y}x + \dots + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n
 
 <!-- Định thức của một lưới không phụ thuộc vào cách chọn cơ sở. -->
 
-<!-- Gram-Schmidt -->
+<!-- quy trình Gram-Schmidt -->
 
 <!-- chuyển một cơ sở bất kỳ thành một cơ sở trực giao -->
 
