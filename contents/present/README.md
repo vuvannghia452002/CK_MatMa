@@ -28,7 +28,7 @@
 <!-- https://www.youtube.com/watch?v=UU2EaVXkKLY&list=PL6hzlGxGIS1A-o2pQVXK-Z2qOBOvZ1XbZ -->
 <!--@ Ví dụ ảnh lưới 2 chiều b1,b2 =>3 4 5 6 7 -->
 
-<!-- ? Nguyên, +-1, det, -->
+<!-- @ ??????????????? Nguyên, +-1, det, -->
 
 <!-- !Ứng dụng, mở đầu, .... -->
 <!-- -->
@@ -64,7 +64,17 @@
 
 <!-- @ Có nhiều vector ngắn nhất khi đi tìm gần như ngắn nhất (vì theo tg đa thức) -->
 <!-- @ Là vector đầu tiên (Chưa học LLL?????) + chứng minh -->
+<!-- @Có thể đưa xuống sau LLL -->
 
+
+
+<!--! Thuật toán LLL -->
+<!--! Thuật toán LLL -->
+
+
+
+
+<!--! Thuật toán LLL -->
 <!-- Thuật toán LLL -->
 <!-- Ngắn hơn + trực giao hơn -->
 
