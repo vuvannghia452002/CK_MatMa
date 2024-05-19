@@ -1,6 +1,9 @@
 # Phương pháp lưới và Thuật toán LLL
 
-<!-- Định nghĩa   Phương pháp lưới -->
+<!--! Định nghĩa   Phương pháp lưới -->
+
+
+
 
 Lý thuyết về lưới = cơ sở....
 
@@ -11,7 +14,53 @@ x_1 , x_2 ,... , x_n tạo thành các vector cơ sở
 Lưới tập hợp tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên: L = a_1 x_1 + a_2 x_2 + ... + a_n x_n
 
 
+
+<!-- \begin{frame}{Định nghĩa} -->
+<!-- \begin{block}{Cơ sở của không gian vector} -->
+<!-- Cho \(n \geq 1 \), \(\{x_1, x_2, \ldots, x_n\}\) là một cơ sở của \(\mathbb{R}^n\). -->
+<!-- Lưới \(n \) chiều với cơ sở \(\{x_1, x_2, \ldots, x_n\}\) -->
+<!-- là tập hợp \(L \) tất cả các tổ hợp tuyến tính của các vector cơ sở đó với hệ số nguyên: -->
+<!--  -->
+<!-- \begin{equation} -->
+<!-- L = \{a_1 x_1 + a_2 x_2 + \ldots + a_n x_n \mid a_i \in \mathbb{Z} \} -->
+<!-- \end{equation} -->
+<!--  -->
+<!-- Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lưới. -->
+<!-- \end{block} -->
+<!-- \end{frame} -->
+
+<!-- ! Ví dụ   lưới 2 chiều -->
+<!-- https://www.youtube.com/watch?v=UU2EaVXkKLY&list=PL6hzlGxGIS1A-o2pQVXK-Z2qOBOvZ1XbZ -->
 <!--@ Ví dụ ảnh lưới 2 chiều  b1,b2 =>3 4 5 6  7 -->
+
+
+
+\item Phương pháp lưới được sử dụng trong nhiều lĩnh vực:
+\begin{itemize}
+\item Lĩnh vực xấp xỉ số đại số
+\item Lĩnh vực mật mã học
+\item Lĩnh vực khoa học máy tính
+\item Lĩnh vực kỹ thuật thông tin
+\end{itemize}
+
+<!-- \begin{frame}{Vector ngắn nhất} -->
+<!--  -->
+<!-- \begin{itemize} -->
+<!-- \item Độ dài vector $v = (v_1, v_2, \dots, v_n)$ là: -->
+<!--  -->
+<!-- $$\|v\| = (v_1^2 + v_2^2 + \dots + v_n^2)^{\tfrac{1}{2}}$$ -->
+<!--  -->
+<!-- \item Có nhiều vấn đề liên quan đến việc tìm một vector khác không ngắn nhất trong lưới. -->
+<!-- Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) rất khó để giải, khi số chiều của lưới lớn. -->
+<!--  -->
+<!-- \end{itemize} -->
+<!--  -->
+<!-- \end{frame} -->
+
+
+
+
+
 
 
 
