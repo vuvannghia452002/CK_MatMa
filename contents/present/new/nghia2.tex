@@ -1,0 +1,250 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamercolor{block title}{bg=red!80!black, fg=white}
+\setbeamercolor{block body}{bg=red!10, fg=black}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{vietnam}
+\usepackage{tikz}
+\usepackage{calc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{bookmark}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Định nghĩa đánh công thức có số chương
+\numberwithin{equation}{section}
+\AtBeginSection[]{
+\setcounter{section}{\thesection}
+\refstepcounter{section}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginSection[]
+{
+\begin{frame}<beamer>
+\frametitle{Nội dung}
+
+\tableofcontents[
+currentsection,
+subsectionstyle=hide/hide,
+subsubsectionstyle=hide/hide
+]
+\end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[{\makebox[.15\paperwidth]{MI4100 - Mật mã và độ phức tạp thuật toán}}]{Chủ đề: Mô phỏng tấn công hệ mật mã khóa công khai RSA bằng thuật toán LLL giảm lưới}
+\author[Nhóm 8]{Nhóm 8}
+\date[\today]{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Trang tiêu đề cần có hình ảnh pictures/HUST2.jpeg
+% Không chỉnh sửa gì
+\begin{frame}
+\begin{tikzpicture}[remember picture, overlay]
+\node[anchor=center, inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth, height=\paperheight]{pictures/HUST2.jpeg}};
+\fill[white, opacity=0.8] (current page.south west) rectangle (current page.north east);
+\end{tikzpicture}
+\titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+ 
+\section{Ứng dụng phương pháp lưới trong hệ mật mã RSA}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \frametitle{Ví dụ về quên mật khẩu}
+    Khi chúng ta quên mật khẩu Facebook, Facebook sẽ gửi thông tin khôi phục. Ví dụ như:
+
+    \begin{figure}
+        \includegraphics[width=0.5\textwidth]{pictures/facebook.png}
+        \caption{Thông báo khôi phục mật khẩu của Facebook}
+    \end{figure}
+
+    Tương tự như:
+    \textbf{Mật khẩu mới của bạn là *****}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+    \frametitle{Thông điệp văn bản}
+    Thông điệp văn bản m bao gồm phần chữ cái mẫu và phần quan trọng.
+
+    \begin{itemize}
+        \item Nếu số mũ mã hóa \( e \) nhỏ, LLL có thể được sử dụng để tấn công RSA trong thời gian đa thức.
+    \end{itemize}
+\end{frame}
+
+
+
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% tấn công RSA
+% tấn công RSA
+% tấn công RSA
+% tấn công RSA
+% tấn công RSA
+% tấn công RSA
+% tấn công RSA
+% tấn công RSA
+% tấn công RSA
+\begin{frame}{Ứng dụng phương pháp lưới trong hệ mật mã RSA}
+\begin{block}{Tấn công hệ mật mã RSA dựa trên phương pháp lưới}
+
+Alice muốn gửi Bob một tin nhắn có dạng:
+
+    \textbf{Mật khẩu mới của bạn là *****}
+
+Trong bài toán này:
+
+\begin{itemize}
+\item Bản rõ có dạng $m = B + x$
+\item $B$ cố định
+\item $|x| \leq Y$ với Y nguyên
+\end{itemize}
+
+Ta giả sử rằng Eve biết $B, Y, n$. Vì vậy cô ấy chỉ cần tìm $x$.
+\end{block}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ví dụ ứng dụng}
+\begin{frame}{Ví dụ ứng dụng}
+
+Giả sử Bob có khóa công khai $(n, e) = (n, 3)$
+
+Khi đó bài toán là $c \equiv (B+x)^3 \quad (mod \ n)$
+
+Ta có thể tạo thành đa thức:
+$$
+\begin{aligned}
+f(T) & = (B+T)^3 - c = T^3 + 3BT^2 + 3B^2T + B^3 -c\\
+& \equiv T^3 + a_2T^2 + a_1T + a_0 (mod \ n).
+\end{aligned}
+$$
+
+Eve đang tìm $|x| \leq Y$ sao cho $f(x) \equiv 0 \quad (mod \ n)$.
+
+Nói cách khác, cô ấy đang tìm nghiệm nhỏ của đồng dư đa thức $f(T) \equiv 0 \quad (mod \ n)$
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Eve áp dụng thuật toán LLL cho lưới được tạo bởi các vector:
+
+$$v_1 =(n, 0, 0, 0), v_2 = (0, Yn, 0, 0) $$
+
+$$ v_3 = (0, 0, Y^2n, 0), v_4 = (a_0, a_1Y, a_2Y^2, Y^3)$$
+
+Điều này tạo nên cơ sở mới $b_1, b_2, b_3, b_4$. Nhưng ở đây, ta chỉ quan tâm đến $b_1$.
+
+Theo Mệnh đề 2.8 ta có:
+% Theo Mệnh đề 2.8 ta có: tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có: tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có: tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có: tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có: tham chiếu đến công thức
+% Theo Mệnh đề 2.8 ta có: tham chiếu đến công thức
+
+$$
+\begin{aligned}
+\|b_1\| & \leq 2^{\tfrac{3}{4}}.det(v_1, \dots, v_4)^{\tfrac{1}{4}} \qquad \quad \text{với} \quad \alpha = \frac{3}{4} \quad \text{hay} \quad \beta = 2 \\
+& = 2^{\tfrac{3}{4}}.(n^{3}Y^{6})^{\tfrac{1}{4}} = 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} \text{.}
+\end{aligned}
+$$
+
+% Ta có thể viết lại:
+% $$b_1 = c_1v_1 + \dots + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
+% với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$ $$e_2 = c_3n + c_4a_2$$
+% \hspace*{7cm} $e_3 = c_4$.\\
+% Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n), \quad 0\leq i\leq 2$. \\
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Ta có thể viết lại:
+$$b_1 = c_1v_1 + \dots + c_4v_4 = (e_0, Ye_1, Y^2e_2, Y^3e_3)\text{.}$$
+với $c_i$ nguyên và với $$e_0 = c_1n + c_4a_0$$ $$e_1 = c_2n + c_4a_1$$ $$e_2 = c_3n + c_4a_2$$
+\hspace*{7cm} $e_3 = c_4$.\\
+Ta dễ dàng thấy rằng $e_i \equiv c_4a_i\quad (mod \ n), \quad 0\leq i\leq 2$. \\
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Ta có thể thiết lập được đa thức $$g(T) = e_3T^3 + e_2T^2 + e_1T + e_0\text{.}$$
+
+Khi đó, vì số nguyên $x$ thỏa mãn $f(x) \equiv 0 \quad (mod \ n) $ và vì các hệ số của $c_4f(T)$ và $g(T)$ đồng dạng với $mod(n)$ nên, $$0 \equiv c_4f(x) \equiv g(x) \quad (mod \ n)\text{.}$$
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Bây giờ ta giả sử rằng $$Y < 2^{-7/6}n^{1/6}$$
+Khi đó $$
+\begin{aligned}
+|g(x)| & \leq |e_0|+|e_1x|+|e_2x^2|+|e_3x^3|\\
+& \leq |e_0| + |e_1|Y + |e_2|Y^2 + |e_3|Y^3\\
+& = (1, 1, 1, 1).(|e_0|, |e_1Y|, |e_2Y^2|, |e_3Y^3|)\\
+&\leq \|(1, 1, 1, 1)\|\|(|e_0|, |e_1Y|, |e_2Y^2|, |e_3Y^3|)\| \\
+& = 2\|b_1\|\text{,}
+\end{aligned}
+$$
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ví dụ ứng dụng}
+
+Trong đó, bất đẳng thức cuối sử dụng bất đẳng thức Cauchy-Schwarz cho các tích vô hướng \index{tích vô hướng} ($u.v \leq \|u\|\|v\|$) . Suy ra: $$\|b_1\| \leq 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}Y^{\tfrac{3}{2}} < 2^{\tfrac{3}{4}}n^{\tfrac{3}{4}}(2^{\tfrac{-7}{6}}n^{\tfrac{1}{6}})^{\tfrac{3}{2}} = 2^{-1}n \text{.}$$
+Do đó ta có được, $$|g(x)| < n.$$
+Vì $g(x) \equiv 0 \quad (mod \ n)$, nên ta có $g(x) = 0$. Từ đó, ta có thể tìm được tối đa 3 nghiệm của $g(x)$ . Sau đó ta sẽ thử xem nó có đưa ra bản mã chính xác hay không. Do đó Eve có thể tìm thấy $x$.\\
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{}
+\begin{frame}{}
+\centering
+\Huge{Thanks for listening!}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Lý thuyết
+% Lịch sử
+% Giới thiệu
+% Mục đích công dụng
+
+% Hình ảnh liên quan
+
+% Thuật toán
+% Các bước
+% Sơ đồ thuật toán
+
+% Code mã nguồn mã giả....
+
+% Ví dụ minh họa
+% Chạy tay
+% Chương trình lập trình
