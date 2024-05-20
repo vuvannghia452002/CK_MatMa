@@ -34,6 +34,27 @@ Code
 <!-- youtube -->
 <!-- youtube -->
 <!-- youtube -->
+![alt text](new/image.png)
+
+
+An Introduction to Mathematical Cryptography (2014) - Hoffstein, Pipher, Silverman
+
+
+
+Lecture-Intro_Lattices.pdf
+
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
 
 # Vận dụng tấn công RSA
 
@@ -41,10 +62,13 @@ Code
 
 Ví dụ khi chúng ta quên mật khẩu facebook thì facebook sẽ gửi thông tin:
 
-<!-- Mật khẩu mới của bạn là ***** -->
 <!-- ảnh -->
 <!-- ![alt text](pictures/facebook.png) -->
 
+
+
+Tương tự như:
+<!-- Mật khẩu mới của bạn là ***** -->
 
 Thông điệp văn bản m bao gồm phần chữ cái mẫu và phần quan trọng.
 
@@ -129,4 +153,6 @@ $$b_0 + \frac{b_1}{Y}x + \dots + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n
 
 <!-- @ -->
 <!-- # -->
+
+
 
