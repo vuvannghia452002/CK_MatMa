@@ -1,6 +1,11 @@
 
 
 
+Tìm video k có thì sách DA ...
+Chứng minh 1 2 3....
+tìm xong chắc là b1 thì ok
+Thực hiện các bước bài toán ... latex
+Code
 
 
 <!-- !Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) -->

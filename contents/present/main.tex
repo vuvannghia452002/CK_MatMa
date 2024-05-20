@@ -94,7 +94,7 @@ subsubsectionstyle=hide/hide
 
 \begin{figure}[!h]
 \centering
-\begin{tikzpicture}[scale=.5]
+\begin{tikzpicture}[scale=.4]
 \draw [lightgray] [<->] (0, 5) -- (10, 5);
 \draw [lightgray] [<->] (5, 10) -- (5, 0);
 
@@ -150,9 +150,9 @@ subsubsectionstyle=hide/hide
 \end{tikzpicture}
 \end{figure}
 
-\begin{itemize}
-\item Lưới rất hữu ích trong mật mã vì chúng mang lại cho chúng ta rất nhiều công cụ để xử lý các số nguyên.
-\end{itemize}
+\begin{block}{Nhận xét}
+Lưới rất hữu ích trong mật mã vì chúng mang lại cho chúng ta rất nhiều công cụ để xử lý các số nguyên.
+\end{block}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -176,16 +176,21 @@ Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lư�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Ví dụ về lưới 2 chiều}
 
+% # Ví dụ về lưới 2 chiều
+% # ta có 2 vector cở sở là b1 b2
+% # và tập các điểm rời rạc của lưới được tạo từ vector cơ sở
+% # Ví dụ như b3 = -b1; b4=b1+b2
+
 \begin{figure}[!h]
 \centering
 \begin{tikzpicture}[scale=.5]
 \draw [lightgray] [<->] (0, 5) -- (10, 5);
 \draw [lightgray] [<->] (5, 10) -- (5, 0);
 
-\draw[->, thick, red] (3, 7) -- (4, 8) node[midway, above, sloped] {b1};
-\draw[->, thick, blue] (3, 7) -- (5, 7) node[midway, below, sloped] {b2};
-\draw[->, thick, yellow] (3, 7) -- (2, 6) node[midway, above, sloped] {b3};
-\draw[->, thick, green] (3, 7) -- (6, 8) node[pos=0.75, above, sloped] {b4};
+\draw[->, thick, red] (3, 7) -- (4, 8) node[midway, above, sloped] {$\vec{b1}$};
+\draw[->, thick, blue] (3, 7) -- (5, 7) node[midway, below, sloped] {$\vec{b2}$};
+\draw[->, thick, yellow] (3, 7) -- (2, 6) node[midway, above, sloped] {$\vec{b3}$};
+\draw[->, thick, green] (3, 7) -- (6, 8) node[pos=0.75, above, sloped] {$\vec{b4}$};
 
 \draw [fill, purple] (9, 1) circle [radius=0.1];
 
@@ -266,14 +271,14 @@ Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lư�
 \draw[very thin, gray] (-1, -2) grid (5, 3);
 
 % Vẽ vector (1, 2)
-\draw[->, thick, blue] (0, 0) -- (1, 2) node[midway, above, sloped] {$b_1$};
+\draw[->, thick, blue] (0, 0) -- (1, 2) node[midway, above, sloped] {$\vec{b_1}$};
 
 % Vẽ vector (4, -1)
-\draw[->, thick, red] (0, 0) -- (4, -1) node[midway, above, sloped] {$b_2$};
+\draw[->, thick, red] (0, 0) -- (4, -1) node[midway, above, sloped] {$\vec{b_2}$};
 
 % Gắn nhãn điểm cuối vector
-\node at (1, 2) [above right] {$(1, 2)$};
-\node at (4, -1) [below right] {$(4, -1)$};
+\node at (1, 2) [above right] {$\begin{pmatrix} 1 \\ 2 \end{pmatrix}$};
+\node at (4, -1) [below right] {$\begin{pmatrix} 4 \\ -1 \end{pmatrix}$};
 \end{tikzpicture}
 
 }
@@ -295,14 +300,14 @@ Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lư�
 \draw[very thin, gray] (-1, -2) grid (5, 3);
 
 % Vẽ vector (1, 2)
-\draw[->, thick, blue] (0, 0) -- (1, 2) node[midway, above, sloped] {$b_1^*$};
+\draw[->, thick, blue] (0, 0) -- (1, 2) node[midway, above, sloped] {$\vec{b_1^*}$};
 
 % Vẽ vector (3.6, -1.8)
-\draw[->, thick, purple] (0, 0) -- (3.6, -1.8) node[midway, above, sloped] {$b_2^*$};
+\draw[->, thick, purple] (0, 0) -- (3.6, -1.8) node[midway, above, sloped] {$\vec{b_2^*}$};
 
 % Gắn nhãn điểm cuối vector
-\node at (1, 2) [above right] {$(1, 2)$};
-\node at (3.6, -1.8) [above right] {$(3.6, -1.8)$};
+\node at (1, 2) [above right] {$\begin{pmatrix} 1 \\ 2 \end{pmatrix}$};
+\node at (3.6, -1.8) [above right] {$\begin{pmatrix} 3.6 \\ -1.8 \end{pmatrix}$};
 
 % Vẽ ký hiệu vuông góc màu đỏ tại gốc tọa độ
 \draw[red] (0, 0) -- (0.1, 0.2) -- (0.3, 0.1) -- (0.2, -0.1);
@@ -350,45 +355,28 @@ là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sa
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- 
-
-
-
-
 % <!-- Điều kiện 1 -->
 
-
 % <!-- Điều kiện 2 -->
-
-
 
 % <!-- Mã giả -->
 
 % <!-- Ví dụ -->
 
-
-
-
-
-
-
-
-% <!--! Thuật toán LLL --> 
+% <!--! Thuật toán LLL -->
 
 % <!-- quy trình Gram-Schmidt: -->
 % <!--Nếu $x_1, x_2, \dots, x_n$ là một cơ sở của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \dots, x_n^*$ có thể không nằm trong lưới $L$. -->
 % <!-- Vì num là phân số.... -->
-% <!-- Xin chào! Bạn có thể vui lòng giải thích mục đích của dòng: bk = bk - [uk,j]bj là gì không? -->
+% <!-- Xin chào! Bạn có thể vui lòng giải thích mục đích của dòng: bk = bk - [uk, j]bj là gì không? -->
 % <!-- quy trình Gram Schmidt làm cho cơ sở trực giao -->
 % <!-- Tuy nhiên, trong LLL chúng ta đang làm việc trong một mạng nên không thể đảm bảo tính trực giao. -->
-% <!-- Để làm được điều đó, chúng ta cần u_{k,j} là một số nguyên. -->
+% <!-- Để làm được điều đó, chúng ta cần u_{k, j} là một số nguyên. -->
 % <!-- Điều này tạo ra một cơ sở "đủ trực giao" trong khi vẫn còn trong mạng -->
-
 
 % <!-- 2 chiều -->
 % <!-- n chiều -->
 % <!-- Thuật toán LLL giảm lưới -->
-
 
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
