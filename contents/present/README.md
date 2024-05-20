@@ -1,6 +1,5 @@
 
 
-
 Tìm video k có thì sách DA ...
 Chứng minh 1 2 3....
 tìm xong chắc là b1 thì ok
@@ -44,6 +43,8 @@ Ví dụ khi chúng ta quên mật khẩu facebook thì facebook sẽ gửi thô
 
 <!-- Mật khẩu mới của bạn là ***** -->
 <!-- ảnh -->
+<!-- ![alt text](pictures/facebook.png) -->
+
 
 Thông điệp văn bản m bao gồm phần chữ cái mẫu và phần quan trọng.
 
