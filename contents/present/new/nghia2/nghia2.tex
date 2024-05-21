@@ -59,51 +59,43 @@ $$
 
 \begin{frame}{Các bước tổng quát}
 
+\begin{itemize}
+\item Để phá vỡ mã hóa RSA yêu cầu giải phương trình đồng dư:
 
- 
+$$c \equiv (M + x)^e \quad (mod \ N)$$
+\item Từ đây ta có phương trình đồng dư:
 
+$$x^n + a_{n-1}x^{n-1} + ... + a_2x^2 + a_1x + a_0 \equiv 0 \quad (mod \ N) $$
 
-    \begin{itemize}
-        \item  Để phá  vỡ mã hóa RSA   yêu cầu giải phương trình đồng dư:
-        
-        $$c \equiv (M + x)^e \quad (mod \ N)$$
-        \item   Từ đây ta có phương trình đồng dư:
-        
-        
-        $$x^n + a_{n-1}x^{n-1} + ... + a_2x^2 + a_1x + a_0 \equiv 0 \quad (mod \ N)  $$
-        
-        \item    Ta có được lưới bởi cơ sở như sau:
-    $$
-      \begin{aligned}
-          &\Vec{v_1} = (N,0,0,...,0,0)\\
-          &\Vec{v_2} = (0,YN,0,...,0,0)\\
-          &\vdots\\
-          &\Vec{v_n} = (0,0,0,...,Y^{n-1}N,0)\\
-          &\Vec{v_{n+1}} = (a_0,a_1Y,...,a_{n-1}Y^{n-1},Y^{n})
-      \end{aligned}    
-     $$ 
-    
-    \end{itemize} 
+\item Ta có được lưới bởi cơ sở như sau:
+$$
+\begin{aligned}
+&\Vec{v_1} = (N, 0, 0, ..., 0, 0)\\
+&\Vec{v_2} = (0, YN, 0, ..., 0, 0)\\
+&\vdots\\
+&\Vec{v_n} = (0, 0, 0, ..., Y^{n-1}N, 0)\\
+&\Vec{v_{n+1}} = (a_0, a_1Y, ..., a_{n-1}Y^{n-1}, Y^{n})
+\end{aligned}
+$$
+
+\end{itemize}
 \end{frame}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Các bước tổng quát}
 
-
 \begin{itemize}
-    \item  Dùng thuật toán LLL để thực hiện giảm lưới. Ta thu được cơ sở mới: $b_0,b_1,b_2,...,b_{n+1}$. 
-    \item   Ta sử dụng vector $b_0$ như vector ngắn nhất của lưới và chuyển về dạng đa thức: 
-    $$b_0 + \frac{b_1}{Y}x + ... + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n}x^n  $$
-    \item    Sau đó thực hiện giải phương trình đa thức
-\end{itemize} 
-    
-    
+\item Dùng thuật toán LLL để thực hiện giảm lưới. Ta thu được cơ sở mới: $b_0, b_1, b_2, ..., b_{n+1}$.
+\item Ta sử dụng vector $b_0$ như vector ngắn nhất của lưới và chuyển về dạng đa thức:
+$$b_0 + \frac{b_1}{Y}x + ... + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n}x^n $$
+\item Sau đó thực hiện giải phương trình đa thức
+\end{itemize}
+
 \begin{block}{Chú ý}
 Khi giải phương trình, nghiệm có thể không phải là số nguyên, ta sử dụng giá trị làm tròn
 \end{block}
 
-    
-    \end{frame}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Ví dụ tấn công RSA}
 
 \begin{frame}{Ví dụ tấn công RSA}
