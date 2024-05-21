@@ -56,22 +56,8 @@ Lecture-Intro_Lattices.pdf
 <!--  -->
 <!--  -->
 
-# Vận dụng tấn công RSA
-
-<!--! Giới thiệu bài toán -->
-
-Ví dụ khi chúng ta quên mật khẩu facebook thì facebook sẽ gửi thông tin:
-
-<!-- ảnh -->
 
 
-
-Tương tự như:
-<!-- Mật khẩu mới của bạn là ***** -->
-
-Thông điệp văn bản m bao gồm phần chữ cái mẫu và phần quan trọng.
-
-=> Nếu số mũ mã hóa e nhỏ, LLL có thể được sử dụng để tấn công RSA trong thời gian đa thức.
 
 <!--! Bài toán -->
 
