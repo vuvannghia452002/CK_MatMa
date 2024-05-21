@@ -58,6 +58,99 @@ Lecture-Intro_Lattices.pdf
 
 
 
+
+
+e=3
+For tractability, we'll let e = 3 and N = 115348777. Let our messages be M 5180 + x, where 0 ≤ x ≤ 9, and suppose we've intercepted the ciphertext c = 64784502.
+The ciphertext can be found if we solve the congruence
+64784502 = (5180 + x)³ mod 115348777 Expanding and simplifying, we obtain the congruence x³ + 15540x² + 80497200x + 47119990 = 0 mod 115348777 2
+If this were an equation instead of a congruence, we could apply a numerical method to solve it.
+
+
+
+
+The Lattice Basis
+We want to solve the congruence
++15540x² + 80497200x + 47119990 = 0 mod 115348777
+for x, where we know 0 ≤ x ≤ 9.
+We'll do that by solving the SVP for the lattice spanned by the basis:
+ที₁ = (115348777,0,0,0)
+√2 = (0, 1038138993,0,0)
+3 = (0,0, 9343250937,0)
+√₁ = (47119990, 724474800, 1258740,
+
+
+
+
+
+
+
+Solving SVP
+We'll apply LLL to solve the SVP. While we get an entire set of basis vectors, remember v₁ will be our approximate solution to the SVP, and we find:
+₁ = (13942760, -14799933, -3334365, 2630232)
+Now solve the equation:
+03608x341165x21644437x + 13942760
+The solutions are x ≈ -20.314, 8.0028, 23.747. Since x must be a positive integer in the interval 0 ≤ x ≤ 9, then we take x = 8 as a potential solution.
+
+
+
+
+
+
+Notes and Observations
+Some key observations:
+• Remember that v₁ is an approximate solution to SVP, but we're not guaranteed to get a good solution: We need to verify the solution. Here we find that (5180+8)3 mod 115348777 = 64784502, so our solution x = 8 is the correct one.
+• When we solve our polynomial equation, we might not get whole numbers. Not a problem; use the rounded values as our potential solutions.
+• The exponent e corresponds to the number of basis vectors for our lattice, so we can apply the approach anytime we can solve the corresponding SVP. LLL works for lattices with up to about 100 basis vectors, so this will give us potential solutions for e < 100 or so.
+
+
+
+
+
+<!-- ! -->
+
+e=3
+Để có thể điều khiển được, chúng ta sẽ đặt e = 3 và N = 115348777. Giả sử tin nhắn của chúng ta là M 5180 + x, trong đó 0 ≤ x ≤ 9 và giả sử chúng ta đã chặn được bản mã c = 64784502.
+Bản mã có thể được tìm thấy nếu chúng ta giải sự đồng dư
+64784502 = (5180 + x)³ mod 115348777 Khai triển và đơn giản hóa, chúng ta thu được sự đồng đẳng x³ + 15540x² + 80497200x + 47119990 = 0 mod 115348777 2
+Nếu đây là một phương trình thay vì đồng dư, chúng ta có thể áp dụng phương pháp số để giải nó.
+
+
+
+
+
+Cơ sở mạng tinh thể
+Chúng tôi muốn giải quyết sự phù hợp
++15540x² + 80497200x + 47119990 = 0 mod 115348777
+với x, trong đó chúng ta biết 0 ≤ x ≤ 9.
+Chúng ta sẽ làm điều đó bằng cách giải SVP cho mạng được kéo dài theo cơ sở:
+T₁ = (115348777,0,0,0)
+√2 = (0, 1038138993,0,0)
+3 = (0,0, 9343250937,0)
+√₁ = (47119990, 724474800, 1258740,
+
+
+
+Giải quyết SVP
+Chúng tôi sẽ áp dụng LLL để giải quyết SVP. Mặc dù chúng tôi nhận được toàn bộ tập hợp các vectơ cơ sở, hãy nhớ v₁ sẽ là giải pháp gần đúng của chúng tôi cho SVP và chúng tôi tìm thấy:
+₁ = (13942760, -14799933, -3334365, 2630232)
+Bây giờ giải phương trình:
+03608x341165x21644437x + 13942760
+Các nghiệm là x ≈ -20,314, 8,0028, 23,747. Vì x phải là số nguyên dương trong khoảng 0 ≤ x ≤ 9 nên ta lấy x = 8 làm nghiệm tiềm năng.
+
+
+
+
+
+Ghi chú và quan sát
+Một số quan sát chính:
+• Hãy nhớ rằng v₁ là một giải pháp gần đúng cho SVP, nhưng chúng tôi không đảm bảo sẽ có được giải pháp tốt: Chúng tôi cần xác minh giải pháp. Ở đây chúng ta thấy rằng (5180+8)3 mod 115348777 = 64784502, vì vậy nghiệm x = 8 của chúng ta là đúng.
+• Khi giải phương trình đa thức, chúng ta có thể không nhận được số nguyên. Không thành vấn đề; sử dụng các giá trị làm tròn làm giải pháp tiềm năng của chúng tôi.
+• Số mũ e tương ứng với số vectơ cơ sở cho mạng của chúng ta, vì vậy chúng ta có thể áp dụng cách tiếp cận này bất cứ lúc nào chúng ta có thể giải được SVP tương ứng. LLL hoạt động với các mạng có tối đa khoảng 100 vectơ cơ sở, vì vậy điều này sẽ cho chúng ta các giải pháp tiềm năng cho e < 100 hoặc hơn.
+
+
+
+
 <!--  -->
 <!--  -->
 <!--  -->
