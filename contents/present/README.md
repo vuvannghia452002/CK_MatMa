@@ -155,20 +155,20 @@ $$b_0 + \frac{b_1}{Y}x + \dots + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n
 <!-- # -->
 
  
-% Lý thuyết
-% Lịch sử
-% Giới thiệu
-% Mục đích công dụng
+<!-- @ Lý thuyết -->
+<!-- @ Lịch sử -->
+<!-- @ Giới thiệu -->
+<!-- @ Mục đích công dụng -->
 
-% Hình ảnh liên quan
+<!-- @ Hình ảnh liên quan -->
 
-% Thuật toán
-% Các bước
-% Sơ đồ thuật toán
+<!-- @ Thuật toán -->
+<!-- @ Các bước -->
+<!-- @ Sơ đồ thuật toán -->
 
-% Code mã nguồn mã giả....
+<!-- @ Code mã nguồn mã giả.... -->
 
-% Ví dụ minh họa
-% Chạy tay
-% Chương trình lập trình
+<!-- @ Ví dụ minh họa -->
+<!-- @ Chạy tay -->
+<!-- @ Chương trình lập trình -->
 
