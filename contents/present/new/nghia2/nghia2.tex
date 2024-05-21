@@ -79,103 +79,142 @@
 
 
 
-\begin{frame}{Ví dụ tấn công RSA}
+% \begin{frame}{Ví dụ tấn công RSA}
 
-    \begin{block}{Bài toán}
-        \begin{itemize}
-        \item Hệ mật mã RSA có:
-        
-        \begin{itemize}
-        \item Khóa công khai (n, e) = (115348777, 3)
-        \item Bản mã  $c = 64784502$
-        \item Bản rõ có dạng $m = 5180 + x$
-        \item Với $x$ là phần bí mật thỏa mãn $|x| \leq 9$ 
-        \end{itemize}
-\item Để giải bài toán, chúng ta cần đi tìm $x$
-        \end{itemize}
-        
-        \end{block}
-\end{frame}
+%     \begin{block}{Bài toán}
+%         \begin{itemize}
+%         \item Hệ mật mã RSA có:
+
+%         \begin{itemize}
+%         \item Khóa công khai (n, e) = (115348777, 3)
+%         \item Bản mã  $c = 64784502$
+%         \item Bản rõ có dạng $m = 5180 + x$
+%         \item Với $x$ là phần bí mật thỏa mãn $|x| \leq 9$ 
+%         \end{itemize}
+% \item Để giải bài toán, chúng ta cần đi tìm $x$
+%         \end{itemize}
+
+%         \end{block}
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ tấn công RSA}
 
 
- 
-%     \begin{frame}
-%     \frametitle{Phương Trình Cần Giải Quyết}
-%     \begin{block}{Phương trình}
-%     \[
-%     64784502 = (5180 + x)^3 \mod 115348777
-%     \]
-%     \end{block}
-%     \begin{block}{Khai triển và đơn giản hóa}
-%     \[
-%     x^3 + 15540x^2 + 80497200x + 47119990 \equiv 0 \mod 115348777
-%     \]
-%     \end{block}
-%     \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
-%     % Slide 3: Cơ sở lưới
-%     \begin{frame}
-%     \frametitle{Cơ Sở Lưới}
-%     \begin{itemize}
-%         \item Cần giải phương trình
+%     Theo hệ  mật mã RSA ta biết:
+
+
+
+%         \[
+%         64784502 = (5180 + x)^3 \mod 115348777
+%         \]
+
+
+%         Hay:
+
+
 %         \[
 %         x^3 + 15540x^2 + 80497200x + 47119990 \equiv 0 \mod 115348777
 %         \]
+
+
+
+
+%     \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ tấn công RSA}
+
+
+
+%     \begin{itemize}
+%         \item Cần giải phương trình
+%               \[
+%                   x^3 + 15540x^2 + 80497200x + 47119990 \equiv 0 \mod 115348777
+%               \]
 %         \item Dựa vào cơ sở lưới:
-%         \[
-%         \mathbf{b}_1 = (115348777, 0, 0, 0)
-%         \]
-%         \[
-%         \mathbf{b}_2 = (0, 1038138993, 0, 0)
-%         \]
-%         \[
-%         \mathbf{b}_3 = (0, 0, 9343250937, 0)
-%         \]
-%         \[
-%         \mathbf{b}_4 = (47119990, 724474800, 1258740, 0)
-%         \]
+%               \[
+%                   \vec{b_1} = (115348777, 0, 0, 0)
+%               \]
+%               \[
+%                   \vec{b_2} = (0, 1038138993, 0, 0)
+%               \]
+%               \[
+%                   \vec{b_3} = (0, 0, 9343250937, 0)
+%               \]
+%               \[
+%                   \vec{b_4} = (47119990, 724474800, 1258740, 0)
+%               \]
 %     \end{itemize}
-%     \end{frame}
+
+
+
+
+
+
+
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
-%     % Slide 4: Giải SVP
-%     \begin{frame}
-%     \frametitle{Giải SVP}
+% \begin{frame}{Ví dụ tấn công RSA}
+
+ 
+
+
 %     \begin{itemize}
-%         \item Áp dụng thuật toán LLL để giải bài toán SVP.
-%         \item Kết quả cơ sở vector:
+%         \item Áp dụng thuật toán LLL để giảm lưới
+%         \item Kết quả cơ sở vector mới:
 %         \[
-%         \mathbf{v}_1 = (13942760, -14799933, -3334365, 2630232)
+%             \vec{v_1}   = (13942760, -14799933, -3334365, 2630232)
 %         \]
-%         \item Giải phương trình:
-%         \[
-%         03608x^3 + 41165x^2 + 21644437x + 13942760 = 0
-%         \]
-%         \item Nghiệm tìm được: $x \approx -20.314, 8.0028, 23.747$
-%         \item Do $0 \leq x \leq 9$, ta chọn $x = 8$ là nghiệm khả dĩ.
+%               \[
+%                   \vec{nghia_2} = (0, 0, 0, 0)
+%               \]
+%               \[
+%                   \vec{nghia_3} = (0, 0, 0, 0)
+%               \]
+%               \[
+%                   \vec{nghia_4} = (0, 0, 0, 0)
+%               \]
+
+
 %     \end{itemize}
-%     \end{frame}
+
+
+
+
+
+
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
-%     % Slide 5: Ghi chú và quan sát
-%     \begin{frame}
-%     \frametitle{Ghi Chú và Quan Sát}
-%     \begin{itemize}
-%         \item $\mathbf{v}_1$ là nghiệm xấp xỉ của SVP, cần xác minh nghiệm.
-%         \item Kiểm tra lại: $(5180+8)^3 \mod 115348777 = 64784502$, do đó $x = 8$ là nghiệm đúng.
-%         \item Khi giải phương trình bậc ba, có thể nghiệm không phải là số nguyên, sử dụng giá trị làm tròn để tìm nghiệm khả dĩ.
-%         \item Số mũ $e$ tương ứng với số vector cơ sở của lưới, phương pháp này áp dụng được khi $e < 100$.
-%     \end{itemize}
-%     \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
+\begin{frame}{Ví dụ tấn công RSA}
 
-    
+ 
 
 
-    
+    \begin{itemize}
+        \item Theo định lý nghia ta có $\vec{v_1}$ là vector ngắn nhất của cơ sở vector mới
+        \[
+            \vec{v_1}   = (13942760, -14799933, -3334365, 2630232)
+        \]
+        \item Từ đó ta có phương trình:
+        \[
+        03608x^3 + 41165x^2 + 21644437x + 13942760 = 0
+        \]
+        \item Nghiệm tìm được: $x \approx -20.314, 8.0028, 23.747$
+        \item Do $0 \leq x \leq 9$, ta chọn $x = 8$ là nghiệm.
+    \end{itemize}
+
+
+
+
+    %       #  \item Kiểm tra lại: $(5180+8)^3 \mod 115348777 = 64784502$, do đó $x = 8$ là nghiệm đúng.
+    %       #  \item Khi giải phương trình bậc ba, có thể nghiệm không phải là số nguyên, sử dụng giá trị làm tròn để tìm nghiệm khả dĩ.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
 
