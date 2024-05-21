@@ -1,0 +1,640 @@
+1
+00:00:00,320 --> 00:00:01,520
+được rồi, chúng ta hãy xem một
+
+2
+00:00:01,520 --> 00:00:04,799
+ví dụ về cách chúng ta có thể sử dụng llll như một bản
+
+3
+00:00:04,799 --> 00:00:07,560
+hack trên RSA để giữ cho ví dụ này
+
+4
+00:00:07,560 --> 00:00:09,559
+dễ hiểu một cách hợp lý, chúng ta sẽ sử dụng số mũ
+
+5
+00:00:09,559 --> 00:00:12,360
+công khai lũy thừa của e bằng 3
+
+6
+00:00:12,360 --> 00:00:15,360
+và mô đun công khai của số này và
+
+7
+00:00:15,360 --> 00:00:17,160
+giả sử  rằng tin nhắn của chúng tôi có dạng
+
+8
+00:00:17,160 --> 00:00:19,920
+5180 cộng với X trong đó X là một số từ
+
+9
+00:00:19,920 --> 00:00:22,680
+0 đến 9 và giả sử chúng tôi đã chặn được một
+
+10
+00:00:22,680 --> 00:00:24,920
+mật mã Tex trông giống như thế này một lần nữa,
+
+11
+00:00:24,920 --> 00:00:26,640
+bạn có thể nghĩ về tin nhắn của chúng tôi cũng như
+
+12
+00:00:26,640 --> 00:00:28,000
+trong trường hợp này nó là một chữ
+
+13
+00:00:28,000 --> 00:00:30,199
+số có bốn chữ số  số mà bạn biết
+
+14
+00:00:30,199 --> 00:00:32,040
+ba chữ số đầu tiên và câu hỏi duy nhất
+
+15
+00:00:32,040 --> 00:00:35,000
+là chữ số cuối cùng đó sẽ là gì
+
+16
+00:00:35,000 --> 00:00:38,680
+nên vấn đề khôi phục
+
+17
+00:00:38,680 --> 00:00:41,000
+tin nhắn văn bản thuần túy ban đầu tương ứng
+
+18
+00:00:41,000 --> 00:00:43,360
+với việc giải văn bản Mật mã đồng
+
+19
+00:00:43,360 --> 00:00:48,280
+dạng với 5180 + x to^ 3 mod đó và
+
+20
+00:00:48,280 --> 00:00:51,280
+như vậy  nếu tôi mở rộng và đơn giản hóa nếu tôi
+
+21
+00:00:51,280 --> 00:00:54,640
+có thể giải được phương trình đồng dư này thì tôi có thể
+
+22
+00:00:54,640 --> 00:00:58,440
+phục hồi giá trị của x một
+
+23
+00:00:58,440 --> 00:01:00,000
+lần nữa nếu đó là một đẳng thức thì điều này
+
+24
+00:01:00,000 --> 00:01:02,239
+sẽ không có vấn đề gì vấn đề là
+
+25
+00:01:02,239 --> 00:01:05,119
+nó là một sự đồng dư nên tôi sẽ đánh nó bằng
+
+26
+00:01:05,119 --> 00:01:08,439
+một phương pháp mạng vì vậy tôi có
+
+27
+00:01:08,439 --> 00:01:11,640
+sự đồng dạng của mình Tôi biết rằng X có
+
+28
+00:01:11,640 --> 00:01:13,680
+giá trị tối đa có thể là 9 Tôi biết
+
+29
+00:01:13,680 --> 00:01:16,680
+mô đun nên tôi có thể làm gì ở đây Tôi sẽ xem
+
+30
+00:01:16,680 --> 00:01:18,920
+xét mạng
+
+31
+00:01:18,920 --> 00:01:22,840
+tương ứng với phương trình này bằng nhau và
+
+32
+00:01:22,840 --> 00:01:24,240
+mạng đó là  sẽ có
+
+33
+00:01:24,240 --> 00:01:26,600
+cơ sở đầu tiên Vector sẽ là
+
+34
+00:01:26,600 --> 00:01:28,320
+mô đun
+
+35
+00:01:28,320 --> 00:01:32,880
+n với tất cả Z sau cơ sở thứ hai đó
+
+36
+00:01:32,880 --> 00:01:38,799
+Vector 0 nhân tối đa
+
+37
+00:01:39,640 --> 00:01:42,320
+mô đun và sau đó là Zer ở các
+
+38
+00:01:42,320 --> 00:01:45,759
+Vị trí còn lại Vector thứ ba một lần nữa chúng ta có thể
+
+39
+00:01:45,759 --> 00:01:48,200
+coi đây là hệ số
+
+40
+00:01:48,200 --> 00:01:51,719
+tuyến tính không đổi Hệ số vuông nên
+
+41
+00:01:51,719 --> 00:01:55,840
+đó là  sẽ là M SAR bình phương tối đa
+
+42
+00:01:55,840 --> 00:01:58,360
+thời gian
+
+43
+00:01:58,840 --> 00:02:00,479
+mô đun
+
+44
+00:02:00,479 --> 00:02:02,840
+Z của chúng ta trong phần sở hữu còn lại và
+
+45
+00:02:02,840 --> 00:02:05,600
+Vector cuối cùng của chúng ta sẽ là
+
+46
+00:02:05,600 --> 00:02:08,560
+các hệ số của đa thức nhân với lũy thừa
+
+47
+00:02:08,560 --> 00:02:10,399
+thích hợp của
+
+48
+00:02:10,399 --> 00:02:14,599
+giá trị cực đại của chúng ta nên tôi có số hạng không đổi.
+
+49
+00:02:14,599 --> 00:02:19,920
+Tôi có số hạng tuyến tính nhân với
+
+50
+00:02:19,920 --> 00:02:23,720
+Tôi có số hạng bình phương nhân với bình
+
+51
+00:02:23,720 --> 00:02:25,920
+phương của số
+
+52
+00:02:25,920 --> 00:02:29,239
+lớn nhất và sau đó tôi có số hạng bậc ba
+
+53
+00:02:29,239 --> 00:02:31,959
+Co hiệu thời gian khối có
+
+54
+00:02:31,959 --> 00:02:34,760
+giá trị lớn nhất và vì vậy bây giờ tôi có một
+
+55
+00:02:34,760 --> 00:02:37,080
+mạng sẽ được bao bọc bởi
+
+56
+00:02:37,080 --> 00:02:39,720
+tập hợp bốn vectơ này và khóa
+
+57
+00:02:39,720 --> 00:02:42,879
+ở đây là mọi điểm trong mạng này
+
+58
+00:02:42,879 --> 00:02:45,959
+tương ứng với một
+
+59
+00:02:45,959 --> 00:02:50,040
+phương trình được liên kết với không
+
+60
+00:02:50,040 --> 00:02:51,920
+giống như vì chúng ta đã thực hiện chia tỷ lệ
+
+61
+00:02:51,920 --> 00:02:56,280
+nhưng được liên kết với
+
+62
+00:02:56,280 --> 00:02:59,800
+sự đồng dư cụ thể này và ở đâu đó trong mạng này
+
+63
+00:02:59,800 --> 00:03:02,760
+là một phương trình mà nghiệm của nó cũng sẽ
+
+64
+00:03:02,760 --> 00:03:07,120
+là nghiệm của  bây giờ, ừ, chúng ta có thể
+
+65
+00:03:07,120 --> 00:03:09,840
+thử áp dụng
+
+66
+00:03:09,840 --> 00:03:11,720
+bài toán Vector ngắn nhất, sau đó chúng ta có thể cố gắng giải
+
+67
+00:03:11,720 --> 00:03:14,440
+bài toán Vector ngắn nhất cho mạng này
+
+68
+00:03:14,440 --> 00:03:17,480
+và trong trường hợp đó, với những
+
+69
+00:03:17,480 --> 00:03:19,400
+điều kiện thích hợp, chúng ta sẽ có thể khôi phục
+
+70
+00:03:19,400 --> 00:03:22,280
+giải pháp cho vấn đề này ngay bây giờ, chúng ta đã thắng'  Hãy đi vào
+
+71
+00:03:22,280 --> 00:03:23,560
+chi tiết về những điều kiện phù hợp đó
+
+72
+00:03:23,560 --> 00:03:26,760
+ở đây nhưng lưu ý rằng
+
+73
+00:03:26,760 --> 00:03:30,000
+giá trị tối đa có thể có của x
+
+74
+00:03:30,000 --> 00:03:33,799
+nhỏ hơn nhiều so với bất kỳ uh nào so với bất kỳ
+
+75
+00:03:33,799 --> 00:03:36,080
+hệ số uh hoặc thành phần nào của các
+
+76
+00:03:36,080 --> 00:03:39,239
+vectơ khác nhau trong cơ sở ltis của chúng tôi,
+
+77
+00:03:39,239 --> 00:03:42,879
+vì vậy tôi có Lattis của mình  cơ sở Tôi áp dụng
+
+78
+00:03:42,879 --> 00:03:47,000
+llll để có được cơ sở mạng mới của
+
+79
+00:03:47,000 --> 00:03:50,319
+các vectơ Quasi trực giao và cơ sở duy nhất
+
+80
+00:03:50,319 --> 00:03:52,799
+tôi thực sự cần Tôi có được toàn bộ tập hợp
+
+81
+00:03:52,799 --> 00:03:54,640
+nhưng cơ sở duy nhất tôi thực sự cần là
+
+82
+00:03:54,640 --> 00:03:57,400
+Vector cơ sở đầu tiên vì
+
+83
+00:03:57,400 --> 00:03:59,040
+Vector cơ sở đầu tiên đó sẽ cung cấp cho chúng ta một cơ sở
+
+84
+00:03:59,040 --> 00:04:01,280
+gần đúng  giải pháp cho
+
+85
+00:04:01,280 --> 00:04:04,200
+vấn đề Vector rương và nếu tôi thấy rằng
+
+86
+00:04:04,200 --> 00:04:07,120
+Vector cơ sở Lattis đầu tiên của tôi trông như thế này và
+
+87
+00:04:07,120 --> 00:04:10,640
+vì vậy từ đây tôi có thể xây dựng lại một polom
+
+88
+00:04:10,640 --> 00:04:12,840
+mà Root của nó hy vọng sẽ mang lại cho tôi một số
+
+89
+00:04:12,840 --> 00:04:14,239
+hiểu biết sâu sắc về các giải pháp này cho
+
+90
+00:04:14,239 --> 00:04:16,440
+sự đồng đẳng ban đầu, vậy biểu thức
+
+91
+00:04:16,440 --> 00:04:18,358
+đa thức đó trông như thế nào  Tương tự như vậy, một lần nữa chúng ta có thể
+
+92
+00:04:18,358 --> 00:04:21,199
+coi đây là hệ số tuyến tính thành phần tuyến tính
+
+93
+00:04:21,199 --> 00:04:24,759
+Hệ số X Hệ
+
+94
+00:04:24,759 --> 00:04:27,680
+số X2 Hệ số lập phương X
+
+95
+00:04:27,680 --> 00:04:31,120
+vì chúng ta đã chia tỷ lệ các phương trình của mình theo Hệ
+
+96
+00:04:31,120 --> 00:04:33,840
+số này m n giá trị lớn nhất của x
+
+97
+00:04:33,840 --> 00:04:35,440
+giá trị lớn nhất có thể có của x nên chúng ta phải
+
+98
+00:04:35,440 --> 00:04:39,400
+thu nhỏ chúng lại nên tôi
+
+99
+00:04:39,400 --> 00:04:42,320
+các hệ số thực tế sẽ là
+
+100
+00:04:42,320 --> 00:04:46,600
+hệ số bậc ba trên M
+
+101
+00:04:48,600 --> 00:04:50,840
+lập phương mà sau đó chúng ta giảm đi và đó là hệ số bậc
+
+102
+00:04:50,840 --> 00:04:54,320
+ba của chúng ta nên một lần nữa hệ số bình
+
+103
+00:04:54,320 --> 00:04:57,680
+phương tuyến tính không đổi nên đó là hệ số bình phương của chúng ta
+
+104
+00:04:57,680 --> 00:05:00,520
+trên bình phương của
+
+105
+00:05:00,520 --> 00:05:03,320
+
+
+106
+00:05:06,840 --> 00:05:09,919
+giá trị tối đa, hệ số tuyến tính của chúng ta
+
+107
+00:05:09,919 --> 00:05:14,000
+trên giá trị tối đa, một lần nữa
+
+108
+00:05:14,000 --> 00:05:16,080
+đây là một thang đo  thừa số đại diện cho
+
+109
+00:05:16,080 --> 00:05:18,280
+giá trị lớn nhất có thể có của
+
+110
+00:05:18,280 --> 00:05:22,120
+x cho nghiệm của chúng ta và cuối cùng là
+
+111
+00:05:22,120 --> 00:05:23,160
+
+
+112
+00:05:23,160 --> 00:05:27,280
+số hạng không đổi của chúng ta và tôi có phương trình hay này và
+
+113
+00:05:27,280 --> 00:05:29,560
+bởi vì nó là một phương trình không phải là
+
+114
+00:05:29,560 --> 00:05:32,000
+đồng dư nên tôi có thể giải phương trình này theo bất kỳ
+
+115
+00:05:32,000 --> 00:05:34,120
+cách nào hữu ích nhất là tôi có thể áp dụng
+
+116
+00:05:34,120 --> 00:05:36,240
+một số  phân tích số cho nó và tôi tìm thấy
+
+117
+00:05:36,240 --> 00:05:39,400
+ba nghiệm trông giống như vậy. Bây
+
+118
+00:05:39,400 --> 00:05:42,400
+giờ hãy nhớ rằng X phải là một
+
+119
+00:05:42,400 --> 00:05:45,280
+số nguyên dương trong khoảng từ 0 đến 9
+
+120
+00:05:45,280 --> 00:05:47,240
+nên nghiệm duy nhất không có nghiệm nào trong số này
+
+121
+00:05:47,240 --> 00:05:51,960
+rõ ràng là số nguyên nhưng giá trị làm tròn của tôi
+
+122
+00:05:51,960 --> 00:05:54,919
+cho tôi một số nguyên trong
+
+123
+00:05:54,919 --> 00:05:57,440
+khoảng từ 0 đến 9 và vì vậy tôi sẽ lấy
+
+124
+00:05:57,440 --> 00:06:00,960
+x = 8 làm nghiệm tiềm năng cho
+
+125
+00:06:00,960 --> 00:06:03,720
+
+
+126
+00:06:03,720 --> 00:06:06,120
+sự đồng dư ban đầu của mình bây giờ một số lưu ý nhanh về
+
+127
+00:06:06,120 --> 00:06:09,080
+điều này uh, hãy nhớ rằng mặc dù V1 này là
+
+128
+00:06:09,080 --> 00:06:10,639
+nghiệm gần đúng cho
+
+129
+00:06:10,639 --> 00:06:12,599
+bài toán Vector ngắn nhất uh nhưng nó không đảm bảo
+
+130
+00:06:12,599 --> 00:06:14,880
+là một nghiệm tốt có nghĩa là chúng ta
+
+131
+00:06:14,880 --> 00:06:18,080
+phải xác minh nghiệm thực tế của mình, điều
+
+132
+00:06:18,080 --> 00:06:20,240
+có nghĩa trong trường hợp này là chúng ta
+
+133
+00:06:20,240 --> 00:06:26,080
+thấy rằng nếu x bằng 8 thì trên
+
+134
+00:06:26,080 --> 00:06:28,680
+thực tế, nghiệm này thỏa mãn sự đồng dạng của chúng ta nên
+
+135
+00:06:28,680 --> 00:06:31,440
+nghiệm ứng cử viên U xal 8 của chúng ta thực sự là
+
+136
+00:06:31,440 --> 00:06:33,560
+nghiệm đúng bởi vì  nó mang lại cho chúng tôi
+
+137
+00:06:33,560 --> 00:06:36,800
+giá trị được mã hóa chính xác
+
+138
+00:06:36,840 --> 00:06:38,800
+một lần nữa trong khi chúng tôi giải
+
+139
+00:06:38,800 --> 00:06:40,759
+các phương trình đa thức mà chúng tôi có thể không nhận được
+
+140
+00:06:40,759 --> 00:06:42,360
+số nguyên và đây không phải là vấn đề.
+
+141
+00:06:42,360 --> 00:06:43,800
+Chúng tôi sẽ sử dụng các giá trị làm tròn làm
+
+142
+00:06:43,800 --> 00:06:47,039
+Giải pháp tiềm năng của mình và cuối cùng,
+
+143
+00:06:47,039 --> 00:06:49,479
+lưu ý cuối cùng là số mũ e tương ứng với
+
+144
+00:06:49,479 --> 00:06:53,080
+số  các vectơ cơ sở cho lce và
+
+145
+00:06:53,080 --> 00:06:55,919
+uh để chúng tôi có thể áp dụng phương pháp này
+
+146
+00:06:55,919 --> 00:06:57,160
+bất cứ lúc nào để chúng tôi có thể giải quyết
+
+147
+00:06:57,160 --> 00:06:59,520
+
+
+148
+00:06:59,520 --> 00:07:01,639
+lại vấn đề Vector ngắn nhất tương ứng LL Hoạt động khá hiệu quả
+
+149
+00:07:01,639 --> 00:07:03,840
+đối với các vectơ muộn với tối đa khoảng 100 vectơ cơ sở,
+
+150
+00:07:03,840 --> 00:07:06,440
+vì vậy điều này sẽ cung cấp cho chúng tôi
+
+151
+00:07:06,440 --> 00:07:09,240
+các giải pháp tiềm năng cho E ít hơn  hơn khoảng 100 hoặc
+
+152
+00:07:09,240 --> 00:07:11,319
+hơn, đó là lý do tại sao điều này được gọi là
+
+153
+00:07:11,319 --> 00:07:14,560
+cuộc tấn công theo số mũ thấp nếu số mũ của bạn thấp
+
+154
+00:07:14,560 --> 00:07:17,280
+ở mức khoảng 100 hoặc hơn thì
+
+155
+00:07:17,280 --> 00:07:20,120
+điều này có thể có tác dụng chống lại
+
+156
+00:07:20,120 --> 00:07:22,680
+nó, vậy bạn sẽ làm gì với hệ thống RSA,
+
+157
+00:07:22,680 --> 00:07:24,080
+bạn sử dụng số mũ cao  số mũ nên bạn
+
+158
+00:07:24,080 --> 00:07:26,199
+không cần phải lo lắng về
+
+159
+00:07:26,199 --> 00:07:28,319
+loại
+
+160
+00:07:28,319 --> 00:07:31,319
+mối đe dọa này
+
