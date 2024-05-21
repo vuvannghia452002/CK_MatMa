@@ -59,15 +59,11 @@ Lecture-Intro_Lattices.pdf
 
 
 
-<!--! Bài toán -->
 
-Giả sử hệ thống RSA có:
 
-<!-- Khóa công khai n, e -->
-<!-- Bản rõ có dạng $m = t + x$ -->
 
-<!-- t là phần mẫu cố định đã biết -->
-<!-- x là phần quan trọng thỏa mãn $|x| \leq Y$ với Y nguyên -->
+
+
 
 <!-- Để phá vỡ mã hóa RSA ta cần giải x trong bài toán: -->
 <!-- c = (T + x) ^ e mod N -->
