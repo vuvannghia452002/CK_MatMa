@@ -34,7 +34,7 @@ Code
 <!-- youtube -->
 <!-- youtube -->
 <!-- youtube -->
-![alt text](new/image.png)
+![alt text](new/nghia1/pictures/image.png)
 
 
 An Introduction to Mathematical Cryptography (2014) - Hoffstein, Pipher, Silverman
