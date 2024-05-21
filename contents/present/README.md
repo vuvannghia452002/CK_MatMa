@@ -63,7 +63,6 @@ Lecture-Intro_Lattices.pdf
 Ví dụ khi chúng ta quên mật khẩu facebook thì facebook sẽ gửi thông tin:
 
 <!-- ảnh -->
-<!-- ![alt text](pictures/facebook.png) -->
 
 
 
