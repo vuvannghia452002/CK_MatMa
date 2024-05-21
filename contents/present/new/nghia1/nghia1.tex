@@ -7,11 +7,17 @@
 
 \begin{itemize}
 \item Ta có thể hiểu lưới tương tự như không gian vector
-\item Ví dụ không gian vector đơn giản gồm 2 vector. Bạn có thể cộng, nhân với số vô hướng và nó trải rộng trong một không gian vector.
+\item Ví dụ không gian vector đơn giản gồm 2 vector
+
+\begin{itemize}
+\item Bạn có thể cộng vector, nhân vô hướng với 1 số
+\item Kết quả trải rộng trong một không gian vector.
+\end{itemize}
 \end{itemize}
 
+% \begin{figure}[!h]
 \resizebox{0.9\textwidth}{!}{%
-\begin{tikzpicture}[scale=.55]
+\begin{tikzpicture}[scale=.5]
 \draw [lightgray] [<->] (0, 5) -- (10, 5);
 \draw [lightgray] [<->] (5, 10) -- (5, 0);
 \draw [thick, purple] [->] (5, 5) -- (6, 8);
@@ -24,6 +30,7 @@
 \path [fill=purple] (15.5, 0) to (20.5, 10) to (23, 10) to (13, 0);
 \end{tikzpicture}
 }
+% \end{figure}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -33,12 +40,12 @@
 \begin{itemize}
 \item Tuy nhiên, các số vô hướng của lưới là các số nguyên
 \item Bây giờ ta có không gian được tạo thành từ các điểm
-\item Đặc điểm của không gian này có tính rời rạc
+\item Đặc điểm của không gian này là có tính rời rạc
 \end{itemize}
 
 \begin{figure}[!h]
 \centering
-\begin{tikzpicture}[scale=.4]
+\begin{tikzpicture}[scale=.3]
 \draw [lightgray] [<->] (0, 5) -- (10, 5);
 \draw [lightgray] [<->] (5, 10) -- (5, 0);
 
@@ -128,7 +135,7 @@ $$
 L = \{a_1 x_1 + a_2 x_2 + \ldots + a_n x_n \mid a_i \in \mathbb{Z} \}
 $$
 
-Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lưới.
+Trong đó các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lưới.
 
 \end{block}
 
@@ -138,7 +145,7 @@ Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lư�
 
 \begin{figure}[!h]
 \centering
-\begin{tikzpicture}[scale=.5]
+\begin{tikzpicture}[scale=.7]
 \draw [lightgray] [<->] (0, 5) -- (10, 5);
 \draw [lightgray] [<->] (5, 10) -- (5, 0);
 
@@ -238,7 +245,11 @@ x_i = \sum_{j=1}^n b_{ij} y_j, \quad y_i = \sum_{j=1}^n c_{ij} x_j.
 Ta có thể viết gọn lại dưới dạng ma trận:
 $X = BY, \quad Y = CX.$
 
-Vì vậy ta có $X = BCX$ và $Y = CBY$. Do $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$ là cơ sở trong không gian $\mathbb{R}^n$ nên ma trận $X$, $Y$ là ma trận khả nghịch.
+Vì vậy ta có $X = BCX$ và $Y = CBY$.
+
+% Do $x_1, x_2, \ldots, x_n$ và $y_1, y_2, \ldots, y_n$
+% là cơ sở trong không gian $\mathbb{R}^n$
+% nên ma trận $X$, $Y$ là ma trận khả nghịch.
 
 Suy ra $BC = CB = I$ và $\det(B) \det(C) = 1$.
 
@@ -365,30 +376,27 @@ là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sa
 \begin{frame}{Nhận xét quy trình Gram-Schmidt}
 
 \begin{itemize}
-\item
-\item
-\item
-\item
-\item
-\end{itemize}
+\item Các vector không được chuẩn hóa độ dài
 
-% \textbf{Chú ý:} Các vector không được chuẩn hóa \index{chuẩn hóa} độ dài. Ngoài ra, nếu $x_1, x_2, \dots, x_n$ là một cơ sở \index{cơ sở} của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \dots, x_n^*$ có thể không nằm trong lưới $L$.\\
+\item Nếu $x_1, x_2, \dots, x_n$ là một cơ sở của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \dots, x_n^*$ có thể không nằm trong lưới $L$.
+\item Để đảm bảo tạo ra một cơ sở "đủ trực giao" trong lưới, chúng ta cần $\mu_{ij}$ là một số nguyên.
+\end{itemize}
 
 Nếu ta đặt $\mu_{ii} = 1 $, $\mu_{ij} = 0$ với $ 1\leq i < j \leq n$ . Ta có thể viết lại dưới dạng ma trận \index{ma trận} :
 $$\underbrace{\left(\begin{array}{c}
-x_1\\
-x_2\\
-\vdots\\
+x_1 \\
+x_2 \\
+\vdots \\
 x_n
 \end{array}\right)}_{X} = \underbrace{\left(\begin{array}{cccc}
-1 & 0 &\cdots & 0\\
-\mu_{21} & 1 &\cdots & 0\\
-\vdots & \vdots & \ddots &\vdots\\
-\mu_{n1} &\cdots & \cdots & 1
+1 & 0 & \cdots & 0 \\
+\mu_{21} & 1 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+\mu_{n1} & \cdots & \cdots & 1
 \end{array}\right)}_{M} \times \underbrace{\left(\begin{array}{c}
-x_1^*\\
-x_2^*\\
-\vdots\\
+x_1^* \\
+x_2^* \\
+\vdots \\
 x_n^*
 \end{array}\right)}_{X^*} $$
 
@@ -498,14 +506,7 @@ Theo công thức (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta c
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Vector ngắn nhất tí gõ sau
-% Vector ngắn nhất tí gõ sau
-% Vector ngắn nhất tí gõ sau
-% Vector ngắn nhất tí gõ sau
-% Vector ngắn nhất tí gõ sau
-% Vector ngắn nhất tí gõ sau
-% Vector ngắn nhất tí gõ sau
-% \begin{frame}{Vector ngắn nhất}
+\begin{frame}{Vector ngắn nhất}
 
 % \begin{itemize}
 % \item Độ dài vector $v = (v_1, v_2, \dots, v_n)$ là:
@@ -517,5 +518,5 @@ Theo công thức (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta c
 
 % \end{itemize}
 
-% \end{frame}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
