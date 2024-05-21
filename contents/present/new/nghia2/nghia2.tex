@@ -55,12 +55,55 @@ $$
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Các bước tổng quan}
+\subsection{Các bước tổng quát}
 
-\begin{frame}{Các bước tổng quan}
+\begin{frame}{Các bước tổng quát}
 
+
+ 
+
+
+    \begin{itemize}
+        \item  Để phá  vỡ mã hóa RSA   yêu cầu giải phương trình đồng dư:
+        
+        $$c \equiv (M + x)^e \quad (mod \ N)$$
+        \item   Từ đây ta có phương trình đồng dư:
+        
+        
+        $$x^n + a_{n-1}x^{n-1} + ... + a_2x^2 + a_1x + a_0 \equiv 0 \quad (mod \ N)  $$
+        
+        \item    Ta có được lưới bởi cơ sở như sau:
+    $$
+      \begin{aligned}
+          &\Vec{v_1} = (N,0,0,...,0,0)\\
+          &\Vec{v_2} = (0,YN,0,...,0,0)\\
+          &\vdots\\
+          &\Vec{v_n} = (0,0,0,...,Y^{n-1}N,0)\\
+          &\Vec{v_{n+1}} = (a_0,a_1Y,...,a_{n-1}Y^{n-1},Y^{n})
+      \end{aligned}    
+     $$ 
+    
+    \end{itemize} 
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Các bước tổng quát}
+
+
+\begin{itemize}
+    \item  Dùng thuật toán LLL để thực hiện giảm lưới. Ta thu được cơ sở mới: $b_0,b_1,b_2,...,b_{n+1}$. 
+    \item   Ta sử dụng vector $b_0$ như vector ngắn nhất của lưới và chuyển về dạng đa thức: 
+    $$b_0 + \frac{b_1}{Y}x + ... + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n}x^n  $$
+    \item    Sau đó thực hiện giải phương trình đa thức
+\end{itemize} 
+    
+    
+\begin{block}{Chú ý}
+Khi giải phương trình, nghiệm có thể không phải là số nguyên, ta sử dụng giá trị làm tròn
+\end{block}
+
+    
+    \end{frame}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Ví dụ tấn công RSA}
 
 \begin{frame}{Ví dụ tấn công RSA}
@@ -150,7 +193,7 @@ x^3 + 15540x^2 + 80497200x + 47119990 \equiv 0 \mod 115348777
 \[
 \vec{v_1} = (13942760, -14799933, -3334365, 2630232)
 \]
-\item Từ đó ta có phương trình:
+\item Từ đó ta có phương trình đa thức:
 \[
 3608x^3 - 41165x^2 - 1644437x + 13942760 = 0
 \]
@@ -158,10 +201,6 @@ x^3 + 15540x^2 + 80497200x + 47119990 \equiv 0 \mod 115348777
 \item Do $|x| \leq 9$, ta chọn $x = 8$ là nghiệm.
 \item Kiểm tra lại: $(5180+8)^3 \mod 115348777 = 64784502$
 \end{itemize}
-
-% \begin{block}{Chú ý}
-% Khi giải phương trình bậc ba, nghiệm có thể không phải là số nguyên, ta sử dụng giá trị làm tròn để tìm nghiệm.
-% \end{block}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
