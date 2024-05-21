@@ -1,8 +1,8 @@
 \section{Phương pháp lưới}
 
+\subsection{Giới thiệu về lưới}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Nguồn Survey: Lattice Reduction Attacks on RSA; David Wong; supervised by Guilhem Castagnos; University of Bordeaux, March 2015
-\subsection{Giới thiệu về lưới}
 \begin{frame}{Giới thiệu về lưới}
 
 \begin{itemize}
@@ -25,17 +25,15 @@
 \end{tikzpicture}
 }
 
-% @ Phần tiếp theo em xin trình bày về Phương pháp lưới
-% @ 2 ý slide
-
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Nguồn Survey: Lattice Reduction Attacks on RSA; David Wong; supervised by Guilhem Castagnos; University of Bordeaux, March 2015
 \begin{frame}{Giới thiệu về lưới}
 
 \begin{itemize}
-\item Tuy nhiên, các số vô hướng của lưới là các số nguyên.
-\item Bây giờ ta có không gian được tạo thành từ các điểm.
+\item Tuy nhiên, các số vô hướng của lưới là các số nguyên 
+\item Bây giờ ta có không gian được tạo thành từ các điểm 
+\item   Đặc điểm của không gian này có tính rời rạc
 \end{itemize}
 
 \begin{figure}[!h]
@@ -97,12 +95,9 @@
 \end{figure}
 
 \begin{block}{Nhận xét}
-Lưới rất hữu ích trong mật mã vì chúng mang lại cho chúng ta rất nhiều công cụ để xử lý các số nguyên.
+Lưới rất hữu ích trong mật mã vì chúng mang lại cho chúng ta rất nhiều công cụ để xử lý các số nguyên
 \end{block}
 
-% @ 2 ý slide
-% @ Đặc điểm của không gian này có tính rời rạc
-% @ Nhận xét slide
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -121,6 +116,7 @@ Lưới rất hữu ích trong mật mã vì chúng mang lại cho chúng ta r�
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Định nghĩa lưới}
+
 \begin{frame}{Định nghĩa lưới}
 
 \begin{block}{Định nghĩa lưới}
@@ -137,8 +133,6 @@ Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lư�
 
 \end{block}
 
-% @ Tiếp theo là phần định nghĩa lưới
-% @ slide
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -207,13 +201,8 @@ Các vector \(\{x_1, x_2, \ldots, x_n\}\) được gọi là cơ sở của lư�
 \end{tikzpicture}
 \end{figure}
 
-% @ ở đây em có Ví dụ về lưới 2 chiều
-% @ giả sử b1, b2 là 2 vector cơ sở
-% @ ta có b3 = -b1 và b4 = b1 + b2
-
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %\begin{frame}{Định thức}
 %\begin{block}{Định thức}
 
@@ -283,28 +272,6 @@ Theo công thức (\ref{equation:bo_de}) trong bổ đề, ta có:
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Vector ngắn nhất tí gõ sau
-% Vector ngắn nhất tí gõ sau
-% Vector ngắn nhất tí gõ sau
-% Vector ngắn nhất tí gõ sau
-% Vector ngắn nhất tí gõ sau
-% Vector ngắn nhất tí gõ sau
-% Vector ngắn nhất tí gõ sau
-% \begin{frame}{Vector ngắn nhất}
-
-% \begin{itemize}
-% \item Độ dài vector $v = (v_1, v_2, \dots, v_n)$ là:
-
-% $$\|v\| = (v_1^2 + v_2^2 + \dots + v_n^2)^{\tfrac{1}{2}}$$
-
-% \item Có nhiều vấn đề liên quan đến việc tìm một vector khác không ngắn nhất trong lưới.
-% Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) rất khó để giải, khi số chiều của lưới lớn.
-
-% \end{itemize}
-
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \subsection{Quy trình Gram-Schmidt}
 \begin{frame}{Quy trình Gram-Schmidt}
 
@@ -398,6 +365,17 @@ là một cơ sở $x_1^*, x_2^*, \ldots, x_n^*$ được định nghĩa như sa
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Nhận xét quy trình Gram-Schmidt}
+
+
+
+    \begin{itemize}
+        \item 
+        \item 
+        \item 
+        \item 
+        \item 
+    \end{itemize}
+
 
 % \textbf{Chú ý:} Các vector không được chuẩn hóa \index{chuẩn hóa} độ dài. Ngoài ra, nếu $x_1, x_2, \dots, x_n$ là một cơ sở \index{cơ sở} của lưới $L$ thì sau khi trực giao hóa ta thu được các vector $x_1^*, x_2^*, \dots, x_n^*$ có thể không nằm trong lưới $L$.\\
 
@@ -524,4 +502,25 @@ Theo công thức (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta c
 \]
 
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vector ngắn nhất tí gõ sau
+% Vector ngắn nhất tí gõ sau
+% Vector ngắn nhất tí gõ sau
+% Vector ngắn nhất tí gõ sau
+% Vector ngắn nhất tí gõ sau
+% Vector ngắn nhất tí gõ sau
+% Vector ngắn nhất tí gõ sau
+% \begin{frame}{Vector ngắn nhất}
+
+% \begin{itemize}
+% \item Độ dài vector $v = (v_1, v_2, \dots, v_n)$ là:
+
+% $$\|v\| = (v_1^2 + v_2^2 + \dots + v_n^2)^{\tfrac{1}{2}}$$
+
+% \item Có nhiều vấn đề liên quan đến việc tìm một vector khác không ngắn nhất trong lưới.
+% Bài toán tìm vector ngắn nhất (Shortest Vector Problem - SVP) rất khó để giải, khi số chiều của lưới lớn.
+
+% \end{itemize}
+
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
