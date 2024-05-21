@@ -42,21 +42,7 @@ An Introduction to Mathematical Cryptography (2014) - Hoffstein, Pipher, Silverm
 
 
 Lecture-Intro_Lattices.pdf
-
-<!--  -->
-<!--  -->
-<!--  -->
-<!--  -->
-<!--  -->
-<!--  -->
-<!--  -->
-
-
-
  
-
-
-
  
 
 
@@ -72,20 +58,7 @@ Lecture-Intro_Lattices.pdf
 
 
 
-  
-
-
-
-
-
-
-
-
-
-<!-- Để phá vỡ mã hóa RSA ta cần giải x trong bài toán: -->
-<!-- c = (T + x) ^ e mod N -->
-
-Chúng ta có thể chuyển đổi vấn đề này thành bài toán vectơ ngắn nhất, sau đó sử dụng LLL để giải nó.
+   
 
 <!-- @ Thống nhất kí hiệu và biến -->
 <!-- @ Thống nhất kí hiệu và biến -->

@@ -3,21 +3,21 @@
 \subsection{Giới thiệu bài toán}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Ví dụ về quên mật khẩu}
+\begin{frame}{Ví dụ về quên mật khẩu}
 
-% \begin{itemize}
-% \item Ví dụ khi chúng ta yêu cầu quên mật khẩu Facebook
-% \item Facebook sẽ gửi thông tin khôi phục:
+\begin{itemize}
+\item Ví dụ khi chúng ta yêu cầu quên mật khẩu Facebook
+\item Facebook sẽ gửi thông tin khôi phục:
 
-% \begin{figure}[h]
-% \includegraphics[width=0.5\textwidth]{pictures/facebook.png}
-% \end{figure}
+\begin{figure}[h]
+\includegraphics[width=0.5\textwidth]{pictures/facebook.png}
+\end{figure}
 
-% \item Tương tự như:
-% \textbf{"Mật khẩu mới của bạn là ******"}
-% \end{itemize}
+\item Tương tự như:
+\textbf{"Mật khẩu mới của bạn là ******"}
+\end{itemize}
 
-% \end{frame}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}{Ví dụ về quên mật khẩu}
 
@@ -44,7 +44,7 @@
 
 % \begin{itemize}
 % \item Khóa công khai (n, e) đã biết
-%         \item Bản mã  $c$ đã biết
+% \item Bản mã $c$ đã biết
 % \item Bản rõ có dạng $m = t + x$
 % \item Với $t$ là phần văn bản mẫu cố định đã biết
 % \item Với $x$ là phần bí mật thỏa mãn $|x| \leq Y$ với \(Y \in \mathbb{Z} \)
@@ -64,158 +64,106 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Ví dụ tấn công RSA}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 % \begin{frame}{Ví dụ tấn công RSA}
 
-%     \begin{block}{Bài toán}
-%         \begin{itemize}
-%         \item Hệ mật mã RSA có:
+% \begin{block}{Bài toán}
+% \begin{itemize}
+% \item Hệ mật mã RSA có:
 
-%         \begin{itemize}
-%         \item Khóa công khai (n, e) = (115348777, 3)
-%         \item Bản mã  $c = 64784502$
-%         \item Bản rõ có dạng $m = 5180 + x$
-%         \item Với $x$ là phần bí mật thỏa mãn $|x| \leq 9$ 
-%         \end{itemize}
+% \begin{itemize}
+% \item Khóa công khai (n, e) = (115348777, 3)
+% \item Bản mã $c = 64784502$
+% \item Bản rõ có dạng $m = 5180 + x$
+% \item Với $x$ là phần bí mật thỏa mãn $|x| \leq 9$
+% \end{itemize}
 % \item Để giải bài toán, chúng ta cần đi tìm $x$
-%         \end{itemize}
+% \end{itemize}
 
-%         \end{block}
+% \end{block}
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}{Ví dụ tấn công RSA}
 
+% Theo hệ mật mã RSA ta biết:
 
-%     Theo hệ  mật mã RSA ta biết:
+% \[
+% 64784502 = (5180 + x)^3 \mod 115348777
+% \]
 
+% Hay:
 
-
-%         \[
-%         64784502 = (5180 + x)^3 \mod 115348777
-%         \]
-
-
-%         Hay:
-
-
-%         \[
-%         x^3 + 15540x^2 + 80497200x + 47119990 \equiv 0 \mod 115348777
-%         \]
-
-
-
-
-%     \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Ví dụ tấn công RSA}
-
-
-
-%     \begin{itemize}
-%         \item Cần giải phương trình
-%               \[
-%                   x^3 + 15540x^2 + 80497200x + 47119990 \equiv 0 \mod 115348777
-%               \]
-%         \item Dựa vào cơ sở lưới:
-%               \[
-%                   \vec{b_1} = (115348777, 0, 0, 0)
-%               \]
-%               \[
-%                   \vec{b_2} = (0, 1038138993, 0, 0)
-%               \]
-%               \[
-%                   \vec{b_3} = (0, 0, 9343250937, 0)
-%               \]
-%               \[
-%                   \vec{b_4} = (47119990, 724474800, 1258740, 0)
-%               \]
-%     \end{itemize}
-
-
-
-
-
-
+% \[
+% x^3 + 15540x^2 + 80497200x + 47119990 \equiv 0 \mod 115348777
+% \]
 
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}{Ví dụ tấn công RSA}
 
- 
+% \begin{itemize}
+% \item Cần giải phương trình
+% \[
+% x^3 + 15540x^2 + 80497200x + 47119990 \equiv 0 \mod 115348777
+% \]
+% \item Dựa vào cơ sở lưới:
+% \[
+% \vec{b_1} = (115348777, 0, 0, 0)
+% \]
+% \[
+% \vec{b_2} = (0, 1038138993, 0, 0)
+% \]
+% \[
+% \vec{b_3} = (0, 0, 9343250937, 0)
+% \]
+% \[
+% \vec{b_4} = (47119990, 724474800, 1258740, 0)
+% \]
+% \end{itemize}
 
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ tấn công RSA}
 
-%     \begin{itemize}
-%         \item Áp dụng thuật toán LLL để giảm lưới
-%         \item Kết quả cơ sở vector mới:
-%         \[
-%             \vec{v_1}   = (13942760, -14799933, -3334365, 2630232)
-%         \]
-%               \[
-%                   \vec{nghia_2} = (0, 0, 0, 0)
-%               \]
-%               \[
-%                   \vec{nghia_3} = (0, 0, 0, 0)
-%               \]
-%               \[
-%                   \vec{nghia_4} = (0, 0, 0, 0)
-%               \]
+% \begin{itemize}
+% \item Áp dụng thuật toán LLL để giảm lưới
+% \item Kết quả cơ sở vector mới:
+% \[
+% \vec{v_1} = (13942760, -14799933, -3334365, 2630232)
+% \]
+% \[
+% \vec{nghia_2} = (0, 0, 0, 0)
+% \]
+% \[
+% \vec{nghia_3} = (0, 0, 0, 0)
+% \]
+% \[
+% \vec{nghia_4} = (0, 0, 0, 0)
+% \]
 
-
-%     \end{itemize}
-
-
-
-
-
+% \end{itemize}
 
 % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Ví dụ tấn công RSA}
 
- 
+\begin{itemize}
+\item Theo định lý nghia ta có $\vec{v_1}$ là vector ngắn nhất của cơ sở vector mới
+\[
+\vec{v_1} = (13942760, -14799933, -3334365, 2630232)
+\]
+\item Từ đó ta có phương trình:
+\[
+03608x^3 + 41165x^2 + 21644437x + 13942760 = 0
+\]
+\item Nghiệm tìm được: $x \approx -20.314, 8.0028, 23.747$
+\item Do $0 \leq x \leq 9$, ta chọn $x = 8$ là nghiệm.
+\end{itemize}
 
-
-    \begin{itemize}
-        \item Theo định lý nghia ta có $\vec{v_1}$ là vector ngắn nhất của cơ sở vector mới
-        \[
-            \vec{v_1}   = (13942760, -14799933, -3334365, 2630232)
-        \]
-        \item Từ đó ta có phương trình:
-        \[
-        03608x^3 + 41165x^2 + 21644437x + 13942760 = 0
-        \]
-        \item Nghiệm tìm được: $x \approx -20.314, 8.0028, 23.747$
-        \item Do $0 \leq x \leq 9$, ta chọn $x = 8$ là nghiệm.
-    \end{itemize}
-
-
-
-
-    %       #  \item Kiểm tra lại: $(5180+8)^3 \mod 115348777 = 64784502$, do đó $x = 8$ là nghiệm đúng.
-    %       #  \item Khi giải phương trình bậc ba, có thể nghiệm không phải là số nguyên, sử dụng giá trị làm tròn để tìm nghiệm khả dĩ.
+% # \item Kiểm tra lại: $(5180+8)^3 \mod 115348777 = 64784502$, do đó $x = 8$ là nghiệm đúng.
+% # \item Khi giải phương trình bậc ba, có thể nghiệm không phải là số nguyên, sử dụng giá trị làm tròn để tìm nghiệm khả dĩ.
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-
-
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
