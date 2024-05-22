@@ -11,7 +11,7 @@
 
 \begin{itemize}
 \item Bạn có thể cộng vector, nhân vô hướng với 1 số
-\item Kết quả trải rộng trong một không gian vector.
+% \item Kết quả trải rộng trong một không gian vector.
 \end{itemize}
 \end{itemize}
 
@@ -253,12 +253,8 @@ Vì vậy ta có $X = BCX$ và $Y = CBY$.
 Suy ra $BC = CB = I$ và $\det(B) \det(C) = 1$.
 
 Thêm nữa, $B$, $C$ là các ma trận hệ số nguyên. Do đó:
-\[
-\begin{cases}
-\det(B) = \det(C) = 1, \\
-\det(B) = \det(C) = -1.
-\end{cases}
-\]
+$$\det(B) = \det(C) = \pm 1$$
+
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -496,13 +492,13 @@ Ta có:
 
 \textbf{Chứng minh:}
 
-Ta có $|\det(X^*)|$ là thể tích hình hộp $n$ chiều căng bởi các vector trực giao $x_1^*, x_2^*, \ldots, x_n^*$. Do đó:
+Ta có $|\det(X^*)|$ là thể tích hình hộp $n$ chiều   bởi các vector trực giao $x_1^*, x_2^*, \ldots, x_n^*$. Do đó:
 \[
 |\det(X^*)| = \|x_1^*\|\|x_2^*\|\cdots\|x_n^*\|.
 \]
 Theo công thức (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta có:
 \[
-|\det(X)| = |\det(X^*)| \leq \|x_1^*\|\|x_2^*\|\cdots\|x_n^*\| \leq \|x_1\|\|x_2\|\cdots\|x_n\|.
+|\det(X)| = |\det(X^*)| = \|x_1^*\|\|x_2^*\|\cdots\|x_n^*\| \leq \|x_1\|\|x_2\|\cdots\|x_n\|.
 \]
 
 \end{frame}
@@ -512,13 +508,45 @@ Theo công thức (\ref{equation:dinh_li_Gram-Schmidt2}) trong định lý, ta c
 \begin{itemize}
 \item Độ dài vector $v = (v_1, v_2, \dots, v_n)$ là:
 
-$$\|v\| = (v_1^2 + v_2^2 + \dots + v_n^2)^{\tfrac{1}{2}}$$
+$$\|v\| = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}$$
 
 \item Trong bài toán tìm vector ngắn nhất SVP (Shortest Vector Problem) có nhiều vector ngắn nhất
 \item Khi giải bài toán có thể đi tìm vector gần ngắn nhất (trong thời gian đa thức)
 \item Để giải bài toán này ta có thể sử dụng thuật toán LLL
 
 \end{itemize}
+
+
+
+% \begin{columns}
+% \begin{column}{0.6\textwidth}
+% \begin{itemize}
+ 
+
+
+
+
+
+
+
+
+
+% \end{itemize}
+% \end{column}
+% \begin{column}{0.4\textwidth}
+
+
+
+
+
+
+
+
+
+
+% \end{column}
+% \end{columns}
+
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
