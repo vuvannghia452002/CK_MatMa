@@ -22,6 +22,13 @@
 
 \begin{itemize}
 \item Thông điệp văn bản \(m \) bao gồm \textbf{phần văn bản mẫu} và \textbf{phần bí mật}
+
+
+\begin{itemize}
+\item  Phần văn bản mẫu   đã cố định trước
+\item   Phần bí mật  cũng bị giới hạn bởi giá trị  
+\end{itemize}
+
 \end{itemize}
 
 $$
@@ -43,7 +50,7 @@ $$
 
 \begin{itemize}
 \item Khóa công khai (n, e) đã biết
-\item Bản mã $c$ đã biết
+\item Bản mã $c$ đã có thông tin (ví dụ   trong  quá trình truyền tin)
 \item Bản rõ có dạng $m = t + x$
 \item Với $t$ là phần văn bản mẫu cố định đã biết
 \item Với $x$ là phần bí mật thỏa mãn $|x| \leq Y$ với \(Y \in \mathbb{Z} \)
@@ -86,12 +93,12 @@ $$
 \begin{itemize}
 \item Dùng thuật toán LLL để thực hiện giảm lưới. Ta thu được cơ sở mới: $b_0, b_1, b_2, ..., b_{n+1}$.
 \item Ta sử dụng vector $b_0$ như vector ngắn nhất của lưới và chuyển về dạng đa thức:
-$$b_0 + \frac{b_1}{Y}x + ... + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n}x^n $$
+$$b_0 + \frac{b_1}{Y}x + ... + \frac{b_{n-1}}{Y^{n-1}}x^{n-1} + \frac{b_n}{Y^n}x^n = 0$$
 \item Sau đó thực hiện giải phương trình đa thức
 \end{itemize}
 
 \begin{block}{Chú ý}
-Khi giải phương trình, nghiệm có thể không phải là số nguyên, ta lấy giá trị làm tròn
+Có thể nghiệm của   phương trình  không phải là số nguyên, ta lấy giá trị làm tròn
 \end{block}
 
 \end{frame}
@@ -160,28 +167,28 @@ x^3 + 15540x^2 + 80497200x + 47119990 \equiv 0 \mod 115348777
 
 \begin{itemize}
 \item Áp dụng thuật toán LLL để giảm lưới
-\item Kết quả cơ sở vector mới:
-\[
-\vec{v_1} = (13942760, -14799933, -3334365, 2630232)
-\]
-\[
-\vec{v_2} = (0, 0, 0, 0)
-\]
-\[
-\vec{v_3} = (0, 0, 0, 0)
-\]
-\[
-\vec{v_4} = (0, 0, 0, 0)
-\]
+% \item Kết quả cơ sở vector mới:
+% \[
+% \vec{v_1} = (13942760, -14799933, -3334365, 2630232)
+% \]
+% \[
+% \vec{v_2} = (0, 0, 0, 0)
+% \]
+% \[
+% \vec{v_3} = (0, 0, 0, 0)
+% \]
+% \[
+% \vec{v_4} = (0, 0, 0, 0)
+% \]
 
-\end{itemize}
+% \end{itemize}
 
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Ví dụ tấn công RSA}
+% \end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Ví dụ tấn công RSA}
 
-\begin{itemize}
-\item Ta có $\vec{v_1}$ là vector ngắn nhất của cơ sở vector mới
+% \begin{itemize}
+\item Ta quan tâm $\vec{v_1}$ là vector ngắn nhất của cơ sở vector mới
 \[
 \vec{v_1} = (13942760, -14799933, -3334365, 2630232)
 \]
@@ -191,8 +198,8 @@ x^3 + 15540x^2 + 80497200x + 47119990 \equiv 0 \mod 115348777
 % 3608x^3 - 41165x^2 - 1644437x + 13942760 = 0
 \]
 \item Nghiệm tìm được: $x \approx -20.314, 8.0028, 23.747$
-\item Do $|x| \leq 9$, ta chọn $x = 8$ là nghiệm.
-\item Kiểm tra lại: $(5180+8)^3 \mod 115348777 = 64784502$
+\item Do $|x| \leq 9$, ta chọn $x = 8$ là nghiệm
+\item Kiểm tra lại: $(5180+8)^3 \mod 115348777 = 64784502$ (đúng)
 \end{itemize}
 
 \end{frame}
